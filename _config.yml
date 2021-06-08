@@ -1,7 +1,7 @@
 # Site Settings
 name: JongSeo
-title: JongSeo | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
+title: JongSeo | 
+description: 잘 열심히 최선을 다해서
   Thiago Rossener.
 tags:
   - blog
@@ -19,7 +19,7 @@ menu:
     url: /contact
   - title: Feed
     url: /feed.xml
-email: youremail@test.com
+email: cakwhdtj@gmail.com
 # See: https://disqus.com/
 disqus_username: disqus_username
 # Contact Form Setting
@@ -46,7 +46,7 @@ two_columns_layout: true
 
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://cakwhdtj.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 language: "en"
 categories_folder: category
