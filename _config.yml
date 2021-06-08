@@ -1,13 +1,12 @@
 # Site Settings
 name: JongSeo
 title: JongSeo | Hi I'm Koo
-description: 잘 열심히 최선을 다해서
+description: 안녕하세요 Koo의 페이지 입니다.
 tags:
   - blog
   - template
   - jekyll
   - theme
-  - netlify
 show_hero: true
 menu:
   - title: Home
@@ -16,8 +15,7 @@ menu:
     url: /about
   - title: Contact
     url: /contact
-  - title: Feed
-    url: /feed.xml
+
 email: cakwhdtj@gmail.com
 # See: https://disqus.com/
 disqus_username: disqus_username
@@ -28,12 +26,10 @@ formspree_form_id: formspree_form_id
 
 # Social Media Settings
 # Remove the item if you don't need it
-github_username: github_username
-facebook_username: facebook_username
-twitter_username: twitter_username
-instagram_username: instagram_username
+github_username: cakwhdtj
+facebook_username: jongseo.koo
+instagram_username: jjongu94
 linkedin_username: linkedin_username
-medium_username: medium_username
 
 
 # Posts Settings
