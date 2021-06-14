@@ -2,10 +2,9 @@
 date: #2019-05-16T23:48:05.000Z
 layout: post
 title: 안녕하세요 구종서입니다. 
-subtitle: #'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+subtitle: 'Hello! this is JongSeoKoo's intro page'
 description: >-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.
+  Hello! this is JongSeoKoo's intro page
 image: >-
   https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821647/theme6_qeeojf.jpg
 optimized_image: >-
