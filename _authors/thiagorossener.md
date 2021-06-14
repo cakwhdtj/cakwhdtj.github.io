@@ -1,15 +1,15 @@
 ---
 layout: author
-photo: /assets/img/uploads/profile.png
+photo: /assets/img/uploads/profile.jpg
 name: thiagorossener
-display_name: Thiago Rossener
+display_name: JongSeoKoo
 position: Chief Editor
-bio: Just a developer.
-github_username: thiagorossener
-facebook_username: thiagorossener
-twitter_username: thiagorossener
-instagram_username: thiagorossener
-linkedin_username: thiagorossener
-medium_username: thiagorossener
+bio: Just a publisher.
+github_username: cakwhdtj
+facebook_username: jongseo.koo
+twitter_username: 
+instagram_username: jjongu94
+linkedin_username: 
+medium_username: 
 ---
 

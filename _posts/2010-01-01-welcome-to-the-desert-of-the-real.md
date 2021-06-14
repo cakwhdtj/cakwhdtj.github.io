@@ -2,9 +2,10 @@
 date: 2019-05-16T23:48:05.000Z
 layout: post
 title: 안녕하세요 구종서입니다. 
-subtitle: 'Hello! this is JongSeoKoo's intro page'
+subtitle: 'Hello! This is JongSeoKoo&rsquo;s intro page'
 description: >-
-  Hello! this is JongSeoKoo's intro page
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.
 image: >-
   https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821647/theme6_qeeojf.jpg
 optimized_image: >-
@@ -13,7 +14,7 @@ category: blog
 tags:
   - welcome
   - blog
-author: JongSeoKoo
+author: thiagorossener
 paginate: false
 ---
 Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
@@ -44,6 +45,7 @@ Most of these elements are styled by browsers with few modifications on our part
 #### Heading 4
 
 Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
 
 ## Code
 
