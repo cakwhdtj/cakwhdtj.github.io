@@ -1,5 +1,5 @@
 ---
-date: #2019-05-16T23:48:05.000Z
+date: 2019-05-16T23:48:05.000Z
 layout: post
 title: 안녕하세요 구종서입니다. 
 subtitle: 'Hello! this is JongSeoKoo's intro page'
