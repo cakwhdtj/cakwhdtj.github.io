@@ -1,8 +1,8 @@
 ---
-date: 2019-05-16T23:48:05.000Z
+date: #2019-05-16T23:48:05.000Z
 layout: post
 title: 안녕하세요 구종서입니다. 
-subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+subtitle: #'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua.
@@ -14,8 +14,8 @@ category: blog
 tags:
   - welcome
   - blog
-author: thiagorossener
-paginate: true
+author: JongSeoKoo
+paginate: false
 ---
 Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
@@ -45,8 +45,6 @@ Most of these elements are styled by browsers with few modifications on our part
 #### Heading 4
 
 Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
---page-break--
 
 ## Code
 
