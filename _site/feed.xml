@@ -5,16 +5,16 @@
     <description>안녕하세요 Koo의 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Jun 2021 14:39:49 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Jun 2021 14:39:49 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Jun 2021 16:02:55 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Jun 2021 16:02:55 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
         <title>안녕하세요 구종서입니다.</title>
         <description>&lt;p&gt;Cas sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt; &lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt; &lt;p&gt;HTML defines a long list of available inline tags, a complete list of...</description>
         <pubDate>Fri, 17 May 2019 08:48:05 +0900</pubDate>
-        <link>http://localhost:4000/welcome-to-the-desert-of-the-real/</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome-to-the-desert-of-the-real/</guid>
+        <link>http://localhost:4000/feature/</link>
+        <guid isPermaLink="true">http://localhost:4000/feature/</guid>
         
         <category>welcome</category>
         

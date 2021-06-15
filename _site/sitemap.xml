@@ -203,7 +203,7 @@
     
     
         <url>
-            <loc>http://localhost:4000/welcome-to-the-desert-of-the-real/</loc>
+            <loc>http://localhost:4000/feature/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
             <lastmod>2019-05-17</lastmod>
