@@ -3,18 +3,18 @@ name: JongSeo
 title: JongSeo | Hi I'm Koo
 description: 안녕하세요 Koo의 페이지 입니다.
 tags:
-  - blog
-  - template
-  - jekyll
-  - theme
+    - blog
+    - template
+    - jekyll
+    - theme
 show_hero: true
 menu:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
-  - title: Contact
-    url: /contact
+    - title: Home
+      url: /
+    - title: About
+      url: /about
+    - title: Contact
+      url: /contact
 
 email: cakwhdtj@gmail.com
 # See: https://disqus.com/
@@ -23,14 +23,12 @@ disqus_username: cakwhdtj
 # See: https://formspree.io/
 formspree_form_id: moqydgoo
 
-
 # Social Media Settings
 # Remove the item if you don't need it
 github_username: cakwhdtj
 facebook_username: jongseo.koo
 instagram_username: jjongu94
-linkedin_username: 
-
+linkedin_username:
 
 # Posts Settings
 show_time_bar: true
@@ -38,66 +36,54 @@ show_modal_on_exit: false
 show_modal_on_finish_post: false
 two_columns_layout: false
 
-
 # Advanced Settings
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cakwhdtj.github.io" # the base hostname & protocol for your site
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "G-9C4YZ6YHYW"
 language: "en , ko"
 categories_folder: category
 sent_message_url: "/contact/message-sent/"
-
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 collections:
-  authors:
-    output: true
+    authors:
+        output: true
 paginate_path: "/page/:num/"
 show_get_theme_btn: true
 use_logo: false
 
 # Content paginator
 paginate_content:
-  enabled: true
-  debug: false
-  collections:
-    - posts
-  auto: false
-  separator: "--page-break--"
-  permalink: "/:num/"
-  seo_canonical: true
-  properties:
-    part:
-      is_generated: true
-    last:
-      is_generated: true
-    single:
-      is_generated: true
+    enabled: true
+    debug: false
+    collections:
+        - posts
+    auto: false
+    separator: "--page-break--"
+    permalink: "/:num/"
+    seo_canonical: true
+    properties:
+        part:
+            is_generated: true
+        last:
+            is_generated: true
+        single:
+            is_generated: true
 
 # SASS
 sass:
-  style: compressed
+    style: compressed
 
 # Plugins
 plugins:
-  - jekyll-paginate
-  - jekyll-paginate-content
+    - jekyll-paginate
+    - jekyll-paginate-content
 
 # Exclude my node related stuff
-exclude: [
-  'package.json',
-  'package-lock.json',
-  'src',
-  'node_modules',
-  'initpost.sh',
-  'Gemfile',
-  'Gemfile.lock',
-  'gulpfile.js',
-  'README.md'
-]
+exclude: ["package.json", "package-lock.json", "src", "node_modules", "initpost.sh", "Gemfile", "Gemfile.lock", "gulpfile.js", "README.md"]
 
 # Theme: jekflix
 version: v3.1.1
