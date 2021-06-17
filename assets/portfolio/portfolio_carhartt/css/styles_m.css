@@ -1,0 +1,213 @@
+@import "reset.css";
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+
+/* hack */
+html {
+  font-family: "Source Code Pro";
+}
+
+.wrap {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+button {
+  background: transparent;
+  border: none;
+}
+.nav__menuBtn {
+  outline: 0;
+}
+.hide_clipPath {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+/* moblie */
+.mobile {
+  display: none;
+}
+
+#index {
+  padding: 0px;
+}
+.nav__menuUl {
+  display: none;
+}
+.nav__menuSide {
+  margin: 0;
+  left: 0;
+  width: 100%;
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+}
+.nav__menuSide li a {
+  color: rgb(224, 224, 224);
+}
+#layer-mask {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, 0.6);
+}
+
+.section1 article h2 {
+  position: absolute;
+  bottom: 0;
+}
+.h2_feature {
+  display: none;
+}
+
+.btnContainer > button {
+  /* outline: 0; */
+  position: absolute;
+  z-index: 2;
+}
+.btnContainer > button:nth-child(1) {
+  margin-left: 20px;
+  left: -10px;
+}
+
+.btnContainer > button:nth-child(2) {
+  margin-right: 20px;
+  right: -10px;
+}
+
+.btnContainer > button > .fas {
+  font-size: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.btnContainer > button:nth-child(1) > .fas {
+  color: rgba(157, 157, 157, 0.1);
+}
+.btnContainer > button:nth-child(2) > .fas {
+  color: rgba(157, 157, 157, 0.1);
+}
+.btnContainer > button > .fas:hover {
+  color: rgba(1, 1, 1, 1);
+}
+.btnContainer > button:nth-child(1) > .fas:hover {
+  transform: translateX(-5px);
+}
+.btnContainer > button:nth-child(2) > .fas:hover {
+  transform: translateX(5px);
+}
+.section2 {
+  margin: -120px auto auto;
+  overflow-x: hidden;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section2 ul li {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.section2 ul li.on {
+  display: block;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.section2 div {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-155.5px);
+}
+.section2 div article {
+  display: block;
+}
+.section2 div article:nth-child(2) {
+  margin-top: -50px;
+}
+.section2 div article:nth-child(3) {
+  margin-top: -50px;
+}
+
+.section3 article {
+  background-size: 200%;
+}
+.section3 article:hover {
+  background-size: 220%;
+  transition: 0.5s ease-in-out;
+}
+.lookbook .section1 {
+  height: auto;
+}
+.lookbook .section1 div {
+  position: relative;
+  width: 100%;
+  margin: 10px auto 50px auto;
+  top: unset;
+  bottom: unset;
+}
+
+.lookbook_1 .section1 div {
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  transition: all 1s ease-in-out;
+  box-shadow: 2px 2px 6px #f1f1f1;
+}
+
+.lookbook_1 .section1 div > img {
+  position: relative;
+  width: 100%;
+}
+.lookbook_1 .section1 div > h2,
+.lookbook_1 .section1 div > p {
+  opacity: 1;
+}
+.lookbook_1 .section1 div > p {
+  text-indent: 2em;
+}
+.lookbook_1 .section1 div > h2 {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#lookbook_1Pic {
+  float: left;
+  margin: 15px;
+  width: 80%;
+}
+
+footer {
+  height: unset;
+  bottom: 0;
+}
+footer ul {
+  display: block;
+  position: relative;
+}
+footer ul:first-child {
+  left: 0px;
+}
+footer ul:nth-child(2) {
+  left: 0;
+  transform: none;
+  margin: 5px auto;
+  text-align: left;
+}
+footer ul:last-child {
+  text-align: right;
+  transform: translateY(-25px);
+}
