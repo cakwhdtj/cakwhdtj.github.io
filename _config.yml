@@ -1,7 +1,7 @@
 # Site Settings
 name: JongSeo
 title: JongSeo | Hi I'm Koo
-description: 안녕하세요 성장하는 웹퍼블리셔 구종서의 개인 포트폴리오 페이지 입니다.
+description: 안녕하세요. 성장하는 웹퍼블리셔 구종서의 개인 포트폴리오 페이지 입니다.
 tags:
     - blog
     - template
@@ -14,7 +14,9 @@ menu:
     - title: Home
       url: /
     - title: About
-      url: /about
+      url: /feature
+    - title: Portfolio
+      url: /category/portfolio/
     - title: Contact
       url: /contact
 
@@ -54,7 +56,7 @@ collections:
     authors:
         output: true
 paginate_path: "/page/:num/"
-show_get_theme_btn: true
+show_get_theme_btn: false
 use_logo: false
 
 # Content paginator
