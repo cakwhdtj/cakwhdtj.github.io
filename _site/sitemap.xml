@@ -142,14 +142,14 @@
             <loc>http://localhost:4000/feature/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
-            <lastmod>2019-05-17</lastmod>
+            <lastmod>2021-06-21</lastmod>
         </url>
     
         <url>
-            <loc>http://localhost:4000/CARHARTT/</loc>
+            <loc>http://localhost:4000/carhartt/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
-            <lastmod>2018-11-22</lastmod>
+            <lastmod>2021-06-21</lastmod>
         </url>
     
     

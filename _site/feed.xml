@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JongSeo | Hi I&apos;m Koo</title>
-    <description>안녕하세요. 성장하는 웹퍼블리셔 구종서의 개인 포트폴리오 페이지 입니다.</description>
+    <description>안녕하세요. 성장하는 웹개발자 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Jun 2021 02:11:42 +0900</pubDate>
-    <lastBuildDate>Mon, 21 Jun 2021 02:11:42 +0900</lastBuildDate>
+    <pubDate>Mon, 21 Jun 2021 16:27:00 +0900</pubDate>
+    <lastBuildDate>Mon, 21 Jun 2021 16:27:00 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
         <title>안녕하세요. 구종서입니다.</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;안녕하세요. 성장하는 웹 퍼블리셔 구종서 입니다. 이곳은 저와 제 작업물을 소개하는 개인 &lt;a href=&quot;/category/portfolio/&quot;&gt;포트폴리오&lt;/a&gt; 사이트입니다. 항상 발전하기 위해 노력하겠습니다.&lt;/p&gt;
+  &lt;p&gt;안녕하세요. 성장하는 웹개발자 구종서 입니다. 이곳은 저와 제 작업물을 소개하는 개인 &lt;a href=&quot;/category/portfolio/&quot;&gt;포트폴리오&lt;/a&gt; 사이트입니다. 항상 발전하기 위해 노력하겠습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;education&quot;&gt;EDUCATION&lt;/h2&gt;
@@ -32,7 +32,7 @@
 &lt;p&gt;&lt;a href=&quot;/category/portfolio/&quot; title=&quot;portfolio&quot;&gt;포트폴리오 보러가기&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 17 May 2019 08:48:05 +0900</pubDate>
+        <pubDate>Mon, 21 Jun 2021 16:26:28 +0900</pubDate>
         <link>http://localhost:4000/feature/</link>
         <guid isPermaLink="true">http://localhost:4000/feature/</guid>
         
@@ -46,13 +46,15 @@
       <item>
         <title>CARHARTT</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;공부를 시작한 초기에 제작한 Carhartt Wip Korea 메인 페이지 입니다. 기존의 페이지를 토대로 클론코딩과 약간의 디자인을 하였으며 2개의 서브페이지가 있습니다.&lt;br /&gt;
-&lt;a href=&quot;/assets/portfolio/portfolio_carhartt/index.html&quot;&gt;보러가기&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_carhartt/index.html&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
+공부를 시작한 초기에 제작한 Carhartt Wip Korea 메인 페이지 입니다. 기존의 페이지를 토대로 반응형으로 제작했고 2개의 서브페이지가 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;sub&gt;좌측 하단에 링크를 누르시면 인트로 페이지로 돌아올 수 있습니다.&lt;/sub&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 22 Nov 2018 21:26:40 +0900</pubDate>
-        <link>http://localhost:4000/CARHARTT/</link>
-        <guid isPermaLink="true">http://localhost:4000/CARHARTT/</guid>
+        <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
+        <link>http://localhost:4000/carhartt/</link>
+        <guid isPermaLink="true">http://localhost:4000/carhartt/</guid>
         
         <category>반응형</category>
         

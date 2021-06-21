@@ -7,15 +7,15 @@
       "tags"     : "welcome and blog",
       "categories" : "intro",
       "url"      : "/feature/",
-      "date"     : "05/17/2019"
+      "date"     : "06/21/2021"
     } ,
   
     {
       "title"    : "CARHARTT",
       "tags"     : "반응형",
       "categories" : "portfolio",
-      "url"      : "/CARHARTT/",
-      "date"     : "11/22/2018"
+      "url"      : "/carhartt/",
+      "date"     : "06/21/2021"
     } 
   
 ]
