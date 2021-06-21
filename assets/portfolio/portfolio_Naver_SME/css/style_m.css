@@ -1,0 +1,171 @@
+/* reset */
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit;text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+/* theme color */
+:root {
+  --main-color: #03c75a;
+  --color-emph: #0fc75b;
+}
+/* common */
+body {font-family: "Noto Sans KR", sans-serif; scrollbar-width: none; scrollbar-color: transparent transparent; overflow-x: hidden;}
+body::-webkit-scrollbar {width: 0px; background: transparent;
+}
+html, body {overflow-x: hidden; position: relative;}
+
+.wrapper {overflow: hidden;}
+.wrapper.bg nav::after {content: 'helo'; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; background: #000000; opacity: .2; z-index: 9;}
+.pcOnly {display: none;}
+#skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
+#skipNav:focus {top: 0;}
+
+#header {position: absolute; max-width: 1920px; width: 100%; height: 76px; z-index: 10;}
+#header h1 {position: absolute; top: 30px; left: 30px;}
+#header h1 a {display: block; width: 85px; height: 17px; background: url(../img/sp_header.png) no-repeat -198px 0; background-size: 344px 136px;}
+
+
+#header nav ul#headerRightBtn {position: absolute; top: 50%; right: 30px; transform: translateY(-50%); width: 200px; height: 36px; background-color: transparent; z-index: 10;}
+#header nav ul#headerRightBtn > li {position: absolute;}
+#header nav ul#headerRightBtn > li:nth-child(1) {left: 0;}
+#header nav ul#headerRightBtn > li:nth-child(2) {right: 0; z-index: 10;}
+#header nav ul#headerRightBtn > li > a {display: block; cursor: pointer; width: 94px; height: 36px;}
+#header nav ul#headerRightBtn > li:nth-child(1) > a {background: url(../img/sp_header.png) no-repeat 0 0; background-size: 344px 136px;}
+#header nav ul#headerRightBtn > li:nth-child(2) > a:nth-child(1) {background: url(../img/sp_header.png) no-repeat -99px 0; background-size: 344px 136px;}
+#header nav ul#headerRightBtn li > ul {position: absolute; box-sizing: border-box; top: -20px; right: -600px; width: 300px; height: 100vh; background-color: #ffffff; transition: all 0.3s ease-in-out; opacity: 0; overflow-y: scroll; z-index: 100; visibility: hidden;}
+#header nav ul#headerRightBtn li > ul.open {position: absolute; right: -30px; opacity: 1; visibility: visible;}
+#header nav ul#headerRightBtn li > ul.open::-webkit-scrollbar {background: transparent; width: 1px;}
+#header nav ul#headerRightBtn li > ul > li {position: relative;}
+#header nav ul#headerRightBtn li > ul > li#closeSideBtn {position: fixed; height: 76px; width: 300px; z-index: 110; background-color: #ffffff;}
+#header nav ul#headerRightBtn li > ul > li#closeSideBtn a {position: absolute; display: block; top: 20px; right: 20px; width: 95px; height: 36px; background: url(../img/sp_header.png) no-repeat -98px -82px; background-size: 344px 136px;}
+#header nav ul#headerRightBtn li > ul > li:nth-child(2) {margin-top: 76px;}
+#header nav ul#headerRightBtn li > ul > li + li > a {display: block; width: 100%; height: 100%;}
+#header nav ul#headerRightBtn li > ul > li + li {box-sizing: border-box; padding: 10px 20px 10px 20px; width: 100%; height: 260px; border-top: 1px solid rgba(99, 99, 99, 0.2);}
+#header nav ul#headerRightBtn li > ul > li > a > p {position: absolute; font-size: 16px;}
+#header nav ul#headerRightBtn li > ul > li > a > span {position: absolute; font-weight: 900; font-size: 16px; color: var(--main-color); right: 20px; top: 10px;}
+#header nav ul#headerRightBtn li > ul > li > a > img {width: 100%; transform: translateY(66px);}
+.comingSoon {background-color: rgba(99, 99, 99, 0.05);}
+.comingSoon > a > p {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 900; font-size: 20px; text-transform: uppercase; color: #999999;}
+
+main {position: relative;}
+
+section {overflow: hidden; position: relative;}
+#section_1 {color: var(--main-color); height: 300px;}
+#section_1 .sectionTitle {visibility: hidden;}
+#section_1.sectionLayout > p:nth-child(1) {position: absolute; top: 135px;}
+
+#section_2, #section_3 {box-sizing: border-box; color: #ffffff;}
+#section_2.sectionLayout > p:nth-child(1) {visibility: hidden;}
+#section_3.sectionLayout > p:nth-child(1) {visibility: hidden;}
+
+#footer {position: absolute; color: #ffffff; left: 50%; transform: translate(-50%,-100%);}
+
+/* module */
+.hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
+
+.textEmph {font-weight: 700; color: var(--color-emph);}
+.scrolled .textEmph {font-weight: 500; color: #ffffff;}
+
+.sectionLayout {height: 100vh;}
+.sectionLayout > p:nth-child(1) {left: 0; padding-left: 10%; font-size: 25px;}
+.sectionLayout > p:nth-child(1) > span.gap::before {content: ""; display: block; height: 10px; width: 100%;}
+p.sectionTitle {
+  position:absolute;
+  top: 50%; left: 60px; 
+  transform: translateY(-50%); 
+  font-size: 56px; font-weight: 200; 
+  line-height: 64px; 
+  letter-spacing: -8px; 
+  box-sizing: border-box;
+}
+p.sectionTitle > a {
+  box-shadow: inset 0 -3px 0 #ffffff; 
+  line-height: 21px;
+}
+.numInSection {
+  position: absolute; 
+  display: block; 
+  top: 20px; left: -35px; 
+  font-size: 15px; font-weight: 900; letter-spacing: normal; line-height: normal;
+}
+
+.sectionVideo {position: absolute; top: 0; height: 100%; width: 177.77777778vh; min-width: 100%; min-height: 56.25vw; left: 50%; transform: translate(-50%,0); pointer-events: none; z-index: -1;}
+
+.slideInSection {visibility: hidden; width: 100%; height: 100%; box-sizing: border-box; color: var(--main-color); overflow-y: scroll;}
+.slideInSection::-webkit-scrollbar {background: transparent; width: 1px;}
+.slideInSection.open {visibility: visible; position: fixed; top: 0; z-index: 11;}
+.slideInSection > a {position: absolute; top: 20px; right: 30px; width: 30px; height: 30px; background-color: var(--main-color); border-radius: 50%; z-index: 1; cursor: pointer;}
+.slideInSection > a::before {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 40%; height: 2px; background: #ffffff;}
+.slideInSection > a::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 40%; height: 2px; background: #ffffff;}
+.slideInSection .numInSection {
+  position: absolute; display: block; 
+  top: 10px; left: -35px; font-size: 12px; font-weight: 500; letter-spacing: normal; line-height: normal;
+}
+.slideInSection .sectionTitle {position: relative; color: var(--main-color); font-size: 50px; transform: translate(-60px,0); line-height: 56px; margin-bottom: 20px;}
+.slideInSection .sectionTitle > a {box-shadow: none;}
+.slideInSection .sectionTitle > a .textEmph {color: var(--main-color);font-size: inherit;}
+.slideInSection .sectionTitle > a i {display: none;}
+
+
+.slideInSection > .box {position: absolute; left: 100vw; width: 100%; box-sizing: border-box; height: 100%; background: #ffffff;}
+.slideInSection.open > .box {animation: slideIn .3s forwards;}
+
+.slideInSection ul.imageSlide {background: #ffffff; width: 100%;}
+.slideInSection ul.imageSlide::-webkit-scrollbar {background: transparent; width: 1px;}
+
+.slideInSection ul.imageSlide > li {box-sizing: border-box; width: 100%; margin-top: 100px; padding-left: 50px; font-weight: 500;}
+.slideInSection ul.imageSlide > li + li .textEmph {
+  color: var(--main-color); font-size: 28px; font-weight: 600;
+}
+.slideInSection ul.imageSlide .desc {font-size: 15px; line-height: 19px;}
+.slideInSection ul.imageSlide .desc br {line-height: 10px;}
+.slideInSection ul.imageSlide > li:nth-child(n+3):nth-child(-n+5) .textEmph {display: block; margin-bottom: 15px; color: var(--main-color);}
+
+.slideInSection ul.imageSlide > li video {width: 100%; margin-top: 20px;}
+.slideInSection ul.imageSlide > li:first-child > a {font-size: 16px; font-weight: 700;}
+
+.slideInSection ul.imageSlide > li:nth-child(2) .textEmph {line-height: 30px;}
+
+.slideInSection ul.imageSlide > li:nth-child(3) .desc {float: left; width: 24%;}
+.slideInSection ul.imageSlide > li:nth-child(3) video {margin-top: 1px; width: 76%; box-sizing: border-box;}
+
+.slideInSection ul.imageSlide > li:nth-child(4) {padding: 0 50px 0 50px;}
+
+.slideInSection ul.imageSlide > li:nth-child(5) video {transform: translate(-25px,0);}
+
+.slideInSection ul.imageSlide > li:nth-child(6) {text-align: center; padding: 0; height: 400px;}
+.slideInSection ul.imageSlide > li:nth-child(6) {font-size: 28px; font-weight: 300; line-height: 30px;}
+.slideInSection ul.imageSlide > li:nth-child(6) p {margin-bottom: 20px;}
+.slideInSection ul.imageSlide > li:nth-child(6) a {display: block; margin-bottom: 10px; font-weight: 600;}
+.slideInSection ul.imageSlide > li:nth-child(6) div:nth-child(1) {padding-bottom: 20px;}
+.slideInSection ul.imageSlide > li:nth-child(6) div:nth-child(2) ul {display: flex; border-top: 1px solid rgba(204, 204, 204, .5); padding: 40px; justify-content: center;}
+.slideInSection ul.imageSlide > li:nth-child(6) div:nth-child(2) ul li {display: inline-block;}
+.slideInSection ul.imageSlide > li:nth-child(6) div:nth-child(2) ul li + li {margin-left: 10px}
+.slideInSection ul.imageSlide > li:nth-child(6) > div:nth-child(2) > ul > li > a {display: inline-block; }
+.slideInSection ul.imageSlide > li:nth-child(6) > div:nth-child(2) > ul > li > a > img {display:block; border: 1px solid rgba(204, 204, 204, .5); border-radius: 35%; width: 50px; padding: 10px; margin: 0 auto 20px auto;}
+.slideInSection ul.imageSlide > li:nth-child(6) > div:nth-child(2) > ul > li:nth-child(2) > a > img {border: none; padding: unset; width: 70px;}
+.slideInSection ul.imageSlide > li:nth-child(6) > div:nth-child(2) > ul > li:nth-child(3) > a > img {border: none; padding: unset; width: 70px;}
+.slideInSection ul.imageSlide > li:nth-child(6) > div:nth-child(2) > ul > li > a > span {font-size: 13px;}
+
+.slideInSection ul.imageSlide > li:nth-child(7) {text-align: center; padding: 0 25px 100px 25px;}
+.slideInSection ul.imageSlide > li:nth-child(7) > p {margin-right: unset; margin-bottom: 40px; text-align: center; font-size: 28px; font-weight: 200; line-height: 40px;}
+.slideInSection ul.imageSlide > li:nth-child(7) > a {display: block; width: 100%;}
+.slideInSection ul.imageSlide > li:nth-child(7) > a img {width: 100%;}
+
+.indicator {display: none;}
+
+
+
+/* keyframes */
+
+@keyframes slideIn {
+  0% {
+
+  }
+  100% {
+    left: 0;
+  }
+}
