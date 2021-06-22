@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 웹개발자 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Jun 2021 19:44:03 +0900</pubDate>
-    <lastBuildDate>Mon, 21 Jun 2021 19:44:03 +0900</lastBuildDate>
+    <pubDate>Tue, 22 Jun 2021 17:09:17 +0900</pubDate>
+    <lastBuildDate>Tue, 22 Jun 2021 17:09:17 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -49,8 +49,6 @@
   &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_Pearlabyss/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
 다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;sub&gt;우측 하단에 링크를 누르시면 인트로 페이지로 돌아올 수 있습니다.&lt;/sub&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
         <link>http://localhost:4000/pearlabyss/</link>
@@ -67,8 +65,6 @@
   &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_Naver_SME/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
 풀페이지 형식에 도전해 보기 위해 제작한 Naver SME 광고갬페인 페이지 입니다. 사이드 메뉴와 스크롤링 효과가 주요 요소입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;sub&gt;우측 하단에 링크를 누르시면 인트로 페이지로 돌아올 수 있습니다.&lt;/sub&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
         <link>http://localhost:4000/naver-sme/</link>
@@ -87,8 +83,6 @@
   &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_carhartt/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
 공부를 시작한 초기에 제작한 Carhartt Wip Korea 메인 페이지 입니다. 기존의 페이지를 토대로 반응형으로 제작했고 2개의 서브페이지가 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;sub&gt;우측 하단에 링크를 누르시면 인트로 페이지로 돌아올 수 있습니다.&lt;/sub&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
         <link>http://localhost:4000/carhartt/</link>

@@ -30,7 +30,11 @@
                 {% include toc.html %}
 
                 {{ content }}
-
+                {% if page.category == "portfolio" %}
+                        <p>
+                            <sub>우측 하단에 버튼에 hover하시면 주요 요소가 강조되고 클릭하면 인트로 페이지로 돌아오실 수 있습니다.</sub>
+                        </p>
+                {% endif %}
                 {% include pagination-post.html %}
             </article>
 

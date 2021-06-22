@@ -281,3 +281,7 @@ function scroll() {
 $('a[href="#"]').on('click', function (e) {
   e.preventDefault();
 });
+
+
+//portfolio global
+document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");

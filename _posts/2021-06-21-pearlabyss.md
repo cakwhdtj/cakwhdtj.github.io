@@ -15,5 +15,3 @@ paginate: false
 
 > <a href="/assets/portfolio/portfolio_Pearlabyss/index.html" target="_blank">보러가기</a>  
 > 다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.
-
-<sub>우측 하단에 링크를 누르시면 인트로 페이지로 돌아올 수 있습니다.</sub>
