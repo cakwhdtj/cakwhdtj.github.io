@@ -6,12 +6,14 @@ let emphOffsetL = [];
 let emphWidth = [];
 let emphHeight = [];
 let timer;
+let interval;
 let count = 0;
-
+let isOn = false;
 
 if (skipNavCheck === "본문바로가기" || skipNavCheck === "본문 바로가기") {
     $("body a").first().after("<a href='https://cakwhdtj.github.io/' id='kooflix'><span>KOOFLIX로 돌아가기</span></a>");
 }
+
 $("#kooflix span").addClass('hide_clipPath');
 $("#kooflix").css({ 
     "background" : "url(../../img/icons/apple-touch-icon-114x114.png)",
@@ -33,30 +35,23 @@ $(window).on("resize", function () {
 });
 
 $("#kooflix").on("mouseenter", function () {
-    $(window).on("scroll", function () {
-        clearTimeout(timer);
-        timer = setTimeout(function() {
-            $("#kooflix").trigger("mouseenter");
-        }, 100);
-    });
+    isOn = true;
     for (let i = 0; i < pfEmph.length; i++) {
         emphOffsetT[i] = $(pfEmph[i]).offset().top;
         emphOffsetL[i] = $(pfEmph[i]).offset().left;
         emphWidth[i] = $(pfEmph[i]).outerWidth();
         emphHeight[i] = $(pfEmph[i]).outerHeight();
     }
+
     emphEffect();
-    let interval = setInterval(emphAnimate, 500);
-    if (count > 15) {
-        console.log('hi');
-        clearInterval(emphAnimate);
-    }
+    interval = setInterval(emphAnimate, 500);
 
     $(this).css({
         "opacity" : 1,
         "transform" : "scale(1.2)"
     });
     $(this).on('mouseleave', function () {
+        isOn = false;
         $(this).css({
             "opacity" : .5,
             "transform" : "none"
@@ -66,26 +61,45 @@ $("#kooflix").on("mouseenter", function () {
 });
 
 
-function emphEffect () {
-    for (let i = 0; i < pfEmph.length; i++) {
+function emphEffect() {
+       for (let i = 0; i < pfEmph.length; i++) {
         $("body").append("<div class='emphEffect " + "e" + [i] + "'></div>");
         $(".emphEffect").css({
-            "position" : "absolute", "z-index" : "9999",
+            "position" : "absolute",
             "opacity" : .7,
             "border" : "1px solid rgba(254, 11, 24, 0.5)",
             "box-shadow" : "5px 5px 25px 5px red",
         });
         $(".e" + [i]).css({
-            "width" : (emphWidth[i]), "height" : (emphHeight[i]),           
+            // "z-index" : emphZindex[i],
+            "width" : emphWidth[i], "height" : emphHeight[i], 
             "top" : emphOffsetT[i], "left" : emphOffsetL[i]
-        });
-    }
+        });    
+    } 
 }
 function emphAnimate() {
-    count = count + 1;
-    console.log(count);
     for (let i = 0; i < pfEmph.length; i++) {
         $(".e"+ [i]).fadeOut(500, 0);
         $(".e"+ [i]).fadeIn(300, 0);
     }
 }
+
+$(window).on("scroll", function () {
+    // console.log(isOn);
+    $(".emphEffect").remove();
+    clearTimeout(timer);
+    if (isOn === true) {
+        timer = setTimeout(function() {
+            for (let i = 0; i < pfEmph.length; i++) {
+                emphOffsetT[i] = $(pfEmph[i]).offset().top;
+                emphOffsetL[i] = $(pfEmph[i]).offset().left;
+                emphWidth[i] = $(pfEmph[i]).outerWidth();
+                emphHeight[i] = $(pfEmph[i]).outerHeight();
+            }
+            emphEffect();
+            interval = setInterval(emphAnimate, 800);
+            console.log(isOn);
+        }, 1000);
+    }
+});
+

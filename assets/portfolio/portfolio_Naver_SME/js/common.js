@@ -186,3 +186,7 @@ function sectionReturn(sectionCheck) {
   return section;
 }
 
+//portfolio global
+
+$('.scrolled .sectionTitle a span.textEmph').addClass("pfEmph");
+document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
