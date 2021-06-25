@@ -190,3 +190,27 @@ function sectionReturn(sectionCheck) {
 
 $('.scrolled .sectionTitle a span.textEmph').addClass("pfEmph");
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
+pfAdjustment();
+
+function pfAdjustment() {
+  let arr = $('.pfEmph');
+  console.log(arr[1]);
+  arr.forEach(element => console.log(element))
+
+
+  $('.scrolled .sectionTitle > a').on('click', function () {
+      $('#kooflix').on('mouseenter', function (e) {
+        $('.emphEffect').addClass('base');
+        if ($(this).parent().parent().find('.slideInSection').hasClass('open') === true) {
+          $(".emphEffect.base").css({  
+          "border" : "none",
+          "box-shadow" : "none",
+        });
+        }
+      });
+
+  });
+  $('.slideInSection > a').on('click', function () {
+    console.log('pf-closed');
+  });
+}

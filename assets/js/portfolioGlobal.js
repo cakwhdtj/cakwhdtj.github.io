@@ -71,7 +71,6 @@ function emphEffect() {
             "box-shadow" : "5px 5px 25px 5px red",
         });
         $(".e" + [i]).css({
-            // "z-index" : emphZindex[i],
             "width" : emphWidth[i], "height" : emphHeight[i], 
             "top" : emphOffsetT[i], "left" : emphOffsetL[i]
         });    
