@@ -57,7 +57,7 @@ navBtn.on("click", function () {
 function pageIndicator() {
   var mainCheck = $("main").attr("class");
   $("nav").append(
-    "<div id='pageIndicator'><a href='index.html'>home</a> > " +
+    "<div id='pageIndicator'><a href='index.html' class='pfEmph'>home</a> > " +
       mainCheck +
       " </div>"
   );

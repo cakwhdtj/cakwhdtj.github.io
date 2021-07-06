@@ -146,7 +146,7 @@ function setImageSlide(selector, first, status, speed, type) {
 
   $selector.find(type + ' > li').each(function (i) {
     if (type === '.slide') { $(this).css({ 'left': (100 * i) + '%', 'display': 'block' }); }
-    $selector.find('.indicator').append('<li><a href="#"><span  class="hide_clipPath">' + (i + 1) + '번 슬라이드</span></a></li>\n');
+    $selector.find('.indicator').append('<li class="pfEmph"><a href="#"><span  class="hide_clipPath">' + (i + 1) + '번 슬라이드</span></a></li>\n');
   });
 
   showSlide(slideFirst);
@@ -284,4 +284,9 @@ $('a[href="#"]').on('click', function (e) {
 
 
 //portfolio global
-document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
+let pfPath = window.location.pathname;
+if (pfPath.includes('page') === false) {
+  document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
+} else if (pfPath.includes('page') === true) {
+  document.write("<script src='../../../../assets/js/portfolioGlobal.js'></script>");
+}

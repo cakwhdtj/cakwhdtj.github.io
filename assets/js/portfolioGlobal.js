@@ -9,25 +9,45 @@ let timer;
 let interval;
 let count = 0;
 let isOn = false;
+let path = window.location.pathname;
+
 
 if (skipNavCheck === "본문바로가기" || skipNavCheck === "본문 바로가기") {
     $("body a").first().after("<a href='https://cakwhdtj.github.io/' id='kooflix'><span>KOOFLIX로 돌아가기</span></a>");
 }
 
 $("#kooflix span").addClass('hide_clipPath');
-$("#kooflix").css({ 
-    "background" : "url(../../img/icons/apple-touch-icon-114x114.png)",
-    "background-size" : "contain",
-    "background-repeat" : "no-repeat",
-    "border-radius" : "50%",
-    "position" : "fixed",
-    "right" : 10, "bottom": 10,
-    "display" : "block", 
-    "width" : "4%", "height" : initialWidth,
-    "z-index" : 999,
-    "opacity" : .5,
-    "transition" : "all .3s ease"
-});
+
+if (path.includes('page') === false) {
+    $("#kooflix").css({ 
+        "background" : "url(../../img/icons/apple-touch-icon-114x114.png)",
+        "background-size" : "contain",
+        "background-repeat" : "no-repeat",
+        "border-radius" : "50%",
+        "position" : "fixed",
+        "right" : 10, "bottom": 10,
+        "display" : "block", 
+        "width" : "4%", "height" : initialWidth,
+        "z-index" : 999,
+        "opacity" : .5,
+        "transition" : "all .3s ease"
+    });
+} else if (path.includes('page') === true) {
+    $("#kooflix").css({ 
+        "background" : "url(../../../img/icons/apple-touch-icon-114x114.png)",
+        "background-size" : "contain",
+        "background-repeat" : "no-repeat",
+        "border-radius" : "50%",
+        "position" : "fixed",
+        "right" : 10, "bottom": 10,
+        "display" : "block", 
+        "width" : "4%", "height" : initialWidth,
+        "z-index" : 999,
+        "opacity" : .5,
+        "transition" : "all .3s ease"
+    });
+}
+
 
 $(window).on("resize", function () {
     let iconWidth = $("#kooflix").width();
@@ -97,7 +117,6 @@ $(window).on("scroll", function () {
             }
             emphEffect();
             interval = setInterval(emphAnimate, 800);
-            console.log(isOn);
         }, 1000);
     }
 });
