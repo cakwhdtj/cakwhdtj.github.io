@@ -193,24 +193,37 @@ document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
 pfAdjustment();
 
 function pfAdjustment() {
-  let arr = $('.pfEmph');
-  console.log(arr[1]);
-  arr.forEach(element => console.log(element))
-
-
-  $('.scrolled .sectionTitle > a').on('click', function () {
-      $('#kooflix').on('mouseenter', function (e) {
-        $('.emphEffect').addClass('base');
-        if ($(this).parent().parent().find('.slideInSection').hasClass('open') === true) {
-          $(".emphEffect.base").css({  
-          "border" : "none",
-          "box-shadow" : "none",
-        });
-        }
-      });
-
-  });
-  $('.slideInSection > a').on('click', function () {
-    console.log('pf-closed');
-  });
+    let arr = $('.pfEmph');
+    let speci = [];
+    for (let i = 0; i < arr.length; i++) {
+        let arrClass = $(arr[i]);
+        arrClass.hasClass('indicator') ? speci.push(i) : false;
+    }
+    
+    $(document).on('mouseover',function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if ($('.slideInSection').hasClass('open') === false) { //안열려있으면
+            for (let i = 0; i < speci.length; i++) {
+                $('.emphEffect.e'+speci[i]).css({
+                    "border" : "none",
+                    "box-shadow" : "none",
+                });
+            }
+        } else if ($('.slideInSection').hasClass('open') === true){//열려있으면
+            for (let i = 0; i < arr.length; i++) {
+                $('.emphEffect.e'+i).css({
+                    "border" : "none",
+                    "box-shadow" : "none",
+                });
+                for (let j = 0; j < speci.length; j++) { 
+                    $('.emphEffect.e'+speci[j]).css({
+                        "border" : "1px solid rgba(254, 11, 24, 0.5)",
+                        "box-shadow" : "5px 5px 25px 5px red",
+                    });
+                }
+            }
+        }     
+    });
 }

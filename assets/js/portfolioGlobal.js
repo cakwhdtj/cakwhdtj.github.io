@@ -34,7 +34,7 @@ $(window).on("resize", function () {
     $("#kooflix").css({"height" : iconWidth});
 });
 
-$("#kooflix").on("mouseenter", function () {
+$("#kooflix").on("mouseenter", function (e) {
     isOn = true;
     for (let i = 0; i < pfEmph.length; i++) {
         emphOffsetT[i] = $(pfEmph[i]).offset().top;
@@ -42,7 +42,6 @@ $("#kooflix").on("mouseenter", function () {
         emphWidth[i] = $(pfEmph[i]).outerWidth();
         emphHeight[i] = $(pfEmph[i]).outerHeight();
     }
-
     emphEffect();
     interval = setInterval(emphAnimate, 500);
 
@@ -58,6 +57,8 @@ $("#kooflix").on("mouseenter", function () {
         });
         $(".emphEffect").remove();
     });
+    // e.preventDefault();
+    // e.stopPropagation();
 });
 
 
@@ -84,7 +85,6 @@ function emphAnimate() {
 }
 
 $(window).on("scroll", function () {
-    // console.log(isOn);
     $(".emphEffect").remove();
     clearTimeout(timer);
     if (isOn === true) {
