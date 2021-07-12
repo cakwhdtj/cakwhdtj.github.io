@@ -68,6 +68,7 @@ body.main #section2 > div {
     display: inline-block;
     width: 100%; max-width: 1440px; position: relative; ;
 }
+body.main #section2 div.news {padding: 10px;}
 body.main #section2 div.news > h2 {text-align: left; font-size: 18px;}
 body.main #section2 div.news ul {width: 100%;}
 body.main #section2 div.news ul li {
@@ -82,6 +83,8 @@ body.main #section2 div.news ul li > a > h3 {
     height: 44px; margin-bottom: 10px;
     color: #333333; font-size: 16px; font-weight: 700; line-height: 22px;
     word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
 }
 body.main #section2 div.news ul li > a > span.date {
     display: block;
@@ -349,7 +352,9 @@ body.sub main#game .image-slide .indicator > li:nth-child(6) a::after {content: 
     position: absolute; top: 20px; left: 20px; width: 30px; height: 30px;
     transition: width .3s ease; transition: left .3s ease; z-index: 3;
 }
-#header #gnbEffect > span {position: absolute; height: 2px; width: 100%; background: #000; left: 0; transition: all .3s ease;}
+#header #gnbEffect > span {position: absolute; height: 2px; width: 100%; background: #fff; left: 0; transition: all .3s ease;}
+#header:hover #gnbEffect > span {background: #000;}
+#header #gnbEffect.on > span {background: #000;}
 #header #gnbEffect > span:nth-child(1) {top: 20%; transform: rotate(0) translate(0,0);}
 #header #gnbEffect > span:nth-child(2) {top: 50%; opacity: 1;}
 #header #gnbEffect > span:nth-child(3) {top: 80%; transform: rotate(0) translate(0,0);}

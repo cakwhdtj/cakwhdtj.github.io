@@ -3,13 +3,13 @@ var resizeWidth = 1023;
 window.onload = function () {
   onloadWidth = window.outerWidth;
 }
-gnbEffect();
+gnbEffect(onloadWidth);
 scroll();
 setImageSlide('body.main div.image-slide:eq(0)', 1, true, 3000);
 setImageSlide('div.galleryBox', 3, true, 2000, 'gallery');
 setImageSlide('body.sub #game .image-slide:eq(0)', 1, false, 1500, 'gallery');
 if (onloadWidth >= 1024) {
-  gnbEffect();
+  gnbEffect(onloadWidth);
   tabIndex();
   $('body.sub #game .indicator li a').on('focus click', function () {
     galleryEvent('body.sub #game .indicator li a');
@@ -19,8 +19,8 @@ if (onloadWidth >= 1024) {
 }
 $(window).on('resize', function () {
   resizeWidth = window.outerWidth;
+  gnbEffect(resizeWidth);
   if (resizeWidth > 1024) {
-    gnbEffect();
     tabIndex();
     $('body.sub #game .indicator li a').on('focus click', function () {
       galleryEvent('body.sub #game .indicator li a');
@@ -30,7 +30,7 @@ $(window).on('resize', function () {
   }
 });
 
-console.log(onloadWidth);
+// console.log(onloadWidth);
 
 
 $('#header').on('mouseover', function () {
@@ -75,7 +75,7 @@ if (onloadWidth < 1024 || resizeWidth < 1024) {
   $('#game .indicator > li > a').on('click', function () {
     var index = $(this).parent().index();
     var scrTop = $('#game #section' + (index + 1)).offset().top;
-    console.log(scrTop);
+    // console.log(scrTop);
   });
 }
 
@@ -141,16 +141,14 @@ function setImageSlide(selector, first, status, speed, type) {
   var slideScrollOn = $selector.find('.galScroll');
   var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll';
   var isBlocked = false;
-  var isMoustOver = false;
+  var isMouseOver = false;
   var passive = true;
 
   $selector.find(type + ' > li').each(function (i) {
     if (type === '.slide') { $(this).css({ 'left': (100 * i) + '%', 'display': 'block' }); }
     $selector.find('.indicator').append('<li class="pfEmph"><a href="#"><span  class="hide_clipPath">' + (i + 1) + '번 슬라이드</span></a></li>\n');
   });
-
   showSlide(slideFirst);
-
   $selector.find(type + ' > li:eq(' + (slideFirst - 1) + ')').addClass('on');
   $selector.find('.indicator li a').on('click focus', function () {
     var index = $selector.find('.indicator li').index($(this).parent());
@@ -162,12 +160,11 @@ function setImageSlide(selector, first, status, speed, type) {
   $selector.find('a.next').on('click', function () {
     showSlide(slideNext);
   });
-
-  $(document).ready(function () { isMoustOver = true; });
+  $(document).ready(function () { isMouseOver = true; });
   $selector.on('mouseover', function () {
-    if ($('body.sub #game .indicator li:last-child').attr('class') !== 'on') isMoustOver = true;
+    if ($('body.sub #game .indicator li:last-child').attr('class') !== 'on') isMouseOver = true;
     $(this).on('mouseleave', function () {
-      isMoustOver = false;
+      isMouseOver = false;
     });
   });
   if (slideScrollOn.length === 1) {
@@ -180,15 +177,14 @@ function setImageSlide(selector, first, status, speed, type) {
     window.addEventListener(scrollEvent, function (e) {
       var scrollAmt = $(document).scrollTop();
       var bottom = $(document).height() - $(window).height();
-      console.log('blocked = ' + isBlocked, '/ mover = ' + isMoustOver, scrollAmt);
+      // console.log('bottom = ' + bottom + ' / scrollAmt = ' + scrollAmt)
       if (scrollAmt === bottom) hitBottom = true;
-      if (scrollAmt === 0 && hitBottom === true) {
-        isMoustOver = true;
+      if (scrollAmt === 0 && hitBottom === true) { //스크롤이 다시 맨 위로 갔을때
+        isMouseOver = true;
         isBlocked = false;
         hitBottom = false;
       }
-      console.log(hitBottom);
-      if (isMoustOver === false) return false;
+      if (isMouseOver === false) return false;
       e.preventDefault();
       if (isBlocked === true) return false;
       isBlocked = true;
@@ -198,16 +194,21 @@ function setImageSlide(selector, first, status, speed, type) {
       } else {
         delta = e.detail / 3;
       }
-      if (delta > 0) {
-        if ($('body.sub #game .indicator li:last-child').attr('class') !== 'on') {
+      console.log('delta = ' + delta);
+      console.log(slideNow)
+      if (delta > 0) { // 스크롤을 내릴때 
+        if (slideNow === (numSlide - 1)) {
+          console.log('hihi');
+        }
+        if ($('body.sub #game .indicator li:last-child').attr('class') !== 'on') { //마지막 슬라이드가 on이 아닐때
           isBlocked = true;
           showSlide(slideNext);
           timerId = setTimeout(function () { isBlocked = false; }, timerSpeed);
         } else {
           isBlocked = true;
-          isMoustOver = false;
+          isMouseOver = false;
         }
-      } else if (delta < 0) {
+      } else if (delta < 0) { //스크롤을 올릴때
         isBlocked = true;
         showSlide(slidePrev);
         timerId = setTimeout(function () { isBlocked = false; }, timerSpeed);
@@ -237,19 +238,20 @@ function setImageSlide(selector, first, status, speed, type) {
     }
   }
 }
-function gnbEffect() {
+function gnbEffect(widthCheck) {
+  $('#gnbEffect').remove();
   var offsetLeft = [];
   var width = [];
   var top = [];
   var index = 0;
-  if (onloadWidth < 1024 || resizeWidth < 1024) {
+  if (widthCheck < 1024) {
     $('<div id="gnbEffect"><span></span><span></span><span></span></div>').appendTo('#header');
     $('#gnbEffect').on('click', function () {
       $(this).toggleClass('on');
       $('.gnb').toggleClass('on');
       $('#header').toggleClass('bg');
     });
-  } else {
+  } else if (widthCheck >= 1024) {
     $('<div id="gnbEffect"></div>').appendTo('#header');
     $('.gnb > li').on('mouseover', function () {
       $('.gnb > li > a > span').each(function (i) {

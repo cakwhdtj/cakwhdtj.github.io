@@ -10,6 +10,7 @@ let interval;
 let count = 0;
 let isOn = false;
 let path = window.location.pathname;
+let bgPath;
 
 
 if (skipNavCheck === "본문바로가기" || skipNavCheck === "본문 바로가기") {
@@ -17,36 +18,25 @@ if (skipNavCheck === "본문바로가기" || skipNavCheck === "본문 바로가�
 }
 
 $("#kooflix span").addClass('hide_clipPath');
-
 if (path.includes('page') === false) {
-    $("#kooflix").css({ 
-        "background" : "url(../../img/icons/apple-touch-icon-114x114.png)",
-        "background-size" : "contain",
-        "background-repeat" : "no-repeat",
         "border-radius" : "50%",
-        "position" : "fixed",
-        "right" : 10, "bottom": 10,
-        "display" : "block", 
-        "width" : "4%", "height" : initialWidth,
-        "z-index" : 999,
-        "opacity" : .5,
-        "transition" : "all .3s ease"
-    });
+    bgPath = "url(../../img/icons/apple-touch-icon-114x114.png)";
 } else if (path.includes('page') === true) {
-    $("#kooflix").css({ 
-        "background" : "url(../../../img/icons/apple-touch-icon-114x114.png)",
-        "background-size" : "contain",
-        "background-repeat" : "no-repeat",
-        "border-radius" : "50%",
-        "position" : "fixed",
-        "right" : 10, "bottom": 10,
-        "display" : "block", 
-        "width" : "4%", "height" : initialWidth,
-        "z-index" : 999,
-        "opacity" : .5,
-        "transition" : "all .3s ease"
-    });
+    bgPath = "url(../../../img/icons/apple-touch-icon-114x114.png)";
 }
+$("#kooflix").css({ 
+    "background" : bgPath,
+    "background-size" : "contain",
+    "background-repeat" : "no-repeat",
+    "border-radius" : "50%",
+    "position" : "fixed",
+    "right" : 10, "bottom": 10,
+    "display" : "block", 
+    "width" : "4%", "height" : initialWidth,
+    "z-index" : 999,
+    "opacity" : .5,
+    "transition" : "all .3s ease"
+});
 
 
 $(window).on("resize", function () {
