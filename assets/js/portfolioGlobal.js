@@ -19,29 +19,28 @@ if (skipNavCheck === "본문바로가기" || skipNavCheck === "본문 바로가�
 
 $("#kooflix span").addClass('hide_clipPath');
 if (path.includes('page') === false) {
-        "border-radius" : "50%",
     bgPath = "url(../../img/icons/apple-touch-icon-114x114.png)";
 } else if (path.includes('page') === true) {
     bgPath = "url(../../../img/icons/apple-touch-icon-114x114.png)";
 }
-$("#kooflix").css({ 
-    "background" : bgPath,
-    "background-size" : "contain",
-    "background-repeat" : "no-repeat",
-    "border-radius" : "50%",
-    "position" : "fixed",
-    "right" : 10, "bottom": 10,
-    "display" : "block", 
-    "width" : "4%", "height" : initialWidth,
-    "z-index" : 999,
-    "opacity" : .5,
-    "transition" : "all .3s ease"
+$("#kooflix").css({
+    "background": bgPath,
+    "background-size": "contain",
+    "background-repeat": "no-repeat",
+    "border-radius": "50%",
+    "position": "fixed",
+    "right": 10, "bottom": 10,
+    "display": "block",
+    "width": "4%", "height": initialWidth,
+    "z-index": 999,
+    "opacity": .5,
+    "transition": "all .3s ease"
 });
 
 
 $(window).on("resize", function () {
     let iconWidth = $("#kooflix").width();
-    $("#kooflix").css({"height" : iconWidth});
+    $("#kooflix").css({ "height": iconWidth });
 });
 
 $("#kooflix").on("mouseenter", function (e) {
@@ -56,14 +55,14 @@ $("#kooflix").on("mouseenter", function (e) {
     interval = setInterval(emphAnimate, 500);
 
     $(this).css({
-        "opacity" : 1,
-        "transform" : "scale(1.2)"
+        "opacity": 1,
+        "transform": "scale(1.2)"
     });
     $(this).on('mouseleave', function () {
         isOn = false;
         $(this).css({
-            "opacity" : .5,
-            "transform" : "none"
+            "opacity": .5,
+            "transform": "none"
         });
         $(".emphEffect").remove();
     });
@@ -73,24 +72,24 @@ $("#kooflix").on("mouseenter", function (e) {
 
 
 function emphEffect() {
-       for (let i = 0; i < pfEmph.length; i++) {
+    for (let i = 0; i < pfEmph.length; i++) {
         $("body").append("<div class='emphEffect " + "e" + [i] + "'></div>");
         $(".emphEffect").css({
-            "position" : "absolute",
-            "opacity" : .7,
-            "border" : "1px solid rgba(254, 11, 24, 0.5)",
-            "box-shadow" : "5px 5px 25px 5px red",
+            "position": "absolute",
+            "opacity": .7,
+            "border": "1px solid rgba(254, 11, 24, 0.5)",
+            "box-shadow": "5px 5px 25px 5px red",
         });
         $(".e" + [i]).css({
-            "width" : emphWidth[i], "height" : emphHeight[i], 
-            "top" : emphOffsetT[i], "left" : emphOffsetL[i]
-        });    
-    } 
+            "width": emphWidth[i], "height": emphHeight[i],
+            "top": emphOffsetT[i], "left": emphOffsetL[i]
+        });
+    }
 }
 function emphAnimate() {
     for (let i = 0; i < pfEmph.length; i++) {
-        $(".e"+ [i]).fadeOut(500, 0);
-        $(".e"+ [i]).fadeIn(300, 0);
+        $(".e" + [i]).fadeOut(500, 0);
+        $(".e" + [i]).fadeIn(300, 0);
     }
 }
 
@@ -98,7 +97,7 @@ $(window).on("scroll", function () {
     $(".emphEffect").remove();
     clearTimeout(timer);
     if (isOn === true) {
-        timer = setTimeout(function() {
+        timer = setTimeout(function () {
             for (let i = 0; i < pfEmph.length; i++) {
                 emphOffsetT[i] = $(pfEmph[i]).offset().top;
                 emphOffsetL[i] = $(pfEmph[i]).offset().left;
