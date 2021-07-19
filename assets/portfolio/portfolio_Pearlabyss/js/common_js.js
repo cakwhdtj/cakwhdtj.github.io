@@ -56,18 +56,17 @@ $('.gnb').clone().prependTo('#footer');
 $('#goTop').on('click', function () {
   $('body, html').animate({ 'scrollTop': 0 }, 500);
 });
-if (onloadWidth < 1024 || resizeWidth < 1024) {
+if (onloadWidth < 1024 || resizeWidth < 1024) { //mobile
   mobileAdd();
   $('.gnb > li > a').on('click', function () {
     $(this).parent().siblings('.on').removeClass('on');
     $(this).parent().toggleClass('on');
   });
   $('#game .indicator > li > a').on('click', function () {
-    var index = $(this).parent().index();
-    var scrTop = $('#game #section' + (index + 1)).offset().top;
-    // console.log(scrTop);
+    let index = $(this).parent().index();
+    let scrGoTo = ($('#game .galScroll > li:eq(' + index + ')').offset().top) - $('#header').height();
+    $('body, html').animate({ 'scrollTop': scrGoTo }, 500);
   });
-
 }
 
 function mobileAdd() {
@@ -166,14 +165,9 @@ function setImageSlide(selector, first, status, speed, type) {
   function galleryScroll(ToF) {
     var hitBottom = false;
     window.addEventListener(scrollEvent, function (e) {
+      if (onloadWidth < 1024 || resizeWidth < 1024) return false;
       var scrollAmt = $(document).scrollTop();
       var bottom = $(document).height() - $(window).height();
-      if (scrollAmt >= ($('#footer').offset().top - (130 + $('body.sub #game .indicator').height()))) {
-        $('body.sub #game .indicator').css({
-          'position': 'absolute',
-          'bottom': ($('#footer').offset().top - (130 + $('body.sub #game .indicator').height()) + 'px'),
-        });
-      }
       if (scrollAmt === bottom) hitBottom = true;
       if (scrollAmt === 0 && hitBottom === true) { //스크롤이 다시 맨 위로 갔을때
         isMouseOver = true;
@@ -190,8 +184,6 @@ function setImageSlide(selector, first, status, speed, type) {
       } else {
         delta = e.detail / 3;
       }
-      // console.log('delta = ' + delta);
-      // console.log(slideNow)
       if (delta > 0) { // 스크롤을 내릴때 
         if (slideNow === (numSlide - 1)) {
           timerId = setTimeout(function () {
@@ -211,9 +203,6 @@ function setImageSlide(selector, first, status, speed, type) {
       }
       $('body.sub #game .gallery li.next').removeClass('next');
       $('body.sub #game .gallery li.on ~ li').addClass('next');
-      // if (($('body.sub #game .indicator').offset().top) + ($('body.sub #game .indicator').height()) >= $('#footer').offset().top) {
-      //   console.log('hi')
-      // }
     }, { 'passive': ToF });
   }
   function showSlide(n) {
