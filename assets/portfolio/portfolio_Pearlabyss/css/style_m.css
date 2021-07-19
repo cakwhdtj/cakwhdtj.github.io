@@ -9,7 +9,6 @@ li {list-style: none;}
 
 .hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
 /* main */
-
 body {font-family: 'Noto Sans KR', 'NanumSquare', sans-serif; width: 100vw; overflow-x: hidden;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
@@ -483,6 +482,7 @@ body.sub #header h1 a {background-image: url(../img/logo_black.svg);}
 body.sub #header ul.gnb > li > a {color: #111111;}
 body.sub #header p a.on {color: #111111;}
 body.sub #header p span {color: #111111;}
+body.sub #header #gnbEffect > span {background: #000;}
 
 
 /* keyframes */

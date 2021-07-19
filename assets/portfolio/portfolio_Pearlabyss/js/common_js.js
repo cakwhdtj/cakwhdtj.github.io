@@ -29,10 +29,6 @@ $(window).on('resize', function () {
     });
   }
 });
-
-// console.log(onloadWidth);
-
-
 $('#header').on('mouseover', function () {
   $(this).addClass('on');
 });
@@ -41,7 +37,6 @@ $('#header').on('mouseleave', function () {
 });
 $('.gnb > li > a').on('mouseover focus', function () {
   $(this).closest('header').addClass('on');
-
   $('#header p a:last-child').on('focusout', function () {
     $(this).closest('header').removeClass('on');
   });
@@ -50,22 +45,17 @@ $('#header p > a').on('click', function () {
   $(this).parent().find('.on').removeClass('on')
   $(this).addClass('on');
 });
-
 $('#game .gallery > li > a').on('mouseover focusin', function () {
   $(this).parent().siblings('.on').removeClass('on');
   $(this).parent().addClass('on');
 });
-
 $('#game .gallery > li > a').on('mouseleave focusout', function () {
   $(this).parent().removeClass('on');
 });
-
 $('.gnb').clone().prependTo('#footer');
-
 $('#goTop').on('click', function () {
   $('body, html').animate({ 'scrollTop': 0 }, 500);
 });
-
 if (onloadWidth < 1024 || resizeWidth < 1024) {
   mobileAdd();
   $('.gnb > li > a').on('click', function () {
@@ -77,11 +67,11 @@ if (onloadWidth < 1024 || resizeWidth < 1024) {
     var scrTop = $('#game #section' + (index + 1)).offset().top;
     // console.log(scrTop);
   });
+
 }
 
 function mobileAdd() {
   $('<i class="fas fa-angle-up mobile_only"></i>').appendTo('.gnb > li > a');
-
 }
 
 function galleryEvent(selector) {
@@ -93,6 +83,7 @@ function galleryEvent(selector) {
     $selector.find(' i').remove();
   });
 }
+
 function tabIndex() {
   $('body.sub #game a').on('focus click', function () {
     var arr = $(this).parents();
@@ -177,7 +168,12 @@ function setImageSlide(selector, first, status, speed, type) {
     window.addEventListener(scrollEvent, function (e) {
       var scrollAmt = $(document).scrollTop();
       var bottom = $(document).height() - $(window).height();
-      // console.log('bottom = ' + bottom + ' / scrollAmt = ' + scrollAmt)
+      if (scrollAmt >= ($('#footer').offset().top - (130 + $('body.sub #game .indicator').height()))) {
+        $('body.sub #game .indicator').css({
+          'position': 'absolute',
+          'bottom': ($('#footer').offset().top - (130 + $('body.sub #game .indicator').height()) + 'px'),
+        });
+      }
       if (scrollAmt === bottom) hitBottom = true;
       if (scrollAmt === 0 && hitBottom === true) { //스크롤이 다시 맨 위로 갔을때
         isMouseOver = true;
@@ -194,19 +190,19 @@ function setImageSlide(selector, first, status, speed, type) {
       } else {
         delta = e.detail / 3;
       }
-      console.log('delta = ' + delta);
-      console.log(slideNow)
+      // console.log('delta = ' + delta);
+      // console.log(slideNow)
       if (delta > 0) { // 스크롤을 내릴때 
         if (slideNow === (numSlide - 1)) {
-          console.log('hihi');
+          timerId = setTimeout(function () {
+            isBlocked = true;
+            isMouseOver = false;
+          }, timerSpeed);
         }
         if ($('body.sub #game .indicator li:last-child').attr('class') !== 'on') { //마지막 슬라이드가 on이 아닐때
           isBlocked = true;
           showSlide(slideNext);
           timerId = setTimeout(function () { isBlocked = false; }, timerSpeed);
-        } else {
-          isBlocked = true;
-          isMouseOver = false;
         }
       } else if (delta < 0) { //스크롤을 올릴때
         isBlocked = true;
@@ -215,6 +211,9 @@ function setImageSlide(selector, first, status, speed, type) {
       }
       $('body.sub #game .gallery li.next').removeClass('next');
       $('body.sub #game .gallery li.on ~ li').addClass('next');
+      // if (($('body.sub #game .indicator').offset().top) + ($('body.sub #game .indicator').height()) >= $('#footer').offset().top) {
+      //   console.log('hi')
+      // }
     }, { 'passive': ToF });
   }
   function showSlide(n) {
