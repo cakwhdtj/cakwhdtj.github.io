@@ -62,11 +62,6 @@ if (onloadWidth < 1024 || resizeWidth < 1024) { //mobile
     $(this).parent().siblings('.on').removeClass('on');
     $(this).parent().toggleClass('on');
   });
-  $('#game .indicator > li > a').on('click', function () {
-    let index = $(this).parent().index();
-    let scrGoTo = ($('#game .galScroll > li:eq(' + index + ')').offset().top) - $('#header').height();
-    $('body, html').animate({ 'scrollTop': scrGoTo }, 500);
-  });
 }
 
 function mobileAdd() {
@@ -164,10 +159,34 @@ function setImageSlide(selector, first, status, speed, type) {
 
   function galleryScroll(ToF) {
     var hitBottom = false;
+    let array = [];
+    for (let i = 0; i < $('#game .indicator > li').length; i++) {
+      array[i] = $('.galScroll > li:eq(' + i + ')').offset().top;
+    }
+    array.push($(document).height());
     window.addEventListener(scrollEvent, function (e) {
-      if (onloadWidth < 1024 || resizeWidth < 1024) return false;
       var scrollAmt = $(document).scrollTop();
       var bottom = $(document).height() - $(window).height();
+      if (window.outerWidth < 1024) {
+        $('#game .indicator > li.on').removeClass('on');
+        $('.stick').css({
+          'position': 'absolute',
+          'top': ($('#footer').offset().top - ($('#game .indicator').height() + 30)),
+        });
+        for (let i = 0; i < $('#game .indicator > li').length; i++) {
+          if ((scrollAmt + $('#header').height()) > array[i] && ((scrollAmt + $('#header').height()) < array[i + 1])) {
+            $('#game .indicator > li:eq(' + i + ')').addClass('on');
+          }
+        }
+        if ($('#footer').offset().top <= ($('#game .indicator').offset().top + $('#game .indicator').height() + 30)) {
+          $('#game .indicator').addClass('stick');
+          if (scrollAmt < ($('#footer').offset().top - $('#game .indicator').height() - 100)) {
+            $('#game .indicator').removeClass('stick');
+            $('#game .indicator').removeAttr('style');
+          }
+        }
+        return false;
+      }
       if (scrollAmt === bottom) hitBottom = true;
       if (scrollAmt === 0 && hitBottom === true) { //스크롤이 다시 맨 위로 갔을때
         isMouseOver = true;
@@ -212,6 +231,11 @@ function setImageSlide(selector, first, status, speed, type) {
       } else {
         $selector.find(type).css({ 'transition': 'left 0.5s', 'left': -((n - 1) * 100) + '%' });
       }
+    }
+    if (type === '.gallery' && window.outerWidth < 1024) {
+      let scrGoTo = ($('#game .galScroll > li:eq(' + (n - 1) + ')').offset().top) - $('#header').height();
+      $('body, html').animate({ 'scrollTop': scrGoTo }, 500);
+      console.log('hi')
     }
     $selector.find('.indicator li').removeClass('on');
     $selector.find('.indicator li:eq(' + (n - 1) + ')').addClass('on');

@@ -224,7 +224,7 @@ body.sub main#game .image-slide .box ul.gallery > li.on div.features .featureBtn
     animation-name: bottomIn; animation-duration: .8s; animation-delay: .25s;
 }
 body.sub main#game .image-slide .box ul.gallery > li div.features .featureBtn a::after{
-    content: ''; position: absolute; bottom: 0; width: 100%; height: 0; 
+    content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 0; 
     background: rgba(255, 255, 255, 0.3); transition: all .3s ease;
 }
 body.sub main#game .image-slide .box ul.gallery > li div.features .featureBtn a:hover::after {
@@ -251,7 +251,7 @@ body.sub main#game .image-slide .box ul.gallery > li div.features .appLinks li:n
 body.sub main#game .image-slide .box ul.gallery > li div.features .appLinks li:nth-child(4) {background-position: -914px -160px;}
 
 body.sub main#game .image-slide .box ul.gallery > li:nth-child(1) {background: url(../img/sub/slide1bg.jpg) no-repeat top center; background-size: cover;}
-body.sub main#game .image-slide .box ul.gallery > li:nth-child(1)::before {background: url(../img/sub/slide1.png) no-repeat left center;  background-size: 150%;}
+body.sub main#game .image-slide .box ul.gallery > li:nth-child(1)::before {background: url(../img/sub/slide1.png) no-repeat left center;  background-size: 120%;}
 body.sub main#game .image-slide .box ul.gallery > li:nth-child(1) div.features::before {width: 192px; height: 58px; background-position: 0 0;}
 body.sub main#game .image-slide .box ul.gallery > li:nth-child(2) {background: url(../img/sub/slide2bg.jpg) no-repeat top center; background-size: cover;}
 body.sub main#game .image-slide .box ul.gallery > li:nth-child(2)::before {background: url(../img/sub/slide2.png) no-repeat 10% 140%; background-size: 150%;}
