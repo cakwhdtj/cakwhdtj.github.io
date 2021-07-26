@@ -3,3 +3,5 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+dev-react-pages/node_modules/
+dev-react-pages/build/

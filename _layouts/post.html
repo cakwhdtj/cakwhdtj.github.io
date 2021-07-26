@@ -1,125 +1,138 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}" class="no-js">
-    {% include head.html %}
-    <body class="has-push-menu">
-        {% include minutes-to-read.html %}
-        {% include svg-icons.html %}
-        {% include header.html %}
+{% include head.html %}
 
-        <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
-            <article role="article" class="post-content">
-                <p class="post-info">
-                    {% if page.date %}
-                        <!-- <svg class="icon-calendar" id="date"><use xlink:href="#icon-calendar"></use></svg> -->
-                        <!-- <time class="date" datetime="{{ page.date | date_to_xmlschema }}">
+<body class="has-push-menu">
+    {% include minutes-to-read.html %}
+    {% include svg-icons.html %}
+    {% include header.html %}
+
+    <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
+        <article role="article" class="post-content">
+            <p class="post-info">
+                {% if page.date %}
+                <!-- <svg class="icon-calendar" id="date"><use xlink:href="#icon-calendar"></use></svg> -->
+                <!-- <time class="date" datetime="{{ page.date | date_to_xmlschema }}">
                             {% include date.html date=page.date %}
                         </time> -->
-                    {% endif %}
-                    <svg id="clock" class="icon-clock"><use xlink:href="#icon-clock"></use></svg>
-                    <span>{{ minutesText }}</span>
-                </p>
-                <h1 class="post-title">{{ page.title }}</h1>
-                <p class="post-subtitle">{{ page.subtitle }}</p>
-
-                {% if page.image and paginator.activated == nil %}
-                    <img src="{{ page.image }}" alt="Featured image" class="post-cover">
                 {% endif %}
+                <svg id="clock" class="icon-clock">
+                    <use xlink:href="#icon-clock"></use>
+                </svg>
+                <span>{{ minutesText }}</span>
+            </p>
+            <h1 class="post-title">{{ page.title }}</h1>
+            <p class="post-subtitle">{{ page.subtitle }}</p>
 
-                {% include pagination-post.html progressBar=true %}
-
-                {% include toc.html %}
-
-                {{ content }}
-                {% if page.category == "portfolio" %}
-                        <p>
-                            <sub>우측 하단에 버튼에 hover하시면 서브페이지가 있는 링크는 강조됩니다. 클릭하면 인트로 페이지로 돌아오실 수 있습니다.</sub>
-                        </p>
-                {% endif %}
-                {% include pagination-post.html %}
-            </article>
-
-            {% if site.two_columns_layout %}
-                <aside class="see-also">
-                    <h2>{{ site.translations.text.see_also | default: "See also" }}</h2>
-                    <ul>
-                        {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" %}
-                        {% assign shuffled_array = next_posts | shuffle %}
-                        {% for post in shuffled_array limit:3 %}
-                            <li>
-                                <a href="{{ post.url | prepend: site.baseurl }}">
-                                    {% if post.optimized_image %}
-                                        <img src="{{ post.optimized_image }}">
-                                    {% elsif post.image %}
-                                        <img src="{{ post.image }}">
-                                    {% else %}
-                                        <img src="/assets/img/off.jpg">
-                                    {% endif %}
-                                    <h3>{{ post.title }}</h3>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </aside>
+            {% if page.image and paginator.activated == nil %}
+            <img src="{{ page.image }}" alt="Featured image" class="post-cover">
             {% endif %}
 
-        </section>
+            {% include pagination-post.html progressBar=true %}
 
-        <!-- Add time bar only for pages without pagination -->
-        {% if paginator.activated == nil and site.show_time_bar == true %}
-            {% include time-bar.html %}
-            {% include recommendation.html %}
+            {% include toc.html %}
+
+            {{ content }}
+            {% if page.category == "portfolio" %}
+            <p>
+                <sub>우측 하단에 버튼(<img src="../assets/img/icons/favicon-16x16.png" alt=""
+                        style="display: inline-block; padding-top: 20px; margin-bottom: -13px;">)에
+                    hover하시면 버튼이나 요소가 강조됩니다. 클릭하면
+                    인트로 페이지로 돌아오실 수 있습니다.</sub>
+            </p>
+            {% endif %}
+            {% include pagination-post.html %}
+        </article>
+
+        {% if site.two_columns_layout %}
+        <aside class="see-also">
+            <h2>{{ site.translations.text.see_also | default: "See also" }}</h2>
+            <ul>
+                {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" |
+                where_exp:"post","post.path != page.path" %}
+                {% assign shuffled_array = next_posts | shuffle %}
+                {% for post in shuffled_array limit:3 %}
+                <li>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        {% if post.optimized_image %}
+                        <img src="{{ post.optimized_image }}">
+                        {% elsif post.image %}
+                        <img src="{{ post.image }}">
+                        {% else %}
+                        <img src="/assets/img/off.jpg">
+                        {% endif %}
+                        <h3>{{ post.title }}</h3>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </aside>
         {% endif %}
 
-        <!-- Show modal if the post is the last one -->
-        {% if paginator.is_last and site.show_modal_on_finish_post %}
-            {% include modal.html title="You made it!" subtitle="Why don't you try another?" %}
-        {% endif %}
+    </section>
 
-        <!-- Show modal before user leaves the page -->
-        {% if site.show_modal_on_exit %}
-            {% include modal.html title="Don't go yet!" subtitle="You may also like..." closed=true showOnExit=true %}
-        {% endif %}
+    <!-- Add time bar only for pages without pagination -->
+    {% if paginator.activated == nil and site.show_time_bar == true %}
+    {% include time-bar.html %}
+    {% include recommendation.html %}
+    {% endif %}
 
-        {% include subscription.html %}
-        <!-- {% include share.html %} -->
-        {% include author.html %}
-        {% include comments.html %}
-        {% include footer.html %}
+    <!-- Show modal if the post is the last one -->
+    {% if paginator.is_last and site.show_modal_on_finish_post %}
+    {% include modal.html title="You made it!" subtitle="Why don't you try another?" %}
+    {% endif %}
 
-        {% assign author = site.authors | where: "name", post.author | first %}
+    <!-- Show modal before user leaves the page -->
+    {% if site.show_modal_on_exit %}
+    {% include modal.html title="Don't go yet!" subtitle="You may also like..." closed=true showOnExit=true %}
+    {% endif %}
 
-        {% assign author_urls = '' %}
-        {% if author.github_username %}
-            {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",' %}
-        {% endif %}
-        {% if author.facebook_username %}
-            {% assign author_urls = author_urls | append: '"https://www.facebook.com/' | append: author.facebook_username | append: '",' %}
-        {% endif %}
-        {% if author.twitter_username %}
-            {% assign author_urls = author_urls | append: '"https://twitter.com/' | append: author.twitter_username | append: '",' %}
-        {% endif %}
-        {% if author.medium_username %}
-            {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: author.medium_username | append: '",' %}
-        {% endif %}
-        {% if author.instagram_username %}
-            {% assign author_urls = author_urls | append: '"https://www.instagram.com/' | append: author.instagram_username | append: '",' %}
-        {% endif %}
-        {% if author.linkedin_username %}
-            {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: author.linkedin_username | append: '",' %}
-        {% endif %}
-        {% if page.math %}
-        <script>
-            MathJax = {
-                tex: {
+    {% include subscription.html %}
+    <!-- {% include share.html %} -->
+    {% include author.html %}
+    {% include comments.html %}
+    {% include footer.html %}
+
+    {% assign author = site.authors | where: "name", post.author | first %}
+
+    {% assign author_urls = '' %}
+    {% if author.github_username %}
+    {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",'
+    %}
+    {% endif %}
+    {% if author.facebook_username %}
+    {% assign author_urls = author_urls | append: '"https://www.facebook.com/' | append: author.facebook_username |
+    append: '",' %}
+    {% endif %}
+    {% if author.twitter_username %}
+    {% assign author_urls = author_urls | append: '"https://twitter.com/' | append: author.twitter_username | append:
+    '",' %}
+    {% endif %}
+    {% if author.medium_username %}
+    {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: author.medium_username | append:
+    '",' %}
+    {% endif %}
+    {% if author.instagram_username %}
+    {% assign author_urls = author_urls | append: '"https://www.instagram.com/' | append: author.instagram_username |
+    append: '",' %}
+    {% endif %}
+    {% if author.linkedin_username %}
+    {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: author.linkedin_username |
+    append: '",' %}
+    {% endif %}
+    {% if page.math %}
+    <script>
+        MathJax = {
+            tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
-        <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script>
-        {% endif %}
-        <script type="application/ld+json">
+    {% endif %}
+    <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "BlogPosting",
@@ -165,5 +178,6 @@
             "keywords": [{{ page.tags | join: '","' | append: '"' | prepend: '"' }}]
         }
         </script>
-    </body>
+</body>
+
 </html>
