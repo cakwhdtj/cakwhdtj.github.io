@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Contlist extends Component {
+class MenuList extends Component {
     render() {
         var lists = [];
         var data = this.props.data;
@@ -10,11 +10,11 @@ class Contlist extends Component {
             i = i + 1;
         }
         return (
-            <ul className="Contlist">
+            <ul className="MenuList">
                 {lists}
             </ul>
         );
     }
 }
 
-export default Contlist;
+export default MenuList;
