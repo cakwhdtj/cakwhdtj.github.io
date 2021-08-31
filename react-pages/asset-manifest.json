@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-pages/static/css/main.a617e044.chunk.css",
-    "main.js": "/react-pages/static/js/main.6b0ae8cb.chunk.js",
-    "main.js.map": "/react-pages/static/js/main.6b0ae8cb.chunk.js.map",
-    "runtime-main.js": "/react-pages/static/js/runtime-main.490813dc.js",
-    "runtime-main.js.map": "/react-pages/static/js/runtime-main.490813dc.js.map",
-    "static/js/2.0b927ed2.chunk.js": "/react-pages/static/js/2.0b927ed2.chunk.js",
-    "static/js/2.0b927ed2.chunk.js.map": "/react-pages/static/js/2.0b927ed2.chunk.js.map",
-    "static/js/3.70f401e2.chunk.js": "/react-pages/static/js/3.70f401e2.chunk.js",
-    "static/js/3.70f401e2.chunk.js.map": "/react-pages/static/js/3.70f401e2.chunk.js.map",
+    "main.css": "/react-pages/static/css/main.4ef53d40.chunk.css",
+    "main.js": "/react-pages/static/js/main.b01a4e62.chunk.js",
+    "main.js.map": "/react-pages/static/js/main.b01a4e62.chunk.js.map",
+    "runtime-main.js": "/react-pages/static/js/runtime-main.a02a992c.js",
+    "runtime-main.js.map": "/react-pages/static/js/runtime-main.a02a992c.js.map",
+    "static/js/2.72705a24.chunk.js": "/react-pages/static/js/2.72705a24.chunk.js",
+    "static/js/2.72705a24.chunk.js.map": "/react-pages/static/js/2.72705a24.chunk.js.map",
+    "static/js/3.f3869374.chunk.js": "/react-pages/static/js/3.f3869374.chunk.js",
+    "static/js/3.f3869374.chunk.js.map": "/react-pages/static/js/3.f3869374.chunk.js.map",
     "index.html": "/react-pages/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/react-pages/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.0b927ed2.chunk.js.LICENSE.txt": "/react-pages/static/js/2.0b927ed2.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/react-pages/static/media/logo.6ce24c58.svg"
+    "static/css/main.4ef53d40.chunk.css.map": "/react-pages/static/css/main.4ef53d40.chunk.css.map",
+    "static/js/2.72705a24.chunk.js.LICENSE.txt": "/react-pages/static/js/2.72705a24.chunk.js.LICENSE.txt",
+    "static/media/web-font.css": "/react-pages/static/media/NotoSansKR-Regular.e95adf0e.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.490813dc.js",
-    "static/js/2.0b927ed2.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.6b0ae8cb.chunk.js"
+    "static/js/runtime-main.a02a992c.js",
+    "static/js/2.72705a24.chunk.js",
+    "static/css/main.4ef53d40.chunk.css",
+    "static/js/main.b01a4e62.chunk.js"
   ]
 }
