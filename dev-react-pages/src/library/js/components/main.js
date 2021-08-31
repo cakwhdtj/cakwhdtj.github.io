@@ -24,13 +24,30 @@ class Main extends Component {
                 { id: 7, title: 'step 7', desc: 'imgae-slide' },
                 { id: 8, title: 'step 8', desc: 'imgae-slide' },
                 { id: 9, title: 'step 9', desc: 'imgae-slide' },
+                { id: 10, title: 'step 10', desc: 'imgae-slide' },
+            ],
+            bannerSlide: [
+                { id: 1, title: 'step 1', desc: 'banner-slide' },
+                { id: 2, title: 'step 2', desc: 'banner-slide' },
+                { id: 3, title: 'step 3', desc: 'banner-slide' },
+                { id: 4, title: 'step 4', desc: 'banner-slide' },
+                { id: 5, title: 'step 5', desc: 'banner-slide' },
+                { id: 6, title: 'step 6', desc: 'banner-slide' },
+            ],
+            scrollUI: [
+                { id: 1, title: 'step 1', desc: 'scroll-UI' },
+                { id: 2, title: 'step 2', desc: 'scroll-UI' },
+                { id: 3, title: 'step 3', desc: 'scroll-UI' },
+                { id: 4, title: 'step 4', desc: 'scroll-UI' },
+                { id: 5, title: 'step 5', desc: 'scroll-UI' },
+                { id: 6, title: 'step 6', desc: 'scroll-UI' },
             ],
         }
     }
     render() {
         return (
             <main className="Main">
-                <Subheading menu={this.state.subheadings} content={this.state.imageSlide}></Subheading>
+                <Subheading menu={this.state.subheadings} content1={this.state.imageSlide} content2={this.state.bannerSlide} content3={this.state.scrollUI}></Subheading>
             </main >
         )
     }

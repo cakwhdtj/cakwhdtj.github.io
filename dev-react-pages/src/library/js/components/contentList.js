@@ -21,14 +21,21 @@ class Subheading extends Component {
         var subheadLists = [];
         var lists = [];
         var menu = this.props.menu;
-        var content = this.props.content;
+        var content = this.props.content1
+        var count = Object.keys(this.props).length;
         var i = 0;
         var j = 0;
-        while (j < content.length) {
-            lists.push(<p key={content[j].id}>{content[j].title}</p>);
-            j = j + 1;
+        var k = 1;
+
+        while (k < count) {
+            k = k + 1;
+            while (j < content.length) {
+                lists.push(<p key={content[j].id}>{content[j].title}</p>);
+                j = j + 1;
+            }
         }
-        console.log(lists)
+        // console.log()
+
         while (i < menu.length) {
             subheadLists.push(
                 <div>
