@@ -15,39 +15,59 @@ class Main extends Component {
                 { id: 7, title: '모바일 UI', desc: 'mobile_UI' },
             ],
             imageSlide: [
-                { id: 1, title: 'step 1', desc: 'imgae-slide' },
-                { id: 2, title: 'step 2', desc: 'imgae-slide' },
-                { id: 3, title: 'step 3', desc: 'imgae-slide' },
-                { id: 4, title: 'step 4', desc: 'imgae-slide' },
-                { id: 5, title: 'step 5', desc: 'imgae-slide' },
-                { id: 6, title: 'step 6', desc: 'imgae-slide' },
-                { id: 7, title: 'step 7', desc: 'imgae-slide' },
-                { id: 8, title: 'step 8', desc: 'imgae-slide' },
-                { id: 9, title: 'step 9', desc: 'imgae-slide' },
-                { id: 10, title: 'step 10', desc: 'imgae-slide' },
+                { id: 1, title: 'Step 1', desc: 'Imgae-slide' },
+                { id: 2, title: 'Step 2', desc: 'Imgae-slide' },
+                { id: 3, title: 'Step 3', desc: 'Imgae-slide' },
+                { id: 4, title: 'Step 4', desc: 'Imgae-slide' },
+                { id: 5, title: 'Step 5', desc: 'Imgae-slide' },
+                { id: 6, title: 'Step 6', desc: 'Imgae-slide' },
+                { id: 7, title: 'Step 7', desc: 'Imgae-slide' },
+                { id: 8, title: 'Step 8', desc: 'Imgae-slide' },
+                { id: 9, title: 'Step 9', desc: 'Imgae-slide' },
+                { id: 10, title: 'Step 10', desc: 'Imgae-slide' },
             ],
             bannerSlide: [
-                { id: 1, title: 'step 1', desc: 'banner-slide' },
-                { id: 2, title: 'step 2', desc: 'banner-slide' },
-                { id: 3, title: 'step 3', desc: 'banner-slide' },
-                { id: 4, title: 'step 4', desc: 'banner-slide' },
-                { id: 5, title: 'step 5', desc: 'banner-slide' },
-                { id: 6, title: 'step 6', desc: 'banner-slide' },
+                { id: 1, title: 'Step 1', desc: 'Banner-slide' },
+                { id: 2, title: 'Step 2', desc: 'Banner-slide' },
+                { id: 3, title: 'Step 3', desc: 'Banner-slide' },
+                { id: 4, title: 'Step 4', desc: 'Banner-slide' },
+                { id: 5, title: 'Step 5', desc: 'Banner-slide' },
+                { id: 6, title: 'Step 6', desc: 'Banner-slide' },
             ],
             scrollUI: [
-                { id: 1, title: 'step 1', desc: 'scroll-UI' },
-                { id: 2, title: 'step 2', desc: 'scroll-UI' },
-                { id: 3, title: 'step 3', desc: 'scroll-UI' },
-                { id: 4, title: 'step 4', desc: 'scroll-UI' },
-                { id: 5, title: 'step 5', desc: 'scroll-UI' },
-                { id: 6, title: 'step 6', desc: 'scroll-UI' },
+                { id: 1, title: 'Step 1', desc: 'Scroll-UI' },
+                { id: 2, title: 'Step 2', desc: 'Scroll-UI' },
+                { id: 3, title: 'Step 3', desc: 'Scroll-UI' },
+                { id: 4, title: 'Step 4', desc: 'Scroll-UI' },
+                { id: 5, title: 'Step 5', desc: 'Scroll-UI' },
+                { id: 6, title: 'Step 6', desc: 'Scroll-UI' },
+            ],
+            popup: [
+                { id: 1, title: 'Step 1', desc: 'Popup' },
+            ],
+            dragUI: [
+                { id: 1, title: 'Step 1', desc: 'Drag-UI' },
+                { id: 2, title: 'Step 2', desc: 'Drag-UI' },
+                { id: 3, title: 'Step 3', desc: 'Drag-UI' },
+                { id: 4, title: 'Step 4', desc: 'Drag-UI' },
+            ],
+            navUI: [
+                { id: 1, title: 'Step 1', desc: 'Navigation-UI' },
+            ],
+            mobileUI: [
+                { id: 1, title: 'Swipe', desc: 'Mobile-UI' },
+                { id: 2, title: 'Step 1', desc: 'Mobile-UI' },
+                { id: 3, title: 'Step 2', desc: 'Mobile-UI' },
+                { id: 4, title: 'Step 3', desc: 'Mobile-UI' },
+                { id: 5, title: 'Step 4', desc: 'Mobile-UI' },
+                { id: 6, title: 'Step 1', desc: 'Mobile-UI' },
             ],
         }
     }
     render() {
         return (
             <main className="Main">
-                <Subheading menu={this.state.subheadings} content1={this.state.imageSlide} content2={this.state.bannerSlide} content3={this.state.scrollUI}></Subheading>
+                <Subheading menu={this.state.subheadings} content1={this.state.imageSlide} content2={this.state.bannerSlide} content3={this.state.scrollUI} content4={this.state.popup} content5={this.state.dragUI} content6={this.state.navUI} content7={this.state.mobileUI} ></Subheading>
             </main >
         )
     }

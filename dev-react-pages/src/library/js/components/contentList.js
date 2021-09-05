@@ -1,52 +1,43 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 
 class Subheading extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         imageSlide: [
-    //             { id: 1, title: 'step', desc: 'imgae-slide' },
-    //             { id: 2, title: 'step', desc: 'imgae-slide' },
-    //             { id: 3, title: 'step', desc: 'imgae-slide' },
-    //             { id: 4, title: 'step', desc: 'imgae-slide' },
-    //             { id: 5, title: 'step', desc: 'imgae-slide' },
-    //             { id: 6, title: 'step', desc: 'imgae-slide' },
-    //             { id: 7, title: 'step', desc: 'imgae-slide' },
-    //             { id: 8, title: 'step', desc: 'imgae-slide' },
-    //             { id: 9, title: 'step', desc: 'imgae-slide' },
-    //         ],
-    //     }
-    // }
     render() {
         var subheadLists = [];
         var lists = [];
+        var eachList = [];
         var menu = this.props.menu;
-        var content = this.props.content1
         var count = Object.keys(this.props).length;
         var i = 0;
         var j = 0;
         var k = 1;
-
         while (k < count) {
-            k = k + 1;
+            var content = eval(`this.props.content${k}`);
+            j = 0;
             while (j < content.length) {
-                lists.push(<p key={content[j].id}>{content[j].title}</p>);
+                lists.push(
+                    <li key={content[j].id}>
+                        {/* {content[j].desc} {content[j].title} */}
+                        <a href="../">{content[j].desc} {content[j].title}</a>
+                    </li>);
                 j = j + 1;
             }
+            eachList.push(lists);
+            lists = [];
+            k = k + 1;
         }
-        // console.log()
-
         while (i < menu.length) {
             subheadLists.push(
                 <div>
                     <h4 key={menu[i].id} className={"divNum" + menu[i].id}>{menu[i].title}</h4>
                     <ul>
-                        <li>{lists}</li>
+                        {eachList[i]}
                     </ul>
-                </div>);
+                </div>
+            );
             i = i + 1;
         }
-        // console.log(content);
         return (
             < div className="UI" >
                 {subheadLists}
