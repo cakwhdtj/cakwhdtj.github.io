@@ -1,31 +1,46 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-
-class Subheading extends Component {
+class Contents extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            uiKind: null,
+            numOfKind: null,
+        }
+    }
+    dataFromLinks = (uiKind, numOfKind) => {
+        this.props.linkKindnNum(uiKind, numOfKind);
+        this.setState({
+            uiKind: uiKind,
+            numOfKind: numOfKind,
+        })
+    }
     render() {
+        console.log(this.state);
         var subheadLists = [];
         var lists = [];
         var eachList = [];
         var menu = this.props.menu;
-        var count = Object.keys(this.props).length;
+        var count = menu.length;
         var i = 0;
-        var j = 0;
-        var k = 1;
-        while (k < count) {
-            var content = eval(`this.props.content${k}`);
-            j = 0;
-            while (j < content.length) {
+        for (let k = 0; k < count; k++) {
+            var content = eval(`this.props.content${k + 1}`);
+            let kind = function () {
+                return menu[k].desc;
+            }();
+            for (let j = 0; j < content.length; j++) {
                 lists.push(
                     <li key={content[j].id}>
-                        {/* {content[j].desc} {content[j].title} */}
-                        <a href="../">{content[j].desc} {content[j].title}</a>
-                    </li>);
-                j = j + 1;
+                        <Link to="/UIPage" onClick={() => this.dataFromLinks(kind, j)}>
+                            {content[j].desc} {content[j].title}
+                        </Link>
+                        {/* <Link to={"/UIPage" + (j + 1)}>{content[j].desc} {content[j].title}</Link> */}
+                    </li >
+                );
             }
             eachList.push(lists);
             lists = [];
-            k = k + 1;
         }
         while (i < menu.length) {
             subheadLists.push(
@@ -39,11 +54,11 @@ class Subheading extends Component {
             i = i + 1;
         }
         return (
-            < div className="UI" >
+            < div className="UI">
                 {subheadLists}
             </div >
         );
     }
 }
 
-export default Subheading;
+export default Contents;

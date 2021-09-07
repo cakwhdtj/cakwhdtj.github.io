@@ -55,6 +55,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 .Main div.UI > div > ul > li > a {display: block; border: 1px solid #e0e0e0; border-radius: 5px; line-height: 30px;transition: all 0.3s;}
 .Main div.UI > div > ul > li > a:hover {background-color: #f9f9f9; border-color: #999999;}
 
+.Page1 {background: tomato; height: 100vh;}
 @media screen and (max-width: 1260px) {
   .Main {padding-left: 30px; padding-right: 30px;}
   .Main div.UI > div > ul > li {width: 100%;}

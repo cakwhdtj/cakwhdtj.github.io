@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Subheading from './contentList';
+import { Route } from 'react-router-dom';
+import UIPage from './UIpage';
 
+import Contents from './contentList';
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -62,12 +64,28 @@ class Main extends Component {
                 { id: 5, title: 'Step 4', desc: 'Mobile-UI' },
                 { id: 6, title: 'Step 1', desc: 'Mobile-UI' },
             ],
+            datafrContList: this.linkKindnNum
         }
+    }
+    linkKindnNum = (linkKindfrChild, linkNumfrChild) => {
+        return { linkKindfrChild, linkNumfrChild };
     }
     render() {
         return (
             <main className="Main">
-                <Subheading menu={this.state.subheadings} content1={this.state.imageSlide} content2={this.state.bannerSlide} content3={this.state.scrollUI} content4={this.state.popup} content5={this.state.dragUI} content6={this.state.navUI} content7={this.state.mobileUI} ></Subheading>
+                <Route path="/" exact={true}>
+                    <Contents
+                        menu={this.state.subheadings}
+                        content1={this.state.imageSlide}
+                        content2={this.state.bannerSlide}
+                        content3={this.state.scrollUI}
+                        content4={this.state.popup}
+                        content5={this.state.dragUI}
+                        content6={this.state.navUI}
+                        content7={this.state.mobileUI}
+                        linkKindnNum={this.linkKindnNum}>
+                    </Contents></Route>
+                <Route path="/UIPage" render={() => <UIPage menu={this.state.subheadings} datafrContList={this.linkKindnNum} />}></Route >
             </main >
         )
     }
