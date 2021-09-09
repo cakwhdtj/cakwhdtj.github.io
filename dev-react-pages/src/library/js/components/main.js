@@ -8,25 +8,25 @@ class Main extends Component {
         super(props);
         this.state = {
             subheadings: [
-                { id: 1, title: '이미지 슬라이드', desc: 'imgae-slide' },
-                { id: 2, title: '배너 슬라이드', desc: 'banner-slide' },
-                { id: 3, title: '스크롤 UI', desc: 'scroll-UI' },
-                { id: 4, title: '팝업', desc: 'popup' },
-                { id: 5, title: '드래그 UI', desc: 'drag-UI' },
-                { id: 6, title: '내비게이션 UI', desc: 'nav-UI' },
-                { id: 7, title: '모바일 UI', desc: 'mobile_UI' },
+                { id: 1, title: '이미지 슬라이드', desc: 'Image-Slide' },
+                { id: 2, title: '배너 슬라이드', desc: 'Banner-Slide' },
+                { id: 3, title: '스크롤 UI', desc: 'Scroll-UI' },
+                { id: 4, title: '팝업', desc: 'Popup' },
+                { id: 5, title: '드래그 UI', desc: 'Drag-UI' },
+                { id: 6, title: '내비게이션 UI', desc: 'Nav-UI' },
+                { id: 7, title: '모바일 UI', desc: 'Mobile_UI' },
             ],
             imageSlide: [
-                { id: 1, title: 'Step 1', desc: 'Imgae-slide' },
-                { id: 2, title: 'Step 2', desc: 'Imgae-slide' },
-                { id: 3, title: 'Step 3', desc: 'Imgae-slide' },
-                { id: 4, title: 'Step 4', desc: 'Imgae-slide' },
-                { id: 5, title: 'Step 5', desc: 'Imgae-slide' },
-                { id: 6, title: 'Step 6', desc: 'Imgae-slide' },
-                { id: 7, title: 'Step 7', desc: 'Imgae-slide' },
-                { id: 8, title: 'Step 8', desc: 'Imgae-slide' },
-                { id: 9, title: 'Step 9', desc: 'Imgae-slide' },
-                { id: 10, title: 'Step 10', desc: 'Imgae-slide' },
+                { id: 1, title: 'Step 1', desc: 'Image-slide' },
+                { id: 2, title: 'Step 2', desc: 'Image-slide' },
+                { id: 3, title: 'Step 3', desc: 'Image-slide' },
+                { id: 4, title: 'Step 4', desc: 'Image-slide' },
+                { id: 5, title: 'Step 5', desc: 'Image-slide' },
+                { id: 6, title: 'Step 6', desc: 'Image-slide' },
+                { id: 7, title: 'Step 7', desc: 'Image-slide' },
+                { id: 8, title: 'Step 8', desc: 'Image-slide' },
+                { id: 9, title: 'Step 9', desc: 'Image-slide' },
+                { id: 10, title: 'Step 10', desc: 'Image-slide' },
             ],
             bannerSlide: [
                 { id: 1, title: 'Step 1', desc: 'Banner-slide' },
@@ -64,11 +64,17 @@ class Main extends Component {
                 { id: 5, title: 'Step 4', desc: 'Mobile-UI' },
                 { id: 6, title: 'Step 1', desc: 'Mobile-UI' },
             ],
-            datafrContList: this.linkKindnNum
+            kindforChild: null,
+            numforChild: null,
+            totalNumData: null,
         }
     }
-    linkKindnNum = (linkKindfrChild, linkNumfrChild) => {
-        return { linkKindfrChild, linkNumfrChild };
+    linkKindnNum = (linkKindfrChild, linkNumfrChild, totalNumfrChild) => {
+        this.setState({
+            kindforChild: linkKindfrChild,
+            numforChild: linkNumfrChild,
+            totalNumData: totalNumfrChild,
+        })
     }
     render() {
         return (
@@ -85,7 +91,21 @@ class Main extends Component {
                         content7={this.state.mobileUI}
                         linkKindnNum={this.linkKindnNum}>
                     </Contents></Route>
-                <Route path="/UIPage" render={() => <UIPage menu={this.state.subheadings} datafrContList={this.linkKindnNum} />}></Route >
+                <Route path={"/UIPage/"} render={() =>
+                    <UIPage
+                        menu={this.state.subheadings}
+                        kindforchild={this.state.kindforChild}
+                        numforchild={this.state.numforChild}
+                        totalNumforChild={this.state.totalNumData}
+                        content1={this.state.imageSlide}
+                        content2={this.state.bannerSlide}
+                        content3={this.state.scrollUI}
+                        content4={this.state.popup}
+                        content5={this.state.dragUI}
+                        content6={this.state.navUI}
+                        content7={this.state.mobileUI} />}
+                >
+                </Route >
             </main >
         )
     }

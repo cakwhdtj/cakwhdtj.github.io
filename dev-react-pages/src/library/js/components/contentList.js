@@ -7,37 +7,40 @@ class Contents extends Component {
         this.state = {
             uiKind: null,
             numOfKind: null,
+            totalNumofList: null,
         }
     }
-    dataFromLinks = (uiKind, numOfKind) => {
-        this.props.linkKindnNum(uiKind, numOfKind);
+    dataFromLinks = (uiKind, numOfKind, totalNum) => {
+        this.props.linkKindnNum(uiKind, numOfKind, totalNum);
         this.setState({
             uiKind: uiKind,
             numOfKind: numOfKind,
+            totalNumofList: totalNum,
         })
     }
     render() {
-        console.log(this.state);
         var subheadLists = [];
         var lists = [];
         var eachList = [];
         var menu = this.props.menu;
         var count = menu.length;
         var i = 0;
+        var totalNum = 0;
         for (let k = 0; k < count; k++) {
             var content = eval(`this.props.content${k + 1}`);
             let kind = function () {
                 return menu[k].desc;
             }();
             for (let j = 0; j < content.length; j++) {
+                totalNum = totalNum + 1;
                 lists.push(
                     <li key={content[j].id}>
-                        <Link to="/UIPage" onClick={() => this.dataFromLinks(kind, j)}>
+                        <Link to={"/UIPage/" + kind + "_" + (j + 1)} onClick={() => this.dataFromLinks(kind, j, totalNum)}>
                             {content[j].desc} {content[j].title}
                         </Link>
-                        {/* <Link to={"/UIPage" + (j + 1)}>{content[j].desc} {content[j].title}</Link> */}
                     </li >
                 );
+
             }
             eachList.push(lists);
             lists = [];
