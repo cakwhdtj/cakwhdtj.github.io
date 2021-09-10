@@ -15,11 +15,15 @@ class UIPage extends Component {
         var totalNumofList = this.props.totalNumforChild;
         var _title = (receivedKind + " " + (receivedNum + 1));
         this.state.data = [receivedKind, receivedNum, totalNumofList];
-        // this.setState({ data: [receivedKind, receivedNum, totalNumofList] });
+        var listLength = [];
+        for (let i = 0; i < this.props.menu.length; i++) {
+            var content = eval(`this.props.content${i + 1}`);
+            listLength.push(content.length);
+        }
         return (
             <div className="UIPage">
                 <h3>{_title}</h3>
-                <UIArea KnN={this.state} subheadings={subheadings}></UIArea>
+                <UIArea KnN={this.state} subheadings={subheadings} listLength={listLength}></UIArea>
             </div >
         )
     }
@@ -27,49 +31,42 @@ class UIPage extends Component {
 
 class UIArea extends Component {
     render() {
-        // console.log(this.props)
-        var EachUISet = [];
-        // var title = this.props.KnN.data[0];
-        // var eachNum = this.props.KnN.data[1];
-        // var loopCount = this.props.KnN.data[2];
-        // for (let i = 0; i < loopCount; i++) {
-        EachUISet.push(
-            <EachUI dataSet={this.props.KnN.data} subheadings={this.props.subheadings} />
-        );
-        // }
+        var _length = 0;
+        var slide = [];
+        var abProps = this.props;
+        var kind = abProps.KnN.data[0];
+        console.log(abProps);
+        for (let i = 0; i < abProps.subheadings.length; i++) {
+            if (kind === abProps.subheadings[i].desc) {
+                var _id = abProps.subheadings[i].id - 1;
+                _length = abProps.listLength[_id];
+            }
+        }
+        for (let i = 0; i < _length; i++) {
+            slide.push(
+                <Route path={"/react-pages/UIPage/" + kind + "_" + (i + 1)}>
+                    <div className={kind + i}>
+                        {kind}{i + 1} 입니다.
+                    </div>
+                </Route>
+            );
+        }
         return (
-            <div className="UIArea">
-                {EachUISet}
-            </div >
+            <div className="ui_frame">
+                {slide}
+            </div>
         )
     }
 }
-class EachUI extends Component {
+
+class Image_Slide extends Component {
     render() {
-        var desc = this.props.dataSet[0];
-        var num = this.props.dataSet[1] + 1;
-        var total = this.props.dataSet[2];
         return (
-            <div className="EachUI">
-                <ImageSlide data={this.props}></ImageSlide>
-            </div >
+            <div>
+                <p>hi</p>
+            </div>
         )
     }
 }
-
-class ImageSlide extends Component {
-    render() {
-        console.log(this.props)
-        // if (condition) {
-
-        // }
-        return (
-            <Route path={"/UIPage/Image-Slide_1"}>
-                <div>imageslide1 입니다</div>
-            </Route>
-        )
-    }
-}
-
 
 export default UIPage;

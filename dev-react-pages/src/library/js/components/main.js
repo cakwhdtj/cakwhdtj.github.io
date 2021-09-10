@@ -8,12 +8,12 @@ class Main extends Component {
         super(props);
         this.state = {
             subheadings: [
-                { id: 1, title: '이미지 슬라이드', desc: 'Image-Slide' },
-                { id: 2, title: '배너 슬라이드', desc: 'Banner-Slide' },
-                { id: 3, title: '스크롤 UI', desc: 'Scroll-UI' },
+                { id: 1, title: '이미지 슬라이드', desc: 'Image_Slide' },
+                { id: 2, title: '배너 슬라이드', desc: 'Banner_Slide' },
+                { id: 3, title: '스크롤 UI', desc: 'Scroll_UI' },
                 { id: 4, title: '팝업', desc: 'Popup' },
-                { id: 5, title: '드래그 UI', desc: 'Drag-UI' },
-                { id: 6, title: '내비게이션 UI', desc: 'Nav-UI' },
+                { id: 5, title: '드래그 UI', desc: 'Drag_UI' },
+                { id: 6, title: '내비게이션 UI', desc: 'Nav_UI' },
                 { id: 7, title: '모바일 UI', desc: 'Mobile_UI' },
             ],
             imageSlide: [
@@ -79,7 +79,7 @@ class Main extends Component {
     render() {
         return (
             <main className="Main">
-                <Route path="/" exact={true}>
+                <Route path="/react-pages" exact={true}>
                     <Contents
                         menu={this.state.subheadings}
                         content1={this.state.imageSlide}
@@ -91,7 +91,7 @@ class Main extends Component {
                         content7={this.state.mobileUI}
                         linkKindnNum={this.linkKindnNum}>
                     </Contents></Route>
-                <Route path={"/UIPage/"} render={() =>
+                <Route path={"/react-pages/UIPage/"} render={() =>
                     <UIPage
                         menu={this.state.subheadings}
                         kindforchild={this.state.kindforChild}
