@@ -35,7 +35,7 @@ class Contents extends Component {
                 totalNum = totalNum + 1;
                 lists.push(
                     <li key={content[j].id}>
-                        <Link to={"/react-pages/UIPage/" + kind + "_" + (j + 1)} onClick={() => this.dataFromLinks(kind, j, totalNum)}>
+                        <Link to={"/react-pages/UIPage/" + kind + "_" + (j + 1)} onClick={() => this.dataFromLinks(kind, j, totalNum)} >
                             {content[j].desc} {content[j].title}
                         </Link>
                     </li >

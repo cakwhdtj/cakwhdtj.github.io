@@ -66,7 +66,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 
 
 /* image-slide */
-div.image-slide {position: relative; margin: 50px auto; max-width: 800px;}
+div.image-slide {position: relative; margin: 50px auto; max-width: 800px; background: red;}
 div.image-slide .box {position: relative; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden;}
 div.image-slide .box img {width: 100%;}
 div.image-slide .dummy {opacity: 0;}
@@ -76,18 +76,18 @@ div.image-slide ul.slide > li:first-child {display: block;}
 div.image-slide ul.indicator {position: absolute; left: 0; bottom: 10px; width: 100%; text-align: center;}
 div.image-slide ul.indicator > li {display: inline-block; vertical-align: top;}
 div.image-slide ul.indicator > li + li {margin-left: 8px;}
-div.image-slide ul.indicator > li > a {display: inline-block; width: 10px; height: 10px; border: 2px solid rgba(255, 255, 255, 0.6); border-radius: 40px; text-indent: -9999px; overflow: hidden; transition: all 0.3s;}
-div.image-slide ul.indicator > li.on > a {width: 25px; border-color: #ffffff; background-color: #ffffff;}
-div.image-slide .control > a.prev,
-div.image-slide .control > a.next {position: absolute; top: 50%; transform: translate(0, -50%); width: 40px;}
-div.image-slide .control > a.prev {left: -50px;}
-div.image-slide .control > a.next {right: -50px;}
-div.image-slide .control > a > img {position: relative;}
-div.image-slide .control > a.play {position: absolute; right: 15px; bottom: 15px; color: #ffffff;}
-div.image-slide .control > a.play i {display: none;}
-div.image-slide .control > a.play i:first-child {display: block;}
-div.image-slide .control > a.play.on i:first-child {display: none;}
-div.image-slide .control > a.play.on i + i {display: block;}
+div.image-slide ul.indicator > li > button {display: inline-block; width: 10px; height: 10px; border: 2px solid rgba(255, 255, 255, 0.6); border-radius: 40px; text-indent: -9999px; overflow: hidden; transition: all 0.3s;}
+div.image-slide ul.indicator > li.on > button {width: 25px; border-color: #ffffff; background-color: #ffffff;}
+div.image-slide .control > button.prev,
+div.image-slide .control > button.next {position: absolute; top: 50%; transform: translate(0, -50%); width: 40px;}
+div.image-slide .control > button.prev {left: -50px;}
+div.image-slide .control > button.next {right: -50px;}
+div.image-slide .control > button > img {position: relative;}
+div.image-slide .control > button.play {position: absolute; right: 15px; bottom: 15px; color: #ffffff;}
+div.image-slide .control > button.play i {display: none;}
+div.image-slide .control > button.play i:first-child {display: block;}
+div.image-slide .control > button.play.on i:first-child {display: none;}
+div.image-slide .control > button.play.on i + i {display: block;}
 div.image-slide .bar {position: absolute; left: 0; bottom: 0; width: 0; height: 4px; background: rgba(255, 255, 255, 0.4);}
 div.image-slide .bar.on {animation: bar-animation 2s linear 0s 1 normal forwards;}
 
