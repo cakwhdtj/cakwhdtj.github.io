@@ -145,6 +145,10 @@ class IS_1compo extends Component {
     }
 }
 class IS_2compo extends Component {
+    constructor(props) {
+        super(props)
+        this.showSlide2 = this.showSlide2.bind(this)
+    }
     componentDidMount() {
         $('div.image-slide.is2 .indicator li button').on('click', function () {
             var index = $('div.image-slide.is2 .indicator > li').index($(this).parent());
@@ -266,6 +270,10 @@ class IS_3compo extends Component {
     }
 }
 class IS_4compo extends Component {
+    constructor(props) {
+        super(props)
+        this.showSlide4 = this.showSlide4.bind(this)
+    }
     componentDidMount() {
         var numSlide = $('div.image-slide.is4 .slide li').length;
         var slideNow = 0;
@@ -354,6 +362,10 @@ class IS_4compo extends Component {
     }
 }
 class IS_5compo extends Component {
+    constructor(props) {
+        super(props)
+        this.showSlide5 = this.showSlide5.bind(this)
+    }
     componentDidMount() {
         var numSlide = $('div.image-slide.is5 .slide li').length;
         var slideNow = 0;
@@ -444,6 +456,10 @@ class IS_5compo extends Component {
     }
 }
 class IS_6compo extends Component {
+    constructor(props) {
+        super(props)
+        this.showSlide6 = this.showSlide6.bind(this)
+    }
     componentDidMount() {
         setImageSlide('div.image-slide.is6:eq(0)', 1, true, 2000);
         setImageSlide('div.image-slide.is6:eq(1)', 3, false, 3000);
@@ -503,7 +519,6 @@ class IS_6compo extends Component {
                 slideNow = n;
                 slidePrev = (n === 1) ? numSlide : (n - 1);
                 slideNext = (n === numSlide) ? 1 : (n + 1);
-                console.log(slidePrev + ' / ' + slideNow + ' / ' + slideNext);
                 if (isTimerOn === true) {
                     clearTimeout(timerId);
                     timerId = setTimeout(function () { showSlide6(slideNext); }, timerSpeed);
@@ -591,6 +606,10 @@ class IS_6compo extends Component {
     }
 }
 class IS_7compo extends Component {
+    constructor(props) {
+        super(props)
+        this.ImageSlide = this.ImageSlide.bind(this)
+    }
     componentDidMount() {
         var slide1 = new ImageSlide('is7');
 
@@ -654,7 +673,6 @@ class IS_7compo extends Component {
                 slideNow = n;
                 slidePrev = (n === 1) ? numSlide : (n - 1);
                 slideNext = (n === numSlide) ? 1 : (n + 1);
-                console.log(slidePrev + ' / ' + slideNow + ' / ' + slideNext);
                 if (isTimerOn === true) {
                     clearTimeout(timerId);
                     timerId = setTimeout(function () { showSlide7(slideNext); }, timerSpeed);
