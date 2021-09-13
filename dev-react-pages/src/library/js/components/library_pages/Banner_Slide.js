@@ -410,7 +410,7 @@ class BS_4compo extends Component {
             var maxOffsetX = 0;
 
             if (isScroll === true) {
-                $selector.find('.box').append('<div className="scroll"><a href="#" className="bar"></a></div>');
+                $selector.find('.box').append('<div class="scroll"><a href="#" class="bar"></a></div>');
             }
             if (isTimerOn === true) {
                 $selector.find('button.play').addClass('on');
