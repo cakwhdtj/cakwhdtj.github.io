@@ -75,6 +75,7 @@ class Main extends Component {
         })
     }
     render() {
+        if (!this.props.object || !this.props.array || this.props.array.length === 0) return null;
         return (
             <main className="Main">
                 <Route path="/react-pages" exact={true}>
