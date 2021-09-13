@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import UIPage from './UIpage';
 
 import Contents from './contentList';
+import UIPage from './UIpage';
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -25,16 +25,14 @@ class Main extends Component {
                 { id: 6, title: 'Step 6', desc: 'Image-slide' },
                 { id: 7, title: 'Step 7', desc: 'Image-slide' },
                 { id: 8, title: 'Step 8', desc: 'Image-slide' },
-                { id: 9, title: 'Step 9', desc: 'Image-slide' },
-                { id: 10, title: 'Step 10', desc: 'Image-slide' },
+                { id: 9, title: 'Drag', desc: 'Image-slide' },
+                { id: 10, title: 'final', desc: 'Image-slide' },
             ],
             bannerSlide: [
                 { id: 1, title: 'Step 1', desc: 'Banner-slide' },
                 { id: 2, title: 'Step 2', desc: 'Banner-slide' },
                 { id: 3, title: 'Step 3', desc: 'Banner-slide' },
-                { id: 4, title: 'Step 4', desc: 'Banner-slide' },
-                { id: 5, title: 'Step 5', desc: 'Banner-slide' },
-                { id: 6, title: 'Step 6', desc: 'Banner-slide' },
+                { id: 4, title: 'final', desc: 'Banner-slide' },
             ],
             scrollUI: [
                 { id: 1, title: 'Step 1', desc: 'Scroll-UI' },
