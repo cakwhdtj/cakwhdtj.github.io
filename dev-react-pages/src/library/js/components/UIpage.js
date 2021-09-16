@@ -27,7 +27,6 @@ class UIPage extends Component {
             var content = eval(`this.props.content${i + 1}`);
             listLength.push(content.length);
         }
-
         return (
             <div className="UIPage">
                 <h3>{_title}</h3>
@@ -86,18 +85,18 @@ class UI_feature extends Component {
         switch (data.KnN.data[0]) {
             case UI_type[0]:
                 return <Image_Slide data={data} match={this.props.match} />;
-            case UI_type[1]:
-                return <Banner_Slide data={data} match={this.props.match} />;
-            case UI_type[2]:
-                return <Scroll_UI data={data} match={this.props.match} />;
-            case UI_type[3]:
-                return <Popup data={data} match={this.props.match} />;
-            case UI_type[4]:
-                return <Drag_UI data={data} match={this.props.match} />;
-            case UI_type[5]:
-                return <Nav_UI data={data} match={this.props.match} />;
-            case UI_type[6]:
-                return <Mobile_UI data={data} match={this.props.match} />;
+            // case UI_type[1]:
+            //     return <Banner_Slide data={data} match={this.props.match} />;
+            // case UI_type[2]:
+            //     return <Scroll_UI data={data} match={this.props.match} />;
+            // case UI_type[3]:
+            //     return <Popup data={data} match={this.props.match} />;
+            // case UI_type[4]:
+            //     return <Drag_UI data={data} match={this.props.match} />;
+            // case UI_type[5]:
+            //     return <Nav_UI data={data} match={this.props.match} />;
+            // case UI_type[6]:
+            //     return <Mobile_UI data={data} match={this.props.match} />;
             default:
                 return <div></div>;
         }

@@ -21,10 +21,6 @@ class Main extends Component {
                 { id: 2, title: 'Step 2', desc: 'Image-slide' },
                 { id: 3, title: 'Step 3', desc: 'Image-slide' },
                 { id: 4, title: 'Step 4', desc: 'Image-slide' },
-                { id: 5, title: 'Step 5', desc: 'Image-slide' },
-                { id: 6, title: 'Step 6', desc: 'Image-slide' },
-                { id: 7, title: 'Step 7', desc: 'Image-slide' },
-                { id: 8, title: 'Step 8', desc: 'Image-slide' },
                 { id: 9, title: 'Drag', desc: 'Image-slide' },
                 { id: 10, title: 'final', desc: 'Image-slide' },
             ],
@@ -75,7 +71,7 @@ class Main extends Component {
         })
     }
     render() {
-        if (!this.props.object || !this.props.array || this.props.array.length === 0) return null;
+        // if (!this.props.object || !this.props.array || this.props.array.length === 0) return null;
         return (
             <main className="Main">
                 <Route path="/react-pages" exact={true}>
