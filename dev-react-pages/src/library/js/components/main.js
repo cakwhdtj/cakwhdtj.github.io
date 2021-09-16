@@ -71,22 +71,22 @@ class Main extends Component {
         })
     }
     render() {
-        // if (!this.props.object || !this.props.array || this.props.array.length === 0) return null;
         return (
             <main className="Main">
-                <Route path="/react-pages" exact={true}>
-                    <Contents
-                        menu={this.state.subheadings}
-                        content1={this.state.imageSlide}
-                        content2={this.state.bannerSlide}
-                        content3={this.state.scrollUI}
-                        content4={this.state.popup}
-                        content5={this.state.dragUI}
-                        content6={this.state.navUI}
-                        content7={this.state.mobileUI}
-                        linkKindnNum={this.linkKindnNum}>
-                    </Contents></Route>
-                <Route path={"/react-pages/UIPage/"} render={() =>
+                {/* <Route path="/react-pages" exact={true}> */}
+                <Contents
+                    menu={this.state.subheadings}
+                    content1={this.state.imageSlide}
+                    content2={this.state.bannerSlide}
+                    content3={this.state.scrollUI}
+                    content4={this.state.popup}
+                    content5={this.state.dragUI}
+                    content6={this.state.navUI}
+                    content7={this.state.mobileUI}
+                    linkKindnNum={this.linkKindnNum}>
+                </Contents>
+                {/* </Route> */}
+                {/* <Route path={"/react-pages/UIPage/"} render={() =>
                     <UIPage
                         menu={this.state.subheadings}
                         kindforchild={this.state.kindforChild}
@@ -100,7 +100,7 @@ class Main extends Component {
                         content6={this.state.navUI}
                         content7={this.state.mobileUI} />}
                 >
-                </Route >
+                </Route > */}
             </main >
         )
     }

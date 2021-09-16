@@ -1,12 +1,12 @@
 import React, { Component, } from 'react';
 import { Route } from 'react-router-dom';
 import Image_Slide from './library_pages/Image_Slide';
-import Banner_Slide from './library_pages/Banner_Slide';
-import Scroll_UI from './library_pages/Scroll_UI';
-import Popup from './library_pages/Popup';
-import Drag_UI from './library_pages/Drag_UI';
-import Nav_UI from './library_pages/Nav_UI';
-import Mobile_UI from './library_pages/Mobile_UI';
+// import Banner_Slide from './library_pages/Banner_Slide';
+// import Scroll_UI from './library_pages/Scroll_UI';
+// import Popup from './library_pages/Popup';
+// import Drag_UI from './library_pages/Drag_UI';
+// import Nav_UI from './library_pages/Nav_UI';
+// import Mobile_UI from './library_pages/Mobile_UI';
 
 class UIPage extends Component {
     constructor(props) {
