@@ -58,49 +58,35 @@ class Main extends Component {
                 { id: 5, title: 'Step 4', desc: 'Mobile-UI' },
                 { id: 6, title: 'Step 1', desc: 'Mobile-UI' },
             ],
-            kindforChild: null,
-            numforChild: null,
-            totalNumData: null,
+            datafrLink: [{
+                kind: null, num: null,
+            }]
         }
     }
-    linkKindnNum = (linkKindfrChild, linkNumfrChild, totalNumfrChild) => {
+    linkKindnNum = (linkKindfrChild, linkNumfrChild,) => {
         this.setState({
-            kindforChild: linkKindfrChild,
-            numforChild: linkNumfrChild,
-            totalNumData: totalNumfrChild,
+            datafrLink: [{ kind: linkKindfrChild, num: linkNumfrChild }],
         })
     }
     render() {
+        const Content = [this.state.imageSlide, this.state.bannerSlide, this.state.scrollUI, this.state.popup, this.state.dragUI, this.state.navUI, this.state.mobileUI]
         return (
             <main className="Main">
-                {/* <Route path="/react-pages" exact={true}> */}
-                <Contents
-                    menu={this.state.subheadings}
-                    content1={this.state.imageSlide}
-                    content2={this.state.bannerSlide}
-                    content3={this.state.scrollUI}
-                    content4={this.state.popup}
-                    content5={this.state.dragUI}
-                    content6={this.state.navUI}
-                    content7={this.state.mobileUI}
-                    linkKindnNum={this.linkKindnNum}>
-                </Contents>
-                {/* </Route> */}
-                {/* <Route path={"/react-pages/UIPage/"} render={() =>
+                <Route path="/react-pages" exact={true}>
+                    <Contents
+                        menu={this.state.subheadings}
+                        content={Content}
+                        linkKindnNum={this.linkKindnNum}
+                    >
+                    </Contents>
+                </Route>
+                <Route path={"/react-pages/UIPage/"} render={() =>
                     <UIPage
                         menu={this.state.subheadings}
-                        kindforchild={this.state.kindforChild}
-                        numforchild={this.state.numforChild}
-                        totalNumforChild={this.state.totalNumData}
-                        content1={this.state.imageSlide}
-                        content2={this.state.bannerSlide}
-                        content3={this.state.scrollUI}
-                        content4={this.state.popup}
-                        content5={this.state.dragUI}
-                        content6={this.state.navUI}
-                        content7={this.state.mobileUI} />}
-                >
-                </Route > */}
+                        datafrLink={this.state.datafrLink}
+                        content={Content}
+                    />}>
+                </Route >
             </main >
         )
     }

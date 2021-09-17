@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: { title1: 'Library', },
+      title: { id: 0, title1: 'Library', },
     }
   }
   render() {
