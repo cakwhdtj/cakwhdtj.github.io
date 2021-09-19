@@ -479,10 +479,8 @@ class IS4compo extends Component {
                 this.#showSlide(this.#slideFirst);
                 this.#selector.find('.indicator li button').each(function (i) {
                     $(this).on('click', () => {
-                        console.log($(this).parent().index())
                         slide.#showSlide($(this).parent().index() + 1)
                     });
-
                 });
                 this.#selector.find('button.prev').on('click', () => {
                     slide.#showSlide(slide.#slidePrev);
@@ -824,11 +822,11 @@ class IS6compo extends Component {
             }
 
             function setEvent() {
-                $selector.find('.indicator li button').on('click', () => {
-                    var index = $selector.find('.indicator li').index($(this).parent());
-                    showSlideFinal(index + 1);
+                $selector.find('.indicator li button').each(function (i) {
+                    $(this).on('click', () => {
+                        showSlideFinal($(this).parent().index() + 1)
+                    });
                 });
-
                 $selector.find('button.prev').on('click', () => {
                     $(this).find('img').stop(true).animate({ 'left': '-10px' }, 80).animate({ 'left': 0 }, 160);
                     showSlideFinal(slidePrev);
@@ -838,7 +836,6 @@ class IS6compo extends Component {
                     $(this).find('img').stop(true).animate({ 'right': '-10px' }, 80).animate({ 'right': 0 }, 160);
                     showSlideFinal(slideNext);
                 });
-
                 $selector.find('button.play').on('click', () => {
                     if (isTimerOn === true) {
                         stopTimer();
@@ -1000,11 +997,11 @@ class IS6compo extends Component {
             }
 
             function setEvent() {
-                $selector.find('.indicator li button').on('click', () => {
-                    var index = $selector.find('.indicator li').index($(this).parent());
-                    setSlide(index + 1);
+                $selector.find('.indicator li button').each(function (i) {
+                    $(this).on('click', () => {
+                        setSlide($(this).parent().index() + 1)
+                    });
                 });
-
                 $selector.find('button.prev').on('click', () => {
                     $(this).find('img').stop(true).animate({ 'left': '-10px' }, 80).animate({ 'left': 0 }, 160);
                     showPrev();
