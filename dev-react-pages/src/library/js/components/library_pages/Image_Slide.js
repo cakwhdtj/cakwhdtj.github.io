@@ -14,7 +14,7 @@ import ImgBtnRight from '../../../img/image-slide/btn-right.png';
 import $ from 'jquery'
 
 
-class Image_Slide extends Component {
+class ImageSlide extends Component {
     render() {
         var _props = this.props.props;
         var _set = [];
@@ -22,7 +22,7 @@ class Image_Slide extends Component {
         function show() {
             for (let i = 0; i < _props.content[0].length; i++) {
                 _set.push(
-                    <Route path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
+                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
                         <div>{funcSet[i]}</div>
                     </Route>
                 );
@@ -551,7 +551,7 @@ class IS4compo extends Component {
             slideFirst: 4,
             timerSpeed: 2000
         });
-        var slide2 = new ImageSlide('is4_2', {
+        new ImageSlide('is4_2', {
             slideFirst: 2,
             timerStatus: false,
             timerSpeed: 1000
@@ -776,11 +776,11 @@ class IS5compo extends Component {
 }
 class IS6compo extends Component {
     componentDidMount() {
-        var slide1 = new ImageSlide('isfinal1');
-        var slide2 = new ImageSlide('isfinal2', {
+        new ImageSlide('isFinal1');
+        new ImageSlide('isFinal2', {
             slideFirst: 5
         });
-        var slide3 = new ImageSlideInfinite('isfinal3', {
+        new ImageSlideInfinite('isFinal3', {
             slideFirst: 4,
             isTimerOn: true,
             timerSpeed: 2000
@@ -1161,7 +1161,7 @@ class IS6compo extends Component {
                     <button id="test3">테스트 버튼 3</button>
                     <button id="test4">테스트 버튼 4</button>
                 </p>
-                <div className="image-slide isfinal" id="isfinal1">
+                <div className="image-slide isFinal" id="isFinal1">
                     <div className="box">
                         <p className="dummy"><img alt="" src={Img1} /></p>
                         <ul className="slide">
@@ -1185,7 +1185,7 @@ class IS6compo extends Component {
                         </button>
                     </p>
                 </div>
-                <div className="image-slide isfinal" id="isfinal2">
+                <div className="image-slide isFinal" id="isFinal2">
                     <div className="box">
                         <p className="dummy"><img alt="" src={Img1} /></p>
                         <ul className="slide">
@@ -1209,7 +1209,7 @@ class IS6compo extends Component {
                         </button>
                     </p>
                 </div>
-                <div className="image-slide isfinal" id="isfinal3">
+                <div className="image-slide isFinal" id="isFinal3">
                     <div className="box">
                         <p className="dummy"><img alt="" src={Img1} /></p>
                         <ul className="slide">
@@ -1237,4 +1237,4 @@ class IS6compo extends Component {
         )
     }
 }
-export default Image_Slide;
+export default ImageSlide;

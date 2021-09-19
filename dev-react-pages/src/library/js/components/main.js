@@ -26,8 +26,6 @@ class Main extends Component {
             ],
             bannerSlide: [
                 { id: 1, title: 'Step 1', desc: 'Banner-slide' },
-                { id: 2, title: 'Step 2', desc: 'Banner-slide' },
-                { id: 3, title: 'Step 3', desc: 'Banner-slide' },
                 { id: 4, title: 'final', desc: 'Banner-slide' },
             ],
             scrollUI: [
