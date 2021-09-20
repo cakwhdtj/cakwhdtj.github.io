@@ -250,8 +250,7 @@ class BS2compo extends Component {
                 }
             });
             $selector.find('.scroll .bar').on('mousedown touchstart', (e) => {
-                console.log('hi')
-                $(this).css({ 'transition': 'none' });
+                $selector.find('.scroll .bar').css({ 'transition': 'none' });
                 clearTimeout(timerId);
                 if (!e.touches) e.preventDefault();
                 startX = (e.touches) ? e.touches[0].clientX : e.clientX;
@@ -305,9 +304,11 @@ class BS2compo extends Component {
             function resetUI() {
                 boxWidth = $selector.find('.box').width();
                 barWidth = 0;
-                $selector.find('.slide li').each(() => {
-                    barWidth += $(this).outerWidth(true);
+                $selector.find('.slide li').each((i) => {
+                    console.log($selector.find('.slide li:eq(' + i + ')').outerWidth(true))
+                    barWidth += $selector.find('.slide li:eq(' + i + ')').outerWidth(true);
                 });
+                // console.log(barWidth)
                 $selector.find('.slide').css({ 'width': (barWidth + 10) + 'px' });
                 minOffsetLeft = boxWidth - barWidth;
                 maxOffsetX = -minOffsetLeft * (boxWidth / barWidth);
