@@ -68,7 +68,6 @@ class BS1compo extends Component {
             var isTimerOn = true;
             var timerSpeed = 2000;
             var counter = 0;
-
             resetUI();
             if (isTimerOn === true) {
                 $selector.find('button.play').addClass('on');
@@ -186,9 +185,9 @@ class BS1compo extends Component {
 }
 class BS2compo extends Component {
     componentDidMount() {
-        setBannerSlide('div.banner-slide.bsFinal:eq(0)', true, 2000);
-        setBannerSlide('div.banner-slide.bsFinal:eq(1)', false, 2000);
-        setBannerSlide('div.banner-slide.bsFinal:eq(2)', true, 1000, true);
+        new setBannerSlide('#bsFinal1', true, 2000);
+        new setBannerSlide('#bsFinal2', false, 2000);
+        new setBannerSlide('#bsFinal3', true, 1000, true);
         function setBannerSlide(selector, status, speed, scroll) {
             var $selector = $(selector);
             var numSlide = $selector.find('.slide li').length;
@@ -209,17 +208,33 @@ class BS2compo extends Component {
             var delX = 0;
             var offsetX = 0;
             var maxOffsetX = 0;
-
+            function resetUI() {
+                boxWidth = $selector.find('.box').width();
+                barWidth = 0;
+                $selector.find('.slide li').each((i) => {
+                    barWidth += $selector.find('.slide li:eq(' + i + ')').outerWidth(true);
+                    // barWidth += $(this).outerWidth(true);
+                });
+                $selector.find('.slide').css({ 'width': (barWidth + 10) + 'px' });
+                minOffsetLeft = boxWidth - barWidth;
+                maxOffsetX = -minOffsetLeft * (boxWidth / barWidth);
+                var scrollBarWidth = boxWidth * (boxWidth / barWidth);
+                $selector.find('.scroll .bar').css({ 'width': scrollBarWidth + 'px' });
+            }
+            resetUI();
+            console.log(barWidth)
+            showSlideBS2(1);
             if (isScroll === true) {
                 $selector.find('.box').append('<div class="scroll"><button class="bar"></button></div>');
             }
+
             if (isTimerOn === true) {
                 $selector.find('button.play').addClass('on');
             } else {
                 $selector.find('button.play').removeClass('on');
             }
-            resetUI();
-            showSlideBS2(1);
+
+
             $selector.find('button.prev').on('click', () => {
                 if (offsetLeft >= 0) {
                     $selector.find('.slide').css({ 'transition': 'none' }).stop(true).animate({ 'left': '10px' }, 80).animate({ 'left': 0 }, 160, () => {
@@ -301,20 +316,20 @@ class BS2compo extends Component {
                     showSlideBS2(slideNow);
                 }, 300);
             });
-            function resetUI() {
-                boxWidth = $selector.find('.box').width();
-                barWidth = 0;
-                $selector.find('.slide li').each((i) => {
-                    console.log($selector.find('.slide li:eq(' + i + ')').outerWidth(true))
-                    barWidth += $selector.find('.slide li:eq(' + i + ')').outerWidth(true);
-                });
-                // console.log(barWidth)
-                $selector.find('.slide').css({ 'width': (barWidth + 10) + 'px' });
-                minOffsetLeft = boxWidth - barWidth;
-                maxOffsetX = -minOffsetLeft * (boxWidth / barWidth);
-                var scrollBarWidth = boxWidth * (boxWidth / barWidth);
-                $selector.find('.scroll .bar').css({ 'width': scrollBarWidth + 'px' });
-            }
+            // const resetUI = () => {
+            //     boxWidth = $selector.find('.box').width();
+            //     barWidth = 0;
+            //     $selector.find('.slide li').each((i) => {
+            //         console.log($selector.find('.slide li:eq(' + i + ')').outerWidth(true))
+            //         barWidth += $selector.find('.slide li:eq(' + i + ')').outerWidth(true);
+            //     });
+            //     // console.log(barWidth)
+            //     $selector.find('.slide').css({ 'width': (barWidth + 10) + 'px' });
+            //     minOffsetLeft = boxWidth - barWidth;
+            //     maxOffsetX = -minOffsetLeft * (boxWidth / barWidth);
+            //     var scrollBarWidth = boxWidth * (boxWidth / barWidth);
+            //     $selector.find('.scroll .bar').css({ 'width': scrollBarWidth + 'px' });
+            // }
             function showSlideBS2(n) {
                 offsetLeft = -$selector.find('.slide li:eq(' + (n - 1) + ')').position().left;
                 if (offsetLeft < minOffsetLeft) {
@@ -349,7 +364,7 @@ class BS2compo extends Component {
     render() {
         return (
             <div>
-                <div className="banner-slide bsFinal">
+                <div className="banner-slide bsFinal" id="bsFinal1">
                     <div className="box">
                         <ul className="slide">
                             <li><button><img alt="000000" src={Img1} /></button></li>
@@ -378,7 +393,7 @@ class BS2compo extends Component {
                         </button>
                     </p>
                 </div>
-                <div className="banner-slide bsFinal">
+                <div className="banner-slide bsFinal" id="bsFinal2">
                     <div className="box">
                         <ul className="slide">
                             <li><button><img alt="000000" src={Img1} /></button></li>
@@ -407,7 +422,7 @@ class BS2compo extends Component {
                         </button>
                     </p>
                 </div>
-                <div className="banner-slide bsFinal">
+                <div className="banner-slide bsFinal" id="bsFinal3">
                     <div className="box">
                         <ul className="slide">
                             <li><button><img alt="000000" src={Img1} /></button></li>

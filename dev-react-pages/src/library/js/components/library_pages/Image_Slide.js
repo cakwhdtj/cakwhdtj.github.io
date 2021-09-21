@@ -496,24 +496,24 @@ class IS4compo extends Component {
                     }
                 });
             }
-            #stopTimer() {
+            #stopTimer = () => {
                 clearTimeout(this.#timerId);
                 this.#selector.find('button.play').removeClass('on');
                 this.#isTimerOn = false;
             }
-            #startTimer() {
+            #startTimer = () => {
                 var slide = this;
                 this.#timerId = setTimeout(() => { slide.#showSlide(slide.#slideNext); }, slide.#timerSpeed);
                 this.#selector.find('button.play').addClass('on');
                 this.#isTimerOn = true;
             }
-            #showPrev() {
+            #showPrev = () => {
                 this.#showSlide(this.#slidePrev);
             }
-            #showNext() {
+            #showNext = () => {
                 this.#showSlide(this.#slideNext);
             }
-            #showSlide(n) {
+            #showSlide = (n) => {
                 var slide = this;
                 if (this.#slideNow === 0) {
                     this.#selector.find('.slide').css({ 'transition': 'nont', 'left': -((n - 1) * 100) + '%' });
