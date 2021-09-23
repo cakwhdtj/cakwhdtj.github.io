@@ -459,7 +459,7 @@ class IS4compo extends Component {
 
             constructor(id, options) {
                 var slide = this;
-                var $selector = $('#' + id);
+                // var $selector = $('#' + id);
                 this.#selector = $('#' + id);
                 this.#numSlide = this.#selector.find('.slide li').length;
                 this.#slideFirst = (options === undefined || options.slideFirst === undefined) ? 1 : options.slideFirst;

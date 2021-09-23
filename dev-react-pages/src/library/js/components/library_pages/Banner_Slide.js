@@ -203,7 +203,7 @@ class BS2compo extends Component {
             var timerSpeed = speed;
             var timerId2 = '';
             var counter = 0;
-            var isScroll = (scroll === undefined) ? false : (isScroll = scroll);
+            var isScroll = (scroll === undefined) ? false : scroll;
             var startX = 0;
             var delX = 0;
             var offsetX = 0;
@@ -222,7 +222,6 @@ class BS2compo extends Component {
                 $selector.find('.scroll .bar').css({ 'width': scrollBarWidth + 'px' });
             }
             resetUI();
-            console.log(barWidth)
             showSlideBS2(1);
             if (isScroll === true) {
                 $selector.find('.box').append('<div class="scroll"><button class="bar"></button></div>');
@@ -316,20 +315,6 @@ class BS2compo extends Component {
                     showSlideBS2(slideNow);
                 }, 300);
             });
-            // const resetUI = () => {
-            //     boxWidth = $selector.find('.box').width();
-            //     barWidth = 0;
-            //     $selector.find('.slide li').each((i) => {
-            //         console.log($selector.find('.slide li:eq(' + i + ')').outerWidth(true))
-            //         barWidth += $selector.find('.slide li:eq(' + i + ')').outerWidth(true);
-            //     });
-            //     // console.log(barWidth)
-            //     $selector.find('.slide').css({ 'width': (barWidth + 10) + 'px' });
-            //     minOffsetLeft = boxWidth - barWidth;
-            //     maxOffsetX = -minOffsetLeft * (boxWidth / barWidth);
-            //     var scrollBarWidth = boxWidth * (boxWidth / barWidth);
-            //     $selector.find('.scroll .bar').css({ 'width': scrollBarWidth + 'px' });
-            // }
             function showSlideBS2(n) {
                 offsetLeft = -$selector.find('.slide li:eq(' + (n - 1) + ')').position().left;
                 if (offsetLeft < minOffsetLeft) {
