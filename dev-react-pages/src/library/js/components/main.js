@@ -20,15 +20,14 @@ import Img14 from '../../img/image-slide/slide-image-14.jpg';
 import Img15 from '../../img/image-slide/slide-image-15.jpg';
 
 
+// const imagesPreload = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15];
 class Main extends Component {
     componentDidMount() {
         const imagesPreload = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15];
         imagesPreload.forEach((image) => {
-            const img = new Image();
-            img.src = image;
-            img.onload = () => {
-                this.setState({ imageIsReady: true });
-            }
+            const newImage = new Image();
+            newImage.src = image;
+            window[image] = newImage;
         });
     }
     constructor(props) {
@@ -95,7 +94,7 @@ class Main extends Component {
     }
     render() {
         const Content = [this.state.imageSlide, this.state.bannerSlide, this.state.scrollUI, this.state.popup, this.state.dragUI, this.state.navUI, this.state.mobileUI]
-        const { imageIsReady } = this.state;
+        // const { imageIsReady } = this.state;
         return (
             <main className="Main">
                 <Route path="/react-pages" exact={true}>
