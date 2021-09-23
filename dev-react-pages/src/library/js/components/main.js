@@ -20,7 +20,6 @@ import Img14 from '../../img/image-slide/slide-image-14.jpg';
 import Img15 from '../../img/image-slide/slide-image-15.jpg';
 
 
-// const imagesPreload = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15];
 class Main extends Component {
     componentDidMount() {
         const imagesPreload = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15];
@@ -28,7 +27,12 @@ class Main extends Component {
             const newImage = new Image();
             newImage.src = image;
             window[image] = newImage;
+            newImage.onload = () => {
+                this.setState(newImage)
+            }
+            console.log(newImage);
         });
+        console.log(this.state)
     }
     constructor(props) {
         super(props);
