@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import './App.css';
 import './library/css/web-font.css'
 import './library/css/style.css'
@@ -24,5 +24,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

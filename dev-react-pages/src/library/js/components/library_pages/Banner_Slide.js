@@ -21,7 +21,6 @@ import ImgBtnRight from '../../../img/image-slide/btn-right.png';
 // import jQuery from 'jquery';
 import $ from 'jquery'
 
-
 class BannerSlide extends Component {
     render() {
         var _props = this.props.props;
@@ -153,6 +152,7 @@ class BS1compo extends Component {
         return (
             <div className="banner-slide bs1" id="bs1">
                 <div className="box">
+                    {/* <ImageSet></ImageSet> */}
                     <ul className="slide">
                         <li><button><img alt="000000" src={Img1} /></button></li>
                         <li><button><img alt="000000" src={Img2} /></button></li>
@@ -366,6 +366,7 @@ class BS2compo extends Component {
             <div>
                 <div className="banner-slide bsFinal" id="bsFinal1">
                     <div className="box">
+                        {/* <ImageSet></ImageSet> */}
                         <ul className="slide">
                             <li><button><img alt="000000" src={Img1} /></button></li>
                             <li><button><img alt="000000" src={Img2} /></button></li>
