@@ -31,7 +31,6 @@ class Main extends Component {
             newImage.onload = () => {
                 imgSet.push(newImage)
                 this.setState({ imgSet })
-                console.log(this.state)
             }
         });
     }
