@@ -209,7 +209,6 @@ class BS2compo extends Component {
             var offsetX = 0;
             var maxOffsetX = 0;
             const resetUI = () => {
-                // console.log('hi')
                 boxWidth = $selector.find('.box').width();
                 barWidth = 0;
                 $selector.find('.slide li').each((i) => {
