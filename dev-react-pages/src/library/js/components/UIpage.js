@@ -1,8 +1,7 @@
 import React, { Component, } from 'react';
 import ImageSlide from './library_pages/Image_Slide';
 import BannerSlide from './library_pages/Banner_Slide';
-// import Banner_Slide from './library_pages/Banner_Slide';
-// import Scroll_UI from './library_pages/Scroll_UI';
+import ScrollUI from './library_pages/Scroll_UI';
 // import Popup from './library_pages/Popup';
 // import Drag_UI from './library_pages/Drag_UI';
 // import Nav_UI from './library_pages/Nav_UI';
@@ -34,6 +33,8 @@ class UIArea extends Component {
                 return <ImageSlide props={this.props}></ImageSlide>
             case 'Banner_Slide':
                 return <BannerSlide props={this.props}></BannerSlide>
+            case 'Scroll_UI':
+                return <ScrollUI props={this.props}></ScrollUI>
             default:
                 return (
                     <div>경로지정 안됨</div>
