@@ -739,12 +739,6 @@ class IS5compo extends Component {
     render() {
         return (
             <div>
-                <p className="test-button">
-                    <button id="test1">테스트 버튼 1</button>
-                    <button id="test2">테스트 버튼 2</button>
-                    <button id="test3">테스트 버튼 3</button>
-                    <button id="test4">테스트 버튼 4</button>
-                </p>
                 <div className="image-slide isdrag" id="isdrag1">
                     <div className="box">
                         <p className="dummy"><img alt="" src={Img1} /></p>
