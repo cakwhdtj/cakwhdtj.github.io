@@ -74,10 +74,6 @@ class Main extends Component {
             scrollUI: [
                 { id: 1, title: 'Step 1', desc: 'Scroll-UI' },
                 { id: 2, title: 'Step 2', desc: 'Scroll-UI' },
-                { id: 3, title: 'Step 3', desc: 'Scroll-UI' },
-                { id: 4, title: 'Step 4', desc: 'Scroll-UI' },
-                { id: 5, title: 'Step 5', desc: 'Scroll-UI' },
-                { id: 6, title: 'Step 6', desc: 'Scroll-UI' },
             ],
             popup: [
                 { id: 1, title: 'Step 1', desc: 'Popup' },

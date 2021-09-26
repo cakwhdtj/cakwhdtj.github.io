@@ -58,7 +58,7 @@ class ScUI1compo extends Component {
             $('html').animate({ 'scrollTop': 0 }, 500);
         });
 
-        const checkVisibility = (selector) => {
+        const checkVisibilitySc1 = (selector) => {
             var pSet = [];
             var start = [];
             var end = [];
@@ -76,16 +76,16 @@ class ScUI1compo extends Component {
                 } else {
                     pSet[i].removeClass('down up');
                     pSet[i].addClass('on');
-                    $('#page-indicator > li').removeClass('on');
-                    $('#page-indicator > li:eq(' + (i) + ')').addClass('on');
+                    $('#scroll1 #page-indicator > li').removeClass('on');
+                    $('#scroll1 #page-indicator > li:eq(' + (i) + ')').addClass('on');
                 }
             }
         }
-        const showPage = (n) => {
+        const showPageSc1 = (n) => {
             var scrollAmt = $('section.page:eq(' + (n - 1) + ')').offset().top;
             $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500);
-            $('#page-indicator > li').removeClass('on');
-            $('#page-indicator > li:eq(' + (n - 1) + ')').addClass('on');
+            $('#scroll1 #page-indicator > li').removeClass('on');
+            $('#scroll1 #page-indicator > li:eq(' + (n - 1) + ')').addClass('on');
             pageNow = n;
             pagePrev = (n <= 1) ? 1 : (n - 1);
             pageNext = (n >= numPage) ? numPage : (n + 1);
@@ -94,11 +94,11 @@ class ScUI1compo extends Component {
             checkScroll();
             $(window).on('scroll', () => {
                 checkScroll();
-                checkVisibility('#scroll1 p.content');
+                checkVisibilitySc1('#scroll1 p.content');
             });
             $('#scroll1 #page-indicator').find('li button').each(function (i) {
                 $(this).on('click', () => {
-                    showPage(($(this).parent().index()) + 1);
+                    showPageSc1(($(this).parent().index()) + 1);
                 });
             });
         }
@@ -184,6 +184,11 @@ class ScUI2compo extends Component {
         var pageNow = 0;
         var pagePrev = 0;
         var pageNext = 0;
+        var timerId = '';
+        var Sc2Counter = 0;
+        var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll';
+        var isBlocked = false;
+
         const checkScroll = () => {
             var scrollAmt = $(document).scrollTop();
             if (scrollAmt > 100) {
@@ -215,39 +220,41 @@ class ScUI2compo extends Component {
                 } else {
                     pSet[i].removeClass('down up');
                     pSet[i].addClass('on');
-                    $('#page-indicator > li').removeClass('on');
-                    $('#page-indicator > li:eq(' + (i) + ')').addClass('on');
                 }
             }
         }
+
         const showPage = (n) => {
+            clearTimeout(timerId);
+            isBlocked = true;
             var scrollAmt = $('section.page:eq(' + (n - 1) + ')').offset().top;
             $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500);
-            $('#page-indicator > li').removeClass('on');
-            $('#page-indicator > li:eq(' + (n - 1) + ')').addClass('on');
+            $('#scroll2 #page-indicator > li').removeClass('on');
+            timerId = setTimeout(() => {
+                $('#scroll2 #page-indicator > li:eq(' + (n - 1) + ')').addClass('on');
+                isBlocked = false;
+            }, 1000);
             pageNow = n;
             pagePrev = (n <= 1) ? 1 : (n - 1);
             pageNext = (n >= numPage) ? numPage : (n + 1);
-            isBlocked = false;
         }
         const checkCurrentPage = () => {
             var scrollAmt = $(document).scrollTop();
             $('section.page').each(function (i) {
                 var min = $(this).offset().top - ($(window).height() / 2);
                 var max = $(this).offset().top + ($(window).height() / 2);
-                // console.log((i + 1) + 'page : ' + min + ' ~ ' + max)
                 if (scrollAmt > min && scrollAmt <= max) {
-                    // console.log(i + 1);
                     var n = i + 1;
                     pageNow = n;
                     pagePrev = (n <= 1) ? 1 : (n - 1);
                     pageNext = (n >= numPage) ? numPage : (n + 1);
+                    $('#scroll2 #page-indicator > li').removeClass('on');
+                    // $('#scroll2 #page-indicator > li:eq(' + (n - 1) + ')').addClass('on');
                     return false;
                 }
             });
         }
-        var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll';
-        var isBlocked = false;
+
         if (this.state.define === "ScUI2") {
             checkCurrentPage()
             checkScroll();
@@ -258,16 +265,21 @@ class ScUI2compo extends Component {
             });
             $('#scroll2 #page-indicator').find('li button').each(function (i) {
                 $(this).on('click', () => {
-                    showPage(($(this).parent().index()) + 1);
+                    showPage(($(this).parent().index() + 1));
                 });
             });
             document.getElementById('scroll2').addEventListener(scrollEvent, function (e) {
                 e.preventDefault();
+                Sc2Counter++;
+                if (Sc2Counter < 25 || Sc2Counter > 100) {
+                    return false;
+                }
+                Sc2Counter = 0;
                 if (isBlocked === true) return false;
                 isBlocked = true;
                 var delta = 0;
                 if (scrollEvent === 'mousewheel') {
-                    delta = e.wheelDelta / -120;
+                    delta = e.wheelDelta / -300;
                 } else {
                     delta = e.detail / 3;
                 }
@@ -277,8 +289,6 @@ class ScUI2compo extends Component {
                     showPage(pagePrev);
                 }
             }, { 'passive': false });
-        } else {
-
         }
     }
     render() {
