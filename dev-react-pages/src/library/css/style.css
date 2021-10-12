@@ -42,7 +42,6 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 .Header::after {content: ''; position: absolute; left: 0; top: 100%; width: 100%; height: 0; background-color: #ffffff; box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); transition: height 0.3s;}
 .Header.open::after {height: 200px;}
 
-
 .Main {padding-top: 100px; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 40px); box-sizing: border-box;}
 .Main > h2 {font-size: 24px;}
 .Main div.UI { display: flex; gap: 50px 0; flex-wrap: wrap;}
@@ -56,9 +55,45 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 .Main div.UI > div > ul > li > a:hover {background-color: #f9f9f9; border-color: #999999;}
 
 .Page1 {background: tomato; height: 100vh;}
+@media screen and (max-width: 1023.9px) {
+/* .Header {background-color: red;} */
+.Header button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.Header button:focus {
+  outline: auto;
+}
+.Header button.menu {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); width: 24px; height: 16px; z-index: 999999;}
+.Header button.menu::before {content: ''; position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background: #000000; transition: all 0.3s;}
+.Header button.menu span {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 100%; height: 2px; background: #000000; overflow: hidden; text-indent: -9999px; transition: all 0.3s;}
+.Header button.menu::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background: #000000; transition: all 0.3s;}
+.Header button.menu.close::before {top: 50%; transform: translate(-50%, -50%) rotate(42deg); width: 120%;}
+.Header button.menu.close span {opacity: 0;}
+.Header button.menu.close::after {top: 50%; transform: translate(-50%, -50%) rotate(-42deg); width: 120%;}
+#gnb {position: fixed; right: -100%; width: 100%; top: 71px; height: calc(100% - 71px); background-color: #ffffff; z-index: 1000; overflow: auto; font-size: 15px; box-sizing: border-box; padding: 20px 20px 40px 20px; transition: right 0.3s;}
+#gnb.open {right: 0;}
+#gnb > ul > li + li {border-top: 1px solid #e0e0e0;}
+#gnb > ul > li > button {position: relative; display: block; line-height: 50px; font-size: 17px; padding:0 20px 0 20px;}
+#gnb > ul > li.on > button {color: #008fe2;}
+#gnb > ul > li > button i {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); color: #999999; font-size: 14px;}
+#gnb > ul > li > ul {overflow: hidden; height: 0; transition: height 0.3s;}
+#gnb > ul > li > ul > li {border-top: 1px solid #e0e0e0;}
+#gnb > ul > li > ul > li > button {display: block; line-height: 34px; padding-left: 30px;}
+#gnb > ul > li > ul > li.on > button {color: #008fe2; background-color: #f9f9f9;}
+}
 @media screen and (max-width: 1260px) {
   .Main {padding-left: 30px; padding-right: 30px;}
   .Main div.UI > div > ul > li {width: 100%;}
+}
+
+div.UI {
+  padding-bottom: 100px;
 }
 
 #footer {position: relative; font-size: 12px; line-height: 40px; text-align: center;}
@@ -156,6 +191,15 @@ body .scroll #scroll-top {position: fixed; right: 30px; bottom: 30px; width: 60p
 /* popup */
 body.popup ul.button {margin-top: 50px;}
 body.popup ul.button li + li {margin-top: 30px;}
+.layer-popup button.close {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
 .layer-mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 5000; background-color: rgba(0, 0, 0, 0.1); display: none;}
 .layer-mask.on {display: block; animation: show-up-mask 1s ease 0s 1 normal forwards;}
@@ -163,17 +207,14 @@ body.popup ul.button li + li {margin-top: 30px;}
 .layer-popup.on {display: block; animation: show-up-popup 0.6s ease 0s 1 normal forwards;}
 .layer-popup .header {position: absolute; left: 0; top: 0; width: 100%; height: 50px; background: linear-gradient(154deg, #008fe2 0, #00b29c 100%); color: #ffffff; box-sizing: border-box; padding: 0 20px;}
 .layer-popup .header h3 {line-height: 50px; font-size: 18px;}
-.layer-popup .header a.close {position: absolute; right: 0px; top: 0; line-height: 50px; padding: 0 20px; font-size: 20px;}
+.layer-popup .header button.close {position: absolute; right: 0px; top: 0; line-height: 50px; padding: 0 20px; font-size: 20px;}
 .layer-popup .body {height: 100%; overflow: auto;}
 .layer-popup .body .wrapper {position: relative; padding: 20px 20px 50px 20px;}
 .layer-popup h4 {font-size: 18px; margin-top: 50px; margin-bottom: 20px;}
 .layer-popup h4:first-child {margin-top: 0;}
 .layer-popup ul.link li + li {margin-top: 10px;}
 .layer-popup ul.link li a {display: block; border: 1px solid #e0e0e0; line-height: 40px; padding: 0 20px; border-radius: 5px;}
-.layer-popup .footer {position: absolute; left: 0; bottom: 0; width: 100%; height: 25px; background: linear-gradient(154deg, #008fe2 0, #00b29c 100%); color: #ffffff; font-size: 10px;}
-.layer-popup .footer p.copyright {position: absolute; left: 20px; top: 50%; transform: translate(0, -50%);}
-.layer-popup .footer p.logo {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%);}
-.layer-popup .footer p.logo img {height: 24px;}
+
 
 @keyframes show-up-mask {
   0% {opacity: 0;}
@@ -189,9 +230,9 @@ body.popup ul.button li + li {margin-top: 30px;}
 
 
 /* drag */
-body.drag .drag-box {position: relative; max-width: 1000px; margin: 50px auto; height: 600px; border: 5px solid #e0e0e0; box-sizing: border-box;}
-body.drag .drag-box .box1 {position: absolute; left: 0; top: 0; width: 100px; height: 100px; background-color: lime;}
-body.drag .drag-box .box2 {position: absolute; left: 500px; top: 200px; width: 100px; height: 100px; background-color: blue;}
+.drag-box {position: relative; max-width: 1000px; margin: 50px auto; height: 600px; border: 5px solid #e0e0e0; box-sizing: border-box;}
+.drag-box .box1 {position: absolute; left: 0; top: 0; width: 100px; height: 100px; background-color: lime;}
+.drag-box .box2 {position: absolute; left: 300px; top: 200px; width: 100px; height: 100px; background-color: blue;}
 
 ul.drag-list {position: relative; width: 500px; border: 2px solid #e0e0e0; background-color: #f9f9f9;}
 ul.drag-list > li {position: relative; line-height: 40px; padding: 0 20px 0 50px; border: 1px solid transparent; background-color: #ffffff;}

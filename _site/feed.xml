@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 웹개발자 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Sep 2021 16:49:33 +0900</pubDate>
-    <lastBuildDate>Sat, 25 Sep 2021 16:49:33 +0900</lastBuildDate>
+    <pubDate>Tue, 12 Oct 2021 16:32:50 +0900</pubDate>
+    <lastBuildDate>Tue, 12 Oct 2021 16:32:50 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -112,15 +112,18 @@
       <item>
         <title>Sandbox &amp; Library</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;/react-pages/&quot; target=&quot;_blank&quot;&gt;gdgdgdgdgdg&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;/react-pages/&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
+jQuery와 React를 사용해서 자체적으로 만들어놓은 여러 기능들을 모아놓은 개인적인 라이브러리입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
         <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
-        <link>http://localhost:4000/test/</link>
-        <guid isPermaLink="true">http://localhost:4000/test/</guid>
+        <link>http://localhost:4000/SBnLbr/</link>
+        <guid isPermaLink="true">http://localhost:4000/SBnLbr/</guid>
         
         <category>React</category>
+        
+        <category>jQuery</category>
         
         <category>library</category>
       </item>

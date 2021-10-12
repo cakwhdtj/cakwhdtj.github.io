@@ -34,19 +34,6 @@ class Main extends Component {
             }
         });
     }
-    // componentDidMount() {
-    //     const imagesPreload = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13, Img14, Img15];
-    //     imagesPreload.forEach((image) => {
-    //         const newImage = new Image();
-    //         newImage.src = image;
-    //         window[image] = newImage;
-    //         newImage.onload = () => {
-    //             this.setState(newImage)
-    //         }
-    //         console.log(newImage);
-    //     });
-    //     console.log(this.state)
-    // }
     constructor(props) {
         super(props);
         this.state = {
@@ -80,20 +67,12 @@ class Main extends Component {
             ],
             dragUI: [
                 { id: 1, title: 'Step 1', desc: 'Drag-UI' },
-                { id: 2, title: 'Step 2', desc: 'Drag-UI' },
-                { id: 3, title: 'Step 3', desc: 'Drag-UI' },
-                { id: 4, title: 'Step 4', desc: 'Drag-UI' },
             ],
             navUI: [
                 { id: 1, title: 'Step 1', desc: 'Navigation-UI' },
             ],
             mobileUI: [
                 { id: 1, title: 'Swipe', desc: 'Mobile-UI' },
-                { id: 2, title: 'Step 1', desc: 'Mobile-UI' },
-                { id: 3, title: 'Step 2', desc: 'Mobile-UI' },
-                { id: 4, title: 'Step 3', desc: 'Mobile-UI' },
-                { id: 5, title: 'Step 4', desc: 'Mobile-UI' },
-                { id: 6, title: 'Step 1', desc: 'Mobile-UI' },
             ],
             datafrLink: [{
                 kind: null, num: null,

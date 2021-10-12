@@ -172,6 +172,7 @@
                 width: 320px;
                 object-fit: contain;
                 object-position: center;
+                left: 50%; transform: translateX(-50%);
             }
 
             .new-post-tag {
