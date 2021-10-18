@@ -34,7 +34,8 @@ $('#header').on('mouseover', function (e) { //header 상황따라 .atTop 붙이�
   console.log(e.pageY)
   $('#header').on('mouseleave', function () {
     if ($(document).scrollTop() < ($(window).height() / 2) && $('#header').attr('class') !== 'atTop') {
-      $(this).addClass('atTop')
+      $(this).addClass('atTop');
+      $(this).find('.gnb.side > li > ul').removeattr('style');
     }
   });
   let arr = new Array();
