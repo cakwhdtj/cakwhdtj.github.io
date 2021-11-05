@@ -167,6 +167,13 @@
         </url>
     
         <url>
+            <loc>http://localhost:4000/test/</loc>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+            <lastmod>2021-06-21</lastmod>
+        </url>
+    
+        <url>
             <loc>http://localhost:4000/carhartt/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>

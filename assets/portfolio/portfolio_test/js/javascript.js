@@ -324,4 +324,4 @@ function lookbook_1() {
 
 
 //portfolio global
-document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
+document.write("<script src='../../../assets/js/portfolioGlobal_test.js'></script>");

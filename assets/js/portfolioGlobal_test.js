@@ -52,8 +52,7 @@ $("#kooflix").on("mouseenter", function (e) {
         emphHeight[i] = $(pfEmph[i]).outerHeight();
     }
     emphEffect();
-    clearInterval(interval);
-    interval = setInterval(emphAnimate, 1200);
+    interval = setInterval(emphAnimate, 500);
 
     $(this).css({
         "opacity": 1,
@@ -74,7 +73,14 @@ $("#kooflix").on("mouseenter", function (e) {
 
 function emphEffect() {
     for (let i = 0; i < pfEmph.length; i++) {
-        $("body").append("<div class='emphEffect " + "e" + [i] + "'><span></span><span></span><span></span><span></span></div>");
+        $("body").append("<div class='emphEffect " + "e" + [i] + "'></div>");
+        $(".emphEffect").css({
+            "position": "absolute",
+            "opacity": 1,
+            // "background-color": "red",
+            "border-bottom": "1px solid rgba(254, 11, 24, 0.5)",
+            // "box-shadow": "5px 5px 25px 5px red",
+        });
         $(".e" + [i]).css({
             "width": emphWidth[i], "height": emphHeight[i],
             "top": emphOffsetT[i], "left": emphOffsetL[i]
@@ -82,20 +88,26 @@ function emphEffect() {
     }
 }
 function emphAnimate() {
-    if (isOn === true) {
-        $(".emphEffect").toggleClass("on");
+    for (let i = 0; i < pfEmph.length; i++) {
+        $(".e" + [i]).fadeOut(500, 0);
+        $(".e" + [i]).fadeIn(300, 0);
     }
-
 }
 
 $(window).on("scroll", function () {
     $(".emphEffect").remove();
-    clearInterval(interval);
     clearTimeout(timer);
-    timer = setTimeout(() => {
-        if (isOn === true) {
-            $("#kooflix").trigger("mouseenter");
-        }
-    }, 1000);
+    if (isOn === true) {
+        timer = setTimeout(function () {
+            for (let i = 0; i < pfEmph.length; i++) {
+                emphOffsetT[i] = $(pfEmph[i]).offset().top;
+                emphOffsetL[i] = $(pfEmph[i]).offset().left;
+                emphWidth[i] = $(pfEmph[i]).outerWidth();
+                emphHeight[i] = $(pfEmph[i]).outerHeight();
+            }
+            emphEffect();
+            interval = setInterval(emphAnimate, 800);
+        }, 1000);
+    }
 });
 
