@@ -7,7 +7,6 @@ $("#headerRightBtn > li:nth-child(2) > a").on("click", function () {
   $("#headerRightBtn li > ul").addClass("open");
   $(".wrapper").addClass("bg");
 });
-
 $("#closeSideBtn").on("click", function () {
   cleaner('#headerRightBtn li > ul', 'no', 'open');
   cleaner('.bg', 'no', 'bg');
@@ -107,17 +106,17 @@ function scrollEvent() {
     } else if (delWheel < 0) {
       showPage(pagePrev);
     }
-  }, {'passive' : false});
+  }, { 'passive': false });
 
   function showPage(n) {
     timerDebounce = setTimeout(() => {
-    var scrollAmt = $('section:eq(' + (n - 1) + ')').offset().top;
-    $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500, function () {
-      isBlocked = false;
-    });
-    pageNow = n;
-    pagePrev = (n <= 1) ? 1 : (n - 1);
-    pageNext = (n >= numPage) ? numPage : (n + 1);
+      var scrollAmt = $('section:eq(' + (n - 1) + ')').offset().top;
+      $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500, function () {
+        isBlocked = false;
+      });
+      pageNow = n;
+      pagePrev = (n <= 1) ? 1 : (n - 1);
+      pageNext = (n >= numPage) ? numPage : (n + 1);
     }, 700);
   }
   clearTimeout(timerDebounce);
@@ -188,42 +187,43 @@ function sectionReturn(sectionCheck) {
 
 
 //portfolio global
-$('.scrolled .sectionTitle a span.textEmph').addClass("pfEmph");
+// $('.scrolled .sectionTitle a span.textEmph').addClass("pfEmph");
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
-pfAdjustment();
+// pfAdjustment();
 
-function pfAdjustment() {
-    let arr = $('.pfEmph');
-    let speci = [];
-    for (let i = 0; i < arr.length; i++) {
-        let arrClass = $(arr[i]);
-        arrClass.hasClass('indicator') ? speci.push(i) : false;
-    }
-    
-    $(document).on('mouseover',function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if ($('.slideInSection').hasClass('open') === false) { //안열려있으면
-            for (let i = 0; i < speci.length; i++) {
-                $('.emphEffect.e'+speci[i]).css({
-                    "border" : "none",
-                    "box-shadow" : "none",
-                });
-            }
-        } else if ($('.slideInSection').hasClass('open') === true){//열려있으면
-            for (let i = 0; i < arr.length; i++) {
-                $('.emphEffect.e'+i).css({
-                    "border" : "none",
-                    "box-shadow" : "none",
-                });
-                for (let j = 0; j < speci.length; j++) { 
-                    $('.emphEffect.e'+speci[j]).css({
-                        "border" : "1px solid rgba(254, 11, 24, 0.5)",
-                        "box-shadow" : "5px 5px 25px 5px red",
-                    });
-                }
-            }
-        }     
-    });
-}
+
+// function pfAdjustment() {
+//   let arr = $('.pfEmph');
+//   let speci = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let arrClass = $(arr[i]);
+//     arrClass.hasClass('indicator') ? speci.push(i) : false;
+//   }
+
+//   $(document).on('mouseover', function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     if ($('.slideInSection').hasClass('open') === false) { //안열려있으면
+//       for (let i = 0; i < speci.length; i++) {
+//         $('.emphEffect.e' + speci[i]).css({
+//           "border": "none",
+//           "box-shadow": "none",
+//         });
+//       }
+//     } else if ($('.slideInSection').hasClass('open') === true) {//열려있으면
+//       for (let i = 0; i < arr.length; i++) {
+//         $('.emphEffect.e' + i).css({
+//           "border": "none",
+//           "box-shadow": "none",
+//         });
+//         for (let j = 0; j < speci.length; j++) {
+//           $('.emphEffect.e' + speci[j]).css({
+//             "border": "1px solid rgba(254, 11, 24, 0.5)",
+//             "box-shadow": "5px 5px 25px 5px red",
+//           });
+//         }
+//       }
+//     }
+//   });
+// }

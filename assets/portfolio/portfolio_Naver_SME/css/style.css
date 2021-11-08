@@ -11,10 +11,15 @@ li {list-style: none;}
   --main-color: #03c75a;
   --color-emph: #0fc75b;
 }
+/* pf */
+.emphEffect.e0 {
+  transform: scale(1.1);
+}
 /* common */
 body {font-family: "Noto Sans KR", sans-serif; scrollbar-width: thin; scrollbar-color: transparent transparent;}
 body::-webkit-scrollbar {width: 1px; background: transparent;}
-.wrapper.bg nav::after {content: 'helo'; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; background: #000000; opacity: .2; z-index: 9;}
+.wrapper.bg nav::after {content: 'thisisbg'; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; background: #000000; opacity: .2; z-index: 9;}
+
 .mobileOnly {display: none;}
 
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
