@@ -12,13 +12,13 @@ li {list-style: none;}
   --color-emph: #0fc75b;
 }
 /* pf */
-.emphEffect.e0 {
+.emphEffect {
   transform: scale(1.1);
 }
 /* common */
-body {font-family: "Noto Sans KR", sans-serif; scrollbar-width: thin; scrollbar-color: transparent transparent;}
+body {font-family: "Noto Sans KR", sans-serif; scrollbar-width: thin; scrollbar-color: transparent transparent; overflow: hidden;}
 body::-webkit-scrollbar {width: 1px; background: transparent;}
-.wrapper.bg nav::after {content: 'thisisbg'; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; background: #000000; opacity: .2; z-index: 9;}
+.wrapper.bg #header nav > div {position: absolute; background-color: #000000; opacity: .2; width: 100vw; height: 100vh; z-index: 9;}
 
 .mobileOnly {display: none;}
 
@@ -62,6 +62,7 @@ body::-webkit-scrollbar {width: 1px; background: transparent;}
 #header.scrolled nav ul#hashtag > li > a.on {color: #ffffff; opacity: 1; border-bottom: 3px solid #ffffff;}
 #header.scrolled nav ul#headerRightBtn > li:nth-child(1) > a {background: url(../img/sp_header.png) no-repeat 0 -41px; background-size: 344px 136px;}
 #header.scrolled nav ul#headerRightBtn > li:nth-child(2) > a:nth-child(1) {background: url(../img/sp_header.png) no-repeat -99px -41px; background-size: 344px 136px;}
+
 
 #main > .sectionLayout#section_1 > a#downArrow {position: absolute; width: 70px; height: 70px; bottom: 0px; left: 50%; transform: translate(-50%, -50%); background: url(../img/btn_scroll_arrow.png) no-repeat; background-size: contain;}
 

@@ -1,4 +1,6 @@
 "use strict";
+var scrollAmt = $(document).scrollTop();
+headerEffect();
 $(document).on('click', 'a[href="#"]', function (e) {
   e.preventDefault();
 });
@@ -6,12 +8,16 @@ $(document).on('click', 'a[href="#"]', function (e) {
 $("#headerRightBtn > li:nth-child(2) > a").on("click", function () {
   $("#headerRightBtn li > ul").addClass("open");
   $(".wrapper").addClass("bg");
+  $("ul#hashtag").after("<div class='bg'></div>");
+  $("nav > div").on("click", function () {
+    $("#closeSideBtn > a").trigger('click');
+  })
 });
-$("#closeSideBtn").on("click", function () {
+$("#closeSideBtn > a").on("click", function () {
   cleaner('#headerRightBtn li > ul', 'no', 'open');
   cleaner('.bg', 'no', 'bg');
+  $("nav > div").remove();
 });
-
 $('#hashtag > li > a, a#downArrow').on('click', function () {
   if (this.hash !== '') {
     var hash = this.hash;
@@ -53,42 +59,31 @@ $(".slideInSection .indicator > li > a").on('click', function () {
 });
 
 $(window).on('scroll', function (e) {
-  var scrollAmt = $(document).scrollTop();
+  scrollAmt = $(document).scrollTop();
   cleaner('#hashtag li a', 1, 'on');
-  if (($('#section_2').offset().top > scrollAmt)) {
-    $('#hashtag > li:nth-child(1) > a').addClass('on');
-  };
-  if (($('#section_2').offset().top <= scrollAmt)) {
-    $('#header').addClass('scrolled');
-    $('#footer').addClass('scrolled');
-    if (($('#section_2').offset().top <= scrollAmt) && ($('#section_3').offset().top > scrollAmt)) {
-      $('#hashtag > li:nth-child(2) > a').addClass('on');
-    }
-    if (($('#section_3').offset().top <= scrollAmt)) {
-      $('#hashtag > li:nth-child(3) > a').addClass('on');
-    }
-  } else {
-    cleaner('#header', 'no', 'scrolled');
-    cleaner('#footer', 'no', 'scrolled');
-  };
+  headerEffect();
 });
 var onloadWidth = $(window).width();
 var resizeWidth = 1024;
 $(window).on('resize', function () {
   resizeWidth = $(window).width();
-})
+});
+var numPage = $('section').length;
+var pageNow = 0;
+var pagePrev = 0;
+var pageNext = 0;
 scrollEvent();
 function scrollEvent() {
-  var numPage = $('section').length;
-  var pageNow = 0;
-  var pagePrev = 0;
-  var pageNext = 0;
+  // var numPage = $('section').length;
+  // var pageNow = 0;
+  // var pagePrev = 0;
+  // var pageNext = 0;
   var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll'; //browser 확인
   var isBlocked = false;
   var timerDebounce = 0;
-  showPage(1);
 
   window.addEventListener(scrollEvent, function (e) {
+    console.log(isBlocked)
     if ($('#headerRightBtn').find('ul').attr('class') === 'open' || resizeWidth < 1024) {
       return false;
     }
@@ -110,7 +105,7 @@ function scrollEvent() {
 
   function showPage(n) {
     timerDebounce = setTimeout(() => {
-      var scrollAmt = $('section:eq(' + (n - 1) + ')').offset().top;
+      scrollAmt = $('section:eq(' + (n - 1) + ')').offset().top;
       $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500, function () {
         isBlocked = false;
       });
@@ -120,6 +115,24 @@ function scrollEvent() {
     }, 700);
   }
   clearTimeout(timerDebounce);
+}
+function headerEffect() {
+  if (($('#section_2').offset().top > scrollAmt)) {
+    $('#hashtag > li:nth-child(1) > a').addClass('on');
+  };
+  if (($('#section_2').offset().top <= scrollAmt)) {
+    $('#header').addClass('scrolled');
+    $('#footer').addClass('scrolled');
+    if (($('#section_2').offset().top <= scrollAmt) && ($('#section_3').offset().top > scrollAmt)) {
+      $('#hashtag > li:nth-child(2) > a').addClass('on');
+    }
+    if (($('#section_3').offset().top <= scrollAmt)) {
+      $('#hashtag > li:nth-child(3) > a').addClass('on');
+    }
+  } else {
+    cleaner('#header', 'no', 'scrolled');
+    cleaner('#footer', 'no', 'scrolled');
+  };
 }
 function slideOpener(selector) {
   // click 된 a가 있는 section에 div.slideInSection 을 연다
@@ -134,7 +147,6 @@ function slideOpener(selector) {
     });
   }
 }
-
 // indicator 에 paremeter 하나 더 받아서 (RorL) if 위에서 R,L 구해서 넣어줌
 // R 이면 다음형제에 on이랑 , L이면 이전형제에 on
 function sliderIndicator(selector, section) {
@@ -187,43 +199,46 @@ function sectionReturn(sectionCheck) {
 
 
 //portfolio global
-// $('.scrolled .sectionTitle a span.textEmph').addClass("pfEmph");
+
+$('.scrolled > .sectionTitle a span.textEmph').addClass("pfEmph");
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
-// pfAdjustment();
+pfAdjustment();
 
 
-// function pfAdjustment() {
-//   let arr = $('.pfEmph');
-//   let speci = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     let arrClass = $(arr[i]);
-//     arrClass.hasClass('indicator') ? speci.push(i) : false;
-//   }
-
-//   $(document).on('mouseover', function (e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-
-//     if ($('.slideInSection').hasClass('open') === false) { //안열려있으면
-//       for (let i = 0; i < speci.length; i++) {
-//         $('.emphEffect.e' + speci[i]).css({
-//           "border": "none",
-//           "box-shadow": "none",
-//         });
-//       }
-//     } else if ($('.slideInSection').hasClass('open') === true) {//열려있으면
-//       for (let i = 0; i < arr.length; i++) {
-//         $('.emphEffect.e' + i).css({
-//           "border": "none",
-//           "box-shadow": "none",
-//         });
-//         for (let j = 0; j < speci.length; j++) {
-//           $('.emphEffect.e' + speci[j]).css({
-//             "border": "1px solid rgba(254, 11, 24, 0.5)",
-//             "box-shadow": "5px 5px 25px 5px red",
-//           });
-//         }
-//       }
-//     }
-//   });
-// }
+function pfAdjustment() {
+  let arr = $('.pfEmph');
+  let speci = [];
+  let closeBtn;
+  for (let i = 0; i < arr.length; i++) {
+    let arrClass = $(arr[i]);
+    arrClass.hasClass('indicator') ? speci.push(i) : false;
+    if (arrClass.parent('#closeSideBtn').length === 1) {
+      closeBtn = i;
+    }
+  }
+  window.onload = function () {
+    document.getElementById('kooflix').addEventListener('mouseover', () => {
+      if ($("#header nav ul#headerRightBtn li > ul").hasClass("open")) {
+        $(".emphEffect.e" + closeBtn).css({
+          "z-index": "10",
+        });
+      }
+      if ($(".slideInSection").hasClass("open") === true) {
+        $(".emphEffect").css({
+          "visibility": "hidden",
+        });
+        for (let i = 0; i < speci.length; i++) {
+          $(".emphEffect.e" + speci[i]).css({
+            "visibility": "visible",
+          });
+        }
+      } else if ($(".slideInSection").hasClass("open") === false) {
+        for (let i = 0; i < speci.length; i++) {
+          $(".emphEffect.e" + speci[i]).css({
+            "visibility": "hidden",
+          });
+        }
+      }
+    });
+  }
+}
