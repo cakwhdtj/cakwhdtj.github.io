@@ -32,9 +32,8 @@ $('#header').on('mouseover', function (e) { //header 상황따라 .atTop 붙이�
     $(this).removeClass('atTop');
   }
   $('#header').on('mouseleave', function () {
-    if ($(document).scrollTop() < ($(window).height() / 2) && $('#header').attr('class') !== 'atTop') {
+    if ($(document).scrollTop() < ($(window).height() / 2) && $('#header').attr('class') !== 'atTop' && $("ul.gnb > li > ul").hasClass('on') === false) {
       $(this).addClass('atTop');
-      // $(this).find('.gnb.side > li > ul').removeattr('style');
     }
   });
   let arr = new Array();
@@ -42,9 +41,12 @@ $('#header').on('mouseover', function (e) { //header 상황따라 .atTop 붙이�
 });
 $('#header > .gnb > li > h3 > a').on('mouseover focus', function () {
   $(this).parent().parent().siblings().find('ul').removeAttr('style');
+  $(this).parent().parent().siblings().find('ul').removeClass('on');
   $(this).parent().siblings('ul').css({ 'visibility': 'visible', 'opacity': 1, 'position': 'fixed' });
+  $(this).parent().siblings('ul').addClass('on')
   $(this).parent().siblings('ul').on('mouseleave', function () {
     $(this).removeAttr('style');
+    $(this).removeClass('on');
   });
 });
 
@@ -57,59 +59,95 @@ $('#open-side-nav').on('click', function () {
 $('#side-nav .btn-close').on('click', function () {
   $('#side-nav').removeClass('open');
   $('body, html').removeAttr('style');
-  $('#side-nav .side.btn-open.down').trigger('click');;
-});
-$('#side-nav .side.btn-open').on('click', function () {
-  sideNavOpen($(this));
-  $(this).parent().siblings().find('.down').stop(true).trigger('click');
-});
-$('.open-all').on('click', function () {
-  $('#side-nav .side.btn-open').trigger('click');
+  $('#side-nav .side.btn-open.down').removeClass('down');;
 });
 
-function sideNavOpen(selector) { //각각 줄의 li높이를 구해 가장 높은 것들의 높이를 더해서 열고 닫아줌
-  var heights = 0;
-  if (selector.siblings('ul').height() === 0) {
-    selector.find('span').html('접기');
-    selector.addClass('down');
-    heights = getheight(selector);
-    selector.siblings('ul').animate({ 'height': heights }, 300);
-  } else {
-    selector.find('span').html('펼치기');
-    selector.removeClass('down');
-    selector.siblings('ul').animate({ 'height': 0 }, 300);
+// ===================================
+// $('#side-nav .side.btn-open').on('click', function () {
+//   sideNavOpen($(this));
+//   $(this).parent().siblings().find('.down').stop(true).trigger('click');
+// });
+// $('.open-all').on('click', function () {
+//   $('#side-nav .side.btn-open').trigger('click');
+// });
+
+// function sideNavOpen(selector) { //각각 줄의 li높이를 구해 가장 높은 것들의 높이를 더해서 열고 닫아줌
+//   var heights = 0;
+//   if (selector.siblings('ul').height() === 0) {
+//     selector.find('span').html('접기');
+//     selector.addClass('down');
+//     heights = getheight(selector);
+//     selector.siblings('ul').animate({ 'height': heights }, 300);
+//   } else {
+//     selector.find('span').html('펼치기');
+//     selector.removeClass('down');
+//     selector.siblings('ul').animate({ 'height': 0 }, 300);
+//   }
+// }
+// function getheight(selector) {
+//   var heightArr1 = [];
+//   var heightArr2 = [];
+//   var heightArr3 = [];
+//   var winWidth = $(window).width();
+//   $(selector).siblings('ul').each(function () { //각 대메뉴 
+//     $(this).find('> li').each(function (i) { // 각 대메뉴 안의 리스트
+//       if (i > 20) i = null;
+//       if (i < 5) { //배열 레이아웃 따라 2줄로 나누기
+//         heightArr1.push($(this).height());
+//       } else if (i >= 6 && i < 10) {
+//         heightArr2.push($(this).height());
+//       } else {
+//         heightArr3.push($(this).height());
+//       }
+//     });
+//   });
+//   heightArr1.sort(function (a, b) { return b - a; }); // 내림차순
+//   heightArr2.sort(function (a, b) { return b - a; }); // 내림차순
+//   heightArr3.sort(function (a, b) { return b - a; }); // 내림차순
+//   // heightArr.sort(function (a, b) { return a - b; }); // 오름차순
+//   //(heightArr[0]);  // 내림차순일 경우 최대값, 오름차순일 경우 최소값
+//   if (heightArr2.length === 0) heightArr2[0] = 0;
+//   if (heightArr3.length === 0) heightArr3[0] = 0;
+//   var heights = heightArr1[0] + heightArr2[0] + heightArr3[0];
+//   if (winWidth < 1280) { //모바일의 경우 모든 li의 높이를 더한다
+//     heights = heightArr1.reduce((a, b) => a + b) + heightArr2.reduce((a, b) => a + b) + heightArr3.reduce((a, b) => a + b) + 30;
+//   }
+//   return heights;
+// }; //getheight
+// ================================
+$("#side-nav .side.btn-open").on("click", function () {
+  // console.log('hgi')
+  $(this).toggleClass("down")
+  $(this).parent().siblings().find(".down").removeClass("down");
+  navSideOpen($(this).siblings('ul'));
+  // $(this).hasClass('down') ? getHeight($(this).siblings('ul')) : false;
+})
+function navSideOpen(selector) {
+  selector.toggleClass('open');
+  selector.hasClass('open') && (selector.height() === 0) ? selector.stop(true).animate({ 'height': (getheight()) }) : selector.stop(true).animate({ 'height': (0) });
+  function getheight() {
+    var _height = 0;
+    var winWidth = $(window).width();
+    var listNum;
+    var line = [];
+    var liHeights = [];
+    selector.find('> li').each((i) => {
+      listNum = i;
+      liHeights.push($(this).height());
+      // console.log(thisg)
+    });
+    console.log(liHeights);
+    var lines = (parseInt(listNum / 4) + 1);
+    for (let i = 0; i < lines; i++) {
+      line[i] = liHeights.slice[1, 5];
+    }
+    console.log(line)
+
+
+    return 500;
   }
 }
-function getheight(selector) {
-  var heightArr1 = [];
-  var heightArr2 = [];
-  var heightArr3 = [];
-  var winWidth = $(window).width();
-  $(selector).siblings('ul').each(function () { //각 대메뉴 
-    $(this).find('> li').each(function (i) { // 각 대메뉴 안의 리스트
-      if (i > 20) i = null;
-      if (i < 5) { //배열 레이아웃 따라 2줄로 나누기
-        heightArr1.push($(this).height());
-      } else if (i >= 6 && i < 10) {
-        heightArr2.push($(this).height());
-      } else {
-        heightArr3.push($(this).height());
-      }
-    });
-  });
-  heightArr1.sort(function (a, b) { return b - a; }); // 내림차순
-  heightArr2.sort(function (a, b) { return b - a; }); // 내림차순
-  heightArr3.sort(function (a, b) { return b - a; }); // 내림차순
-  // heightArr.sort(function (a, b) { return a - b; }); // 오름차순
-  //(heightArr[0]);  // 내림차순일 경우 최대값, 오름차순일 경우 최소값
-  if (heightArr2.length === 0) heightArr2[0] = 0;
-  if (heightArr3.length === 0) heightArr3[0] = 0;
-  var heights = heightArr1[0] + heightArr2[0] + heightArr3[0];
-  if (winWidth < 1280) { //모바일의 경우 모든 li의 높이를 더한다
-    heights = heightArr1.reduce((a, b) => a + b) + heightArr2.reduce((a, b) => a + b) + heightArr3.reduce((a, b) => a + b) + 30;
-  }
-  return heights;
-}; //getheight
+// ========
 function mainControl() {
   var sectionNum = 0;
   var sectionOffset = 0;
@@ -255,4 +293,18 @@ if (pfPath.includes('page') === false) {
   document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
 } else if (pfPath.includes('page') === true) {
   document.write("<script src='../../../../assets/js/portfolioGlobal.js'></script>");
+}
+pfAdjustment();
+function pfAdjustment() {
+  let arr = $('.pfEmph');
+  let speci = [];
+  window.onload = function () {
+    document.getElementById('kooflix').addEventListener('mouseover', () => {
+      if ($("#header").hasClass('atTop') === true) {
+        $(".e2").css({ "visibility": "hidden" });
+      } else {
+        $(".e2").css({ "visibility": "visible" });
+      }
+    });
+  }
 }
