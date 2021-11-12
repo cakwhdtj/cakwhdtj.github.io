@@ -31,16 +31,14 @@ $('#header').on('mouseover', function (e) { //header 상황따라 .atTop 붙이�
   if ($('#header').attr('class') === 'atTop') {
     $(this).removeClass('atTop');
   }
-  console.log(e.pageY)
   $('#header').on('mouseleave', function () {
     if ($(document).scrollTop() < ($(window).height() / 2) && $('#header').attr('class') !== 'atTop') {
       $(this).addClass('atTop');
-      $(this).find('.gnb.side > li > ul').removeattr('style');
+      // $(this).find('.gnb.side > li > ul').removeattr('style');
     }
   });
   let arr = new Array();
   arr.push(e.pageY);
-  console.log(arr);
 });
 $('#header > .gnb > li > h3 > a').on('mouseover focus', function () {
   $(this).parent().parent().siblings().find('ul').removeAttr('style');
@@ -75,7 +73,6 @@ function sideNavOpen(selector) { //각각 줄의 li높이를 구해 가장 높�
     selector.find('span').html('접기');
     selector.addClass('down');
     heights = getheight(selector);
-    console.log(heights)
     selector.siblings('ul').animate({ 'height': heights }, 300);
   } else {
     selector.find('span').html('펼치기');
@@ -198,7 +195,6 @@ function setBannerSlide(selector, status, speed, stopHere) {
     }
   });
 
-  // console.log(slideNow, slidePrev);
   $selector.find('a.next').on('click', function () {
     if (offsetLeft <= minOffsetLeft) {
       $selector.find('.slide').css({ 'transition': 'none' }).stop(true).animate({ 'left': (minOffsetLeft - 10) + 'px' }, 80).animate({ 'left': minOffsetLeft + 'px' }, 160, function () {
@@ -228,7 +224,6 @@ function setBannerSlide(selector, status, speed, stopHere) {
     slideNow = n;
     slidePrev = (n <= 1) ? 1 : (n - 1);
     slideNext = (n >= stopAt) ? 1 : (n + 1);
-    // console.log(slidePrev + ' / ' + slideNow + ' / ' + slideNext);
     if (isTimerOn === true) {
       clearTimeout(timerId);
       timerId = setTimeout(function () { showSlide(slideNext); }, timerSpeed);

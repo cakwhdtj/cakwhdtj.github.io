@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 웹개발자 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Nov 2021 13:01:07 +0900</pubDate>
-    <lastBuildDate>Thu, 11 Nov 2021 13:01:07 +0900</lastBuildDate>
+    <pubDate>Thu, 11 Nov 2021 15:35:08 +0900</pubDate>
+    <lastBuildDate>Thu, 11 Nov 2021 15:35:08 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -89,22 +89,6 @@
         <category>반응형</category>
         
         <category>풀페이지</category>
-        
-        <category>portfolio</category>
-      </item>
-    
-      <item>
-        <title>test</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_test/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
-test&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
-        <link>http://localhost:4000/test/</link>
-        <guid isPermaLink="true">http://localhost:4000/test/</guid>
-        
-        <category>반응형</category>
         
         <category>portfolio</category>
       </item>

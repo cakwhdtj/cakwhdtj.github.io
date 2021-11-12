@@ -6,6 +6,10 @@ a {color: inherit;text-decoration: inherit;}
 img {vertical-align: middle;}
 a img {border: none;}
 li {list-style: none;}
+/* pf */
+.emphEffect {
+    z-index: 99; scale: 1.1;
+}
 /* main */
 body {font-family: 'Noto Sans KR', 'NanumSquare', sans-serif;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
@@ -492,8 +496,8 @@ div.imgSlide-box .control a.play.on .fa-play {visibility: hidden;}
 #header > .gnb > li > ul > li:nth-child(n+7):nth-child(-n+20) {min-height: unset;}
 
 
-.top-nav {position: absolute; top: 15px; right: 30px; width: 505.8px; height: 75px; font-size: 14px; font-weight: 100; text-align: right; }
-.top-nav > * {position: absolute;}
+.top-nav {position: absolute; top: 15px; right: 30px; width: 100%; height: 75px; font-size: 14px; font-weight: 100; text-align: right; }
+.top-nav > * {position: absolute; right: 0;}
 .top-nav > ul > li {display: inline-block; position: relative; padding: 0 10px 0 10px; box-sizing: border-box;}
 .top-nav > ul > li:hover, .top-nav > ul > li:focus {
     text-decoration: underline;
@@ -507,21 +511,28 @@ div.imgSlide-box .control a.play.on .fa-play {visibility: hidden;}
 .top-nav li:nth-child(6) {padding-left: 20px;}
 .top-nav li:nth-child(7) {padding-right: 20px; cursor: pointer;}
 .top-nav li:nth-child(7)::after {right: 0; transform: scale(-50%); background: unset; border: 6px solid transparent; border-top: 6px solid #666; top: 40%; width: .5px; height: 1px;}
-.top-nav > div {display: inline-block; position: absolute; bottom: -5px; right: 0; margin-top: 10px;}
-.input-group {display: inline-block; position: relative; height: 38px; overflow: visible;}
+.top-nav > div {display: inline-block; position: absolute; bottom: -5px; right: 0; margin-top: 10px; width:15%;}
+.input-group textarea:focus, input:focus{
+    outline: none;
+}
+.input-group {display: inline-block; position: relative; height: 38px; overflow: visible; width: calc(100% - 50px); min-width: calc(30%);
+}
 .input-group .text {
     display: inline-block;
-    border: 1px solid rgba(102, 102, 102, .3); width: 180px; height: 100%; border-radius: 19px; background: transparent;
+    border: 1px solid rgba(102, 102, 102, .3); width: calc(100% - 30px); height: 100%; border-radius: 19px; background: transparent;
     border-right: transparent; border-top-right-radius: 0;  border-bottom-right-radius: 0; 
     box-sizing: border-box; transition: all 0.3s; 
-    padding-left: 10px;
+    padding-left: 15px;
     background-color: #e6ebf2;
     font-family: inherit; font-size: 14px; 
     appearance: none; -webkit-appearance: none;
+    text-overflow: ellipsis;
+    transition: .3s ease-in-out;
 }
+
 .atTop .input-group .text {background-color: transparent;}
 .input-group input[type="submit"] {
-    outline: none; border-color: transparent;
+    border-color: transparent;
     display: inline-block;
     height: 100%; width: 30px;
     background: #e6ebf2 url(../img/search_black.png) no-repeat center;
@@ -541,6 +552,17 @@ div.imgSlide-box .control a.play.on .fa-play {visibility: hidden;}
 }
 .atTop .top-nav > div > a {background: url(../img/allmenu.png) no-repeat;}
 .top-nav > div > a {background: url(../img/allmenu_black.png) no-repeat;}
+@media screen and (max-width: 1280px) { 
+    .input-group .text {
+        width: 0; border: none; background-color: transparent;
+    }
+    .input-group input[type="submit"] {
+        border: none;
+        background: transparent url(../img/search_black.png) no-repeat center;
+
+    }
+}
+
 
 #side-nav {
     will-change: right;
