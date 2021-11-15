@@ -608,6 +608,7 @@ div.imgSlide-box .control a.play.on .fa-play {visibility: hidden;}
     float: left;
     padding: 5px;
     position: relative;
+    margin-bottom: 20px;
 }
 #side-nav > ul.gnb > li > ul > li:nth-child(6) {clear: left;}
 #side-nav > ul.gnb > li > ul > .card {display: none;}

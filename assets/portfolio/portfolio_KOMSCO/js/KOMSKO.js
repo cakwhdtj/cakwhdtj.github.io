@@ -3,26 +3,10 @@ setBannerSlide('#slide5', false, 3000, 5);
 checkScroll();
 section1Side();
 mainControl();
-// headerResizing();
 $(window).on('scroll resize', function () {
   checkScroll();
-  // headerResizing();
   section1Side();
-
 });
-
-// function headerResizing() {
-//   var winWidth = $(window).width();
-//   if (winWidth > 1280) {
-//     var gnbchildwidth = $('.gnb > li:last-child').width();
-//     var gnbEnd = $('.gnb > li:last-child').offset().left + gnbchildwidth;
-//     if ($('.input-group').offset().left <= gnbEnd) {
-//       $('.input-group .text').css({ 'visibility': 'hidden' });
-//     } else if ($('.input-group').offset().left > gnbEnd) {
-//       $('.input-group .text').removeAttr('style');
-//     }
-//   }
-// }
 
 $('#skipNav').on('click', function () {
   $(document).scrollTop($('#main').offset().top);
@@ -59,95 +43,42 @@ $('#open-side-nav').on('click', function () {
 $('#side-nav .btn-close').on('click', function () {
   $('#side-nav').removeClass('open');
   $('body, html').removeAttr('style');
-  $('#side-nav .side.btn-open.down').removeClass('down');;
+  $('#side-nav .side.btn-open.down').removeClass('down');
+  $('#side-nav').find('ul.open').css({ 'height': 0 }).removeClass('open');
 });
 
-// ===================================
-// $('#side-nav .side.btn-open').on('click', function () {
-//   sideNavOpen($(this));
-//   $(this).parent().siblings().find('.down').stop(true).trigger('click');
-// });
-// $('.open-all').on('click', function () {
-//   $('#side-nav .side.btn-open').trigger('click');
-// });
-
-// function sideNavOpen(selector) { //각각 줄의 li높이를 구해 가장 높은 것들의 높이를 더해서 열고 닫아줌
-//   var heights = 0;
-//   if (selector.siblings('ul').height() === 0) {
-//     selector.find('span').html('접기');
-//     selector.addClass('down');
-//     heights = getheight(selector);
-//     selector.siblings('ul').animate({ 'height': heights }, 300);
-//   } else {
-//     selector.find('span').html('펼치기');
-//     selector.removeClass('down');
-//     selector.siblings('ul').animate({ 'height': 0 }, 300);
-//   }
-// }
-// function getheight(selector) {
-//   var heightArr1 = [];
-//   var heightArr2 = [];
-//   var heightArr3 = [];
-//   var winWidth = $(window).width();
-//   $(selector).siblings('ul').each(function () { //각 대메뉴 
-//     $(this).find('> li').each(function (i) { // 각 대메뉴 안의 리스트
-//       if (i > 20) i = null;
-//       if (i < 5) { //배열 레이아웃 따라 2줄로 나누기
-//         heightArr1.push($(this).height());
-//       } else if (i >= 6 && i < 10) {
-//         heightArr2.push($(this).height());
-//       } else {
-//         heightArr3.push($(this).height());
-//       }
-//     });
-//   });
-//   heightArr1.sort(function (a, b) { return b - a; }); // 내림차순
-//   heightArr2.sort(function (a, b) { return b - a; }); // 내림차순
-//   heightArr3.sort(function (a, b) { return b - a; }); // 내림차순
-//   // heightArr.sort(function (a, b) { return a - b; }); // 오름차순
-//   //(heightArr[0]);  // 내림차순일 경우 최대값, 오름차순일 경우 최소값
-//   if (heightArr2.length === 0) heightArr2[0] = 0;
-//   if (heightArr3.length === 0) heightArr3[0] = 0;
-//   var heights = heightArr1[0] + heightArr2[0] + heightArr3[0];
-//   if (winWidth < 1280) { //모바일의 경우 모든 li의 높이를 더한다
-//     heights = heightArr1.reduce((a, b) => a + b) + heightArr2.reduce((a, b) => a + b) + heightArr3.reduce((a, b) => a + b) + 30;
-//   }
-//   return heights;
-// }; //getheight
-// ================================
 $("#side-nav .side.btn-open").on("click", function () {
-  // console.log('hgi')
   $(this).toggleClass("down")
   $(this).parent().siblings().find(".down").removeClass("down");
   navSideOpen($(this).siblings('ul'));
-  // $(this).hasClass('down') ? getHeight($(this).siblings('ul')) : false;
 })
 function navSideOpen(selector) {
+  selector.parent().siblings().find('>ul').removeClass('open').css({ 'height': 0 });
+  // console.log(selector.parent().siblings().find('>ul'))
   selector.toggleClass('open');
   selector.hasClass('open') && (selector.height() === 0) ? selector.stop(true).animate({ 'height': (getheight()) }) : selector.stop(true).animate({ 'height': (0) });
   function getheight() {
     var _height = 0;
     var winWidth = $(window).width();
-    var listNum;
-    var line = [];
     var liHeights = [];
+    var eachLine = [];
+    var eachLineMax = [];
+
     selector.find('> li').each((i) => {
-      listNum = i;
-      liHeights.push($(this).height());
-      // console.log(thisg)
+      liHeights.push(selector.find('> li:eq(' + i + ')').height())
     });
-    console.log(liHeights);
-    var lines = (parseInt(listNum / 4) + 1);
-    for (let i = 0; i < lines; i++) {
-      line[i] = liHeights.slice[1, 5];
+    for (let i = 0; i < parseInt(liHeights.length / 4); i++) {
+      var x = (i * 4) + 1;
+      var y = (i * 4) + 5;
+      eachLine[i] = liHeights.slice(x, y);
+      eachLineMax[i] = eachLine[i].reduce(function (previous, current) {
+        return previous > current ? previous : current;
+      });
     }
-    console.log(line)
-
-
-    return 500;
+    _height = eachLineMax.reduce((a, b) => a + b);
+    return (_height + 80);
   }
 }
-// ========
 function mainControl() {
   var sectionNum = 0;
   var sectionOffset = 0;
