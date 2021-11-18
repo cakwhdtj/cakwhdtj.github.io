@@ -277,7 +277,6 @@ ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
   position: relative;
   margin: 100px auto 0 auto;
   width: 90vw; height: 90vh;
-  border: 1px solid red;
 
 }
 .api_practice #map {
@@ -285,6 +284,5 @@ ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
   width: 80%; height: 80%;
-  border: 1px solid red;
 
 }

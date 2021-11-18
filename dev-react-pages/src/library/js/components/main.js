@@ -38,7 +38,6 @@ class Main extends Component {
         super(props);
         this.state = {
             subheadings: [
-                { id: 1, title: 'API', desc: 'API' },
                 { id: 1, title: '이미지 슬라이드', desc: 'Image_Slide' },
                 { id: 2, title: '배너 슬라이드', desc: 'Banner_Slide' },
                 { id: 3, title: '스크롤 UI', desc: 'Scroll_UI' },
@@ -46,9 +45,7 @@ class Main extends Component {
                 { id: 5, title: '드래그 UI', desc: 'Drag_UI' },
                 { id: 6, title: '내비게이션 UI', desc: 'Nav_UI' },
                 { id: 7, title: '모바일 UI', desc: 'Mobile_UI' },
-            ],
-            api: [
-                { id: 1, title: 'API', desc: 'API' }
+                { id: 8, title: 'API', desc: 'API' },
             ],
             imageSlide: [
                 { id: 1, title: 'Step 1', desc: 'Image-slide' },
@@ -78,6 +75,9 @@ class Main extends Component {
             mobileUI: [
                 { id: 1, title: 'Swipe', desc: 'Mobile-UI' },
             ],
+            api: [
+                { id: 1, title: 'API', desc: 'API' }
+            ],
             datafrLink: [{
                 kind: null, num: null,
             }]
@@ -89,7 +89,7 @@ class Main extends Component {
         })
     }
     render() {
-        const Content = [this.state.api, this.state.imageSlide, this.state.bannerSlide, this.state.scrollUI, this.state.popup, this.state.dragUI, this.state.navUI, this.state.mobileUI]
+        const Content = [this.state.imageSlide, this.state.bannerSlide, this.state.scrollUI, this.state.popup, this.state.dragUI, this.state.navUI, this.state.mobileUI, this.state.api,]
         // const { imageIsReady } = this.state;
         return (
             <main className="Main">
