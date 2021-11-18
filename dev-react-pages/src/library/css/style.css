@@ -55,6 +55,35 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 .Main div.UI > div > ul > li > a:hover {background-color: #f9f9f9; border-color: #999999;}
 
 .Page1 {background: tomato; height: 100vh;}
+.Header button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.Header button:focus {
+  outline: auto;
+}
+.Header button.menu {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); width: 24px; height: 16px; z-index: 999999;}
+.Header button.menu::before {content: ''; position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background: #000000; transition: all 0.3s;}
+.Header button.menu span {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 100%; height: 2px; background: #000000; overflow: hidden; text-indent: -9999px; transition: all 0.3s;}
+.Header button.menu::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background: #000000; transition: all 0.3s;}
+.Header button.menu.close::before {top: 50%; transform: translate(-50%, -50%) rotate(42deg); width: 120%;}
+.Header button.menu.close span {opacity: 0;}
+.Header button.menu.close::after {top: 50%; transform: translate(-50%, -50%) rotate(-42deg); width: 120%;}
+#gnb {position: fixed; right: -100%; width: 100%; top: 71px; height: calc(100% - 71px); background-color: #ffffff; z-index: 1000; overflow: auto; font-size: 15px; box-sizing: border-box; padding: 20px 20px 40px 20px; transition: right 0.3s;}
+#gnb.open {right: 0;}
+#gnb > ul > li + li {border-top: 1px solid #e0e0e0;}
+#gnb > ul > li > button {position: relative; display: block; line-height: 50px; font-size: 17px; padding:0 20px 0 20px;}
+#gnb > ul > li.on > button {color: #008fe2;}
+#gnb > ul > li > button i {position: absolute; right: 20px; top: 50%; transform: translate(180%, -50%); color: #999999; font-size: 14px;}
+#gnb > ul > li > ul {overflow: hidden; height: 0; transition: height 0.3s;}
+#gnb > ul > li > ul > li {border-top: 1px solid #e0e0e0;}
+#gnb > ul > li > ul > li > button {display: block; line-height: 34px; padding-left: 30px;}
+#gnb > ul > li > ul > li.on > button {color: #008fe2; background-color: #f9f9f9;}
 @media screen and (max-width: 1023.9px) {
 /* .Header {background-color: red;} */
 .Header button {
@@ -81,7 +110,7 @@ body.no-scroll {height: 100vh; overflow: hidden;}
 #gnb > ul > li + li {border-top: 1px solid #e0e0e0;}
 #gnb > ul > li > button {position: relative; display: block; line-height: 50px; font-size: 17px; padding:0 20px 0 20px;}
 #gnb > ul > li.on > button {color: #008fe2;}
-#gnb > ul > li > button i {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); color: #999999; font-size: 14px;}
+#gnb > ul > li > button i {position: absolute; right: 20px; top: 50%; transform: translate(180%, -50%); color: #999999; font-size: 14px;}
 #gnb > ul > li > ul {overflow: hidden; height: 0; transition: height 0.3s;}
 #gnb > ul > li > ul > li {border-top: 1px solid #e0e0e0;}
 #gnb > ul > li > ul > li > button {display: block; line-height: 34px; padding-left: 30px;}
@@ -242,3 +271,20 @@ ul.drag-list > li > a i {position: absolute; left: 50%; top: 50%; transform: tra
 ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
 
 
+/* api */
+.api_practice {
+  display: inline-block;
+  position: relative;
+  margin: 100px auto 0 auto;
+  width: 90vw; height: 90vh;
+  border: 1px solid red;
+
+}
+.api_practice #map {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%; height: 80%;
+  border: 1px solid red;
+
+}

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import $ from 'jquery'
+import $ from 'jquery';
+import '../../../css/style.css';
+// import './library/css/style.css';
 
 class NavUI extends Component {
     componentDidMount() {
-
         $('#gnb > ul > li > button').on('mouseenter', function () {
             $('.Header').addClass('open');
         });
@@ -28,23 +29,23 @@ class NavUI extends Component {
         $('#gnb > ul > li').each(function () {
             var numSub = $(this).find('> ul > li').length;
             if (numSub > 0) {
-                $(this).find('> button').append('<i class="fas fa-plus mobile"><span>열림</span></i>');
+                $(this).find('> button').append('<i className="fas fa-plus"><span>열기</span></i>');
             }
         });
 
         $('#gnb > ul > li > button').on('click', function (e) {
-            if ($(window).width() < 1024 && $(this).next().find('li').length > 0) {
-                e.preventDefault();
-                var height = 0;
-                $(this).next().find('li').each(function () {
-                    height += $(this).outerHeight(true);
-                });
-                $(this).next().css({ 'height': height + 'px' });
-                $(this).find('i').attr({ 'class': 'fas fa-minus mobile' });
+            // if ($(window).width() < 1024 && $(this).next().find('li').length > 0) {
+            e.preventDefault();
+            var height = 0;
+            $(this).next().find('li').each(function () {
+                height += $(this).outerHeight(true);
+            });
+            $(this).next().css({ 'height': height + 'px' });
+            $(this).find('i').attr({ 'className': 'fas fa-minus' });
 
-                $(this).parent().siblings().find('> ul').css({ 'height': 0 });
-                $(this).parent().siblings().find('> button i').attr({ 'class': 'fas fa-plus mobile' });
-            }
+            $(this).parent().siblings().find('> ul').css({ 'height': 0 });
+            $(this).parent().siblings().find('> button i').attr({ 'className': 'fas fa-plus' });
+            // }
         });
 
         $('#gnb > ul > li').on('focusin', function () {
@@ -55,7 +56,7 @@ class NavUI extends Component {
             if ($(window).width() >= 1024) {
                 $('#gnb > ul > li > ul').removeAttr('style');
                 $('#gnb').removeClass('open');
-                $('#gnb').find('i').attr({ 'class': 'fas fa-plus mobile' });
+                $('#gnb').find('i').attr({ 'className': 'fas fa-plus' });
                 $('.Header button.menu').removeClass('close');
             }
         });
@@ -65,10 +66,10 @@ class NavUI extends Component {
     render() {
         return (
             <div>
-                <button class="menu"><span>내비게이션 열기/닫기</span></button>
+                <button className="menu"><span>내비게이션 열기/닫기</span></button>
                 <nav id="gnb">
                     <ul>
-                        <li class="sub1" data-menu="_menu">
+                        <li className="sub1" data-menu="_menu">
                             <button>메뉴1</button>
                             <ul>
                                 <li data-menu="company"><button>회사개요</button></li>
@@ -79,7 +80,7 @@ class NavUI extends Component {
                                 <li data-menu="way"><button>오시는 길</button></li>
                             </ul>
                         </li>
-                        <li class="sub2" data-menu="product">
+                        <li className="sub2" data-menu="product">
                             <button>메뉴2</button>
                             <ul>
                                 <li data-menu="menu2_sub1"><button>서브1</button></li>
@@ -89,7 +90,7 @@ class NavUI extends Component {
                                 <li data-menu="menu2_sub5"><button>서브5</button></li>
                             </ul>
                         </li>
-                        <li class="sub3" data-menu="pr">
+                        <li className="sub3" data-menu="pr">
                             <button>메뉴3</button>
                             <ul>
                                 <li data-menu="news"><button>소식</button></li>
@@ -98,8 +99,8 @@ class NavUI extends Component {
                                 <li data-menu="customer"><button>주요고객사</button></li>
                             </ul>
                         </li>
-                        <li class="sub4" data-menu="portfolio"><button>메뉴4</button></li>
-                        <li class="sub5" data-menu="data">
+                        <li className="sub4" data-menu="portfolio"><button>메뉴4</button></li>
+                        <li className="sub5" data-menu="data">
                             <button>메뉴5</button>
                             <ul>
                                 <li data-menu="menu5_sub1"><button>서브1</button></li>
@@ -109,9 +110,9 @@ class NavUI extends Component {
                                 <li data-menu="menu5_sub5"><button>서브5</button></li>
                             </ul>
                         </li>
-                        <li class="sub6" data-menu="test"><button>메뉴6</button></li>
+                        <li className="sub6" data-menu="test"><button>메뉴6</button></li>
                     </ul>
-                    <span class="bar"></span>
+                    <span className="bar"></span>
                 </nav>
             </div>
         )

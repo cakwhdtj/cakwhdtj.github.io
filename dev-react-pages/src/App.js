@@ -1,4 +1,4 @@
-import { Component, React } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import './library/css/web-font.css'
 import './library/css/style.css'
