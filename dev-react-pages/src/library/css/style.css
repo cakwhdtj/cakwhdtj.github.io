@@ -273,9 +273,8 @@ ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
 
 /* api */
 .api_practice {
-  display: inline-block;
-  position: relative;
-  margin: 100px auto 0 auto;
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
   width: 90vw; height: 90vh;
 
 }

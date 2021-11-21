@@ -25,6 +25,8 @@ class UIPage extends Component {
 class UIArea extends Component {
     render() {
         switch (this.props.datafrLink[0].kind) {
+            case 'API':
+                return <APIPractice props={this.props}></APIPractice>
             case 'Image_Slide':
                 return <ImageSlide props={this.props}></ImageSlide>
             case 'Banner_Slide':
@@ -39,8 +41,7 @@ class UIArea extends Component {
                 return (<div>우상단 메뉴버튼</div>)
             case 'Mobile_UI':
                 return <MobileUI props={this.props}></MobileUI>
-            case 'API':
-                return <APIPractice props={this.props}></APIPractice>
+
             default:
                 return (
                     <div>경로지정 안됨</div>
