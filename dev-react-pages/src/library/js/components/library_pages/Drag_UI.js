@@ -8,7 +8,7 @@ class DragUI extends Component {
         var _set = [];
         var funcSet = [(Dr1()),]
         function show() {
-            for (let i = 0; i < _props.content[0].length; i++) {
+            for (let i = 0; i < _props.content[5].length; i++) {
                 _set.push(
                     <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
                         <div>{funcSet[i]}</div>

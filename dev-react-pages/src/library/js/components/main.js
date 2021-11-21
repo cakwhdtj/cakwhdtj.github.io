@@ -92,7 +92,6 @@ class Main extends Component {
     }
     render() {
         const Content = [this.state.api, this.state.imageSlide, this.state.bannerSlide, this.state.scrollUI, this.state.popup, this.state.dragUI, this.state.navUI, this.state.mobileUI,]
-        // const { imageIsReady } = this.state;
         return (
             <main className="Main">
                 <Route path="/react-pages" exact={true}>

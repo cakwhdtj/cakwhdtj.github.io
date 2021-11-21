@@ -20,7 +20,7 @@ class ImageSlide extends Component {
         var _set = [];
         var funcSet = [IS1(), IS2(), IS3(), IS4(), IS5(), IS6(),]
         function show() {
-            for (let i = 0; i < _props.content[0].length; i++) {
+            for (let i = 0; i < _props.content[1].length; i++) {
                 _set.push(
                     <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
                         <div>{funcSet[i]}</div>
@@ -29,6 +29,8 @@ class ImageSlide extends Component {
             }
             return (<div>{_set}</div>)
         }
+        console.log(_props.content)
+
         return show();
     }
 }

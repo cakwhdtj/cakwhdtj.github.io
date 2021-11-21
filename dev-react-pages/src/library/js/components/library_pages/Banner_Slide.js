@@ -27,7 +27,7 @@ class BannerSlide extends Component {
         var _set = [];
         var funcSet = [BS1(), BS2(),]
         function show() {
-            for (let i = 0; i < _props.content[0].length; i++) {
+            for (let i = 0; i < _props.content[2].length; i++) {
                 _set.push(
                     <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
                         <div>{funcSet[i]}</div>

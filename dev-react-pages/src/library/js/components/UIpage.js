@@ -24,6 +24,7 @@ class UIPage extends Component {
 };
 class UIArea extends Component {
     render() {
+        console.log(this.props.datafrLink[0].kind);
         switch (this.props.datafrLink[0].kind) {
             case 'API':
                 return <APIPractice props={this.props}></APIPractice>
