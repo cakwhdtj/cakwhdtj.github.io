@@ -161,6 +161,13 @@
         </url>
     
         <url>
+            <loc>http://localhost:4000/double_sweet/</loc>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+            <lastmod>2021-06-21</lastmod>
+        </url>
+    
+        <url>
             <loc>http://localhost:4000/komsco/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>

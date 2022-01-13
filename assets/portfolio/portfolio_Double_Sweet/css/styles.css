@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+/* reset */
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+main {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i.fas, i.far, i.fab {vertical-align: middle; display: inline-block;}
+i.fas span, i.far span, i.fab span {position: absolute; overflow: hidden; text-indent: -999px;}
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m:after {content: '\00a0';}
+.ir-hidden {position: absolute; left: -9999px;}
+
+/* common */
+body {font-family: 'Noto Sans KR', serif; font-weight: 400; font-size: 14px; color: #333333; background: #ffffff;}
+.wrap {min-width: 1024px; overflow: hidden;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; font-size: 16px; color: #ffffff; background: rgba(0, 0, 0, 0.6); z-index: 10000; transition: top 0.3s;}
+#skip-nav:focus {top: 0;}
+
+/* header */
+#header {
+    z-index: 999;
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100px;
+}
+#header h1 {position: absolute; left: 50px; bottom: 0;}
+#header h1 a {display: block; width: 100%; height: 100%;}
+#header h1 a img.icon1 {position: absolute; top: 0; left: 50%; transform: translate(-110%, 0);}
+#header h1 a img.icon2 {position: absolute; top: 10px; left: 50%; transform: translate(10%, 0);}
+#header h1 a:hover img.icon1 {animation: logo-effect 0.5s linear 0s infinite alternate forwards;}
+#header h1 a:hover img.icon2 {animation: logo-effect 0.5s linear 0s infinite alternate-reverse forwards;}
+
+#header > a.menu {position: absolute; right: 50px; bottom: 0; font-size: 26px; font-weight: 700; padding-right: 40px;}
+#header > a.menu img {position: absolute; right: 0; top: 50%; transform: translate(0, -50%); transition: transform 0.5s;}
+#header a.menu:hover img {transform: translate(0, -50%) rotate(90deg);}
+#header .gnb {
+    background: #ffffff; overflow: hidden; box-shadow: -0px 0px 300px rgba(0, 0, 0, 0.485);
+    position: absolute; right: -100%;
+    height: 100vh; width: 500px;
+    transition: .5s ease-in;
+}
+#header .gnb.on {right: 0; transition: .5s ease-in;}
+#header .gnb > img {position: absolute;}
+#header .gnb .bg1 {top: 20px; right: -80px; animation: rotate1 30s linear infinite;}
+#header .gnb .bg2 {top: 60%; right: 60px; animation: rotate2 30s linear infinite;}
+#header .gnb > a {position: absolute; top: 60px; right: 55px;}
+#header .gnb ul {position: absolute; left: 100px; top: 50%; transform: translateY(-50%);}
+#header .gnb ul li {font-size: 24px; margin: 25px 0 25px 0;}
+#header .gnb .copyright {position: absolute; font-size: 12px; left: 50%; bottom: 10%; transform:translateX(-50%)}
+#header .gnb::after {position: absolute; top: 55%; left: -13%; width: 150px; height: 150px; background-color: #faf9f4; content: ""; border-radius: 50%;}
+
+.quick_menu {
+    background-color: #2a2928; z-index: 800;
+    color: #fff; font-weight: lighter; font-size: 13px;
+    position: fixed; right:30px; top: 180px;
+    text-align: center;
+}
+.quick_menu a {display: block; position: relative;}
+.quick_menu > a {margin-left: auto; margin-right: auto;}
+.quick_menu > a:first-child {
+    border: 1px solid #cca96a;
+    position: absolute; left: 50%;
+    transform: translate(-50% , -50%);
+    color:#fff;
+    background-color: #1b1b1b;
+    line-height: 90px;
+    width: 90px; height: 90px; border-radius: 50%;
+}
+.quick_menu > a:first-child::after {
+    position:absolute; transform: translateX(-50%);
+    width: 12px; height: 6px; left: 50%; bottom: 15px;
+    content: "";
+    background-image: url("../img/icon_arrow_down.png");
+    transition: .3s ease-in-out;
+}
+.quick_menu > a:first-child:hover::after {bottom: 10px;}
+.quick_menu > a:last-child::before {
+    display: block;
+    margin: 50px auto 0 auto;
+    content: ""; width: 40px; height: 40px;
+    background-image: url("../img/icon_top.png");
+    transition: all .3s ease;
+}
+.quick_menu ul {
+    height: 0; width: 120px; overflow: hidden; 
+    transform: translateY(55px);
+    transition: all .3s ease-in-out;
+}
+.quick_menu ul.on {
+    height: 540px; 
+    transition: all .3s ease-in-out;
+}
+.quick_menu > a:last-child { position: relative; height: 60px; line-height: 5px;}
+.quick_menu > a:last-child:hover::before {transform: translateY(-3px);}
+.quick_menu ul li {position:relative; margin-bottom: 13px; }
+.quick_menu ul li::after {content: ""; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 70%; background-color: #fff; height: 1px;}
+.quick_menu ul li img {display: block; margin-right: auto; margin-left: auto; transition: all .3s ease-in-out;}
+.quick_menu ul li:hover a {color: #cca96a;}
+.quick_menu ul li:hover a img {color: #cca96a; transform: translateY(-3px);}
+
+/* main */
+#main {padding-top: 100vh; position: relative;}
+section{position: relative; width: 100%; height: 100vh; background-color: #fff;}
+.section1 {
+    width: 100%;
+    position: fixed; top: 0; 
+    background-color: antiquewhite; overflow: hidden;
+    background-attachment: fixed;
+}
+.section1 .description { border: 1px solid red; position: absolute; left: 150px; top: 200px;}
+.section1 .description > li { position: absolute; width: max-content; opacity: 0; transition: all .5s;}
+.section1 .description > li.on {opacity: 100%;}
+.section1 .description h3 { font-family: 'Noto Serif KR'; font-size: 70px; margin-bottom: 40px; transform: translateX(50%); transition: all .5s ease-in-out;}
+.section1 .description .on h3 {transform: translateX(0);}
+.section1 .description ul li {
+    transform: translateX(50%); transition: all .5s ease-in-out .08s;
+    background: url("../img/icon_bullet.gif") 0 center no-repeat;
+    padding-left: 25px;
+    font-size: 14px;
+}
+.section1 .description .on ul li {transform: translateX(0);}
+.section1 .description a.view {position: absolute; transform: translateX(80%); bottom: -50px; padding: 0 20px; transition: all 0.5s ease-in-out .1s; z-index: 1;}
+.section1 .description .on a.view {transform: translateX(0);}
+.section1 .description a.view:before {content: ''; position: absolute; left: 0; top: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; background: #000000; border-radius: 100%; z-index: -1;}
+.section1 .description a.view:hover:before {animation: dot-effect-left 0.6s ease-out 0s 1 normal forwards;}
+.section1 .description a.view:after {content: ''; position: absolute; right: 0; top: 50%; transform: translate(50%, -50%); width: 6px; height: 6px; background: #000000; border-radius: 100%; z-index: -1;}
+.section1 .description a.view:hover:after {animation: dot-effect-right 0.6s ease-out 0s 1 normal forwards;}
+.section1 .description a.view:hover {color: #ffffff;}
+
+@keyframes logo-effect {
+    0% {top: 0;}
+    100% {top: 10px;}
+}
+@keyframes rotate1 {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes rotate2 {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(-360deg);}
+}
+@keyframes dot-effect-left {
+    0% {left: 0;}
+    50% {left: 50%;}
+    100% {left: 50%; width: 60px; height: 60px;}
+}
+@keyframes dot-effect-right {
+    0% {right: 0;}
+    50% {right: 50%;}
+    100% {right: 50%; width: 60px; height: 60px;}
+}
