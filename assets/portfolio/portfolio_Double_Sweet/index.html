@@ -15,6 +15,7 @@
     <meta name="twitter:url" content="#">
     <meta name="twitter:image" content="#">
     <meta name="twitter:description" content="포트폴리오용 Double Sweet 홈페이지입니다.">
+    <link href="fa/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Double Sweet</title>
 </head>
@@ -46,7 +47,7 @@
                 <p class="copyright">Copyright © 더블스윗. All Rights Reserved.</p>
             </div>
         </header>
-        <div class="quick_menu">
+        <div class="quick_menu" style="display: none;">
             <a href="#"><em>Q</em>UICK</a>
             <ul>
                 <li><a href="#"><img src="img/quick_icon_01.png" alt=""> 기존 거래처 발주</a></li>
@@ -62,7 +63,7 @@
         <main id="main">
             <section class="section1">
                 <ul class="description slide">
-                    <li>
+                    <li class="on">
                         <h3>Salty Caramel<br />Macaron</h3>
                         <ul>
                             <li>더블스윗에서 직접 제조한 수제 카라멜</li>
@@ -119,28 +120,39 @@
                     </li>
                 </ul>
                 <div class="indicator">
-                    <ul class="main_images">
-                        <li><img src="img/main_macaron_01.png" alt="salty caramel macaron"></li>
+                    <ul class="product circle">
+                        <!-- <li class="on"><a href="#">SALTY CARAMEL</a></li>
+                        <li><a href="#">VANILLA</a></li>
+                        <li><a href="#">STRAWBERRY</a></li>
+                        <li><a href="#">CHOCOLATE</a></li>
+                        <li><a href="#">EARL GREY</a></li>
+                        <li><a href="#">SALTY CARAMEL</a></li>
+                        <li><a href="#">VANILLA</a></li>
+                        <li><a href="#">STRAWBERRY</a></li>
+                        <li><a href="#">CHOCOLATE</a></li>
+                        <li><a href="#">EARL GREY</a></li> -->
+                        <li class="on"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                    <ul class="main_images slide">
+                        <li class="on"><img src="img/main_macaron_01.png" alt="salty caramel macaron"></li>
                         <li><img src="img/main_macaron_02.png" alt="vanilla macaron"></li>
                         <li><img src="img/main_macaron_03.png" alt="strawberry macaron"></li>
                         <li><img src="img/main_macaron_04.png" alt="chocolate macaron"></li>
                         <li><img src="img/main_macaron_05.png" alt="earl grey macaron"></li>
                     </ul>
-                    <ul class="product">
-                        <li>SALTY CARAMEL</li>
-                        <li>VANILLA</li>
-                        <li>STRAWBERRY</li>
-                        <li>CHOCOLATE</li>
-                        <li>EARL GREY</li>
-                        <li>SALTY CARAMEL</li>
-                        <li>VANILLA</li>
-                        <li>STRAWBERRY</li>
-                        <li>CHOCOLATE</li>
-                        <li>EARL GREY</li>
-                    </ul>
                 </div>
             </section>
-            <section id="section2">
+            <section class="section2">
+                <h3>DOUBLESWEET<br />BRAND STORY</h3>
                 <div>
                     <img src="img/brand_logo.png" alt="더블스윗 브랜드로고">
                     <p>
@@ -161,7 +173,7 @@
                 <h3>DOUBLE SWEET<br />HADMADE MACARON</h3>
                 <div class="indicator">
                     <span>Color Choice!</span>
-                    <ul>
+                    <ul class="group gallery">
                         <li class="on"><a href="#"><img src="img/color_01.png" alt="전체제품보기"></a></li>
                         <li><a href="#"><img src="img/color_02.png" alt="2그룹제품보기"></a></li>
                         <li><a href="#"><img src="img/color_03.png" alt="3그룹제품보기"></a></li>
@@ -174,8 +186,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_01.jpg" alt="" class="normal">
                                 <img src="img/macaron_01_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_01.jpg" alt="" class="normal">
                             </div>
                             <span>초코 마카롱</span>
                             <em>CHOCOLATE MACARON</em>
@@ -184,8 +196,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_02.jpg" alt="" class="normal">
                                 <img src="img/macaron_02_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_02.jpg" alt="" class="normal">
                             </div>
                             <span>바닐라 마카롱</span>
                             <em>VANILLA MACARON</em>
@@ -194,8 +206,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_03.jpg" alt="" class="normal">
                                 <img src="img/macaron_03_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_03.jpg" alt="" class="normal">
                             </div>
                             <span>딸기 마카롱</span>
                             <em>STRAWBERRY MACARON</em>
@@ -204,8 +216,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_04.jpg" alt="" class="normal">
                                 <img src="img/macaron_04_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_04.jpg" alt="" class="normal">
                             </div>
                             <span>얼그레이 마카롱</span>
                             <em>EARL GREY MACARON</em>
@@ -214,8 +226,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_05.jpg" alt="" class="normal">
                                 <img src="img/macaron_05_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_05.jpg" alt="" class="normal">
                             </div>
                             <span>솔티카라멜 마카롱</span>
                             <em>SALTY CARAMEL MACARON</em>
@@ -224,8 +236,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_06.jpg" alt="" class="normal">
                                 <img src="img/macaron_06_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_06.jpg" alt="" class="normal">
                             </div>
                             <span>녹차 마카롱</span>
                             <em>GREENTEA MACARON</em>
@@ -234,8 +246,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_07.jpg" alt="" class="normal">
                                 <img src="img/macaron_07_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_07.jpg" alt="" class="normal">
                             </div>
                             <span>오레오 마카롱</span>
                             <em>OREO MACARON</em>
@@ -244,8 +256,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_08.jpg" alt="" class="normal">
                                 <img src="img/macaron_08_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_08.jpg" alt="" class="normal">
                             </div>
                             <span>레드벨벳 마카롱</span>
                             <em>RED VELVET MACARON</em>
@@ -254,8 +266,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_09.jpg" alt="" class="normal">
                                 <img src="img/macaron_09_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_09.jpg" alt="" class="normal">
                             </div>
                             <span>요거트 마카롱</span>
                             <em>YOGURT MACARON</em>
@@ -264,8 +276,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_10.jpg" alt="" class="normal">
                                 <img src="img/macaron_10_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_10.jpg" alt="" class="normal">
                             </div>
                             <span>인절미 마카롱</span>
                             <em>INJEOLMI MACARON</em>
@@ -274,8 +286,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_11.jpg" alt="" class="normal">
                                 <img src="img/macaron_11_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_11.jpg" alt="" class="normal">
                             </div>
                             <span>황치즈 마카롱</span>
                             <em>YELLOW CHEESE MACARON</em>
@@ -284,8 +296,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_12.jpg" alt="" class="normal">
                                 <img src="img/macaron_12_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_12.jpg" alt="" class="normal">
                             </div>
                             <span>블루베리 크림치즈 마카롱</span>
                             <em>BLUEBERRY MACARON</em>
@@ -294,8 +306,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_13.jpg" alt="" class="normal">
                                 <img src="img/macaron_13_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_13.jpg" alt="" class="normal">
                             </div>
                             <span>흑임자 마카롱</span>
                             <em>BLACK SESAME MACARON</em>
@@ -304,8 +316,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_14.jpg" alt="" class="normal">
                                 <img src="img/macaron_14_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_14.jpg" alt="" class="normal">
                             </div>
                             <span>청포도 마카롱</span>
                             <em>GREEN GRAPE MACARON</em>
@@ -314,8 +326,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_15.jpg" alt="" class="normal">
                                 <img src="img/macaron_15_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_15.jpg" alt="" class="normal">
                             </div>
                             <span>다크초코가나슈 마카롱</span>
                             <em>DARK CHOCO GANACHE MACARON</em>
@@ -324,8 +336,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <img src="img/macaron_16.jpg" alt="" class="normal">
                                 <img src="img/macaron_16_o.jpg" alt="" class="hover">
+                                <img src="img/macaron_16.jpg" alt="" class="normal">
                             </div>
                             <span>크림브륄레 마카롱</span>
                             <em>CREAM BRULEE MACARON</em>
@@ -345,20 +357,22 @@
             </div>
             <div class="footer-main">
                 <h2><img src="img/logo_footer.png" alt="더블스윗"></h2>
-                <h3>주식회사 더블스윗</h3>
-                <address>
-                    <ul>
-                        <li>[본사] 부산광역시 남구 용호로159번길 94, 부산시범공단 6층</li>
-                        <li>[매장] 부산광역시 남구 수영로322번길 45, 1층 더블스윗</li>
-                        <li>사업자등록번호 891-81-01772</li>
-                        <li>통신판매업번호 2019-부산남구-0608</li>
-                        <li>이메일 order@doublesweet.co.kr</li>
-                        <li>fax 051-625-9434</li>
-                    </ul>
-                </address>
-                <p class="copyright">Copyright © 더블스윗. All Rights Reserved.</p>
+                <div class="company">
+                    <h3>주식회사 더블스윗</h3>
+                    <address>
+                        <ul>
+                            <li>[본사] 부산광역시 남구 용호로159번길 94, 부산시범공단 6층</li>
+                            <li>[매장] 부산광역시 남구 수영로322번길 45, 1층 더블스윗</li>
+                            <li>사업자등록번호 891-81-01772</li>
+                            <li>통신판매업번호 2019-부산남구-0608</li>
+                            <li>이메일 order@doublesweet.co.kr</li>
+                            <li>fax 051-625-9434</li>
+                        </ul>
+                    </address>
+                    <p class="copyright">Copyright © 더블스윗. All Rights Reserved.</p>
+                </div>
                 <div class="contact">
-                    <p class="phone"><i class="fas fa-phone-alt"></i>대표번호<span>1811-9432</span></p>
+                    <p class="phone"><i class="fas fa-phone-alt"></i> 대표번호 <span> 1811-9432</span></p>
                     <ul>
                         <li>[본사] 평일 9AM ~ 7PM</li>
                         <li>[매장] 월 ~ 금 12PM ~ 8PM / 토 ~ 일 12PM ~ 7PM</li>

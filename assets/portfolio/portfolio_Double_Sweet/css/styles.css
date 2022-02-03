@@ -20,7 +20,7 @@ br.only-m:after {content: '\00a0';}
 
 /* common */
 body {font-family: 'Noto Sans KR', serif; font-weight: 400; font-size: 14px; color: #333333; background: #ffffff;}
-.wrap {min-width: 1024px; overflow: hidden;}
+.wrap { overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; font-size: 16px; color: #ffffff; background: rgba(0, 0, 0, 0.6); z-index: 10000; transition: top 0.3s;}
 #skip-nav:focus {top: 0;}
 
@@ -107,14 +107,20 @@ body {font-family: 'Noto Sans KR', serif; font-weight: 400; font-size: 14px; col
 
 /* main */
 #main {padding-top: 100vh; position: relative;}
-section{position: relative; width: 100%; height: 100vh; background-color: #fff;}
+section{position: relative; overflow: hidden; width: 100%; height: 100vh; background-color: #fff;}
 .section1 {
     width: 100%;
     position: fixed; top: 0; 
-    background-color: antiquewhite; overflow: hidden;
+    background-color: #f2f2f2; overflow: hidden;
     background-attachment: fixed;
 }
-.section1 .description { border: 1px solid red; position: absolute; left: 150px; top: 200px;}
+.section1::before{
+    background-color: #fff;
+    content: ""; position: absolute; z-index: -1;
+    width: 380px;
+    height: 100%;
+}
+.section1 .description {position: absolute; left: 150px; top: 200px;}
 .section1 .description > li { position: absolute; width: max-content; opacity: 0; transition: all .5s;}
 .section1 .description > li.on {opacity: 100%;}
 .section1 .description h3 { font-family: 'Noto Serif KR'; font-size: 70px; margin-bottom: 40px; transform: translateX(50%); transition: all .5s ease-in-out;}
@@ -134,6 +140,230 @@ section{position: relative; width: 100%; height: 100vh; background-color: #fff;}
 .section1 .description a.view:hover:after {animation: dot-effect-right 0.6s ease-out 0s 1 normal forwards;}
 .section1 .description a.view:hover {color: #ffffff;}
 
+.section1 .indicator {position: absolute; left: 50%; top: 280px; width: 600px; height: 600px;}
+.section1 .indicator .main_images {
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+}
+.section1 .indicator .main_images li {
+    position: absolute; opacity: 0;
+    transform: scale(.8);
+    border-radius: 50%;
+    width: 100%; height: 100%;
+    transition: all 1s ease;
+}
+.section1 .indicator .main_images li.on {opacity: 100%; transform: scale(1);}
+.section1 .indicator .main_images li:nth-child(1) {background-image: url("../img/main_visual_01.jpg");}
+.section1 .indicator .main_images li:nth-child(2) {background-image: url("../img/main_visual_02.jpg");}
+.section1 .indicator .main_images li:nth-child(3) {background-image: url("../img/main_visual_03.jpg");}
+.section1 .indicator .main_images li:nth-child(4) {background-image: url("../img/main_visual_04.jpg");}
+.section1 .indicator .main_images li:nth-child(5) {background-image: url("../img/main_visual_05.jpg");}
+
+
+.section1 .indicator .main_images img {
+    position: absolute; opacity: 0;
+    width: 90%;
+    top: 50%; left: 50%; 
+    transform: translate(-50%,-50%) scale(.8); 
+    transition: all .3s ease-in-out .5s;
+}
+.section1 .indicator .main_images li.on img {opacity: 100%; transform: translate(-50%,-50%) scale(1); }
+
+
+
+.section1 .product {
+    border: 2.5px solid #ddd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transition: all 2s ease;
+    transform: translate(-50%,-50%);
+    width: 760px; height: 760px; 
+    font-size: 12px;
+}
+.section1 .product::after {
+    content: ""; position: absolute;
+    border-radius: 50%;
+    top: 5%; left: 5%;
+    border: 2px dashed #ddd;
+    width: 90%; height: 90%;
+    animation: rotate1 100s linear infinite;
+}
+.section1 .product li {
+    position: absolute;
+    transition: all .3s ease-in-out;
+    left: 50%; top:0; 
+    transform-origin: center;
+    transform: translate(-50%,0);
+    height: 100%;
+    white-space: nowrap;
+}
+
+.section1 .product li a::after{
+    content: ""; position: absolute;
+    transform: translateX(-50%);
+    left: 50%; bottom: -30px;
+    outline: 2px solid #ddd;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    width: 25px; height: 25px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+.section1 .product li a:hover::after {
+    outline: dashed #ddd;
+    transform: translateX(-50%) scale(1.1) rotate(360deg);
+}
+.section1 .product li a:nth-child(1) {
+    top: 0;
+    position: absolute; transform: translate(-50%,-218%);
+}
+.section1 .product li a:nth-child(2) {
+    bottom: 0;
+    position: absolute; transform: translate(-50%, 218%) rotate(180deg);
+}
+
+.section1 .product li:nth-child(1) a::after,
+.section1 .product li:nth-child(6) a::after {background-color: #9fd6d9;}
+.section1 .product li:nth-child(2) {transform: translate(-50%,0) rotate(36deg);}
+.section1 .product li:nth-child(2) a::after,
+.section1 .product li:nth-child(7) a::after {background-color: #efe48d;}
+.section1 .product li:nth-child(3) {transform: translate(-50%,0) rotate(72deg);}
+.section1 .product li:nth-child(3) a::after,
+.section1 .product li:nth-child(8) a::after {background-color: #f6b8c4;}
+.section1 .product li:nth-child(4) {transform: translate(-50%,0) rotate(108deg);}
+.section1 .product li:nth-child(4) a::after,
+.section1 .product li:nth-child(9) a::after {background-color: #945b35;}
+.section1 .product li:nth-child(5) {transform: translate(-50%,0) rotate(144deg);}
+.section1 .product li:nth-child(5) a::after,
+.section1 .product li:nth-child(10) a::after {background-color: #f1798a;}
+.section1 .product li:nth-child(6) {transform: translate(-50%,0) rotate(180deg);}
+.section1 .product li:nth-child(7) {transform: translate(-50%,0) rotate(216deg);}
+.section1 .product li:nth-child(8) {transform: translate(-50%,0) rotate(252deg);}
+.section1 .product li:nth-child(9) {transform: translate(-50%,0) rotate(288deg);}
+.section1 .product li:nth-child(10) {transform: translate(-50%,0) rotate(324deg);}
+
+section h3 {
+    position: relative;
+    padding-top: 170px; padding-bottom: 100px;
+    text-align: center; font-size: 30px; font-family: 'Noto Serif KR', serif;
+}
+section h3::after {
+    position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%);
+    content: ""; width: 200px; height: 20px;
+    background: url("../img/bg_title.png") center no-repeat;
+}
+
+
+.section2 {height: 1075px;}
+.section2 div {
+    position: relative;
+    background: url("../img/brand_bg.jpg") center /cover no-repeat;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 62%; width: 100%;
+    font-family: 'Noto Serif KR', serif;
+}
+.section2 div img {position: absolute; left: 50px; top: 120px;}
+.section2 div p {position: absolute; left: 50px; top: 300px}
+.section2 div p span {color: #b29a6e; font-weight: 600; text-shadow: 1px 1px 1px rgb(0 0 0 / 80%);}
+.section2 div::after {
+    position: absolute; opacity: .5;
+    left: 20px; top: 20px;
+    content: ""; border: .5px solid #fff;
+    width: calc(100% - 40px); height: calc(100% - 40px);
+}
+
+.section3 {
+    margin-top: -50px;
+    height: max-content;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding-bottom: 150px;
+}
+
+.section3 .indicator {margin-bottom: 30px; text-align: center;}
+.section3 .indicator > span {color: #b29a6e; margin-right: 60px; font-family: 'Noto Serif KR', serif; font-weight: bold;}
+.section3 .indicator ul {display: inline-block;}
+.section3 .indicator ul li {
+    display: inline-block; position: relative; margin-right: 60px;
+}
+.section3 .indicator ul li.on::after {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    animation: rotate3 10s linear 0s infinite forwards;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../img/menu_bg_01.png") center /contain no-repeat;
+}
+.section3 .product {
+    height: 100%; width: 100%;
+    transition: all .4s ease-in-out;
+    margin: auto; text-align: center;
+}
+.section3 .product > li {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-right: -5px; margin-right: -5px;
+    text-align: center;
+    width: 24%;
+}
+.section3 .product > li a {
+    display: block;
+    height: 100%; width: 100%;
+    font-size: 20px; font-family: 'Noto Serif KR', serif;
+}
+.section3 .product > li a * {
+    display: block; margin-bottom: 10px;
+}
+.section3 .product > li div {
+    position: relative;
+    height: 230px;
+}
+.section3 .product > li img {
+    position: absolute; width: 100%;
+    transition: all .8s ease;
+}
+.section3 .product:hover li:not(li:hover) {opacity: 50%;}
+/* .section3 .product > li img:nth-child(1) {opacity: 0;} */
+.section3 .product > li:hover img:nth-child(1) {opacity: 100%;}
+.section3 .product > li:hover img:nth-child(2) {opacity: 0%;}
+.section3 .product > li em {font-size: 12px; color: #cca96a;}
+
+
+#footer {position: relative; width: 100vw; background-color: #1a1b1d;}
+#footer .footer-top {border-bottom: .5px solid rgba(255, 255, 255, 0.5); text-align: right;}
+#footer .footer-top * {display: inline-block; height: 55px; line-height: 55px; color: #fff;}
+#footer .footer-top > a {position: absolute; left: 10px; padding-left: 5px; }
+#footer .footer-top > a i {display: inline;}
+#footer .footer-top > a span {display: inline-block; margin-left: 10px;}
+#footer .footer-top > ul {font-weight: lighter;}
+#footer .footer-top > ul li  {margin-right:20px;}
+#footer .footer-top > ul li:nth-child(2) {font-weight: bold;}
+#footer .footer-main {
+    position: relative;
+    padding: 50px 10px;
+    text-align: center;
+}
+#footer .footer-main > * {vertical-align: top; margin-bottom: 30px; display: inline-block;}
+#footer .footer-main > h2 {width: 220px}
+#footer .footer-main > div.company {width:57%; margin: auto; color: #878683; font-size: 14px; font-weight: 300;}
+#footer .footer-main > div.company * {margin-bottom: 10px; text-align: left;}
+#footer .footer-main > div.company h3 {font-size: 14px; font-weight: 300;}
+#footer .footer-main > div.company li {display: inline-block; margin-right: 20px; white-space: nowrap;}
+#footer .footer-main > div.contact {position:relative; height: 150px; border: 2px solid #b29a6e; padding: 20px; box-sizing: border-box; width: 400px; vertical-align: baseline;}
+#footer .footer-main > div.contact  * {margin-bottom: 10px; color: #b29a6e;}
+#footer .footer-main > div.contact p {font-size: 16px; color: #cca96a;}
+#footer .footer-main > div.contact p i  {font-size: 30px; transform: translate(0,-10px);}
+#footer .footer-main > div.contact p span {font-size: 26px; color: #d9d6c5;}
+
+
 @keyframes logo-effect {
     0% {top: 0;}
     100% {top: 10px;}
@@ -145,6 +375,10 @@ section{position: relative; width: 100%; height: 100vh; background-color: #fff;}
 @keyframes rotate2 {
     0% {transform: rotate(0);}
     100% {transform: rotate(-360deg);}
+}
+@keyframes rotate3 {
+    0% {transform: translate(-50%,-50%) rotate(0);}
+    100% {transform: translate(-50%,-50%) rotate(360deg);}
 }
 @keyframes dot-effect-left {
     0% {left: 0;}
