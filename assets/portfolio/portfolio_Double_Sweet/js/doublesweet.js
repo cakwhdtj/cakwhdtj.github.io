@@ -15,6 +15,12 @@ $('.scrollTop').on('click', function () {
     $('html, body').animate({ scrollTop: 0 }, 400);
     return false;
 });
+$('.section3 .indicator li a').on('click', function () {
+    var index = $(this).parent().index();
+    $('.section3 .product > li').css({ "display": "none" });
+    $('.section3 .product > li.mark_' + index).css({ "display": "inline-block" });
+    if (index === 0) { $('.section3 .product > li').removeAttr('style'); }
+})
 function onAdder(e) {
     e.toggleClass('on');
 }
@@ -113,37 +119,42 @@ function SetSlide(selector, options) {
         (direction === 'left') ? degree = (degree * -1) : degree = degree * 1;
         var prevIndex = (Math.round(getRotationDegrees($('.circle')) / 36) * -1) + 1;
         (prevIndex <= 0) ? prevIndex = prevIndex + 10 : prevIndex = prevIndex;
-        if (prevIndex > 7 && prevIndex < 11 && index < 4) {
-            var delta = (((10 - prevIndex) + index) * 36);
-            selector.css({
-                "transition": "all 2s ease",
-                "transform": "translate(-50%,-50%) rotate(" + (-360 + (delta - 36)) + "deg)"
-            });
+        console.log(degree)
+        if (prevIndex > 7 && prevIndex < 11 && index < 4 && index != 0) {
+            selCSS('y', (degree - 360));
+            rotateTimer2 = setTimeout(() => {
+                selCSS('n', degree);
+            }, 2000);
+        } else if (prevIndex < 4 && prevIndex > 0 && index > 7) {
+            selCSS('y', ((index - 11) * -36));
+            rotateTimer2 = setTimeout(() => {
+                selCSS('n', (degree));
+            }, 2000);
         } else {
-            (degree < -360) ? degree = degree + 360 : degree = degree;
-            selector.css({
-                "transition": "all 2s ease",
-                "transform": "translate(-50%,-50%) rotate(" + degree + "deg)"
-            });
+            var n = parseInt(degree / -360) * 360;
+            (degree < -360) ? (degree = degree + n) : degree = degree;
+            selCSS('y', degree);
         }
-        console.log('degree = ' + degree, 'delta = ' + delta);
         rotateTimer = setTimeout(function () {
             var moved = getRotationDegrees($('.circle'));
-            if (moved != degree && moved === 0 && degree === -360) {
-                selector.css({
-                    "transition": "none",
-                    "transform": "translate(-50%,-50%) rotate(" + 0 + "deg)"
-                });
+            if (moved != degree && moved === 0 && degree <= -360) {
+                selCSS('n', 0);
             }
-        }, (mainTimerSpeed - 1000));
-    }
+            index = 0;
+        }, (mainTimerSpeed - 2000));
 
+        function selCSS(YorN, n) {
+            var _transition = '';
+            (YorN === 'y') ? _transition = "all 2s ease" : _transition = "none";
+            selector.css({
+                "transition": _transition,
+                "transform": "translate(-50%,-50%) rotate(" + n + "deg)"
+            });
+        }
+    }
 
     this.showSlide = function (n) {
         showSlide(n);
-    }
-    this.rotateSlide = function (selector, degree, RorL) {
-        rotate(selector, degree, RorL);
     }
 }
 
@@ -155,29 +166,6 @@ $('.circle li a').on('click', function () {
     slide2_section1.showSlide(index);
 })
 
-
-
-
-// function rotate(selector, degree, n) {
-//     clearTimeout(rotateTimer);
-//     var rotateTimer = '';
-//     var RorL = 'left';
-//     (RorL === 'left') ? degree = (degree * -1) : degree = degree * 1;
-
-//     selector.css({
-//         "transition": "all 2s ease",
-//         "transform": "translate(-50%,-50%) rotate(" + degree + "deg)"
-//     });
-//     rotateTimer = setTimeout(function () {
-//         var moved = getRotationDegrees($('.circle'));
-//         if (moved != degree && moved === 0 && degree === -360) {
-//             selector.css({
-//                 "transition": "none",
-//                 "transform": "translate(-50%,-50%) rotate(" + 0 + "deg)"
-//             });
-//         }
-//     }, (2000));
-// }
 
 function getRotationDegrees(obj) {
     var matrix = obj.css("transform");
