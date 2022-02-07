@@ -16,8 +16,9 @@
     <meta name="twitter:image" content="#">
     <meta name="twitter:description" content="포트폴리오용 Double Sweet 홈페이지입니다.">
     <link href="fa/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/portfolio_global.css" media="screen and (min-width : 720px)" />
     <link rel="stylesheet" href="css/styles.css">
-    <title>Double Sweet</title>
+    <title>Double Sweet (clone)</title>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                     <img src="img/logo.png" alt="더블스윗로고">
                 </a>
             </h1>
-            <a href="#" class="menu">MENU<img alt="" src="img/icon_menu.png" /></a>
+            <a href="#" class="menu pfEmph">MENU<img alt="" src="img/icon_menu.png" /></a>
             <div class="gnb">
                 <img alt="" src="img/menu_bg_01.png" class="bg1" />
                 <img alt="" src="img/menu_bg_02.png" class="bg2" />
@@ -47,7 +48,7 @@
                 <p class="copyright">Copyright © 더블스윗. All Rights Reserved.</p>
             </div>
         </header>
-        <div class="quick_menu">
+        <div class="quick_menu pfEmph">
             <a href="#"><em>Q</em>UICK</a>
             <ul>
                 <li><a href="#"><img src="img/quick_icon_01.png" alt=""> 기존 거래처 발주</a></li>
@@ -62,7 +63,7 @@
         </div>
         <main id="main">
             <section class="section1">
-                <ul class="description slide">
+                <ul class="description slide ">
                     <li class="on">
                         <h3>Salty Caramel<br />Macaron</h3>
                         <ul>
@@ -145,7 +146,7 @@
                 <h3>DOUBLESWEET<br />BRAND STORY</h3>
                 <div>
                     <img src="img/brand_logo.png" alt="더블스윗 브랜드로고">
-                    <p>
+                    <p class="">
                         더블스윗 마카롱은 다른 수제 마카롱 업체와 <br />
                         여러 스토어에서 판매 중인 많은 마카롱들에서는 <br />
                         찾아보기 힘든 <span>HACCP(식품안전 관리 인증)</span>을<br />
@@ -370,10 +371,11 @@
                 </div>
             </div>
         </footer>
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/doublesweet.js"></script>
     </div> <!-- wrap -->
 
 </body>
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/doublesweet.js"></script>
 
 </html>

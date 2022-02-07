@@ -119,7 +119,6 @@ function SetSlide(selector, options) {
         (direction === 'left') ? degree = (degree * -1) : degree = degree * 1;
         var prevIndex = (Math.round(getRotationDegrees($('.circle')) / 36) * -1) + 1;
         (prevIndex <= 0) ? prevIndex = prevIndex + 10 : prevIndex = prevIndex;
-        console.log(degree)
         if (prevIndex > 7 && prevIndex < 11 && index < 4 && index != 0) {
             selCSS('y', (degree - 360));
             rotateTimer2 = setTimeout(() => {
@@ -180,3 +179,7 @@ function getRotationDegrees(obj) {
     return /*(angle < 0) ? angle + 360 : */ angle;
 }
 
+$('.section3 .gallery li').addClass('pfEmph');
+
+//portfolio global
+document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");

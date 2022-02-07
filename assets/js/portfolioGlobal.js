@@ -73,6 +73,7 @@ $("#kooflix").on("mouseenter", function (e) {
 
 
 function emphEffect() {
+    console.log(pfEmph.length)
     for (let i = 0; i < pfEmph.length; i++) {
         $("body").append("<div class='emphEffect " + "e" + [i] + "'><span></span><span></span><span></span><span></span></div>");
         $(".e" + [i]).css({
@@ -82,10 +83,7 @@ function emphEffect() {
     }
 }
 function emphAnimate() {
-    if (isOn === true) {
-        $(".emphEffect").toggleClass("on");
-    }
-
+    if (isOn === true) { $(".emphEffect").toggleClass("on"); }
 }
 
 $(window).on("scroll", function () {
@@ -93,9 +91,7 @@ $(window).on("scroll", function () {
     clearInterval(interval);
     clearTimeout(timer);
     timer = setTimeout(() => {
-        if (isOn === true) {
-            $("#kooflix").trigger("mouseenter");
-        }
+        if (isOn === true) { $("#kooflix").trigger("mouseenter"); }
     }, 1000);
 });
 
