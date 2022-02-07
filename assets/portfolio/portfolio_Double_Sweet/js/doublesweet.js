@@ -130,6 +130,8 @@ function SetSlide(selector, options) {
             rotateTimer2 = setTimeout(() => {
                 selCSS('n', (degree));
             }, 2000);
+        } else if (degree < -360 && Number.isInteger(degree / 360)) {
+            selCSS('y', -360);
         } else {
             var n = parseInt(degree / -360) * 360;
             (degree < -360) ? (degree = degree + n) : degree = degree;

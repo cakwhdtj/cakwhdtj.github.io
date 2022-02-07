@@ -25,11 +25,7 @@ body {font-family: 'Noto Sans KR', serif; font-weight: 400; font-size: 14px; col
 #skip-nav:focus {top: 0;}
 
 /* header */
-#header {
-    z-index: 999;
-    position: fixed; top: 0; left: 0; 
-    width: 100%; height: 100px;
-}
+#header {z-index: 999; position: fixed; top: 0; left: 0; width: 100%; height: 100px;}
 #header h1 {position: absolute; left: 50px; bottom: 0;}
 #header h1 a {display: block; width: 100%; height: 100%;}
 #header h1 a img.icon1 {position: absolute; top: 0; left: 50%; transform: translate(-110%, 0);}
@@ -120,19 +116,45 @@ section{position: relative; overflow: hidden; width: 100%; height: 100vh; backgr
     width: 380px;
     height: 100%;
 }
-.section1 .description {position: absolute; left: 150px; top: 200px;}
-.section1 .description > li { position: absolute; width: max-content; opacity: 0; transition: all .5s;}
+.section1 .description {position: absolute; left: 150px;}
+.section1 .description > li { position: absolute; width: max-content; opacity: 0; transition: all .3s ease-in;}
 .section1 .description > li.on {opacity: 100%;}
-.section1 .description h3 { font-family: 'Noto Serif KR'; font-size: 70px; margin-bottom: 40px; transform: translateX(50%); transition: all .5s ease-in-out;}
+.section1 .description > li::before,
+.section1 .description > li::after {transition: all 1s ease-in-out .3s; content: ''; position: absolute; z-index: -1; opacity: 0;}
+.section1 .description > li::before{transform: translateY(-20px); top: 0; left: 230px; width: 500px; height: 350px;}
+.section1 .description > li::after{transform: scale(.7); bottom: -240px; left: 100px; width: 412px; height: 302px;}
+.section1 .description > li.on::after,
+.section1 .description > li.on::before {transform: scale(1); opacity: 100;}
+
+.section1 .description > li:nth-child(1):before {background: url("../img/mslide_icon_01.png") 0 top no-repeat;}
+.section1 .description > li:nth-child(1):after {background: url("../img/mslide_icon_02.png") 0 center no-repeat;}
+.section1 .description > li:nth-child(2):before {background: url("../img/mslide_icon_03.png") 0 center no-repeat;}
+.section1 .description > li:nth-child(2):after {background: url("../img/mslide_icon_04.png") 0 center no-repeat;}
+.section1 .description > li:nth-child(3):before {background: url("../img/mslide_icon_05.png") 0 top no-repeat;}
+.section1 .description > li:nth-child(3):after {background: url("../img/mslide_icon_06.png") 0 center no-repeat;}
+.section1 .description > li.on:nth-child(3):before {transform: scale(.8) translateY(-50px); }
+.section1 .description > li.on:nth-child(3):after {transform: scale(.8);}
+.section1 .description > li:nth-child(4):before {background: url("../img/mslide_icon_08.png") 0 top no-repeat;}
+.section1 .description > li:nth-child(4):after {background: url("../img/mslide_icon_09.png") 0 center no-repeat;}
+.section1 .description > li:nth-child(5):before {background: url("../img/mslide_icon_10.png") 0 top no-repeat;}
+.section1 .description > li:nth-child(5):after {background: url("../img/mslide_icon_11.png") 0 center no-repeat;}
+.section1 .description > li.on:nth-child(5):before {transform: scale(.8) translateY(-50px); }
+.section1 .description > li.on:nth-child(5):after {transform: scale(.8);}
+
+.section1 .description > li > * {opacity: 0;}
+.section1 .description > li.on > * {opacity: 100;}
+
+.section1 .description h3 { font-family: 'Noto Serif KR'; font-size: 70px; transform: translateX(100px); transition: all .9s linear;}
 .section1 .description .on h3 {transform: translateX(0);}
+.section1 .description > li > ul {margin-top: -30px;}
 .section1 .description ul li {
-    transform: translateX(50%); transition: all .5s ease-in-out .08s;
+    transform: translateX(100px); transition: all .9s linear .08s;
     background: url("../img/icon_bullet.gif") 0 center no-repeat;
-    padding-left: 25px;
-    font-size: 14px;
+    padding-left: 25px; font-size: 14px; margin-bottom: 15px;
+    color: #6e6e6e;
 }
 .section1 .description .on ul li {transform: translateX(0);}
-.section1 .description a.view {position: absolute; transform: translateX(80%); bottom: -50px; padding: 0 20px; transition: all 0.5s ease-in-out .1s; z-index: 1;}
+.section1 .description a.view {position: absolute; transform: translateX(100px); bottom: -50px; padding: 0 20px; transition: all .9s linear .10s; z-index: 1;}
 .section1 .description .on a.view {transform: translateX(0);}
 .section1 .description a.view:before {content: ''; position: absolute; left: 0; top: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; background: #000000; border-radius: 100%; z-index: -1;}
 .section1 .description a.view:hover:before {animation: dot-effect-left 0.6s ease-out 0s 1 normal forwards;}
@@ -320,9 +342,7 @@ section h3::after {
     height: 100%; width: 100%;
     font-size: 20px; font-family: 'Noto Serif KR', serif;
 }
-.section3 .product > li a * {
-    display: block; margin-bottom: 10px;
-}
+.section3 .product > li a * {display: block; margin-bottom: 10px;}
 .section3 .product > li div {
     position: relative;
     height: 230px;
