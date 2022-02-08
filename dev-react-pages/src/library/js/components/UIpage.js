@@ -7,6 +7,7 @@ import DragUI from './library_pages/Drag_UI';
 // import NavUI from './library_pages/Nav_UI';
 import MobileUI from './library_pages/Mobile_UI';
 import APIPractice from './library_pages/APIPractice';
+import CircleUI from './library_pages/Circle_UI';
 
 class UIPage extends Component {
     render() {
@@ -24,7 +25,7 @@ class UIPage extends Component {
 };
 class UIArea extends Component {
     render() {
-        console.log(this.props.datafrLink[0].kind);
+        // console.log(this.props.datafrLink[0].kind);s
         switch (this.props.datafrLink[0].kind) {
             case 'API':
                 return <APIPractice props={this.props}></APIPractice>
@@ -42,7 +43,8 @@ class UIArea extends Component {
                 return (<div>우상단 메뉴버튼</div>)
             case 'Mobile_UI':
                 return <MobileUI props={this.props}></MobileUI>
-
+            case 'Circle_UI':
+                return <CircleUI props={this.props}></CircleUI>
             default:
                 return (
                     <div>경로지정 안됨</div>

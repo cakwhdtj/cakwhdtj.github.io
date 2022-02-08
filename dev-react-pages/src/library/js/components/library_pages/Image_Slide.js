@@ -29,8 +29,6 @@ class ImageSlide extends Component {
             }
             return (<div>{_set}</div>)
         }
-        console.log(_props.content)
-
         return show();
     }
 }

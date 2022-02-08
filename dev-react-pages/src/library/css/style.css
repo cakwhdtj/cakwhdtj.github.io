@@ -283,5 +283,17 @@ ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
   width: 80%; height: 80%;
-
 }
+
+/* circle */
+.circleDiv img {
+  position: absolute; top: 500px;
+  transform: translate(-50%,-50%);
+}
+
+.circle {
+  position: absolute; border: 1px solid red;
+  top: 50%;
+  left: 50%;
+}
+
