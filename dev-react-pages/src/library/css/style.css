@@ -287,8 +287,9 @@ ul.drag-list > li.drag {border-color: #e0e0e0; opacity: 0.8; z-index: 10;}
 
 /* circle */
 .circleDiv {
-  position: absolute;
-  width: 90vw; height: 90vw;
+  position: absolute; left: 50%; top: 150px;
+  transform: translate(-50%);
+  width: 50vw; height: 50vw;
 }
 .circleDiv .slide li {
   position: absolute; opacity: 0;
