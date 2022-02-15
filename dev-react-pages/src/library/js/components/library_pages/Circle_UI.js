@@ -176,7 +176,7 @@ class CircleUI extends Component {
                         <li><img alt="000000" src={circle2} /><span>7</span></li>
                         <li><img alt="000000" src={circle3} /><span>8</span></li>
                         <li><img alt="000000" src={circle4} /><span>9</span></li>
-                        <li><img alt="000000" src={circle5} />1<span>0</span></li>
+                        <li><img alt="000000" src={circle5} /><span>10</span></li>
                     </ul>
                 </div>
             </div>
