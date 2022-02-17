@@ -8,7 +8,7 @@ image: /assets/img/thumnails/doublesweet_main.png
 optimized_image: /assets/img/thumnails/doublesweet_main.png
 category: portfolio
 tags:
-    - 반응형
+    - 
 author: JongSeoKoo
 paginate: false
 ---

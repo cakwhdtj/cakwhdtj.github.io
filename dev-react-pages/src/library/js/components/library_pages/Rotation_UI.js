@@ -9,7 +9,7 @@ import circle5 from '../../../img/circle/main_macaron_05.png';
 import $ from 'jquery'
 
 
-class CircleUI extends Component {
+class RotationUI extends Component {
     componentDidMount() {
         var $selector = $('.circleDiv');
         $selector.find('.slide li').each((i) => {
@@ -185,4 +185,4 @@ class CircleUI extends Component {
     }
 }
 
-export default CircleUI;
+export default RotationUI;
