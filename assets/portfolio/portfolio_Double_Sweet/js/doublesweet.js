@@ -183,3 +183,29 @@ $('.section3 .gallery li').addClass('pfEmph');
 
 //portfolio global
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
+window.onload = function () {
+    $('#kooflix').on('mouseover', function () {
+        var deg = getRotationDegrees($('.circle'));
+        var index = $('.pfEmph');
+        var inCircle = $('.circle .pfEmph');
+        var toChange = 0;
+
+
+
+        for (let i = 0; i < pfEmph.length; i++) {
+
+            if (index[i] === inCircle[0]) {
+                var matrix = $(index[i]).css("offset");
+                console.log(index[i].offsetParent)
+
+                toChange = i;
+                // console.log(matrix);
+            }
+        }
+        console.log(matrix)
+        $(".emphEffect.e" + [toChange]).css({
+            "background": "transprent",
+            "border": "1px solid red",
+        });
+    })
+};
