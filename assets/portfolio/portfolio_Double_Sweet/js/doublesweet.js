@@ -187,25 +187,37 @@ window.onload = function () {
     $('#kooflix').on('mouseover', function () {
         var deg = getRotationDegrees($('.circle'));
         var index = $('.pfEmph');
-        var inCircle = $('.circle .pfEmph');
+        var inCircle = $('.slide.pfEmph');
         var toChange = 0;
-
-
 
         for (let i = 0; i < pfEmph.length; i++) {
 
             if (index[i] === inCircle[0]) {
                 var matrix = $(index[i]).css("offset");
                 console.log(index[i].offsetParent)
-
                 toChange = i;
-                // console.log(matrix);
             }
         }
-        console.log(matrix)
-        $(".emphEffect.e" + [toChange]).css({
-            "background": "transprent",
-            "border": "1px solid red",
+        $(".emphEffect.e" + [toChange] + " > span").css({
+            "display": "none"
         });
-    })
+
+        console.log($(".pfCircleEffect"));
+
+
+        $(".emphEffect.e" + [toChange]).append('<div class="pfCircleEffect"></div>');
+        $(".pfCircleEffect").css({
+            "border-top": "2px solid red", "z-index": "0",
+            "background-color": "transparent", "width": "100%", "height": "100%", "border-radius": "50%",
+            "position": "absolute",
+            "animation": "circling 1.5s linear",
+            "animation-delay": "0.5s",
+            "animation-iteration-count": "infinite"
+        });
+        $(".emphEffect.e" + [toChange]).css({
+            "border": "1px solid transprarent", "border-radius": "50%",
+            "transform": "scale(1.41)",
+        });
+
+    });
 };
