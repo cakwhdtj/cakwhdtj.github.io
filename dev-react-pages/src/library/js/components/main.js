@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import Contents from './contentList';
+import Contents from './Lists';
 import UIPage from './UIpage';
 import Img1 from '../../img/image-slide/slide-image-01.jpg';
 import Img2 from '../../img/image-slide/slide-image-02.jpg';
