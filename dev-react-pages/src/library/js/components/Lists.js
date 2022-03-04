@@ -2,19 +2,42 @@ import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Lists ({listHead, listContents}) {
-const [_listing, setList] = useState([]);
-console.log(listHead[1])
-useEffect(()=>{
-    // getList();
-})
+function Lists({ listHead }) {
+    const [_listing, setList] = useState([]);
+    const getList = () => {
+        setList(listHead);
+    }
+    useEffect(() => {
+        getList();
+    }, [3]);
+
+    console.log(listHead)
+    const hihi = () => {
+        const newObj = {};
+        let count = 0;
+        _listing.map((list => {
+            count = count + 1;
+            newObj.push(count);
+            // newObj.title = list;
+
+        }));
+        console.log(newObj)
+    }
+
+
+
+    // const setObj = () => {
+    //     const title = _listing.map((list) => list);
+    //     console.log(title)
+    //     listObj.title = title;
+    //     listObj.desc = [`API`, `Image_Slide`, `Banner_Slide`, `Scroll_UI`, `Popup`, `Drag_UI`, `Nav_UI`, `Mobile_UI`, `Rotation_UI`]
+    // }
+    // let listObj = {};
+    // setObj();
+
     return (
         <div>
-        <h3>title will come</h3>
-        <ul> 
-            <li>d</li>
-            {/* <li>{listHead}</li> */}
-        </ul>
+            hi
         </div>
     )
 }
