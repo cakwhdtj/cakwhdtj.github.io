@@ -2,42 +2,26 @@ import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Lists({ listHead }) {
-    const [_listing, setList] = useState([]);
-    const getList = () => {
-        setList(listHead);
-    }
-    useEffect(() => {
-        getList();
-    }, [3]);
+function Lists() {
+    const [_listing, setList] = useState();
 
-    console.log(listHead)
-    const hihi = () => {
-        const newObj = {};
-        let count = 0;
-        _listing.map((list => {
-            count = count + 1;
-            newObj.push(count);
-            // newObj.title = list;
-
-        }));
-        console.log(newObj)
+    const data = () => {
+        const dataObj = {
+            uiName: ['API' , '이미지 슬라이드' , '배너 슬라이드', '스크롤 UI', '팝업', '드래그 UI', '내비게이션', '모바일 UI', 'Rotation'],
+            desc: [ 'API', 'Image_Slide', 'Banner_Slide', 'Scroll_UI', 'Popup', 'Drag_UI', 'Nav_UI', 'Mobile_UI', 'Rotation_UI',],
+            num: [1,6,2,2,1,1,1,1,1,]
+        }
+        for (key of Object.keys(dataObj)) {
+            console.log(key, dataObj[key]);
+        }
     }
 
-
-
-    // const setObj = () => {
-    //     const title = _listing.map((list) => list);
-    //     console.log(title)
-    //     listObj.title = title;
-    //     listObj.desc = [`API`, `Image_Slide`, `Banner_Slide`, `Scroll_UI`, `Popup`, `Drag_UI`, `Nav_UI`, `Mobile_UI`, `Rotation_UI`]
-    // }
-    // let listObj = {};
-    // setObj();
+    console.log()
 
     return (
         <div>
-            hi
+           
+
         </div>
     )
 }
