@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import Lists from './Lists';
 
 
 function Main() {
     const [_listing, setList] = useState([]);
-
     const setData = () => {
         const data = [
             {uiName: 'API', desc: 'API' , steps:[1]},
@@ -23,19 +21,17 @@ function Main() {
     useEffect(()=>{
         setData();
     },[]);
-
-
     return (
         <main className="Main">
-                    {_listing.map((list) => (
-                        <Lists 
-                        key={list.desc}
-                        uiName={list.uiName}
-                        desc={list.desc}
-                        steps={list.steps}
-                        />
-                    ))}
-        </main >
+            {_listing.map((list) => (
+                <Lists 
+                    key={list.desc}
+                    uiName={list.uiName}
+                    desc={list.desc}
+                    steps={list.steps}
+                    />
+                ))}                    
+        </main>
     )
 }
 
