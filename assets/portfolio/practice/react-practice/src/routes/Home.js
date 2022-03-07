@@ -58,6 +58,8 @@ const getMovies = async() => {
     `https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`
     )
   ).json();
+  // console.log(json)
+  console.log(json.data.movies)
 
   setMovies(json.data.movies);
   setLoading(false);
@@ -65,6 +67,8 @@ const getMovies = async() => {
 
 useEffect(()=> {
  getMovies();
+//  console.log(movies)
+
 },[]);
 
 
