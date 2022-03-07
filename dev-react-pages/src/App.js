@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Switch, Route } from 'react-router-dom';
-
-
 
 import './App.css';
 import './library/css/web-font.css'
 import './library/css/style.css'
-// ----
+
 import Header from './library/js/header.js'
 import Main from './library/js/components/Main.js';
 
