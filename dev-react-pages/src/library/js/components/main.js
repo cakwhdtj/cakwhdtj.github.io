@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Lists from './Lists';
 
 
-import Random from './Random';
 
-function Main() {
+function Main({onClick}) {
     const [_listing, setList] = useState([]);
     const setData = () => {
         const data = [
@@ -24,25 +22,17 @@ function Main() {
     useEffect(()=>{
         setData();
     },[]);
-    return <Router>
-            <Switch>
-                <Route path="/">
-                    <main className="Main">
-                        {_listing.map((list) => (
-                            <Lists 
-                            key={list.desc}
-                            uiName={list.uiName}
-                            desc={list.desc}
-                            steps={list.steps}
-                            />
-                            ))}                    
-                    </main>
-                </Route>
-                <Route path="/API/1">
-                    <Random></ Random>
-                </Route>
-            </Switch>
-             </Router>
+    // console.log(onClick)
+    return <main className="Main">
+            {_listing.map((list) => (
+                <Lists 
+                key={list.desc}
+                uiName={list.uiName}
+                desc={list.desc}
+                steps={list.steps}
+                />
+                ))}                    
+            </main>
 }
 
 export default Main;
