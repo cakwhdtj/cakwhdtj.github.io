@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Lists from './Lists';
-import Random from './Random';
-import WhrIam from './test';
+import UIPage from './UIpage';
+import Random from './UIpage';
+import WhrIam from './WhereGetter';
 
 //   const getLists = () => {
 //         let _list =  Lists().props.children.map((main)=>main);
@@ -29,7 +30,6 @@ function Main({homepage}) {
     useEffect(()=>{
         setData();
     },[]);
-
     return <main className="Main">
             <Route path={homepage} exact={true}>
                 {_listing.map((list) => (
@@ -42,9 +42,8 @@ function Main({homepage}) {
                 ))}  
             </Route>
             <Switch>
-                {<WhrIam></WhrIam>}
-                <Route  path={`${homepage}/${_listing.desc}/${_listing.steps}`} key={homepage + _listing.desc}>
-                    <Random num={_listing.desc}/>
+                <Route path={WhrIam(false)} key={WhrIam(false)}>
+                        <UIPage ui={_listing} />
                 </Route>
             </Switch>    
         </main>

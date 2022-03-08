@@ -1,8 +1,5 @@
 import React, { } from 'react';
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-
-import Random from './library/js/components/Random';
+import {BrowserRouter as Router } from "react-router-dom";
 
 import './App.css';
 import './library/css/web-font.css'
