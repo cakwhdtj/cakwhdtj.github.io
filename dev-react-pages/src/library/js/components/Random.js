@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
+
+// import { Link } from 'react-router-dom';
 
 
-function Random() {
+function Random({num}) {
+    console.log('hihi')
     return (
-        <div>hihi</div>
+        <div>hihi {num}</div>
     )
 }
 

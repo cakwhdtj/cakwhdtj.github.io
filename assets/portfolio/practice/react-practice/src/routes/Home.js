@@ -27,7 +27,7 @@ function Home() {
     // }
   },[keyword]);
   useEffect(()=> {
-      // console.log('counter changes');
+      console.log('counter changes');
   },[counter]);
 
 // ------------

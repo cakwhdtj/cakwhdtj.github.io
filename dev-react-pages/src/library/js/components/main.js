@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Lists from './Lists';
+import Random from './Random';
+import WhrIam from './test';
 
+//   const getLists = () => {
+//         let _list =  Lists().props.children.map((main)=>main);
+//         let result = _list.map(({ key }) => key)
+//         return result;
+//      }
 
-
-function Main({onClick}) {
+function Main({homepage}) {
     const [_listing, setList] = useState([]);
     const setData = () => {
         const data = [
@@ -22,17 +29,25 @@ function Main({onClick}) {
     useEffect(()=>{
         setData();
     },[]);
-    // console.log(onClick)
+
     return <main className="Main">
-            {_listing.map((list) => (
-                <Lists 
-                key={list.desc}
-                uiName={list.uiName}
-                desc={list.desc}
-                steps={list.steps}
-                />
-                ))}                    
-            </main>
+            <Route path={homepage} exact={true}>
+                {_listing.map((list) => (
+                    <Lists 
+                    key={list.desc}
+                    uiName={list.uiName}
+                    desc={list.desc}
+                    steps={list.steps}
+                    />     
+                ))}  
+            </Route>
+            <Switch>
+                {<WhrIam></WhrIam>}
+                <Route  path={`${homepage}/${_listing.desc}/${_listing.steps}`} key={homepage + _listing.desc}>
+                    <Random num={_listing.desc}/>
+                </Route>
+            </Switch>    
+        </main>
 }
 
 export default Main;
