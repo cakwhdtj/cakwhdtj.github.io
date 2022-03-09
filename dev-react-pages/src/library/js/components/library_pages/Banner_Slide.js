@@ -20,34 +20,14 @@ import ImgBtnLeft from '../../../img/image-slide/btn-left.png';
 import ImgBtnRight from '../../../img/image-slide/btn-right.png';
 // import jQuery from 'jquery';
 import $ from 'jquery'
+import getInfo from '../UiInfoGetter';
 
 class BannerSlide extends Component {
-    render() {
-        var _props = this.props.props;
-        var _set = [];
-        var funcSet = [BS1(), BS2(),]
-        function show() {
-            for (let i = 0; i < _props.content[2].length; i++) {
-                _set.push(
-                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
-                        <div>{funcSet[i]}</div>
-                    </Route>
-                );
-            }
-            return (<div>{_set}</div>)
+        render() {
+            let index = getInfo(this.props);
+            let compArry = [<BS1compo/>,<BS2compo/>]
+            return <div>{compArry[index]}</div> 
         }
-        return show();
-    }
-}
-const BS1 = () => {
-    return (
-        <BS1compo></BS1compo>
-    );
-}
-const BS2 = () => {
-    return (
-        <BS2compo></BS2compo>
-    );
 }
 class BS1compo extends Component {
     componentDidMount() {

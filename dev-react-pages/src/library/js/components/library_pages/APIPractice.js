@@ -1,5 +1,7 @@
 /*global kakao*/
 import React, { Component } from "react";
+import getInfo from "../UiInfoGetter";
+
 class APIPractice extends Component {
     componentDidMount() {
         const script = document.createElement('script');
@@ -16,7 +18,9 @@ class APIPractice extends Component {
             });
         };
     }
+    
     render() {
+        getInfo(this.props);
         return (
             <div className="api_practice">
                 <div id="map">

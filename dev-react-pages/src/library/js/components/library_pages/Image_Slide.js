@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import React, { Component ,useEffect,useState } from 'react';
 import '../../../fa/css/all.min.css'
 import Img1 from '../../../img/image-slide/slide-image-01.jpg';
 import Img2 from '../../../img/image-slide/slide-image-02.jpg';
@@ -10,58 +9,23 @@ import Img6 from '../../../img/image-slide/slide-image-06.jpg';
 import Img7 from '../../../img/image-slide/slide-image-07.jpg';
 import ImgBtnLeft from '../../../img/image-slide/btn-left.png';
 import ImgBtnRight from '../../../img/image-slide/btn-right.png';
-// import jQuery from 'jquery';
+import getInfo from './../UiInfoGetter'
 import $ from 'jquery'
-
 
 class ImageSlide extends Component {
     render() {
-        var _props = this.props.props;
-        var _set = [];
-        var funcSet = [IS1(), IS2(), IS3(), IS4(), IS5(), IS6(),]
-        function show() {
-            for (let i = 0; i < _props.content[1].length; i++) {
-                _set.push(
-                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
-                        <div>{funcSet[i]}</div>
-                    </Route>
-                );
-            }
-            return (<div>{_set}</div>)
+        console.log(this.props.imgSet.map((sr)=>sr.Img1)[0])
+        let index = getInfo(this.props);
+        let compArry = [<IS1compo srFn={setSrc}/>,<IS2compo/>,<IS3compo/>,<IS4compo/>,<IS5compo/>,<IS6compo/>]
+        function setSrc(whichSrc) {
+           let _src = this.props.imgSet.map((sr)=>sr.whichSrc)[0];
+           return _src;
         }
-        return show();
+        
+        return <div>{compArry[index]}</div> 
     }
 }
-const IS1 = () => {
-    return (
-        <IS1compo></IS1compo>
-    );
-}
-const IS2 = () => {
-    return (
-        <IS2compo></IS2compo>
-    );
-}
-const IS3 = () => {
-    return (
-        <IS3compo></IS3compo>
-    )
-}
-const IS4 = () => {
-    return (
-        <IS4compo></IS4compo>
-    )
-}
-const IS5 = () => {
-    return (
-        <IS5compo></IS5compo>
-    )
-}
-const IS6 = () => {
-    return (
-        <IS6compo></IS6compo>
-    )
-}
+
 class IS1compo extends Component {
     componentDidMount() {
         var numSlide = $('div.image-slide.is1 .slide li').length;
@@ -125,6 +89,7 @@ class IS1compo extends Component {
 
     }
     render() {
+        // console.log(this.props.srFn())
         return (
             <div className="image-slide is1">
                 <div className="box">
