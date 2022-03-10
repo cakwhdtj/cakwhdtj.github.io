@@ -6,8 +6,8 @@ export default function getInfo(props) {
         let theSet = _props.dataSet[descNum]
         let toSt = theSet.steps.toString();
         let newArr = toSt.split(",");
-        let index = newArr.indexOf(wStep[1])
-        return index;
+        let indexOfStep = newArr.indexOf(wStep[1]);
+        return [indexOfStep, theSet];
     }
     return match();
 }

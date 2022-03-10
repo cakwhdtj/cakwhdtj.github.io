@@ -15,27 +15,25 @@ import $, { type } from 'jquery'
 class ImageSlide extends Component {
     render() {
         // console.log(this.props.imgSet.map((sr)=>sr.Img1)[0])
-        let index = getInfo(this.props);
+        let index = getInfo(this.props)[0];
+        let getLength = getInfo(this.props)[1].steps.length;
+
         let compArry = [<IS1compo />,<IS2compo/>,<IS3compo/>,<IS4compo/>,<IS5compo/>,<IS6compo/>]
+        // let _compArry = [];
+        
         // const setSrc = (whichSrc) => {
         //    let _src = this.props.imgSet.map((sr)=>sr.whichSrc)[0];
         //    return _src;
         // }
-        let hi1 = this.props.uiInfo[0];
-        let hi2 = this.props.dataSet.map((a)=>a.uiName);
-        console.log(this.props)
-        console.log(hi2, typeof(hi2))
+        // console.log(getInfo(this.props)[1].steps.length)
+        // console.log(this.props)
 
-        const compGen = () => {
-            // let _compArry = [];
-            // for (let i = 0; i < array.length; i++) {
-            //     const element = array[i];
-                
-            // }
-        }
-
-
-        return <div>{compArry[index]}<div><img src="" /></div></div> 
+        return (
+            <div>
+                {compArry[index]}
+                {/* <div><img src="" /></div> */}
+            </div> 
+            )
     }
 }
 
