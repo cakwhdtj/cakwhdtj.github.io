@@ -10,19 +10,32 @@ import Img7 from '../../../img/image-slide/slide-image-07.jpg';
 import ImgBtnLeft from '../../../img/image-slide/btn-left.png';
 import ImgBtnRight from '../../../img/image-slide/btn-right.png';
 import getInfo from './../UiInfoGetter'
-import $ from 'jquery'
+import $, { type } from 'jquery'
 
 class ImageSlide extends Component {
     render() {
-        console.log(this.props.imgSet.map((sr)=>sr.Img1)[0])
+        // console.log(this.props.imgSet.map((sr)=>sr.Img1)[0])
         let index = getInfo(this.props);
-        let compArry = [<IS1compo srFn={setSrc}/>,<IS2compo/>,<IS3compo/>,<IS4compo/>,<IS5compo/>,<IS6compo/>]
-        function setSrc(whichSrc) {
-           let _src = this.props.imgSet.map((sr)=>sr.whichSrc)[0];
-           return _src;
+        let compArry = [<IS1compo />,<IS2compo/>,<IS3compo/>,<IS4compo/>,<IS5compo/>,<IS6compo/>]
+        // const setSrc = (whichSrc) => {
+        //    let _src = this.props.imgSet.map((sr)=>sr.whichSrc)[0];
+        //    return _src;
+        // }
+        let hi1 = this.props.uiInfo[0];
+        let hi2 = this.props.dataSet.map((a)=>a.uiName);
+        console.log(this.props)
+        console.log(hi2, typeof(hi2))
+
+        const compGen = () => {
+            // let _compArry = [];
+            // for (let i = 0; i < array.length; i++) {
+            //     const element = array[i];
+                
+            // }
         }
-        
-        return <div>{compArry[index]}</div> 
+
+
+        return <div>{compArry[index]}<div><img src="" /></div></div> 
     }
 }
 
@@ -89,7 +102,6 @@ class IS1compo extends Component {
 
     }
     render() {
-        // console.log(this.props.srFn())
         return (
             <div className="image-slide is1">
                 <div className="box">
