@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import getInfo from "../UiInfoGetter";
 
-class APIPractice extends Component {
+class API extends Component {
     componentDidMount() {
         const script = document.createElement('script');
         script.async = true;
@@ -31,4 +31,4 @@ class APIPractice extends Component {
     }
 }
 
-export default APIPractice;
+export default API;

@@ -4,9 +4,8 @@ import BannerSlide from './library_pages/Banner_Slide';
 import ScrollUI from './library_pages/Scroll_UI';
 import Popup from './library_pages/Popup';
 import DragUI from './library_pages/Drag_UI';
-import NavUI from './library_pages/Nav_UI';
 import MobileUI from './library_pages/Mobile_UI';
-import APIPractice from './library_pages/APIPractice';
+import API from './library_pages/API';
 import RotationUI from './library_pages/Rotation_UI';
 import WhrIam from './WhereGetter';
 
@@ -28,7 +27,7 @@ function UIPage({ui}) {
    },[])
     switch (uinstep[0]) {
         case 'API':
-            return <APIPractice uiInfo={uinstep} dataSet={ui} />
+            return <API uiInfo={uinstep} dataSet={ui} />
         case 'Image_Slide':
             return <ImageSlide uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         case 'Banner_Slide':
