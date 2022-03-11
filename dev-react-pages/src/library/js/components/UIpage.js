@@ -23,32 +23,30 @@ function UIPage({ui}) {
         return [wUi,step]
     }
     const imgs = SetImage().map((mImg)=>mImg);
-   useEffect(()=>{
+    useEffect(()=>{
     setState(getWhich());
    },[])
     switch (uinstep[0]) {
         case 'API':
-            return <APIPractice uiInfo={uinstep} dataSet={ui}/>
+            return <APIPractice uiInfo={uinstep} dataSet={ui} />
         case 'Image_Slide':
-            return <ImageSlide uiInfo={uinstep} dataSet={ui} imgSet={imgs}/>
+            return <ImageSlide uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         case 'Banner_Slide':
-            return <BannerSlide uiInfo={uinstep} dataSet={ui}/>
-        // case 'Scroll_UI':
-        //     return <ScrollUI hi={ui}/>
-        // case 'Popup':
-        //     return <Popup hi={ui}/>
-        // case 'Drag_UI':
-        //     return <DragUI hi={ui}/>
-        // case 'Nav_UI':
-        //     return (<div>우상단 메뉴버튼</div>)
-        // case 'Mobile_UI':
-        //     return <MobileUI hi={ui}/>
-        // case 'Rotation_UI':
-        //     return <RotationUI hi={ui}/>
+            return <BannerSlide uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
+        case 'Scroll_UI':
+            return <ScrollUI uiInfo={uinstep} dataSet={ui} />
+        case 'Popup':
+            return <Popup uiInfo={uinstep} dataSet={ui} />
+        case 'Drag_UI':
+            return <DragUI uiInfo={uinstep} dataSet={ui} />
+        case 'Nav_UI':
+            return (<div>우상단 메뉴버튼</div>);
+        case 'Mobile_UI':
+            return <MobileUI uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
+        case 'Rotation_UI':
+            return <RotationUI uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         default:
-            return (
-                <div>경로지정 안됨 {`${uinstep[0]} ${uinstep[1]}`}</div>
-            )
+            return <div></div>
     }
 }
 

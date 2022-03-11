@@ -1,47 +1,30 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
 import $ from 'jquery'
-import Img1 from '../../../img/image-slide/slide-image-01.jpg';
-import Img2 from '../../../img/image-slide/slide-image-02.jpg';
-import Img3 from '../../../img/image-slide/slide-image-03.jpg';
-import Img4 from '../../../img/image-slide/slide-image-04.jpg';
-import Img5 from '../../../img/image-slide/slide-image-05.jpg';
-import Img6 from '../../../img/image-slide/slide-image-06.jpg';
-import Img7 from '../../../img/image-slide/slide-image-07.jpg';
-import ImgBtnLeft from '../../../img/image-slide/btn-left.png';
-import ImgBtnRight from '../../../img/image-slide/btn-right.png';
+import getInfo from '../UiInfoGetter';
+
 
 class MobileUI extends Component {
     render() {
-        var _props = this.props.props;
-        var _set = [];
-        var funcSet = [MUI1(),]
-        function show() {
-            for (let i = 0; i < _props.content[7].length; i++) {
-                _set.push(
-                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
-                        <div>{funcSet[i]}</div>
-                    </Route>
-                );
-            }
-            return (
-                <div>
-                    <div>모바일 환경에서 swipe가 가능합니다</div>
-                    {_set}
-                </div>)
-        }
-        return show();
-    }
+        let index = getInfo(this.props)[0];
+        let img4Compo = this.props.imgSet.map((sr)=>sr);
+        let compArry = [<MUI1compo img={img4Compo} />]
+        return (
+            <div>
+                <div>{compArry[index]}</div> 
+                <div style={{
+                    position : "absolute",
+                    left : "50%",
+                    transform : "translate(-50%,0)"
+                }}>
+                모바일 환경에서 swipe가 가능합니다
+                </div>
+            </div>
+        )}
 }
-const MUI1 = () => {
-    return (
-        <MUI1compo></MUI1compo>
-    );
-}
+
 
 class MUI1compo extends Component {
     componentDidMount() {
-
         var numSlide = $('div.image-slide.mui .slide li').length;
         var slideNow = 0;
         var slidePrev = 0;
@@ -162,25 +145,26 @@ class MUI1compo extends Component {
 
     }
     render() {
+        let pre = this.props.img.map((imageset)=>imageset);
         return (
             <div className="image-slide mui">
                 <div className="box">
-                    <p className="dummy"><img alt="" src={Img1} /></p>
+                    <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
                     <ul className="slide">
-                        <li><button><img alt="000000" src={Img1} /></button></li>
-                        <li><button><img alt="000000" src={Img2} /></button></li>
-                        <li><button><img alt="000000" src={Img3} /></button></li>
-                        <li><button><img alt="000000" src={Img4} /></button></li>
-                        <li><button><img alt="000000" src={Img5} /></button></li>
-                        <li><button><img alt="000000" src={Img6} /></button></li>
-                        <li><button><img alt="000000" src={Img7} /></button></li>
+                        <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
+                        <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
+                        <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
+                        <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
+                        <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
+                        <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
+                        <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
                     </ul>
                 </div>
-                <ul class="indicator">
+                <ul className="indicator">
                 </ul>
                 <p className="control">
-                    <button className="prev"><img alt="이전" src={ImgBtnLeft} /></button>
-                    <button className="next"><img alt="다음" src={ImgBtnRight} /></button>
+                    <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
+                    <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
                     <button className="play">
                         <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
                         <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>

@@ -1,36 +1,16 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
 import logo from '../../../img/apple-touch-icon-152x152.png';
 import $ from 'jquery'
+import getInfo from '../UiInfoGetter';
+
 
 
 class ScrollUI extends Component {
     render() {
-        var _props = this.props.props;
-        var _set = [];
-        var funcSet = [ScUI1(), ScUI2()]
-        function show() {
-            for (let i = 0; i < _props.content[3].length; i++) {
-                _set.push(
-                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
-                        <div>{funcSet[i]}</div>
-                    </Route>
-                );
-            }
-            return (<div>{_set}</div>)
-        }
-        return show();
+        let index = getInfo(this.props)[0];
+        let compArry = [<ScUI1compo />,<ScUI2compo />]
+        return <div>{compArry[index]}</div> 
     }
-}
-const ScUI1 = () => {
-    return (
-        <ScUI1compo></ScUI1compo>
-    )
-}
-const ScUI2 = () => {
-    return (
-        <ScUI2compo></ScUI2compo>
-    )
 }
 
 class ScUI1compo extends Component {

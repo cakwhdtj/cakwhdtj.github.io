@@ -1,31 +1,17 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import $ from 'jquery'
+import getInfo from '../UiInfoGetter';
+
 
 class DragUI extends Component {
     render() {
-        var _props = this.props.props;
-        var _set = [];
-        var funcSet = [(Dr1()),]
-        function show() {
-            for (let i = 0; i < _props.content[5].length; i++) {
-                _set.push(
-                    <Route key={i} path={"/react-pages/UIPage/" + _props.datafrLink[0].kind + "_" + (i + 1)}>
-                        <div>{funcSet[i]}</div>
-                    </Route>
-                );
-                withRouter(_set[i]);
-            }
-            return (<div>{_set}</div>)
-        }
-        return show();
+        let index = getInfo(this.props)[0];
+        let compArry = [<Dr1compo />]
+        return <div>{compArry[index]}</div> 
     }
 }
-const Dr1 = () => {
-    return (
-        <Dr1compo></Dr1compo>
-    );
-}
+
 class Dr1compo extends Component {
     constructor(props) {
         super(props);

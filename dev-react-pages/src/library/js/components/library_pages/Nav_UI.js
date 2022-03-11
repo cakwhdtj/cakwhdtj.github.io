@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import '../../../css/style.css';
-// import './library/css/style.css';
 
 class NavUI extends Component {
     componentDidMount() {
@@ -34,7 +33,6 @@ class NavUI extends Component {
         });
 
         $('#gnb > ul > li > button').on('click', function (e) {
-            // if ($(window).width() < 1024 && $(this).next().find('li').length > 0) {
             e.preventDefault();
             var height = 0;
             $(this).next().find('li').each(function () {
@@ -45,7 +43,6 @@ class NavUI extends Component {
 
             $(this).parent().siblings().find('> ul').css({ 'height': 0 });
             $(this).parent().siblings().find('> button i').attr({ 'className': 'fas fa-plus' });
-            // }
         });
 
         $('#gnb > ul > li').on('focusin', function () {

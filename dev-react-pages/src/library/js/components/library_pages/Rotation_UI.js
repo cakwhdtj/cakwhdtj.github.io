@@ -5,7 +5,6 @@ import circle3 from '../../../img/circle/main_macaron_03.png';
 import circle4 from '../../../img/circle/main_macaron_04.png';
 import circle5 from '../../../img/circle/main_macaron_05.png';
 
-
 import $ from 'jquery'
 
 
@@ -15,8 +14,6 @@ class RotationUI extends Component {
         $selector.find('.slide li').each((i) => {
             $selector.find('.product').append('<li><button>' + (i + 1) + '</button></li>')
         });
-
-
         var mainTimerSpeed = 5000;
         var slide1_section1 = new SetSlide('.product', {
             slideFirst: 1,
