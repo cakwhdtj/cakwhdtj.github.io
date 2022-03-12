@@ -2,6 +2,7 @@ import React, { Component ,useEffect,useState } from 'react';
 import '../../../fa/css/all.min.css'
 import getInfo from './../UiInfoGetter'
 import $ from 'jquery'
+import Box from './Box';
 
 
 class ImageSlide extends Component {
@@ -81,32 +82,33 @@ class IS1compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-        return (
-            <div className="image-slide is1">
-                <div className="box">
-                    <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                    <ul className="slide">
-                        <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                        <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                        <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                        <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                        <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                        <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                        <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                    </ul>
-                </div>
-                <ul className="indicator">
-                </ul>
-                <p className="control">
-                    <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                    <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                    <button className="play">
-                        <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                        <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                    </button>
-                </p>
-            </div>
-        )
+        console.log(pre)
+        return Box(pre)
+            // <div className="image-slide is1">
+            //     <div className="box">
+            //         <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
+            //         <ul className="slide">
+            //             <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
+            //             <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
+            //             <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
+            //             <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
+            //             <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
+            //             <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
+            //             <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
+            //         </ul>
+            //     </div>
+            //     <ul className="indicator">
+            //     </ul>
+            //     <p className="control">
+            //         <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
+            //         <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
+            //         <button className="play">
+            //             <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
+            //             <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
+            //         </button>
+            //     </p>
+            // </div>
+        // )
     }
 }
 class IS2compo extends Component {
