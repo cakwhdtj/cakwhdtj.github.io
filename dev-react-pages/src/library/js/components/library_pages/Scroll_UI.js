@@ -22,9 +22,9 @@ class ScUI1compo extends Component {
     }
     componentDidMount() {
         var numPage = $('section.page').length;
-        var pageNow = 0;
-        var pagePrev = 0;
-        var pageNext = 0;
+        let pageNow = 0;     // eslint-disable-line no-unused-vars
+        let pagePrev = 0;   // eslint-disable-line no-unused-vars
+        let pageNext = 0;   // eslint-disable-line no-unused-vars
         const checkScroll = () => {
             var scrollAmt = $(document).scrollTop();
             if (scrollAmt > 100) {
@@ -161,7 +161,7 @@ class ScUI2compo extends Component {
     }
     componentDidMount() {
         var numPage = $('section.page').length;
-        var pageNow = 0;
+        var pageNow = 0; // eslint-disable-line no-unused-vars
         var pagePrev = 0;
         var pageNext = 0;
         var timerId = '';

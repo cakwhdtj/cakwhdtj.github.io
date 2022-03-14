@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
 import '../../../fa/css/all.min.css'
 import $ from 'jquery'
 import getInfo from '../UiInfoGetter';

@@ -656,10 +656,10 @@ class IS6compo extends Component {
                 }
             }
 
-            function removeEvent() {
-                $selector.find('.indicator li button, button.prev, button.next, button.play').off('click');
-                $selector.find('.slide').off('mousedown touchstart');
-            }
+            // function removeEvent() {
+            //     $selector.find('.indicator li button, button.prev, button.next, button.play').off('click');
+            //     $selector.find('.slide').off('mousedown touchstart');
+            // }
 
             function stopTimer() {
                 clearTimeout(timerId);
@@ -850,12 +850,12 @@ class IS6compo extends Component {
                 $selector.append('<span className="bar on" style="animation-duration: ' + timerSpeed + 'ms"></span>');
             }
 
-            function restartTimer() {
-                clearTimeout(timerId);
-                $selector.find('span.bar').remove();
-                timerId = setTimeout(() => { setSlide(slideNext); }, timerSpeed);
-                $selector.append('<span className="bar on" style="animation-duration: ' + timerSpeed + 'ms"></span>');
-            }
+            // function restartTimer() {
+            //     clearTimeout(timerId);
+            //     $selector.find('span.bar').remove();
+            //     timerId = setTimeout(() => { setSlide(slideNext); }, timerSpeed);
+            //     $selector.append('<span className="bar on" style="animation-duration: ' + timerSpeed + 'ms"></span>');
+            // }
 
             function showPrev() {
                 $selector.find('.slide').css({ 'transition': 'left 0.5s', 'left': '100%' }).one('transitionend', () => {

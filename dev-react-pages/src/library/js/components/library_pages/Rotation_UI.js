@@ -33,14 +33,14 @@ class RotationUI extends Component {
             var isTimerOn = (options === undefined || options.isTimerOn === undefined) ? false : options.isTimerOn;
             var timerSpeed = (options === undefined || options.timerSpeed === undefined) ? 3000 : options.timerSpeed;
             var types = ['slide', 'circle', 'gallery'];
-            var type = 'no type set';
+            var type = 'no type set'; // eslint-disable-line no-unused-vars
             for (let i = 0; i < types.length; i++) { if ($selector.hasClass(types[i])) type = types[i]; }
             var timerId = '';
             var timerId2 = '';
             var numSlide = $selector.find(' > li').length;
-            var slideNow = 0;
+            var slideNow = 0; // eslint-disable-line no-unused-vars
             var slideNext = 0;
-            var slidePrev = 0;
+            var slidePrev = 0; // eslint-disable-line no-unused-vars
             var index = 0;
             var deg = 0;
 
@@ -89,15 +89,15 @@ class RotationUI extends Component {
             }
 
             function rotate(selector, degree, RorL) {
-                clearTimeout(rotateTimer);
-                clearTimeout(rotateTimer2);
                 var rotateTimer = '';
                 var rotateTimer2 = '';
-                var direction = (RorL === undefined) ? direction = 'left' : direction = RorL;
+                clearTimeout(rotateTimer);
+                clearTimeout(rotateTimer2);
+                var direction = (RorL === undefined) ? 'left' : RorL;
                 (direction === 'left') ? degree = (degree * -1) : degree = degree * 1;
                 var prevIndex = (Math.round(getRotationDegrees($('.circle')) / 36) * -1) + 1;
-                (prevIndex <= 0) ? prevIndex = prevIndex + 10 : prevIndex = prevIndex;
-                if (prevIndex > 7 && prevIndex < 11 && index < 4 && index != 0) {
+                (prevIndex <= 0) ? prevIndex = prevIndex + 10 : prevIndex = prevIndex; // eslint-disable-line no-unused-vars
+                if (prevIndex > 7 && prevIndex < 11 && index < 4 && index !== 0) {
                     selCSS('y', (degree - 360));
                     rotateTimer2 = setTimeout(() => {
                         selCSS('n', degree);
@@ -111,12 +111,12 @@ class RotationUI extends Component {
                     selCSS('y', -360);
                 } else {
                     var n = parseInt(degree / -360) * 360;
-                    (degree < -360) ? (degree = degree + n) : degree = degree;
+                    (degree < -360) ? (degree = degree + n) : degree = degree; 
                     selCSS('y', degree);
                 }
                 rotateTimer = setTimeout(function () {
                     var moved = getRotationDegrees($('.circle'));
-                    if (moved != degree && moved === 0 && degree <= -360) {
+                    if (moved !== degree && moved === 0 && degree <= -360) {
                         selCSS('n', 0);
                     }
                     index = 0;
@@ -147,7 +147,7 @@ class RotationUI extends Component {
                 var a = values[0];
                 var b = values[1];
                 var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
-            } else { var angle = 0; }
+            } else { angle = 0; }
             return angle;
         }
 
