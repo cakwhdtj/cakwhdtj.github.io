@@ -1,4 +1,4 @@
-import React, { Component ,useEffect,useState } from 'react';
+import React, { Component } from 'react';
 import '../../../fa/css/all.min.css'
 import getInfo from './../UiInfoGetter'
 import $ from 'jquery'
@@ -9,12 +9,8 @@ class ImageSlide extends Component {
     render() {
         let index = getInfo(this.props)[0];
         let img4Compo = this.props.imgSet.map((sr)=>sr);
-        let compArry = [<IS1compo img={img4Compo}/>,<IS2compo img={img4Compo}/>,<IS3compo img={img4Compo}/>,<IS4compo img={img4Compo}/>,<IS5compo img={img4Compo}/>,<IS6compo/>]
-        return (
-            <div>
-                {compArry[index]}
-            </div> 
-            )
+        let compArry = [<IS1compo img={img4Compo}/>,<IS2compo img={img4Compo}/>,<IS3compo img={img4Compo}/>,<IS4compo img={img4Compo}/>,<IS5compo img={img4Compo}/>,<IS6compo img={img4Compo} />]
+        return <div>{compArry[index]}</div> 
     }
 }
 
@@ -82,33 +78,7 @@ class IS1compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-        console.log(pre)
-        return Box(pre)
-            // <div className="image-slide is1">
-            //     <div className="box">
-            //         <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-            //         <ul className="slide">
-            //             <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-            //             <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-            //             <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-            //             <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-            //             <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-            //             <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-            //             <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-            //         </ul>
-            //     </div>
-            //     <ul className="indicator">
-            //     </ul>
-            //     <p className="control">
-            //         <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-            //         <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-            //         <button className="play">
-            //             <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-            //             <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-            //         </button>
-            //     </p>
-            // </div>
-        // )
+        return Box(pre, '', 'image-slide is1', 7, true);
     }
 }
 class IS2compo extends Component {
@@ -180,82 +150,7 @@ class IS2compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-        return (
-            <div>
-                <div className="image-slide is2">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="image-slide is2">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="image-slide is2">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-            </div>
-        )
+        return Box(pre, '', 'image-slide is2', 7, true);
     }
 }
 class IS3compo extends Component {
@@ -377,30 +272,7 @@ class IS3compo extends Component {
                     <button id="test4">테스트 버튼 4 타이머정지</button>
                     <button id="test5">테스트 버튼 4 타이머 시작</button>
                 </p>
-                <div className="image-slide is3">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
+                {Box(pre, '', 'image-slide is3', 7, true)}
             </div>
         )
     }
@@ -543,56 +415,10 @@ class IS4compo extends Component {
                     <button id="test4">테스트 버튼 4 토글타이머</button>
                 </p>
                 <div>
-                    <div className="image-slide is4" id="is4_1">
-                        <div className="box">
-                            <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                            <ul className="slide">
-                                <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                                <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                                <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                                <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                                <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                                <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                                <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                            </ul>
-                        </div>
-                        <ul className="indicator">
-                        </ul>
-                        <p className="control">
-                            <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                            <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                            <button className="play">
-                                <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                                <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                            </button>
-                        </p>
-                    </div>
+                    {Box(pre, 'is4_1', 'image-slide is4', 7, true)}
                 </div>
                 <div>
-                    <div className="image-slide is4" id="is4_2">
-                        <div className="box">
-                            <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                            <ul className="slide">
-                                <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                                <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                                <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                                <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                                <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                                <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                                <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                            </ul>
-                        </div>
-                        <ul className="indicator">
-                        </ul>
-                        <p className="control">
-                            <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                            <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                            <button className="play">
-                                <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                                <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                            </button>
-                        </p>
-                    </div>
+                    {Box(pre, 'is4_2', 'image-slide is4', 7, true)}
                 </div>
             </div>
         )
@@ -701,36 +527,7 @@ class IS5compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-
-        return (
-            <div>
-                <div className="image-slide isdrag" id="isdrag1">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-
-            </div>
-        )
+        return <div>{Box(pre, 'isdrag1', 'image-slide isdrag', 7, true)}</div>
     }
 }
 class IS6compo extends Component {
@@ -1113,7 +910,6 @@ class IS6compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-
         return (
             <div>
                 <p className="test-button">
@@ -1122,78 +918,9 @@ class IS6compo extends Component {
                     <button id="test3">테스트 버튼 3</button>
                     <button id="test4">테스트 버튼 4</button>
                 </p>
-                <div className="image-slide isFinal" id="isFinal1">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="image-slide isFinal" id="isFinal2">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                    <ul className="indicator">
-                    </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="image-slide isFinal" id="isFinal3">
-                    <div className="box">
-                        <p className="dummy"><img alt="" src={pre[0].Img1} /></p>
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li>
-                        </ul>
-                    </div>
-                        <ul className="indicator">
-                        </ul>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
+                {Box(pre, "isFinal1", "image-slide isFinal", 7, true)}
+                {Box(pre, "isFinal2", "image-slide isFinal", 7, true)}
+                {Box(pre, "isFinal3", "image-slide isFinal", 7, true)}
             </div>
         )
     }

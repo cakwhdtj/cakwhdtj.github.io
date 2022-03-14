@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import '../../../fa/css/all.min.css'
 import $ from 'jquery'
 import getInfo from '../UiInfoGetter';
+import Box from './Box';
 
 class BannerSlide extends Component {
         render() {
@@ -113,38 +114,7 @@ class BS1compo extends Component {
     }
     render() {
         let pre = this.props.img.map((imageset)=>imageset);
-        return (
-            <div className="banner-slide bs1" id="bs1">
-                <div className="box">
-                    <ul className="slide">
-                        <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                        <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                        <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                        <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                        <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                        <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                        <li><button><img alt="000000" src={pre[6].Img7} /></button></li> <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                        <li><button><img alt="000000" src={pre[7].Img8} /></button></li>
-                        <li><button><img alt="000000" src={pre[8].Img9} /></button></li>
-                        <li><button><img alt="000000" src={pre[9].Img10} /></button></li>
-                        <li><button><img alt="000000" src={pre[10].Img11} /></button></li>
-                        <li><button><img alt="000000" src={pre[11].Img12} /></button></li>
-                        <li><button><img alt="000000" src={pre[12].Img13} /></button></li>
-                        <li><button><img alt="000000" src={pre[13].Img14} /></button></li>
-                        <li><button><img alt="000000" src={pre[14].Img15} /></button></li>
-
-                    </ul>
-                </div>
-                <p className="control">
-                    <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                    <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                    <button className="play">
-                        <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                        <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                    </button>
-                </p>
-            </div>
-        )
+        return Box(pre, 'bs1', 'banner-slide bs1', 15);
     }
 }
 class BS2compo extends Component {
@@ -314,93 +284,9 @@ class BS2compo extends Component {
         let pre = this.props.img.map((imageset)=>imageset);
         return (
             <div>
-                <div className="banner-slide bsFinal" id="bsFinal1">
-                    <div className="box">
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li> <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[7].Img8} /></button></li>
-                            <li><button><img alt="000000" src={pre[8].Img9} /></button></li>
-                            <li><button><img alt="000000" src={pre[9].Img10} /></button></li>
-                            <li><button><img alt="000000" src={pre[10].Img11} /></button></li>
-                            <li><button><img alt="000000" src={pre[11].Img12} /></button></li>
-                            <li><button><img alt="000000" src={pre[12].Img13} /></button></li>
-                            <li><button><img alt="000000" src={pre[13].Img14} /></button></li>
-                            <li><button><img alt="000000" src={pre[14].Img15} /></button></li>
-                        </ul>
-                    </div>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="banner-slide bsFinal" id="bsFinal2">
-                    <div className="box">
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li> <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[7].Img8} /></button></li>
-                            <li><button><img alt="000000" src={pre[8].Img9} /></button></li>
-                            <li><button><img alt="000000" src={pre[9].Img10} /></button></li>
-                            <li><button><img alt="000000" src={pre[10].Img11} /></button></li>
-                            <li><button><img alt="000000" src={pre[11].Img12} /></button></li>
-                            <li><button><img alt="000000" src={pre[12].Img13} /></button></li>
-                            <li><button><img alt="000000" src={pre[13].Img14} /></button></li>
-                            <li><button><img alt="000000" src={pre[14].Img15} /></button></li>
-                        </ul>
-                    </div>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
-                <div className="banner-slide bsFinal" id="bsFinal3">
-                    <div className="box">
-                        <ul className="slide">
-                            <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[1].Img2} /></button></li>
-                            <li><button><img alt="000000" src={pre[2].Img3} /></button></li>
-                            <li><button><img alt="000000" src={pre[3].Img4} /></button></li>
-                            <li><button><img alt="000000" src={pre[4].Img5} /></button></li>
-                            <li><button><img alt="000000" src={pre[5].Img6} /></button></li>
-                            <li><button><img alt="000000" src={pre[6].Img7} /></button></li> <li><button><img alt="000000" src={pre[0].Img1} /></button></li>
-                            <li><button><img alt="000000" src={pre[7].Img8} /></button></li>
-                            <li><button><img alt="000000" src={pre[8].Img9} /></button></li>
-                            <li><button><img alt="000000" src={pre[9].Img10} /></button></li>
-                            <li><button><img alt="000000" src={pre[10].Img11} /></button></li>
-                            <li><button><img alt="000000" src={pre[11].Img12} /></button></li>
-                            <li><button><img alt="000000" src={pre[12].Img13} /></button></li>
-                            <li><button><img alt="000000" src={pre[13].Img14} /></button></li>
-                            <li><button><img alt="000000" src={pre[14].Img15} /></button></li>
-                        </ul>
-                    </div>
-                    <p className="control">
-                        <button className="prev"><img alt="이전" src={pre[15].ImgBtnLeft} /></button>
-                        <button className="next"><img alt="다음" src={pre[16].ImgBtnRight} /></button>
-                        <button className="play">
-                            <i className="fas fa-play fa-fw"><span>타이머 시작</span></i>
-                            <i className="fas fa-pause fa-fw"><span>타이머 정지</span></i>
-                        </button>
-                    </p>
-                </div>
+                {Box(pre, 'bsFinal1', 'banner-slide bsFinal', 15)}
+                {Box(pre, 'bsFinal2', 'banner-slide bsFinal', 15)}
+                {Box(pre, 'bsFinal3', 'banner-slide bsFinal', 15)}
             </div>
         )
     }

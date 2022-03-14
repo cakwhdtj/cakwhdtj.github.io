@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState, } from 'react';
+import React, { useEffect, useState, } from 'react';
 import ImageSlide from './library_pages/Image_Slide';
 import BannerSlide from './library_pages/Banner_Slide';
 import ScrollUI from './library_pages/Scroll_UI';
@@ -8,7 +8,6 @@ import MobileUI from './library_pages/Mobile_UI';
 import API from './library_pages/API';
 import RotationUI from './library_pages/Rotation_UI';
 import WhrIam from './WhereGetter';
-
 import SetImage from './library_pages/ImageSet';
 
 

@@ -22,7 +22,7 @@ class API extends Component {
     render() {
         getInfo(this.props);
         return (
-            <div className="api_practice">
+            <div className="api_map">
                 <div id="map">
                 </div>
             </div>
