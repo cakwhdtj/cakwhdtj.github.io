@@ -4,7 +4,6 @@ import circle2 from '../../../img/circle/main_macaron_02.png';
 import circle3 from '../../../img/circle/main_macaron_03.png';
 import circle4 from '../../../img/circle/main_macaron_04.png';
 import circle5 from '../../../img/circle/main_macaron_05.png';
-
 import $ from 'jquery'
 
 

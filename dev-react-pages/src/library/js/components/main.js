@@ -17,6 +17,7 @@ function Main({homepage}) {
             {uiName: '내비게이션 UI', desc: 'Nav_UI' , steps:[1]},
             {uiName: '모바일 UI', desc: 'Mobile_UI' , steps:['Swipe']},
             {uiName: 'Rotation', desc: 'Rotation_UI' , steps:['Rotation']},
+            {uiName: '아무거나', desc: '아무거나' , steps:['Pong']},
         ];
         setList(data);
     }
