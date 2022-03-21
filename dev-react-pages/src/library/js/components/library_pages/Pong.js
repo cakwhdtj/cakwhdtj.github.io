@@ -35,91 +35,122 @@ const Pong = () => {
                 setCtx(renderCtx);
             }
         }
-
-        const longSide = 100; const shortSide = 15;
-        const gap = 10;
-        let x1 = 200; let x2 = 200;
-        let y1 = 200; let y2 = 200;
+        let gballvx = 2; let gballvy = 1;
+        let gballd = Math.hypot(gballvx,gballvy);
         let ball = {
             ballX: 250,
             ballY: 250,
             ballRadi: 25,
-            ballvx : 5,
-            ballvy : 2,
-            ballXDirection : true,
-            ballYDirection : true,
+            ballvx : gballvx,
+            ballvy : gballvy,
             ballDraw : function () {
                 if (ctx) {
                     ctx.beginPath();
-                    ctx.arc(this.ballX,this.ballY,this.ballRadi,0,2*Math.PI);
+                    ctx.arc(this.ballX,this.ballY,this.ballRadi, 0 ,2*Math.PI);
                     ctx.closePath();
                     ctx.fill();
-                    // (this.ballXDirection === true) ? this.ballX +=2 : this.ballX -=2;
-                    // (this.ballYDirection === true) ? this.ballY +=2 : this.ballY -=2;
-    
-                    // if (this.ballX > 460) {this.ballXDirection = false}
-                    // if (this.ballX < 40) {this.ballXDirection = true}
-                    // if (this.ballY > 460) {this.ballYDirection = false}
-                    // if (this.ballY < 40) {this.ballYDirection = true}    
+               }
+            }
+        }
+        let bar = {
+            barx1 : 200, bary1 : 200,
+            barx2 : 200, bary2 : 200,
+            barGap : 10,
+            barLside : 100, barSside : 15,
+            barDraw : function () {
+                if (ctx) {
+                    if (ctx) ctx.fillRect(this.barx1, this.barGap, this.barLside, this.barSside);
+                    if (ctx) ctx.fillRect(475, this.bary1, this.barSside, this.barLside);
+                    if (ctx) ctx.fillRect(this.barx2, 475, this.barLside, this.barSside);
+                    if (ctx) ctx.fillRect(this.barGap, this.bary2, this.barSside, this.barLside);
+
+                    if ((this.barx1+100) >= 500) {
+                        if(ctx) ctx.fillRect((this.barx1-500), 10, 100, 15);
+                        if (this.barx1>=500) {this.barx1 = 0}
+                    }
+                    if ((this.bary1+100) >= 500) {
+                        if(ctx) ctx.fillRect(475, (this.bary1-500), 15, 100);
+                        if (this.bary1 >= 500) {this.bary1 = 0;}
+                    }
+                    if (this.barx2 <= 0) {
+                        if(ctx) ctx.fillRect((this.barx2+500), 475, 100, 15);
+                        if (this.barx2 <= -100) {this.barx2 = 500;}
+                    }
+                    if (this.bary2 <= 0) {
+                        if(ctx) ctx.fillRect(10, (this.bary2+500), 15, 100);
+                        if (this.bary2 <= -100) {this.bary2 = 500;}
+                    }
                 }
             }
         }
-        const bar = () => {
-            if (ctx) ctx.fillRect(x1, gap, longSide, shortSide);
-            if (ctx) ctx.fillRect(475, y1, shortSide, longSide);
-            if (ctx) ctx.fillRect(x2, 475, longSide, shortSide);
-            if (ctx) ctx.fillRect(gap, y2, shortSide, longSide);
-
-            if ((x1+100) >= 500) {
-                if(ctx) ctx.fillRect((x1-500), 10, 100, 15);
-                if (x1>=500) {x1 = 0}
-            }
-            if ((y1+100) >= 500) {
-                if(ctx) ctx.fillRect(475, (y1-500), 15, 100);
-                if (y1 >= 500) {y1 = 0;}
-            }
-            if (x2 <= 0) {
-                if(ctx) ctx.fillRect((x2+500), 475, 100, 15);
-                if (x2 <= -100) {x2 = 400;}
-            }
-            if (y2 <= 0) {
-                if(ctx) ctx.fillRect(10, (y2+500), 15, 100);
-                if (y2 <= -100) {y2 = 400;}
-            }
-        }
-        function getRandomArbitrary(min, max) {
-            return Math.random() * (max - min) + min;
+        function randomDirctionGenerator(min, max) {
+            let result = Math.random() * (max - min) + min;
+            result = Math.round(result);
+            result = 0 ? result = 1 : result = result;
+            return result
           }
+        function newDGenerator(newNum , bvc) {
+            let newD = Math.abs(Math.round(Math.sqrt(Math.abs((gballd*gballd) - (newNum * newNum)))));
+            bvc < 0 ? newD = newD * 1 : newD = newD * -1;
+            return newD;
+        }
+
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
-            bar();
+            bar.barDraw();
             ball.ballDraw();
             ball.ballX += ball.ballvx;
             ball.ballY += ball.ballvy;
-
-            if (ball.ballY + ball.ballvy > 500 || ball.ballY + ball.ballvy < 0) {
-                ball.ballvy = getRandomArbitrary(-3,3);
+            let newNum = 0;
+            if (ball.ballX >= 500 || ball.ballX <= 0) {
+                console.log('out')
+                ball.ballX = 250;
+                ball.ballY = 250;            
             }
-            if (ball.ballX + ball.ballvx > 500 || ball.ballX + ball.ballvx < 0) {
-                ball.ballvx = getRandomArbitrary(-3,3);
+            if (ball.ballY >= 500 || ball.ballY <= 0) {
+                console.log('out')
+                ball.ballX = 250;
+                ball.ballY = 250;  
             }
-
-
+            if ((ball.ballX + ball.ballRadi) >= (475) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside)))) {
+                console.log('hit')
+                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
+                ball.ballvy = newNum;
+                ball.ballvx = newDGenerator(newNum, ball.ballvx);               
+            } else if ((ball.ballX - ball.ballRadi) <= (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside)))) {
+                console.log('hit')
+                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
+                ball.ballvy = newNum;
+                ball.ballvx = newDGenerator(newNum, ball.ballvx);
+            }
+            if ((ball.ballY + ball.ballRadi) >= (475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside)))) {
+                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
+                ball.ballvx = newNum;
+                ball.ballvy = newDGenerator(newNum, ball.ballvy);
+            } else if ((ball.ballY - ball.ballRadi) <= (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside)))) {
+                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
+                ball.ballvx = newNum;
+                ball.ballvy = newDGenerator(newNum, ball.ballvy);
+            }
             requestAnimationFrame(draw);
         }
         draw()
         function _onKeyDown (e) {
-                if (e.key === "ArrowUp") {
-                    x1 = x1 + 10;
-                }
-                if (e.key === "ArrowRight") {
-                    y1 = y1 + 10;                
-                }
-                if (e.key === "ArrowDown") {
-                    x2 = x2 - 10;                
-                }
-                if (e.key === "ArrowLeft") {
-                    y2 = y2 - 10;
+                switch (e.key) {
+                    case "ArrowUp":
+                        bar.barx1 = bar.barx1 + 30;
+                        break;
+                    case "ArrowRight":
+                        bar.bary1 = bar.bary1 + 30;                
+                        break;
+                    case "ArrowDown":
+                        bar.barx2 = bar.barx2 - 30;                
+                        break;
+                    case "ArrowLeft":
+                        bar.bary2 = bar.bary2 - 30;
+                        break;
+                    default:
+                        break;
                 }
         }
     },[ctx]);
