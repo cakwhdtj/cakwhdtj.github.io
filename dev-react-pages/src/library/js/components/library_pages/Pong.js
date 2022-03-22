@@ -3,7 +3,6 @@ import create from 'zustand';
 
 const useStore = create(()=>({
     selectCanvas(selected){
-        // console.log(selected)
         return selected
     }
 }))
@@ -14,15 +13,9 @@ const Pong = () => {
     
     const canvasRef = useRef(null);
     const [ctx, setCtx] = useState();
-    // const [start, setBtn] = useState(false);
 
     const theCanvas = document.getElementById('canvas_1');
     selectCanvas(theCanvas);
-
-    // const handleOnClick = () => {
-    //     setBtn((prev) => !prev);
-    // }
-
 
     useEffect(()=> {
         document.addEventListener("keydown",_onKeyDown);
@@ -35,12 +28,13 @@ const Pong = () => {
                 setCtx(renderCtx);
             }
         }
-        let gballvx = 2; let gballvy = 1;
+        
+        let gballvx = 1.5; let gballvy = 2.5;
         let gballd = Math.hypot(gballvx,gballvy);
         let ball = {
             ballX: 250,
             ballY: 250,
-            ballRadi: 25,
+            ballRadi: 20,
             ballvx : gballvx,
             ballvy : gballvy,
             ballDraw : function () {
@@ -66,7 +60,7 @@ const Pong = () => {
 
                     if ((this.barx1+100) >= 500) {
                         if(ctx) ctx.fillRect((this.barx1-500), 10, 100, 15);
-                        if (this.barx1>=500) {this.barx1 = 0}
+                        if (this.barx1>=500) {this.barx1 = 0;}
                     }
                     if ((this.bary1+100) >= 500) {
                         if(ctx) ctx.fillRect(475, (this.bary1-500), 15, 100);
@@ -74,16 +68,18 @@ const Pong = () => {
                     }
                     if (this.barx2 <= 0) {
                         if(ctx) ctx.fillRect((this.barx2+500), 475, 100, 15);
-                        if (this.barx2 <= -100) {this.barx2 = 500;}
+                        if (this.barx2 <= -100) {this.barx2 = 400;}
                     }
                     if (this.bary2 <= 0) {
                         if(ctx) ctx.fillRect(10, (this.bary2+500), 15, 100);
-                        if (this.bary2 <= -100) {this.bary2 = 500;}
+                        if (this.bary2 <= -100) {this.bary2 = 400;}
                     }
                 }
             }
         }
-        function randomDirctionGenerator(min, max) {
+        function randomDirctionGenerator() {
+            let min =  -(gballvx+gballvy);
+            let max = (gballvx+gballvy);
             let result = Math.random() * (max - min) + min;
             result = Math.round(result);
             result = 0 ? result = 1 : result = result;
@@ -92,49 +88,55 @@ const Pong = () => {
         function newDGenerator(newNum , bvc) {
             let newD = Math.abs(Math.round(Math.sqrt(Math.abs((gballd*gballd) - (newNum * newNum)))));
             bvc < 0 ? newD = newD * 1 : newD = newD * -1;
+            console.log(newD)
             return newD;
         }
-
+        function hit (whichBar) {
+            let result = [];
+            result[0] = randomDirctionGenerator();
+            if (whichBar = 'y') {
+                result[1] = newDGenerator(result[0], ball.ballvx)
+            }
+            if (whichBar = 'x') {
+                result[1] = newDGenerator(result[0], ball.ballvy)
+            }
+            return result;
+        }
+        console.log(hit('y')[1])
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
+            
             bar.barDraw();
             ball.ballDraw();
+            
             ball.ballX += ball.ballvx;
             ball.ballY += ball.ballvy;
+            
             let newNum = 0;
-            if (ball.ballX >= 500 || ball.ballX <= 0) {
+            if ((ball.ballX > 500 || ball.ballX < 0) || (ball.ballY > 500 || ball.ballY < 0)) {
                 console.log('out')
                 ball.ballX = 250;
                 ball.ballY = 250;            
             }
-            if (ball.ballY >= 500 || ball.ballY <= 0) {
-                console.log('out')
-                ball.ballX = 250;
-                ball.ballY = 250;  
-            }
-            if ((ball.ballX + ball.ballRadi) >= (475) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside)))) {
-                console.log('hit')
-                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
-                ball.ballvy = newNum;
-                ball.ballvx = newDGenerator(newNum, ball.ballvx);               
-            } else if ((ball.ballX - ball.ballRadi) <= (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside)))) {
-                console.log('hit')
-                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
-                ball.ballvy = newNum;
-                ball.ballvx = newDGenerator(newNum, ball.ballvx);
-            }
-            if ((ball.ballY + ball.ballRadi) >= (475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside)))) {
-                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
-                ball.ballvx = newNum;
-                ball.ballvy = newDGenerator(newNum, ball.ballvy);
-            } else if ((ball.ballY - ball.ballRadi) <= (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside)))) {
-                newNum = randomDirctionGenerator(-(gballvx+gballvy),(gballvx+gballvy));
-                ball.ballvx = newNum;
-                ball.ballvy = newDGenerator(newNum, ball.ballvy);
-            }
+            if (((ball.ballX + ball.ballRadi) > (475) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside))))
+                || 
+                ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
+            ) {
+                // hit y bar
+                ball.ballvy = randomDirctionGenerator();
+                ball.ballvx = newDGenerator(ball.ballvy, ball.ballvx);               
+            } 
+            if (((ball.ballY + ball.ballRadi) > (475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside))))
+                || 
+                ((ball.ballY - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
+            ) {
+                // hit x bar
+                ball.ballvx = randomDirctionGenerator();
+                ball.ballvy = newDGenerator(ball.ballvx, ball.ballvy);
+            } 
             requestAnimationFrame(draw);
         }
-        draw()
+        draw();
         function _onKeyDown (e) {
                 switch (e.key) {
                     case "ArrowUp":
@@ -153,7 +155,9 @@ const Pong = () => {
                         break;
                 }
         }
+        
     },[ctx]);
+    
 
     return (
         <div id="canvasDiv" style={{position:"relative"}}>
@@ -163,7 +167,7 @@ const Pong = () => {
             style={{border:"1px solid black",position:"absolute",left:"50%",transform:"translate(-50%,0)"}} 
             ref={canvasRef}
             />
-            {/* <button onClick={handleOnClick}>start</button> */}
+            {/* <button onClick={}>start</button> */}
         </div>
     );
   }
