@@ -51,6 +51,7 @@ const Pong = () => {
             barx2 : 200, bary2 : 200,
             barGap : 10,
             barLside : 100, barSside : 15,
+            barGArea : [],
             barDraw : function () {
                 if (ctx) {
                     if (ctx) ctx.fillRect(this.barx1, this.barGap, this.barLside, this.barSside);
@@ -91,18 +92,6 @@ const Pong = () => {
             console.log(newD)
             return newD;
         }
-        function hit (whichBar) {
-            let result = [];
-            result[0] = randomDirctionGenerator();
-            if (whichBar = 'y') {
-                result[1] = newDGenerator(result[0], ball.ballvx)
-            }
-            if (whichBar = 'x') {
-                result[1] = newDGenerator(result[0], ball.ballvy)
-            }
-            return result;
-        }
-        console.log(hit('y')[1])
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
             
@@ -123,6 +112,8 @@ const Pong = () => {
                 ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
             ) {
                 // hit y bar
+
+
                 ball.ballvy = randomDirctionGenerator();
                 ball.ballvx = newDGenerator(ball.ballvy, ball.ballvx);               
             } 
