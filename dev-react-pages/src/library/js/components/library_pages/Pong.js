@@ -28,8 +28,8 @@ const Pong = () => {
                 setCtx(renderCtx);
             }
         }
-        
-        let gballvx = 1.5; let gballvy = 2.5;
+        let timer = null;
+        let gballvx = 1; let gballvy = 2;
         let gballd = Math.hypot(gballvx,gballvy);
         let ball = {
             ballX: 250,
@@ -51,7 +51,6 @@ const Pong = () => {
             barx2 : 200, bary2 : 200,
             barGap : 10,
             barLside : 100, barSside : 15,
-            barGArea : [],
             barDraw : function () {
                 if (ctx) {
                     if (ctx) ctx.fillRect(this.barx1, this.barGap, this.barLside, this.barSside);
@@ -89,9 +88,17 @@ const Pong = () => {
         function newDGenerator(newNum , bvc) {
             let newD = Math.abs(Math.round(Math.sqrt(Math.abs((gballd*gballd) - (newNum * newNum)))));
             bvc < 0 ? newD = newD * 1 : newD = newD * -1;
-            console.log(newD)
             return newD;
         }
+        function checkDirection(x,y) {
+            let direction = 0;
+            if ((x > 0) && (y > 0)) {direction = 1;}
+            if ((x < 0) && (y < 0)) {direction = 2;}
+            if ((x < 0) && (y > 0)) {direction = 3;}
+            if ((x > 0) && (y > 0)) {direction = 4;}
+            return direction; 
+        }
+
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
             
@@ -100,53 +107,47 @@ const Pong = () => {
             
             ball.ballX += ball.ballvx;
             ball.ballY += ball.ballvy;
-            
-            let newNum = 0;
             if ((ball.ballX > 500 || ball.ballX < 0) || (ball.ballY > 500 || ball.ballY < 0)) {
-                console.log('out')
                 ball.ballX = 250;
                 ball.ballY = 250;            
+            }
+            if ((((ball.ballY + ball.ballRadi) > 475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside))))
+                ||
+                ((ball.ballY - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
+            ){
+                // hit x bar
+                ball.ballvy = -ball.ballvy
             }
             if (((ball.ballX + ball.ballRadi) > (475) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside))))
                 || 
                 ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
             ) {
                 // hit y bar
-
-
-                ball.ballvy = randomDirctionGenerator();
-                ball.ballvx = newDGenerator(ball.ballvy, ball.ballvx);               
+                ball.ballvx = -ball.ballvx
             } 
-            if (((ball.ballY + ball.ballRadi) > (475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside))))
-                || 
-                ((ball.ballY - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
-            ) {
-                // hit x bar
-                ball.ballvx = randomDirctionGenerator();
-                ball.ballvy = newDGenerator(ball.ballvx, ball.ballvy);
-            } 
+        // console.log(checkDirection(ball.ballvx,ball.ballvy))
+
             requestAnimationFrame(draw);
         }
         draw();
         function _onKeyDown (e) {
                 switch (e.key) {
                     case "ArrowUp":
-                        bar.barx1 = bar.barx1 + 30;
+                        bar.barx1 = bar.barx1 + 50;
                         break;
                     case "ArrowRight":
-                        bar.bary1 = bar.bary1 + 30;                
+                        bar.bary1 = bar.bary1 + 50;                
                         break;
                     case "ArrowDown":
-                        bar.barx2 = bar.barx2 - 30;                
+                        bar.barx2 = bar.barx2 - 50;                
                         break;
                     case "ArrowLeft":
-                        bar.bary2 = bar.bary2 - 30;
+                        bar.bary2 = bar.bary2 - 50;
                         break;
                     default:
                         break;
                 }
-        }
-        
+        }        
     },[ctx]);
     
 
