@@ -1,3 +1,4 @@
+import { toNumber } from 'lodash';
 import React, { useRef, useEffect, useState} from 'react';
 import create from 'zustand';
 
@@ -29,14 +30,15 @@ const Pong = () => {
             }
         }
         let timer = null;
-        let gballvx = 1; let gballvy = 2;
-        let gballd = Math.hypot(gballvx,gballvy);
+        let iballvx = -.5; let iballvy = 2;
+        let isum = Math.abs(iballvx) + Math.abs(iballvy);
+        let gballd = Math.hypot(iballvx,iballvy);
         let ball = {
             ballX: 250,
             ballY: 250,
-            ballRadi: 20,
-            ballvx : gballvx,
-            ballvy : gballvy,
+            ballRadi: 15,
+            ballvx : iballvx,
+            ballvy : iballvy,
             ballDraw : function () {
                 if (ctx) {
                     ctx.beginPath();
@@ -77,12 +79,11 @@ const Pong = () => {
                 }
             }
         }
-        function randomDirctionGenerator() {
-            let min =  -(gballvx+gballvy);
-            let max = (gballvx+gballvy);
+        function randomDirctionGenerator(min, max) {
             let result = Math.random() * (max - min) + min;
-            result = Math.round(result);
-            result = 0 ? result = 1 : result = result;
+            result = result.toFixed(2);
+            result = parseFloat(result);
+            // result > 0 ? result = 1 : result = -1;
             return result
           }
         function newDGenerator(newNum , bvc) {
@@ -90,43 +91,60 @@ const Pong = () => {
             bvc < 0 ? newD = newD * 1 : newD = newD * -1;
             return newD;
         }
-        function checkDirection(x,y) {
-            let direction = 0;
-            if ((x > 0) && (y > 0)) {direction = 1;}
-            if ((x < 0) && (y < 0)) {direction = 2;}
-            if ((x < 0) && (y > 0)) {direction = 3;}
-            if ((x > 0) && (y > 0)) {direction = 4;}
-            return direction; 
+        function newiSub(num) {
+            let result = 0;
+            result = isum - Math.abs(num);
+            return result;
         }
+
 
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
             
             bar.barDraw();
             ball.ballDraw();
-            
             ball.ballX += ball.ballvx;
             ball.ballY += ball.ballvy;
             if ((ball.ballX > 500 || ball.ballX < 0) || (ball.ballY > 500 || ball.ballY < 0)) {
                 ball.ballX = 250;
                 ball.ballY = 250;            
             }
-            if ((((ball.ballY + ball.ballRadi) > 475) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside))))
+            if ((((ball.ballY + ball.ballRadi) > 472) && ((ball.ballX > bar.barx2) && (ball.ballX < (bar.barx2 + bar.barLside))))
                 ||
-                ((ball.ballY - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
+                ((ball.ballY - ball.ballRadi) < (bar.barGap + bar.barSside + 3) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
             ){
                 // hit x bar
-                ball.ballvy = -ball.ballvy
+                if (ball.ballX < 100 || ball.ballX > 400) {
+                    ball.ballvx = -ball.ballvx * .8
+                    ball.ballvy = -ball.ballvy;
+                } else {
+                    ball.ballvx = (randomDirctionGenerator(iballvx,iballvy));
+                    ball.ballvy = -ball.ballvy;
+                }
+                console.log(ball.ballvx,' & ', ball.ballvy)
             }
-            if (((ball.ballX + ball.ballRadi) > (475) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside))))
+            if (((ball.ballX + ball.ballRadi) > (472) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside))))
                 || 
-                ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
+                ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside + 3) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
             ) {
                 // hit y bar
-                ball.ballvx = -ball.ballvx
+                if (ball.ballY < 100 || ball.ballY > 400) {
+                    ball.ballvy = -ball.ballvy * .8
+                    ball.ballvx = -ball.ballvx;
+                } else {
+                    ball.ballvy = (randomDirctionGenerator(iballvx,iballvy));
+                    ball.ballvx = -ball.ballvx;
+                }
+                console.log(ball.ballvx,' & ', ball.ballvy)
             } 
         // console.log(checkDirection(ball.ballvx,ball.ballvy))
-
+            // if (!timer) {
+            //     timer = setTimeout(() => {
+            //     timer = null;
+            //     console.log(ball.ballX,ball.ballY)
+            //     }, 200);
+            // }    
+        
             requestAnimationFrame(draw);
         }
         draw();
