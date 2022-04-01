@@ -1,4 +1,3 @@
-import { toNumber } from 'lodash';
 import React, { useRef, useEffect, useState} from 'react';
 import create from 'zustand';
 
@@ -11,10 +10,8 @@ const useStore = create(()=>({
 
 const Pong = () => {
     const {selectCanvas} = useStore();
-    
     const canvasRef = useRef(null);
     const [ctx, setCtx] = useState();
-
     const theCanvas = document.getElementById('canvas_1');
     selectCanvas(theCanvas);
 
@@ -29,7 +26,6 @@ const Pong = () => {
                 setCtx(renderCtx);
             }
         }
-        let timer = null;
         let iballvx = -.5; let iballvy = 2;
         let isum = Math.abs(iballvx) + Math.abs(iballvy);
         let gballd = Math.hypot(iballvx,iballvy);
@@ -81,21 +77,11 @@ const Pong = () => {
         }
         function randomDirctionGenerator(min, max) {
             let result = Math.random() * (max - min) + min;
-            result = result.toFixed(2);
+            result = result.toFixed(0);
             result = parseFloat(result);
             // result > 0 ? result = 1 : result = -1;
             return result
           }
-        function newDGenerator(newNum , bvc) {
-            let newD = Math.abs(Math.round(Math.sqrt(Math.abs((gballd*gballd) - (newNum * newNum)))));
-            bvc < 0 ? newD = newD * 1 : newD = newD * -1;
-            return newD;
-        }
-        function newiSub(num) {
-            let result = 0;
-            result = isum - Math.abs(num);
-            return result;
-        }
 
 
         function draw() {
@@ -105,6 +91,7 @@ const Pong = () => {
             ball.ballDraw();
             ball.ballX += ball.ballvx;
             ball.ballY += ball.ballvy;
+
             if ((ball.ballX > 500 || ball.ballX < 0) || (ball.ballY > 500 || ball.ballY < 0)) {
                 ball.ballX = 250;
                 ball.ballY = 250;            
@@ -114,13 +101,13 @@ const Pong = () => {
                 ((ball.ballY - ball.ballRadi) < (bar.barGap + bar.barSside + 3) && ((ball.ballX > bar.barx1) && (ball.ballX < (bar.barx1 + bar.barLside))))
             ){
                 // hit x bar
-                if (ball.ballX < 100 || ball.ballX > 400) {
-                    ball.ballvx = -ball.ballvx * .8
-                    ball.ballvy = -ball.ballvy;
+                if (ball.ballX > 400 || ball.ballX < 100) {
+                    ball.ballvx = -ball.ballvx * .9;
                 } else {
-                    ball.ballvx = (randomDirctionGenerator(iballvx,iballvy));
-                    ball.ballvy = -ball.ballvy;
+                    let newD = randomDirctionGenerator(iballvx,iballvy);
+                    ball.ballvx = newD;
                 }
+                ball.ballvy = -ball.ballvy;
                 console.log(ball.ballvx,' & ', ball.ballvy)
             }
             if (((ball.ballX + ball.ballRadi) > (472) && ((ball.ballY > bar.bary1) && (ball.ballY < (bar.bary1 + bar.barLside))))
@@ -128,23 +115,15 @@ const Pong = () => {
                 ((ball.ballX - ball.ballRadi) < (bar.barGap+bar.barSside + 3) && ((ball.ballY > bar.bary2) && (ball.ballY < (bar.bary2 + bar.barLside))))
             ) {
                 // hit y bar
-                if (ball.ballY < 100 || ball.ballY > 400) {
-                    ball.ballvy = -ball.ballvy * .8
-                    ball.ballvx = -ball.ballvx;
+                if (ball.ballY > 400 || ball.ballY < 100) {
+                    ball.ballvy = -ball.ballvy * .9;
                 } else {
-                    ball.ballvy = (randomDirctionGenerator(iballvx,iballvy));
-                    ball.ballvx = -ball.ballvx;
+                    let newD = randomDirctionGenerator(iballvx,iballvy);
+                    ball.ballvy = newD;
                 }
+                ball.ballvx = -ball.ballvx;
                 console.log(ball.ballvx,' & ', ball.ballvy)
             } 
-        // console.log(checkDirection(ball.ballvx,ball.ballvy))
-            // if (!timer) {
-            //     timer = setTimeout(() => {
-            //     timer = null;
-            //     console.log(ball.ballX,ball.ballY)
-            //     }, 200);
-            // }    
-        
             requestAnimationFrame(draw);
         }
         draw();
@@ -168,8 +147,8 @@ const Pong = () => {
         }        
     },[ctx]);
     
-
     return (
+        
         <div id="canvasDiv" style={{position:"relative"}}>
             <canvas 
             id={`canvas_1`}

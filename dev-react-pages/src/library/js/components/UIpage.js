@@ -10,6 +10,7 @@ import RotationUI from './library_pages/Rotation_UI';
 import WhrIam from './WhereGetter';
 import SetImage from './library_pages/ImageSet';
 import Pong from './library_pages/Pong';
+import Sandbox from './library_pages/sandbox';
 
 
 function UIPage({ui}) {
@@ -45,7 +46,8 @@ function UIPage({ui}) {
         case 'Rotation_UI':
             return <RotationUI uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         case '아무거나':
-            return <Pong uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
+            return <Sandbox uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
+            // return <Pong uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         default:
             return <div></div>
     }

@@ -7,6 +7,7 @@ import Box from './Box';
 
 class ImageSlide extends Component {
     render() {
+        console.log(this.props)
         let index = getInfo(this.props)[0];
         let img4Compo = this.props.imgSet.map((sr)=>sr);
         let compArry = [<IS1compo img={img4Compo}/>,<IS2compo img={img4Compo}/>,<IS3compo img={img4Compo}/>,<IS4compo img={img4Compo}/>,<IS5compo img={img4Compo}/>,<IS6compo img={img4Compo} />]
