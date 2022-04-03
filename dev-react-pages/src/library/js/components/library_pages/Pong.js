@@ -20,15 +20,15 @@ const Pong = () => {
 
         if (canvasRef.current) {
             const renderCtx = canvasRef.current.getContext("2d");
-            // canvasRef.current.width = 500;
-            // canvasRef.current.height = 500;
+            canvasRef.current.width = 500;
+            canvasRef.current.height = 500;
             if (renderCtx) {
                 setCtx(renderCtx);
             }
         }
         let iballvx = -.5; let iballvy = 2;
-        let isum = Math.abs(iballvx) + Math.abs(iballvy);
-        let gballd = Math.hypot(iballvx,iballvy);
+        // let isum = Math.abs(iballvx) + Math.abs(iballvy);
+        // let gballd = Math.hypot(iballvx,iballvy);
         let ball = {
             ballX: 250,
             ballY: 250,
@@ -79,11 +79,8 @@ const Pong = () => {
             let result = Math.random() * (max - min) + min;
             result = result.toFixed(0);
             result = parseFloat(result);
-            // result > 0 ? result = 1 : result = -1;
             return result
           }
-
-
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
             
@@ -144,7 +141,8 @@ const Pong = () => {
                     default:
                         break;
                 }
-        }        
+        }
+    // eslint-disable-next-line
     },[ctx]);
     
     return (
@@ -156,7 +154,6 @@ const Pong = () => {
             style={{border:"1px solid black",position:"absolute",left:"50%",transform:"translate(-50%,0)"}} 
             ref={canvasRef}
             />
-            {/* <button onClick={}>start</button> */}
         </div>
     );
   }

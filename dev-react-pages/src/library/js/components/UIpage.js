@@ -9,8 +9,7 @@ import API from './library_pages/API';
 import RotationUI from './library_pages/Rotation_UI';
 import WhrIam from './WhereGetter';
 import SetImage from './library_pages/ImageSet';
-import Pong from './library_pages/Pong';
-import Sandbox from './library_pages/sandbox';
+import Sandbox from './library_pages/Sandbox';
 
 
 function UIPage({ui}) {
@@ -25,6 +24,7 @@ function UIPage({ui}) {
     const imgs = SetImage().map((mImg)=>mImg);
     useEffect(()=>{
     setState(getWhich());
+    // eslint-disable-next-line
    },[])
     switch (uinstep[0]) {
         case 'API':
@@ -47,7 +47,6 @@ function UIPage({ui}) {
             return <RotationUI uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         case '아무거나':
             return <Sandbox uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
-            // return <Pong uiInfo={uinstep} dataSet={ui} imgSet={imgs} />
         default:
             return <div></div>
     }
