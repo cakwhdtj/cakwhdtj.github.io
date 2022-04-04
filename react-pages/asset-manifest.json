@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/react-pages/static/css/main.8b7c6d86.chunk.css",
-    "main.js": "/react-pages/static/js/main.046712c8.chunk.js",
-    "main.js.map": "/react-pages/static/js/main.046712c8.chunk.js.map",
+    "main.js": "/react-pages/static/js/main.3f8374d0.chunk.js",
+    "main.js.map": "/react-pages/static/js/main.3f8374d0.chunk.js.map",
     "runtime-main.js": "/react-pages/static/js/runtime-main.69483a03.js",
     "runtime-main.js.map": "/react-pages/static/js/runtime-main.69483a03.js.map",
-    "static/js/2.55c64804.chunk.js": "/react-pages/static/js/2.55c64804.chunk.js",
-    "static/js/2.55c64804.chunk.js.map": "/react-pages/static/js/2.55c64804.chunk.js.map",
+    "static/js/2.5d7908cd.chunk.js": "/react-pages/static/js/2.5d7908cd.chunk.js",
+    "static/js/2.5d7908cd.chunk.js.map": "/react-pages/static/js/2.5d7908cd.chunk.js.map",
     "index.html": "/react-pages/index.html",
-    "precache-manifest.db2f3c84270ee332a07895493bccb2cf.js": "/react-pages/precache-manifest.db2f3c84270ee332a07895493bccb2cf.js",
+    "precache-manifest.9fb9131cbdf2ee30984ab1b7972291c4.js": "/react-pages/precache-manifest.9fb9131cbdf2ee30984ab1b7972291c4.js",
     "service-worker.js": "/react-pages/service-worker.js",
     "static/css/main.8b7c6d86.chunk.css.map": "/react-pages/static/css/main.8b7c6d86.chunk.css.map",
-    "static/js/2.55c64804.chunk.js.LICENSE.txt": "/react-pages/static/js/2.55c64804.chunk.js.LICENSE.txt",
+    "static/js/2.5d7908cd.chunk.js.LICENSE.txt": "/react-pages/static/js/2.5d7908cd.chunk.js.LICENSE.txt",
     "static/media/web-font.css": "/react-pages/static/media/NotoSansKR-Regular.f97524d1.woff2",
+    "static/media/background.png": "/react-pages/static/media/background.a5f2bb9a.png",
     "static/media/all.min.css": "/react-pages/static/media/fa-solid-900.9ae050d1.woff2",
+    "static/media/hills.png": "/react-pages/static/media/hills.9966e5b0.png",
     "static/media/main_macaron_01.png": "/react-pages/static/media/main_macaron_01.fad792c5.png",
     "static/media/main_macaron_02.png": "/react-pages/static/media/main_macaron_02.beaea997.png",
     "static/media/main_macaron_03.png": "/react-pages/static/media/main_macaron_03.b121eae1.png",
@@ -38,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.69483a03.js",
-    "static/js/2.55c64804.chunk.js",
+    "static/js/2.5d7908cd.chunk.js",
     "static/css/main.8b7c6d86.chunk.css",
-    "static/js/main.046712c8.chunk.js"
+    "static/js/main.3f8374d0.chunk.js"
   ]
 }

@@ -1,5 +1,8 @@
 import React, { useRef, useEffect, useState} from 'react';
-import platformImg from './../../../img/random/platform.png'
+import platformImg from './../../../img/random/platform.png';
+import bg from './../../../img/random/background.png'
+import hills from './../../../img/random/hills.png'
+import { unset } from 'lodash';
 
 
 const Jump = () => {
@@ -11,8 +14,11 @@ const Jump = () => {
     useEffect(()=> {
         document.addEventListener("keydown",_onKeyDown);
         document.addEventListener("keyup",_onKeyUp);
-        const img = new Image();
-        img.src = platformImg;
+        function createImage(imgSrc) {
+            const img = new Image();
+            img.src = imgSrc;
+            return img
+        }
 
 
         if (canvasRef.current) {
@@ -24,7 +30,7 @@ const Jump = () => {
             }
         }     
 
-        let Player = {
+        const Player = {
             position : {
                 x:100, 
                 y:100
@@ -58,36 +64,79 @@ const Jump = () => {
 
         let scrollOffset = 0;
 
+        const pImg = createImage(platformImg);
         class Platform {
-            constructor({x,y}) {
+            constructor({x,y},{w,h}) {
                 this.position = {
                     x,
                     y
-                }
-                this.width = 200
-                this.height = 20
+                };
+                this.width = w;
+                this.height = h;
             }
             platformDraw() {
                 if (ctx) {
-                    ctx.fillStyle = 'blue';
-                    ctx.drawImage(img, this.position.x, this.position.y, this.width, this.height)
+                    ctx.drawImage(createImage(platformImg), this.position.x, this.position.y, this.width, this.height)
                 }
             }
         }
- 
-
+        const Score = {
+            scoreDraw : function (text) {
+                text < 0 ? text = 0 : text = text;
+                if (ctx) {
+                    ctx.font = "30px Arial";
+                    ctx.fillStyle = "black"
+                    ctx.fillText(text, 10, 50);
+                }
+            }
+        } 
+        class GenericObjs {
+            constructor({x,y},img) {
+                this.position = {
+                    x,
+                    y
+                };
+                this.img = createImage(img);
+            };
+            gObjDraw() {
+                if (ctx) ctx.drawImage(this.img, this.position.x, this.position.y);
+            }
+        }
+        
+        const GObjs = [
+            new GenericObjs(
+                {x:-1, y:-1},
+                bg,),
+            new GenericObjs(
+                {x:-1, y:-1},
+                hills,),
+        ]  
         const Platforms = [
-            new Platform({
-                x:200, y:300,
-            }),
-            new Platform({
-                x:600, y:400
-            })
+            new Platform(
+                {x:200, y:300,},
+                {w:200, h:20}
+                ),
+            new Platform(
+                {x:600, y:400},
+                {w:200, h:20}
+                ),
+            new Platform(
+                {x:-1, y:530},
+                {w:700, h:100}
+                ),
         ];
+
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
             if (ctx) {ctx.fillStyle = 'red';}
+       
+            GObjs.forEach((gOs)=>{
+                gOs.gObjDraw();
+            })
+
             Player.playerDraw();
+            Score.scoreDraw(Math.round(scrollOffset * .25));
+            // Score.scoreDraw(Math.round(scrollOffset));
 
             Platforms.forEach((platform) => {
                 platform.platformDraw();
@@ -95,7 +144,9 @@ const Jump = () => {
             Player.position.y += Player.velocity.y;
             Player.position.x += Player.velocity.x;
 
-            if (Player.position.y + Player.height + Player.velocity.y <= (window.innerHeight - 300)) {
+
+
+            if (Player.position.y + Player.height + Player.velocity.y <= (576 /*canvas height*/)) {
                 Player.velocity.y += gravity;
             } else {
                 Player.velocity.y = 0;
@@ -110,12 +161,20 @@ const Jump = () => {
                     scrollOffset += 5;
                     Platforms.forEach((platform) => {
                         platform.position.x -= 5;
-                    })
+                    });
+                    GObjs.forEach((gOs)=>{
+                        gOs.position.x -= 3;
+                    });
                 } else if (keys.left.pressed) {
-                    scrollOffset -= 5;
-                    Platforms.forEach((platform) => {
-                        platform.position.x += 5;
-                    })
+                    if (scrollOffset > 0) {
+                        scrollOffset -= 5;
+                        Platforms.forEach((platform) => {
+                            platform.position.x += 5;
+                        });
+                        GObjs.forEach((gOs)=>{
+                            gOs.position.x += 3;
+                        });
+                    }
                 }
             }
             // platform collision detection
@@ -129,9 +188,10 @@ const Jump = () => {
                 }
             });
 
-            if (scrollOffset > 20000) {
+            if ((Math.round(scrollOffset * .25)) > 10000) {
                 console.log('you win')
             }
+            
             requestAnimationFrame(draw);
         }
         draw();
