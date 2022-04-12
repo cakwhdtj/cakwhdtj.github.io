@@ -88,14 +88,10 @@ const Jump = () => {
             down: {pressed: false,} 
         }
         let scrollOffset = 0;
-
         const platformW = 700;
         class Platform {
             constructor({x,y},{w,h}) {
-                this.position = {
-                    x,
-                    y
-                };
+                this.position = {x, y};
                 this.width = w;
                 this.height = h;
             }
@@ -115,6 +111,15 @@ const Jump = () => {
                 }
             }
         } 
+        const Win = {
+            win : function () {
+                if (ctx) {
+                    ctx.font = "80px Arial";
+                    ctx.fillStyle = "white"
+                    ctx.fillText("You Win", ((window.innerWidth - 100)/2), (576/2));
+                }
+            }
+        }
         class GenericObjs {
             constructor({x,y},img) {
                 this.position = {
@@ -153,7 +158,7 @@ const Jump = () => {
             //     {w:700, h:100}
             //     ),
         ];
-
+        let count = 0;
 
         function init() {
             Player.position.x = 100;
@@ -189,8 +194,15 @@ const Jump = () => {
                     {w:700, h:100}
                     ),
             ];
+            count = 0;
         }
-        
+
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        function pPusher() {
+            Platforms.push(new Platform({x:getRandomArbitrary(800,900), y:(getRandomArbitrary(100,500))},{w:200,h:20}));
+        }
         init();
         function draw() {
             if (ctx) ctx.clearRect(0,0, theCanvas.width, theCanvas.height);
@@ -205,10 +217,18 @@ const Jump = () => {
             Player.playerDraw();
             
             Score.scoreDraw(Math.round(scrollOffset * .25));
+            count = Math.round((Math.round(scrollOffset * .25)/100));
 
+            if (Math.round(scrollOffset * .25) != 0 && Number.isInteger(Math.round(scrollOffset * .25)/100) === true) {
+                Platforms.push(new Platform({x:(platformW*count)+150, y:530},{w:700,h:100}));
+                pPusher();
+            }
+            
             Platforms.forEach((platform) => {
                 platform.platformDraw();
-            })
+            });
+
+
             Player.position.y += Player.velocity.y;
             Player.position.x += Player.velocity.x;
 
@@ -257,8 +277,9 @@ const Jump = () => {
             });
 
             //win
-            if ((Math.round(scrollOffset * .25)) > 10000) {
-                console.log('you win')
+            if ((Math.round(scrollOffset * .25)) > 1500) {
+                console.log('you win');
+                Win.win();
             }
             //lose
             if (Player.position.y > 576 /*canvas height*/) { 
@@ -269,11 +290,17 @@ const Jump = () => {
             requestAnimationFrame(draw);
         }
         draw();
+        let timer;
+        
         function _onKeyDown (e) {
             switch (e.key) {
                 case "ArrowUp":
-                    Player.velocity.y -= 10;
-                    
+                    if(!timer) {
+                        timer = setTimeout(function() {
+                            timer = null;
+                            Player.velocity.y -= 10;
+                        }, 100);
+                    }
                     break;
                 case "ArrowRight":
                     keys.right.pressed = true;
