@@ -277,9 +277,14 @@ const Jump = () => {
             });
 
             //win
+            
             if ((Math.round(scrollOffset * .25)) > 1500) {
                 console.log('you win');
                 Win.win();
+                const winTimer = setTimeout(() => {
+                    init();
+                    clearTimeout(winTimer);
+                }, 5000);
             }
             //lose
             if (Player.position.y > 576 /*canvas height*/) { 
@@ -290,16 +295,19 @@ const Jump = () => {
             requestAnimationFrame(draw);
         }
         draw();
-        let timer;
-        
+
+
+        let timer; //쓰로틀링
         function _onKeyDown (e) {
             switch (e.key) {
                 case "ArrowUp":
-                    if(!timer) {
+                    var timer;
+                    if (!timer) {
                         timer = setTimeout(function() {
-                            timer = null;
-                            Player.velocity.y -= 10;
-                        }, 100);
+                        timer = null;
+                        Player.velocity.y -= 10;
+                        // 실행할 코드 내용
+                        }, 200);
                     }
                     break;
                 case "ArrowRight":
