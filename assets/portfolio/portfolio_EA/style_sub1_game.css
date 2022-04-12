@@ -1,0 +1,132 @@
+#sub1_game_main .section1 {
+  position: relative;
+  width: 100%;
+  min-width: 1080px;
+  padding-top: 40px;
+}
+#sub1_game_main section video {
+  display: block;
+  width: 100%;
+}
+#sub1_game_main .section2 {
+  border: 1px dotted green;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: unset;
+}
+
+#sub1_game_main #section2_bar {
+  position: relative;
+  border-bottom: 2px solid #dedede;
+  display: block;
+  height: 60px;
+  text-align: center;
+}
+#sub1_game_main #section2_bar > ul {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+#sub1_game_main #section2_bar > ul > li {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#sub1_game_main #section2_bar > ul > li.on {
+  height: 100%;
+  background-color: #dedede;
+}
+#sub1_game_main #section2_bar > ul > li:hover {
+  background-color: #dedede;
+}
+#sub1_game_main #section2_bar > ul > li > a > span::before {
+  content: "";
+  box-sizing: border-box;
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  transform: translateX(-15px);
+}
+#sub1_game_main #section2_bar > ul > li > a > span {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+#sub1_game_main #section2_bar > ul > li > a > span.on {
+  border-bottom: 2px solid #fe4747;
+}
+#sub1_game_main .subBoxSet {
+  position: relative;
+  margin-top: 40px;
+  height: 100vh;
+}
+#sub1_game_main .subBoxSet:nth-child(4),
+#sub1_game_main .subBoxSet:nth-child(5) {
+  height: 50vh;
+}
+#sub1_game_main .subBoxSet ul {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+#sub1_game_main .subBoxSet ul > li {
+  position: relative;
+  box-shadow: 2px 2px 5px grey;
+  margin: 5px;
+  width: 30%;
+  height: 150px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+#sub1_game_main .subBoxSet ul > li > h4 {
+  position: absolute;
+  color: white;
+}
+#sub1_game_main .subBoxSet ul > li:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 10px grey;
+}
+#sub1_game_main .subBoxSet#genre ul > li {
+  background: linear-gradient(to right, #0f1141cd, #ff213fcd);
+}
+#sub1_game_main .subBoxSet#genre ul > li > h4 {
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+}
+#sub1_game_main .subBoxSet#platform ul > li {
+  background-color: rgba(89, 116, 137, 0.8);
+}
+#sub1_game_main .subBoxSet#platform ul > li > h4 > img {
+  width: 100%;
+}
+#sub1_game_main .subBoxSet#age ul > li {
+  background: linear-gradient(to right, #0f1141cd, #ff213fcd);
+}
+#sub1_game_main .subBoxSet#age ul > li > h4 {
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+}
+#sub1_game_main .subBoxSet#playMode ul > li {
+  background: linear-gradient(to right, #0f1141cd, #ff213fcd);
+}
+#sub1_game_main .subBoxSet#playMode ul > li > h4 {
+  font-size: 30px;
+  top: 50%;
+  transform: translateY(-15px);
+}
+#sub1_game_main footer {
+  position: absolute;
+  bottom: 0;
+}
