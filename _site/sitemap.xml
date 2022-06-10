@@ -10,6 +10,14 @@
         </url>
     
         <url>
+            <loc>http://localhost:4000/assets/portfolio/portfolio_CJ_AI/cj/node_modules/@typescript-eslint/eslint-plugin/docs/rules/README/</loc>
+            
+                <changefreq>monthly</changefreq>
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
             <loc>http://localhost:4000/assets/portfolio/practice/react-practice/node_modules/@typescript-eslint/eslint-plugin/docs/rules/README/</loc>
             
                 <changefreq>monthly</changefreq>
