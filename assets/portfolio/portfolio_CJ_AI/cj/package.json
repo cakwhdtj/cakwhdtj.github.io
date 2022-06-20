@@ -1,5 +1,5 @@
 {
-  "homepage": "/cj_ai/",
+  "homepage": "https://cakwhdtj.github.io/cj_ai/cj_ai/",
   "name": "cj",
   "version": "0.1.0",
   "private": true,
@@ -18,10 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "purge": "rm -rf ../cj/static && cp -fR ./build/* ../cj",
-    "frontmatter": "echo '---\ntitle: React Tools\nlayout: null\n---\n' | cat - ../cj/index.html > temp && mv temp ../cj/index.html",
-    "deploy": "npm run purge && npm run frontmatter"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

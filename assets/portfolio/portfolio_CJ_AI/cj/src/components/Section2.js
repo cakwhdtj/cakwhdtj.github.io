@@ -13,6 +13,7 @@ const Section2 = (s2Title) => {
     const svgList = svgType.map((svgType, index) => 
         <li key={index +"_section2"}>{SVG(svgType, svgSize[index], circProps[index])}</li>)
 
+    console.log(title)
     return (
         <section className="section2">
             <h2>{title[0]}</h2>
