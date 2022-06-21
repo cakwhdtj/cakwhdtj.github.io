@@ -87,7 +87,20 @@ plugins:
     - jekyll-paginate-content
 
 # Exclude my node related stuff
-exclude: ["package.json", "package-lock.json", "src", "node_modules", "initpost.sh", "Gemfile", "Gemfile.lock", "gulpfile.js", "README.md", "dev-react-pages"]
+exclude: [
+    "package.json", 
+    "package-lock.json", 
+    "src", 
+    "node_modules", 
+    "initpost.sh", 
+    "Gemfile", 
+    "Gemfile.lock", 
+    "gulpfile.js", 
+    "README.md", 
+    "dev-react-pages",
+    "assets/portfolio/portfolio_cj_ai/dev-cj-ai-react",
+    "assets/portfolio/portfolio_cj_ai/dev-cj-ai-react/node_modules"
+    ]
 
 # Theme: jekflix
 version: v3.1.1
