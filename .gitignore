@@ -5,3 +5,5 @@ _site
 vendor
 dev-react-pages/node_modules/
 dev-react-pages/build/
+dev-cj-ai/node_modules/
+dev-cj-ai/build/

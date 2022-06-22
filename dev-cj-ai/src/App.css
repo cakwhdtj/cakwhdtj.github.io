@@ -1,0 +1,67 @@
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+
+
+@font-face {
+  font-family: cjFontBold;
+  src: url(./font/CJ+ONLYONE+Bold.ttf);
+}
+@font-face {
+  font-family: cjFontMedium;
+  src: url(./font/CJ+ONLYONE+Medium.ttf);
+}
+
+body { 
+  font-family: cjFontMedium;
+}
+#skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
+#skipNav:focus {top: 0;}
+
+header {
+  background: red;
+  opacity: 80%;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .4s ease;
+}
+header > * {
+  margin: 30px;
+}
+header h1 {display: inline-block;}
+header nav {
+  border: 1px solid blue;
+  display: flex;
+}
+header nav ul {display: flex;}
+header nav ul li {display: inline-block;}
+/* header nav button {display: none;}  */
+
+.section1 {
+  background-color: bisque;
+  height: 1080px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

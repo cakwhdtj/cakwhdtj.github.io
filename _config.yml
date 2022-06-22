@@ -98,8 +98,7 @@ exclude: [
     "gulpfile.js", 
     "README.md", 
     "dev-react-pages",
-    "assets/portfolio/portfolio_cj_ai/dev-cj-ai-react",
-    "assets/portfolio/portfolio_cj_ai/dev-cj-ai-react/node_modules"
+    "dev-cj-ai"
     ]
 
 # Theme: jekflix

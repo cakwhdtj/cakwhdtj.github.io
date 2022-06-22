@@ -1,0 +1,44 @@
+{
+  "homepage": "/react-cj-ai/",
+  "name": "dev-cj-ai",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "purge": "rm -rf ../react-cj-ai/static && cp -fR ./build/* ../react-cj-ai",
+    "frontmatter": "echo '---\ntitle: CJ AI\nlayout: null\n---\n' | cat - ../react-cj-ai/index.html > temp && mv temp ../react-cj-ai/index.html",
+    "deploy": "npm run purge && npm run frontmatter"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
