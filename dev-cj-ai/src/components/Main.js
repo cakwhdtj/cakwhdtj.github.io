@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React, { useState } from 'react';
 
 import Header from './Header'
 import Section1 from './Section1';
@@ -9,6 +9,7 @@ import Section5 from './Section5';
 import Section6 from './Section6';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import Counter from './Counter';
 
 
 const Main = () => {
@@ -24,6 +25,7 @@ const Main = () => {
         <Link id='skipNav' to="#section0">본문으로</Link>
         <Header menuList={menu_items} />
         <Section1 s1Title={menu_items} />
+        <Counter />
         <Section2 s2Title={menu_items} />
         <Section3 s3Title={menu_items} />
         <Section4 s4Title={menu_items} />

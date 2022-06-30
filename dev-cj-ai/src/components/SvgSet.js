@@ -18,7 +18,6 @@ const SVG = (type, size, circle) => {
             }
         }
     if (isCircle === true) {circleAdder()}
-    // let fill = 
     const svgPath = (type) => {
         switch (type) {
             //바퀴
