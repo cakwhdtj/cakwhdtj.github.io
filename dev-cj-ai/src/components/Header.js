@@ -3,25 +3,9 @@ import { Link } from "react-router-dom";
 import SVG from "./SvgSet";
 
 const Header = (props) => {
-    const [winSize , setWinSize] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight
-    });
-    const handleResize = () => {
-      setWinSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-    useEffect(()=> {
-      window.addEventListener('resize' , handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      }
-    }, []);
+  let winWidth = props.dataSet.width;
   const style = {
-    fontSize : `${(winSize.width/1512)*100}%`
-    
+    fontSize : `${(winWidth/1512)*100}%`
   }
   const lists = props.menuList;
   const headerList = 
@@ -32,12 +16,16 @@ const Header = (props) => {
       return (
       <header>
         <div id="headerContainer">
-          <h1><Link to="#section0">{SVG('logo',0,[])}</Link></h1>
+          <h1>
+            <Link to="#section0">
+              <SVG type={'logo'} size={0} circle={[]} BorW={null}/>
+            </Link>
+          </h1>
           <nav id="gnb">
             <ul style={style}>
               {headerList}
             </ul>
-            {(winSize.width < 1024) ? btn("on") : btn("")}
+            {(winWidth < 1024) ? btn("on") : btn("")}
           </nav>
         </div>
       </header>

@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
 
-const SVG = (type, size, circle) => {
-    const svgSize = size;
+const SVG = (props) => {
+    const type = props.type;
+    const size = props.size;
+    const circle = props.circle;
+    const BorW = props.BorW;
+
     const isCircle = circle[0];
     const numCircle = (circle[1] === undefined) ? null : circle[1];
     const circleProps = (circle[2] === undefined) ? null : circle[2];
@@ -10,6 +14,7 @@ const SVG = (type, size, circle) => {
         for (let i = 0; i < numCircle; i++) {
             arrCircle.push(
                 <circle 
+                key={i+`circle`}
                 cx={circleProps[i][0]}
                 cy={circleProps[i][1]}
                 r={circleProps[i][2]}
@@ -36,7 +41,6 @@ const SVG = (type, size, circle) => {
                 return <div>hi</div>;
         } 
     }
-    // console.log(type,size,circle)
     if (type === 'logo') {
         return <svg xmlns="http://www.w3.org/2000/svg" width="120" height="20" viewBox="0 0 120 20" fill="none" className="img-svg replaced-svg">
         <title>CJ AI CENTER LOGO</title>
@@ -54,7 +58,7 @@ const SVG = (type, size, circle) => {
     } else {
         return <svg id={`svg`+type+size+circle}
         xmlns="http://www.w3.org/2000/svg"
-        width={svgSize} height={svgSize}
+        width={size} height={size}
         viewBox="0 0 190 190" fill="none" focusable="false"
         className="img-svg replaced-svg"
         >

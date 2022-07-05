@@ -9,7 +9,6 @@ import Section5 from './Section5';
 import Section6 from './Section6';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
-// import Fns from './Fns';
 
 
 const Main = (props) => {
@@ -20,12 +19,20 @@ const Main = (props) => {
         'CAREEERS',
         'CONTACT US'
     ];
+    const [scroll, getScroll] = useState(0);
+    const [width, getWidth] = useState(0);
+    const dataSet = {
+        scroll : scroll,
+        width : width,
+    }
     return (
         <div>
+        <Fns getScroll={getScroll} getWidth={getWidth}/>
+        {/* {console.log(dataSet)} */}
         <Link id='skipNav' to="#section0">본문으로</Link>
-        <Header menuList={menu_items} />
-        <Section1 s1Title={menu_items} />
-        <Section2 s2Title={menu_items} />
+        <Header menuList={menu_items} dataSet={dataSet} />
+        <Section1 s1Title={menu_items}  />
+        <Section2 s2Title={menu_items} dataSet={dataSet} />
         <Section3 s3Title={menu_items} />
         <Section4 s4Title={menu_items} />
         <Section5 s5Title={menu_items} />
@@ -35,21 +42,40 @@ const Main = (props) => {
     );
   };
 
-  const Fns = () => {
+  const Fns = (props) => {
     const [scroll , checkScroll] = useState({
-        scrollY : window.scrollY
-      });
-      const handleScroll = () => {
-          checkScroll({
-              scrollY : window.scrollY
-          });
-      };
-      useEffect(()=>{
-          window.addEventListener('scroll' , handleScroll);
-          return () => {
-              window.removeEventListener('scroll' , handleScroll);
-          }
-      }, []);
+        scrollY : window.scrollY,
+        scrollX : window.scrollX
+    });
+    const [winSize , setWinSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    // handlers
+    const handleScroll = () => {
+        checkScroll({
+            scrollY : window.scrollY
+        });
+    };
+    const handleResize = () => {
+        setWinSize({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+    };
+
+    useEffect(()=>{
+        window.addEventListener('scroll' , handleScroll);
+        window.addEventListener('resize' , handleResize);
+        return () => {
+            window.removeEventListener('scroll' , handleScroll);
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);  
+   useEffect(()=>{
+    props.getScroll(scroll.scrollY);
+    props.getWidth(winSize.width);
+   })
   }
   
   export default Main;
