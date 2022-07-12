@@ -10,11 +10,8 @@ const Section2 = (props) => {
         [false,0,null],
         [true, 3, [[142,34,10,"#187BD2"],[139,154,16,"#FF9700"],[16.5,127.5,8.5,"#EF151E"]]]
     ]
-    if (dataSet.scroll > 1000) {
-        console.log('hi')
-    }
     let liTest = svgType.map((svgType,index) => 
-    <li key={svgType+`svg`}><SVG type={svgType} size={190} circle={circProps[index]} BorW={null} /></li>
+    <li key={svgType+`svg`}><SVG type={svgType} size={190} circle={circProps[index]} BorW={'black'} /></li>
     )
 
     return (

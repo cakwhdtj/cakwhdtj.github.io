@@ -43,10 +43,14 @@ header {
   height: 100px;
   width: 100%;
   position: fixed;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: .4s ease;
+}
+header * {
+  transition: all .05s ease;
 }
 header > div#headerContainer {
   display: flex;
@@ -58,7 +62,9 @@ header > div#headerContainer {
   max-width: 1200px;
 }
 header > div#headerContainer > * {display: inline-block;}
-header h1 {display: inline-block;}
+header h1 {
+  display: inline-block;
+}
 header nav {
   width: 700px;
   vertical-align: bottom;
@@ -90,7 +96,100 @@ header nav ul {
 }
 header nav ul li {display: inline-block;}
 
-.section1 {
-  background-color: bisque;
+#section1 {
+  background-color: black;
   height: 1080px;
+}
+#s1Container {
+  position: absolute;
+  top: 60%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%; max-width: 1240px;
+  font-size: 55px;
+  font-weight: bold;
+}
+#s1Container > p span {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: white;
+}
+#s1Container > div {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  margin-top: 60px;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #ff9700;
+}
+#s1Container > div::before {
+  content: "";
+  border: 1.5px solid;
+  border-color: transparent transparent #ff9700 #ff9700;
+  position: absolute;
+  width: 10px; height: 10px;
+  transform: rotate(-45deg);
+  right: -30px;
+  top: -4px;
+  animation: scrollDownArrow 3s linear infinite;
+}
+#s1Container > div::after {
+  content: "";
+  border: 1.5px solid;
+  border-color: transparent transparent #ff9700 #ff9700;
+  position: absolute;
+  width: 10px; height: 10px;
+  transform: rotate(-45deg);
+  right: -30px;
+  top: 7px;
+  animation: scrollDownArrow 3s .8s linear infinite;
+}
+#section1 > #s1SVGs {
+  width: 100%; height: 100%;
+  position: absolute;
+}
+#section1 > #s1SVGs::before {
+  content: "";
+  position: absolute;
+  right: 100px; top:80px;
+  border-radius: 50%;
+  width: 350px; height: 350px;
+  background: linear-gradient(90deg, #000 0%, #0087cc 102.23%);
+}
+#section1 > #s1SVGs > svg:nth-child(1) {
+  position: absolute;
+  top: 150px;
+  right: 17%;
+}
+#s1SVGs #s1Circle1 {
+  position: absolute;
+  border-radius: 50%;
+  top: 772px;
+  left: -4px;
+  opacity: 1;
+  width: 345px;
+  height: 345px;
+  background: linear-gradient(0deg, rgba(24, 24, 24, 0.0001) 0%, #0087CC 100%);
+}
+#s1SVGs #s1Circle2 {
+  position: absolute;
+  border-radius: 50%;
+  top: 772px;
+  left: 150px;
+  opacity: 1;
+  width: 345px;
+  height: 345px;
+  background: linear-gradient(0deg, #0087CC 0%, rgba(24, 24, 24, 0.0001) 100%);
+}
+#s1SVGs > svg:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 17%;
+}
+
+
+@keyframes scrollDownArrow {
+  0% {opacity: 0;}
+  50% {opacity: 100;}
+  100% {opacity: 0;}
 }
