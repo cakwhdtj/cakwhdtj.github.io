@@ -12,11 +12,9 @@ const SVG = (props) => {
     const numCircle = (circle[1] === undefined) ? null : circle[1];
     const circleProps = (circle[2] === undefined) ? null : circle[2];
     let arrCircle = [];
-
     const circleAdder = () => {
         for (let i = 0; i < numCircle; i++) {
-            let fillBe = 'transparent';
-            (typeof(circleProps[i][3]) === 'string' ? fillBe = circleProps[i][3] : fillBe = "url(#grad1)");
+
             arrCircle.push(
                 <circle 
                 id={i+`circle`+size}
@@ -24,7 +22,7 @@ const SVG = (props) => {
                 cx={circleProps[i][0]}
                 cy={circleProps[i][1]}
                 r={circleProps[i][2]}
-                fill={fillBe}
+                fill={circleProps[i][3]}
                 ></circle>)
             }
         }
@@ -71,6 +69,16 @@ const SVG = (props) => {
         fill="none" focusable="false"
         className="img-svg replaced-svg"
         >
+            <defs>
+                <linearGradient id="grad1" gradientTransform="rotate(36)">
+                    <stop offset="10.38%"  stopColor="#ef151e66" />
+                    <stop offset="95.06%" stopColor="#ef151e" />
+                </linearGradient>
+                <linearGradient id="grad2" gradientTransform="rotate(36)">
+                    <stop offset="10.38%"  stopColor="#feC26b" />
+                    <stop offset="95.06%" stopColor="#ff9700" />
+                </linearGradient>
+            </defs>
             {arrCircle}{svgPath(type)}
         </svg>
     }
