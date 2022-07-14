@@ -14,7 +14,6 @@ const SVG = (props) => {
     let arrCircle = [];
     const circleAdder = () => {
         for (let i = 0; i < numCircle; i++) {
-
             arrCircle.push(
                 <circle 
                 id={i+`circle`+size}
@@ -68,7 +67,16 @@ const SVG = (props) => {
         // stroke="none"
         fill="none" focusable="false"
         className="img-svg replaced-svg"
-        >
+        >   
+            {(stroke === 1) && (type === 1) ?
+            <animateTransform attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0"
+            to="-360"
+            dur="30s"
+            repeatCount="indefinite"/> : null}
+            {(stroke === 1)?
             <defs>
                 <linearGradient id="grad1" gradientTransform="rotate(36)">
                     <stop offset="10.38%"  stopColor="#ef151e66" />
@@ -78,7 +86,8 @@ const SVG = (props) => {
                     <stop offset="10.38%"  stopColor="#feC26b" />
                     <stop offset="95.06%" stopColor="#ff9700" />
                 </linearGradient>
-            </defs>
+            </defs> :
+            null}
             {arrCircle}{svgPath(type)}
         </svg>
     }

@@ -1,7 +1,7 @@
 import SVG from "./SvgSet";
 
 const Section2 = (props) => {
-    const dataSet = props.dataSet
+    const dataSet = props.dataSet;
     const svgType = [1,2,3,4];
     const svgSize = [190,190,190,190];
     const circProps = [
@@ -10,18 +10,37 @@ const Section2 = (props) => {
         [false,0,null],
         [true, 3, [[142,34,10,"#187BD2"],[139,154,16,"#FF9700"],[16.5,127.5,8.5,"#EF151E"]]]
     ]
-    let liTest = svgType.map((svgType,index) => 
-    <li key={svgType+`svg`}><SVG type={svgType} size={190} circle={circProps[index]} BorW={'black'} /></li>
+    let li_h3 = [`ESTABLISH PARTNERSHIP`,`COLLABORATE TOGETHER`,`DESIGN THE FUTURE`,`ENLARGE A BUSINESS`];
+    let li_p = 
+    [`글로벌 라이프스타일 혁신의 시너지를 일으키는 최고의 AI 파트너로서 고객과 함께 합니다.`, 
+    `국내외 다양한 AI 기업 및 대학교와 협력관계를 유지하며 공통연구와 과제를 수행합니다.`,
+    `최첨단 AI 연구와 AI 원천기술 확보를 통해 CJ의 미래 성장동력을 확보합니다.`,
+    `AI를 통한 인사이트를 발굴하여 비즈니스를 확장합니다.`
+    ];
+
+    let liSet = svgType.map((svgType,index) => 
+        <li key={svgType+`svg`}>
+            <SVG type={svgType} size={190} circle={circProps[index]} BorW={props.borw} />
+            <h3>{li_h3[index]}</h3>
+            <p>{li_p[index]}</p>
+        </li>
     )
+    const s2bg = {
+        background : `${(dataSet.scroll > 1040) ? 'white' : 'black'}`,
+        transition : `all .3s ease`
+    }
+    // console.log(props.borw)
 
     return (
-        <section id="section2">
-            <h2>hi</h2>
-            <p>Using AI technologies, will will:</p>
-            {/* <SvgList svgType={svgType} /> */}
-            <ul>
-                {liTest}
-            </ul>
+        <section id="section2" style={s2bg}>
+            <div>
+                <h2>{props.s2Title[0]}</h2>
+                <p>Using AI technologies, will will:</p>
+                {/* <SvgList svgType={svgType} /> */}
+                <ul>
+                    {liSet}
+                </ul>
+            </div>
         </section>
     );
   };

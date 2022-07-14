@@ -31,15 +31,11 @@ i[class^="fa"] span {position: absolute; left: -9999px;}
   src: url(./font/CJ+ONLYONE+Medium.ttf);
 }
 
-body { 
-  font-family: cjFontMedium;
-}
+body {font-family: cjFontMedium;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
 
 header {
-  background: red;
-  opacity: 80%;
   height: 100px;
   width: 100%;
   position: fixed;
@@ -49,9 +45,7 @@ header {
   align-items: center;
   transition: .4s ease;
 }
-header * {
-  transition: all .05s ease;
-}
+header * {transition: all .05s ease;}
 header > div#headerContainer {
   display: flex;
   justify-content: space-between;
@@ -59,12 +53,10 @@ header > div#headerContainer {
   left: 50%; transform: translate(-50%);
   position: absolute;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
 }
 header > div#headerContainer > * {display: inline-block;}
-header h1 {
-  display: inline-block;
-}
+header h1 {display: inline-block;}
 header nav {
   width: 700px;
   vertical-align: bottom;
@@ -95,14 +87,17 @@ header nav ul {
   justify-content: space-between;
 }
 header nav ul li {display: inline-block;}
+section h2 {font-size: 42px;}
 
 #section1 {
   background-color: black;
+  position: relative;
+  z-index: 2;
   height: 1080px;
 }
 #s1Container {
   position: absolute;
-  top: 60%; left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%,-50%);
   width: 100%; max-width: 1240px;
   font-size: 55px;
@@ -153,7 +148,7 @@ header nav ul li {display: inline-block;}
   position: absolute;
   right: 100px; top:80px;
   border-radius: 50%;
-  width: 350px; height: 350px;
+  width: 320px; height: 320px;
   background: linear-gradient(90deg, #000 0%, #0087cc 102.23%);
 }
 #section1 > #s1SVGs > svg:nth-child(1) {
@@ -164,7 +159,7 @@ header nav ul li {display: inline-block;}
 #s1SVGs #s1Circle1 {
   position: absolute;
   border-radius: 50%;
-  top: 772px;
+  top: 800px;
   left: -4px;
   opacity: 1;
   width: 345px;
@@ -174,19 +169,54 @@ header nav ul li {display: inline-block;}
 #s1SVGs #s1Circle2 {
   position: absolute;
   border-radius: 50%;
-  top: 772px;
+  top: 800px;
   left: 150px;
   opacity: 1;
   width: 345px;
   height: 345px;
   background: linear-gradient(0deg, #0087CC 0%, rgba(24, 24, 24, 0.0001) 100%);
 }
-#s1SVGs > svg:nth-child(4) {
+#s1SVGs > div > svg {
   position: absolute;
-  bottom: 0;
-  right: 17%;
+  bottom: -300px;
+  right: -12%;
 }
+#svg1770, #svg2270 {opacity: .6;}
 
+#section2 {
+  border: 1px solid red;
+  height: 100vh;
+  position: relative;
+  padding-top: 200px;
+}
+#section2 > div {
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%,0);
+  width: 100%;
+  max-width: 1240px;
+}
+#section2 > div > p {
+  margin-top: 16px;
+  font-size: 24px;
+  color: #333;
+}
+#section2 ul {margin-top: 95px;}
+#section2 ul li {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  padding-right: 80px;
+}
+#section2 > div > ul h3 {
+  margin-top: 32px;
+  font-size: 26px;
+}
+#section2 > div > ul p {
+  margin-top: 16px;
+  font-size: 16px;
+  opacity: .8;
+}
 
 @keyframes scrollDownArrow {
   0% {opacity: 0;}
