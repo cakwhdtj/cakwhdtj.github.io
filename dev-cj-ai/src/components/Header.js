@@ -1,23 +1,35 @@
-import React , {useState , useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import SVG from "./SvgSet";
 
 const Header = (props) => {
   let winWidth = props.dataSet.width;
   let scroll = props.dataSet.scroll;
+
+  // eslint-disable-next-line
   const headerBg = () => {
+    // eslint-disable-next-line
     let result = 'transparent'
+    // eslint-disable-next-line
     {(scroll > 10) ? result = 'black' : result = result}
+    // eslint-disable-next-line
     {(scroll > 1040) ? result = 'white' : result = result}
+    // eslint-disable-next-line
     return result
+  } 
+  const fontSizer = () => {
+    let result = (winWidth/1512)*100;
+    // eslint-disable-next-line
+    (result > 100) ? result = 100 : result = result;
+    return result;
   }
   const ulStyle = {
-    fontSize : `${(winWidth/1512)*100}%`,
+    fontSize : `${fontSizer()}%`,
     color: `${props.borw}`,
   }
   const headerStyle = {
     background : `${headerBg()}`,
-    boxShadow : `rgb(0 0 0 / 12%) 1px 1px 1px 1px`
+    boxShadow : `${(scroll > 10) ? 'rgb(0 0 0 / 12%) 1px 1px 1px 1px' : 'none'}`
   }
   const lists = props.menuList;
   const headerList = 

@@ -10,13 +10,15 @@ import Section6 from './Section6';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
+//section1 overflow 해결
+// section5 버튼 hover
 
 const Main = (props) => {
     const menu_items = [
         'ABOUT',
         'VISION&MISSION',
         'RESEARCH AREAS',
-        'CAREEERS',
+        'CAREERS',
         'CONTACT US'
     ];
     const [scroll, getScroll] = useState(0);
@@ -55,18 +57,13 @@ const Main = (props) => {
         height: window.innerHeight
     });
     // handlers
-    const handleScroll = () => {
-        checkScroll({
-            scrollY : window.scrollY
-        });
-    };
+    const handleScroll = () => {checkScroll({scrollY : window.scrollY});};
     const handleResize = () => {
         setWinSize({
           width: window.innerWidth,
           height: window.innerHeight
         });
     };
-
     useEffect(()=>{
         window.addEventListener('scroll' , handleScroll);
         window.addEventListener('resize' , handleResize);
@@ -78,7 +75,7 @@ const Main = (props) => {
    useEffect(()=>{
     props.getScroll(scroll.scrollY);
     props.getWidth(winSize.width);
-   })
+   });
   }
   
   export default Main;
