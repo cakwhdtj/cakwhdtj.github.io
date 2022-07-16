@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-cj-ai/static/css/main.3d734263.css",
-    "main.js": "/react-cj-ai/static/js/main.3529eb6d.js",
+    "main.css": "/react-cj-ai/static/css/main.a69f5d1f.css",
+    "main.js": "/react-cj-ai/static/js/main.4d36e29b.js",
     "static/js/787.bb193f58.chunk.js": "/react-cj-ai/static/js/787.bb193f58.chunk.js",
     "static/media/CJ+ONLYONE+Bold.ttf": "/react-cj-ai/static/media/CJ+ONLYONE+Bold.7be3a36859d5baea59f3.ttf",
     "static/media/CJ+ONLYONE+Medium.ttf": "/react-cj-ai/static/media/CJ+ONLYONE+Medium.f6bc83e8d41c48f0ef3e.ttf",
     "index.html": "/react-cj-ai/index.html",
-    "main.3d734263.css.map": "/react-cj-ai/static/css/main.3d734263.css.map",
-    "main.3529eb6d.js.map": "/react-cj-ai/static/js/main.3529eb6d.js.map",
+    "main.a69f5d1f.css.map": "/react-cj-ai/static/css/main.a69f5d1f.css.map",
+    "main.4d36e29b.js.map": "/react-cj-ai/static/js/main.4d36e29b.js.map",
     "787.bb193f58.chunk.js.map": "/react-cj-ai/static/js/787.bb193f58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d734263.css",
-    "static/js/main.3529eb6d.js"
+    "static/css/main.a69f5d1f.css",
+    "static/js/main.4d36e29b.js"
   ]
 }

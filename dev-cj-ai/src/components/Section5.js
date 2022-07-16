@@ -1,16 +1,8 @@
 import { Link } from "react-router-dom";
 import SVG from "./SvgSet";
-import useHover from "./Hover";
 
 const Section5 = (props) => {
     const title = props.s5Title;
-    const ico = 
-        <i className="ico" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="30" viewBox="0 0 18 30" fill="none" focusable="false" className="img-svg replaced-svg">
-                <path d="M7.5 8.5H2.5V20.5H14.5V15.5" stroke={'black'} strokeLinecap="round" strokeLinejoin="round"></path>
-                <path d="M10.5 8.5H14.5M14.5 8.5V12.5M14.5 8.5L9.5 13.5" stroke={'black'} strokeLinecap="round" strokeLinejoin="round"></path>
-            </svg>
-        </i>;
     const objSVG = 
         <div className="obj_rect">
             <svg xmlns="http://www.w3.org/2000/svg" width="494" height="491" viewBox="0 0 494 491" fill="none" focusable="false" className="img-svg replaced-svg">
@@ -33,7 +25,7 @@ const Section5 = (props) => {
             <div className="sInner">
                 <h2>{title[3]}</h2>
                 <p>AI로 내일의 일상을 만들어갈 동료를 찾습니다.</p>
-                <Link className="btn" to='#'>채용공고 보러가기 {ico}</Link>
+                <Link className="btn" to='#'>채용공고 보러가기 <SVG type={'ico'} size={0} circle={[]}/></Link>
                 <div className="objs">
                     {objSVG}
                     <SVG type={1} size={600} circle={[false]} BorW={'grey'} viewbox={`0 0 190 190`} stroke={1} />

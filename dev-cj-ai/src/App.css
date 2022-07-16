@@ -198,10 +198,16 @@ section h2 {
   height: 345px;
   background: linear-gradient(0deg, #0087CC 0%, rgba(24, 24, 24, 0.0001) 100%);
 }
-#s1SVGs > div > svg {
+#rotateSVG {
   position: absolute;
-  bottom: -300px;
-  right: -12%;
+  width: 600px;
+  height: 800px;
+  top: 63%;
+  right: 0;
+  overflow: hidden;
+}
+#rotateSVG > svg {
+  position: absolute;
 }
 #svg1770, #svg2270 {opacity: .6;}
 
@@ -366,6 +372,53 @@ section h2 {
   position: absolute;
   opacity: .3;
   right: 20%;
+}
+#section6 {
+  padding: 88px 0 80px;
+}
+#section6 .sInner {
+  display: flex;
+  height: 100%;
+}
+#section6 .sInner > div {
+  position: relative;
+  width: 50%;
+  padding-bottom: 4px;
+}
+#section6 .sInner > div:nth-child(2) {
+  border-left: .5px solid #000;
+  padding-left: 60px;
+}
+#section6 .sInner > div > p,
+#section6 .sInner > div > address {
+  color: #333;
+}
+#section6 .btn {
+  margin-top: 38px;
+  border-color: #333;
+}
+
+#footer > div {
+  color: #666;
+  height: 100%;
+  padding: 4% 0 4% 0;
+}
+#footer div p {
+  float: left;
+  font-weight: 300;
+  line-height: 21px;
+}
+#footer div p span{
+  display: inline-block;
+  padding-top: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+#footer div ul {float: right;}
+#footer ul li {
+  display: inline-block;
+  margin-left: 37px;
 }
 
 @keyframes scrollDownArrow {

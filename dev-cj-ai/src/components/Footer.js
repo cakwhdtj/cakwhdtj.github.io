@@ -9,10 +9,13 @@ const Footer = () => {
     )
 
     return (
-        <footer className="footer">
-           <ul>
+        <footer id="footer">
+          <div className="sInner">
+            <p><span>©</span> 씨제이㈜. All Rights Reserved.</p>
+            <ul>
             {footerList}
-           </ul>
+            </ul>
+          </div>
         </footer>
     );
     };

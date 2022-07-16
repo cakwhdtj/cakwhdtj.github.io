@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 const SVG = (props) => {
     const type = props.type;
@@ -59,6 +59,20 @@ const SVG = (props) => {
         <path fillRule="evenodd" clipRule="evenodd" d="M91.136 1C90.5235 1 90 1.67588 90 2.28594V3.37473C90 3.37473 91.3922 3.3744 93.0523 3.3744V13H94.8043C95.4171 13 95.9406 12.4475 95.9406 11.8371C95.9406 11.6436 95.9312 6.23086 95.9312 3.3744C97.02 3.3744 97.7965 3.3744 97.8644 3.3744C98.4807 3.3744 99 2.8448 99 2.2118V1H91.136Z" fill={BorW}></path>
         <path fillRule="evenodd" clipRule="evenodd" d="M113.85 6.60454V3.37473H115.928C116.579 3.37473 117.18 3.94423 117.18 4.71254C117.18 5.48583 116.571 6.13379 115.928 6.13379C115.285 6.13379 115.132 6.14442 114.922 6.14442C114.004 6.14442 113.85 6.60454 113.85 6.60454ZM119.776 11.8381C119.711 11.7403 118.688 10.1981 117.433 8.30672C118.766 7.78443 119.759 6.3429 119.759 4.69724C119.759 2.74706 118.133 1 116.262 1H112.137C111.524 1 111 1.55287 111 2.16293V13H112.713C113.326 13 113.85 12.4471 113.85 11.8374V8.51949L114.644 8.51916C116.212 10.8816 117.618 13 117.618 13H119.411C120.024 13 120.181 12.4475 119.776 11.8381Z" fill={BorW}></path>
         </svg>
+    } else if (type === 'ico') {
+        return  <i className="ico" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="30" viewBox="0 0 18 30" fill="none" focusable="false" className="img-svg replaced-svg">
+                        <path d="M7.5 8.5H2.5V20.5H14.5V15.5" stroke={'black'} strokeLinecap="round" strokeLinejoin="round"></path>
+                        <path d="M10.5 8.5H14.5M14.5 8.5V12.5M14.5 8.5L9.5 13.5" stroke={'black'} strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                </i>;
+    } else if (type === 'ico2') {
+        return   <i className="ico">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="30" viewBox="0 0 18 30" fill="none" focusable="false" className="img-svg replaced-svg">
+                        <rect x="2.5" y="11.5" width="9" height="9" stroke="black" strokeLinejoin="round"></rect>
+                        <path d="M5.5 11.5618V8.5H14.5V17.5H11.5696" stroke="black" strokeLinejoin="round"></path>
+                    </svg>
+                </i>
     } else {
         return <svg id={`svg`+type+size}
         xmlns="http://www.w3.org/2000/svg"
