@@ -7,7 +7,15 @@
       "tags"     : "welcome and blog",
       "categories" : "intro",
       "url"      : "/feature/",
-      "date"     : "06/21/2021"
+      "date"     : "06/21/2022"
+    } ,
+  
+    {
+      "title"    : "CJ AI CENTER",
+      "tags"     : "반응형 and React",
+      "categories" : "portfolio",
+      "url"      : "/cj_ai/",
+      "date"     : "06/22/2021"
     } ,
   
     {
@@ -35,7 +43,7 @@
     } ,
   
     {
-      "title"    : "Electronic Arts",
+      "title"    : "ELECTRONIC ARTS",
       "tags"     : "반응형",
       "categories" : "portfolio",
       "url"      : "/electronic_arts/",
@@ -64,14 +72,6 @@
       "categories" : "library",
       "url"      : "/SBnLbr/",
       "date"     : "06/21/2021"
-    } ,
-  
-    {
-      "title"    : "작업중",
-      "tags"     : "반응형 and React",
-      "categories" : "portfolio",
-      "url"      : "/cj_ai/",
-      "date"     : "06/21/2020"
     } 
   
 ]

@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 웹개발자 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Jul 2022 17:00:27 +0900</pubDate>
-    <lastBuildDate>Tue, 05 Jul 2022 17:00:27 +0900</lastBuildDate>
+    <pubDate>Sat, 16 Jul 2022 17:36:48 +0900</pubDate>
+    <lastBuildDate>Sat, 16 Jul 2022 17:36:48 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -32,7 +32,7 @@
 &lt;p&gt;&lt;a href=&quot;/category/portfolio/&quot; title=&quot;portfolio&quot;&gt;포트폴리오 보러가기&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 21 Jun 2021 16:26:28 +0900</pubDate>
+        <pubDate>Tue, 21 Jun 2022 16:26:28 +0900</pubDate>
         <link>http://localhost:4000/feature/</link>
         <guid isPermaLink="true">http://localhost:4000/feature/</guid>
         
@@ -41,6 +41,24 @@
         <category>blog</category>
         
         <category>intro</category>
+      </item>
+    
+      <item>
+        <title>CJ AI CENTER</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/react-cj-ai/&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;
+깔끔한 디자인이 인상적인 페이지 입니다. React를 사용했습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 22 Jun 2021 16:18:46 +0900</pubDate>
+        <link>http://localhost:4000/cj_ai/</link>
+        <guid isPermaLink="true">http://localhost:4000/cj_ai/</guid>
+        
+        <category>반응형</category>
+        
+        <category>React</category>
+        
+        <category>portfolio</category>
       </item>
     
       <item>
@@ -92,7 +110,7 @@
       </item>
     
       <item>
-        <title>Electronic Arts</title>
+        <title>ELECTRONIC ARTS</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_EA/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
 다양한 이미지 슬라이드들이 주요 요소인 게임 개발 및 유통사의 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.&lt;/p&gt;
@@ -157,24 +175,6 @@ jQuery와 React를 사용해서 자체적으로 만들어놓은 여러 기능들
         <category>jQuery</category>
         
         <category>library</category>
-      </item>
-    
-      <item>
-        <title>작업중</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;/react-cj-ai/&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;
-깔끔한 디자인과 스크롤 기능이 인상적인 페이지 입니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sun, 21 Jun 2020 16:18:46 +0900</pubDate>
-        <link>http://localhost:4000/cj_ai/</link>
-        <guid isPermaLink="true">http://localhost:4000/cj_ai/</guid>
-        
-        <category>반응형</category>
-        
-        <category>React</category>
-        
-        <category>portfolio</category>
       </item>
     
   </channel>

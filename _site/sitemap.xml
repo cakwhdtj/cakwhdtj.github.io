@@ -166,7 +166,14 @@
             <loc>http://localhost:4000/feature/</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
-            <lastmod>2021-06-21</lastmod>
+            <lastmod>2022-06-21</lastmod>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/cj_ai/</loc>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+            <lastmod>2021-06-22</lastmod>
         </url>
     
         <url>
@@ -216,13 +223,6 @@
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
             <lastmod>2021-06-21</lastmod>
-        </url>
-    
-        <url>
-            <loc>http://localhost:4000/cj_ai/</loc>
-            <changefreq>weekly</changefreq>
-            <priority>0.8</priority>
-            <lastmod>2020-06-21</lastmod>
         </url>
     
     

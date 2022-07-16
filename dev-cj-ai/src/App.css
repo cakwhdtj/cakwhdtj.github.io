@@ -49,9 +49,18 @@ body {font-family: cjFontMedium;}
   border-color: #000;
   color: #fff;
 }
+
 .ico {
   display: inline-block;
   vertical-align: top;
+}
+.ico path,
+.ico rect {
+  transition: stroke .4s ease;
+}
+.btn:hover .ico path,
+.btn:hover .ico rect {
+  stroke: #fff;
 }
 
 header {
@@ -104,8 +113,13 @@ header nav ul {
   display: flex;
   right: 0;
   justify-content: space-between;
+  transition: all .3s ease;
 }
 header nav ul li {display: inline-block;}
+
+header nav ul:hover li{color: #666;}
+header nav ul li:hover {color: #fff;}
+
 section h2 {
   font-size: 38px;
   margin-bottom: 32px;
@@ -419,6 +433,9 @@ section h2 {
 #footer ul li {
   display: inline-block;
   margin-left: 37px;
+}
+#footer ul li:nth-child(1) {
+  color: #000;
 }
 
 @keyframes scrollDownArrow {

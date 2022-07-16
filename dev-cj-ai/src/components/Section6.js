@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import SVG from "./SvgSet";
 
-const Section6 = (s6Title) => {
-    const title = s6Title.s6Title
+const Section6 = (props) => {
+    const title = props.s6Title; 
     return (
         <section id="section6">
             <div className="sInner">
