@@ -64,11 +64,12 @@ body {font-family: cjFontMedium;}
 }
 
 header {
+  box-sizing: border-box;
   height: 100px;
   width: 100%;
   position: fixed;
   z-index: 999;
-  display: flex;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
   transition: .4s ease;
@@ -76,12 +77,11 @@ header {
 header * {transition: all .05s ease;}
 header > div#headerContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  left: 50%; transform: translate(-50%);
-  position: absolute;
   width: 100%;
   max-width: 1240px;
+  margin: auto;
+  justify-content: space-between;
 }
 header > div#headerContainer > * {display: inline-block;}
 header h1 {display: inline-block;}
@@ -90,30 +90,45 @@ header nav {
   vertical-align: bottom;
 }
 header nav > * {display: inline-block;}
-header nav button {display: none;}
-header nav button.on {
+header nav > div > a {display: none;}
+header nav #headerCloseBtn {
   display: inline-block;
   position: relative;
-  background-color: rgba(0, 0, 255, 0.495);
   border: none;
-  width: 90px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   transition: all .4s ease;
+  box-sizing: border-box;
+  padding-right: 30px;
+  background: none;
+  border-style: none;
 } 
-header nav button > * {
+header nav #headerCloseBtn > * {
   position: absolute;
+  transition: all .4s ease;
   width: 25px;
   height: 2.5px;
-  background-color: white;
+  transform-origin: 0;
+  background-color: #fff;
 }
-header nav button.on span {background-color: red;}
-header nav button span:first-child {top: 15px;}
-header nav button span:last-child{top: 25px;}
+header nav #headerCloseBtn.on > * {background-color: #000;}
+header nav #headerCloseBtn span:first-child {top: 15px;}
+header nav #headerCloseBtn span:last-child{top: 25px;}
+header nav #headerCloseBtn.on span:first-child {
+  top: 15px;
+  width: 21.5px;
+  transform: rotate(45deg);
+}
+header nav #headerCloseBtn.on span:last-child{
+  top: 30px;
+  width: 21.5px;
+  transform: rotate(-45deg);
+}
 header nav ul {
   display: flex;
   right: 0;
-  justify-content: space-between;
-  transition: all .3s ease;
+  justify-content: space-around;
+  transition: all .4s ease;
 }
 header nav ul li {display: inline-block;}
 
@@ -126,7 +141,7 @@ section h2 {
 }
 
 #section1 {
-  background-color: black;
+  background-color: #000;
   position: relative;
   z-index: 2;
   height: 1080px;
@@ -142,7 +157,7 @@ section h2 {
 #s1Container > p span {
   display: inline-block;
   margin-bottom: 15px;
-  color: white;
+  color: #fff;
 }
 #s1Container > div {
   position: relative;
@@ -197,7 +212,6 @@ section h2 {
   border-radius: 50%;
   top: 800px;
   left: -4px;
-  opacity: 1;
   width: 345px;
   height: 345px;
   background: linear-gradient(0deg, rgba(24, 24, 24, 0.0001) 0%, #0087CC 100%);
@@ -207,7 +221,6 @@ section h2 {
   border-radius: 50%;
   top: 800px;
   left: 150px;
-  opacity: 1;
   width: 345px;
   height: 345px;
   background: linear-gradient(0deg, #0087CC 0%, rgba(24, 24, 24, 0.0001) 100%);
@@ -220,10 +233,49 @@ section h2 {
   right: 0;
   overflow: hidden;
 }
-#rotateSVG > svg {
-  position: absolute;
-}
+#rotateSVG > svg {position: absolute;}
 #svg1770, #svg2270 {opacity: .6;}
+
+
+#s1Container > svg { /*1*/
+  opacity: 0;
+  animation: apearRtoL 1s  .2s forwards;
+}
+#s1Container > p { /*1*/
+  opacity: 0;
+  animation: apearRtoL 1s  .2s forwards;
+}
+#s1Circle1 { /*2*/
+  opacity: 0;
+  animation: apearLtoR 1s  .6s forwards;
+}
+#s1Circle2 { /*2*/
+  opacity: 0;
+  animation: apearRtoL 1s  .6s forwards;
+}
+#s1Container > div { /*3*/
+  opacity: 0;
+  animation: apearLtoR 1s  1.5s forwards;
+}
+#section1 > #s1SVGs::before { /*3*/
+  opacity: 0;
+  animation: apearRtoL 1s  1.5s forwards;
+}
+#rotateSVG { /*4*/
+  opacity: 0;
+  animation: apearLtoR 1s  1s forwards;
+}
+#svg1701 circle { /*4*/
+  opacity: 0;
+  animation: apearRtoL 1.5s  1.4s forwards;
+} 
+#svg2270 { /*4*/
+  opacity: 0;
+  animation: apearLtoR 1.5s  1.6s forwards;
+}
+
+#svg2270  path {fill: rgba(255, 255, 255, 0.449);}
+
 
 #section2 {
   height: 100vh;
@@ -438,8 +490,80 @@ section h2 {
   color: #000;
 }
 
+
+@media (max-width:1240px) {
+  #headerContainer {
+    max-width: 1080px;
+  }
+}
+@media (max-width:1024px) {
+  header {
+    padding: 10px 30px 0 30px;
+    height: 70px;
+  }
+  header nav > div {
+    flex-direction: row-reverse;
+  }
+  header nav {
+    width: unset;
+  }
+  #gnb > .on ul {
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 100%; left: 0;
+    box-sizing: border-box;
+    padding: 0 20px 30px 30px;
+    height: 0;
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  #gnb > .on ul.on {
+    opacity: 1;
+    height: 220px;
+  }
+  header nav ul:hover li{color: #000;}
+  header nav ul li:hover {color: #000;}
+  header nav ul li {
+    display: none;
+    color: #000;
+  }
+  header nav ul.on li {
+    display: block;
+  }
+  header nav ul li:nth-child(1) {
+    margin-top: 10px;
+  }
+  header nav ul li + li {
+    margin-top: 30px;
+  }
+}
+
+
+
 @keyframes scrollDownArrow {
   0% {opacity: 0;}
   50% {opacity: 100;}
   100% {opacity: 0;}
+}
+
+@keyframes apearLtoR {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+@keyframes apearRtoL {
+  0% {
+    opacity: 0;
+    transform: translateX(30px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
 }
