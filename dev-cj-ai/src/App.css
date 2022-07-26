@@ -147,12 +147,14 @@ section h2 {
   height: 1080px;
 }
 #s1Container {
+  box-sizing: border-box;
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
   width: 100%; max-width: 1240px;
   font-size: 55px;
   font-weight: bold;
+  transition: all .3s ease;
 }
 #s1Container > p span {
   display: inline-block;
@@ -191,7 +193,7 @@ section h2 {
   animation: scrollDownArrow 3s .8s linear infinite;
 }
 #section1 > #s1SVGs {
-  width: 100%; height: 100%;
+  width: 100%; height: 1480px;
   position: absolute;
 }
 #section1 > #s1SVGs::before {
@@ -201,35 +203,35 @@ section h2 {
   border-radius: 50%;
   width: 320px; height: 320px;
   background: linear-gradient(90deg, #000 0%, #0087cc 102.23%);
+  transition: all .3s ease;
 }
 #section1 > #s1SVGs > svg:nth-child(1) {
   position: absolute;
   top: 150px;
   right: 17%;
 }
-#s1SVGs #s1Circle1 {
+#s1SVGs #s1Circle1, #s1Circle2 {
   position: absolute;
   border-radius: 50%;
   top: 800px;
-  left: -4px;
   width: 345px;
   height: 345px;
+  transition: all .3s ease;
+}
+#s1SVGs #s1Circle1 {
+  left: -4px;
   background: linear-gradient(0deg, rgba(24, 24, 24, 0.0001) 0%, #0087CC 100%);
 }
 #s1SVGs #s1Circle2 {
-  position: absolute;
-  border-radius: 50%;
-  top: 800px;
   left: 150px;
-  width: 345px;
-  height: 345px;
   background: linear-gradient(0deg, #0087CC 0%, rgba(24, 24, 24, 0.0001) 100%);
 }
+
 #rotateSVG {
   position: absolute;
   width: 600px;
   height: 800px;
-  top: 63%;
+  bottom: 0;
   right: 0;
   overflow: hidden;
 }
@@ -274,7 +276,9 @@ section h2 {
   animation: apearLtoR 1.5s  1.6s forwards;
 }
 
-#svg2270  path {fill: rgba(255, 255, 255, 0.449);}
+#svg2270  path {
+  fill: rgba(255, 255, 255, 0.449);
+}
 
 
 #section2 {
@@ -492,21 +496,15 @@ section h2 {
 
 
 @media (max-width:1240px) {
-  #headerContainer {
-    max-width: 1080px;
-  }
+  #headerContainer {max-width: 1080px;}
 }
 @media (max-width:1024px) {
   header {
     padding: 10px 30px 0 30px;
     height: 70px;
   }
-  header nav > div {
-    flex-direction: row-reverse;
-  }
-  header nav {
-    width: unset;
-  }
+  header nav > div {flex-direction: row-reverse;}
+  header nav {width: unset;}
   #gnb > .on ul {
     background: #fff;
     display: block;
@@ -524,22 +522,29 @@ section h2 {
   }
   header nav ul:hover li{color: #000;}
   header nav ul li:hover {color: #000;}
-  header nav ul li {
-    display: none;
-    color: #000;
+  header nav ul li {display: none; color: #000;}
+  header nav ul.on li {display: block;}
+  header nav ul li:nth-child(1) {margin-top: 10px;}
+  header nav ul li + li {margin-top: 30px;}
+  #s1Container {padding-left: 45px;}
+  #section1 > #s1SVGs {overflow-x: hidden;}
+  #section1 > #s1SVGs::before {
+    position: absolute;
+    right: -60px; top:-100px;
+    border-radius: 50%;
+    width: 240px; height: 240px;
   }
-  header nav ul.on li {
-    display: block;
+  #svg2270 path {
+   fill: none; 
   }
-  header nav ul li:nth-child(1) {
-    margin-top: 10px;
+  #s1SVGs #s1Circle1, #s1Circle2 {
+    width: 210px;
+    height: 210px;
   }
-  header nav ul li + li {
-    margin-top: 30px;
+  #rotateSVG {
+    border: 1px solid red;
   }
 }
-
-
 
 @keyframes scrollDownArrow {
   0% {opacity: 0;}

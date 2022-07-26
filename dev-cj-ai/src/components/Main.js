@@ -29,14 +29,17 @@ const Main = (props) => {
     }
     let BorW = String;
     (dataSet.scroll < 1040) ? BorW = 'white' : BorW = 'black';
-    const fontBorW = {color : BorW}
-
+    const fontBorW = {
+        color : BorW,
+        backgroundColor : `${dataSet.scroll < 1040 ? 'black' : 'white'}`,
+        transition: 'all .3s ease'
+    }
     return (
         <div style={fontBorW}>
         <Fns getScroll={getScroll} getWidth={getWidth}/>
         <Link id='skipNav' to="#section0">본문으로</Link>
         <Header menuList={menu_items} dataSet={dataSet} borw={BorW} />
-        <Section1 s1Title={menu_items} borw={BorW} />
+        <Section1 s1Title={menu_items} dataSet={dataSet} borw={BorW} />
         <Section2 s2Title={menu_items} dataSet={dataSet} borw={BorW}/>
         <Section3 s3Title={menu_items} />
         <Section4 s4Title={menu_items} />

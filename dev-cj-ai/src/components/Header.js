@@ -51,7 +51,6 @@ const Header = (props) => {
               {headerList}
             </ul>
           </div>
-  console.log(isOn)
       return (
       <header style={headerStyle}>
         <div id="headerContainer">

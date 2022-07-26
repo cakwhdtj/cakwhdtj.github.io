@@ -1,9 +1,8 @@
 import SVG from "./SvgSet";
 
 const Section2 = (props) => {
-    const dataSet = props.dataSet;
     const svgType = [1,2,3,4];
-    const svgSize = [190,190,190,190];
+    // const svgSize = [190,190,190,190];
     const circProps = [
         [false,0,null],
         [true,2, [[167,142,9,"#187BD2"],[17,54,9,"#EF151E"]]],
@@ -26,17 +25,13 @@ const Section2 = (props) => {
         </li>
     )
     const s2bg = {
-        background : `${(dataSet.scroll > 1040) ? 'white' : 'black'}`,
         transition : `all .3s ease`
     }
-    // console.log(props.borw)
-
     return (
         <section id="section2" style={s2bg}>
             <div>
                 <h2>{props.s2Title[0]}</h2>
                 <p>Using AI technologies, will will:</p>
-                {/* <SvgList svgType={svgType} /> */}
                 <ul>
                     {liSet}
                 </ul>

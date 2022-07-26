@@ -1,9 +1,12 @@
 import SVG from "./SvgSet";
 
 const Section1 = (props) => {
+    const s1pst = {
+        fontSize : `${props.dataSet.width >= 1024 ? (props.dataSet.width >= 1560 ? '55px' : '48px') : '32px'}`,
+    }
     return (
         <section id="section1">
-            <div id="s1Container">
+            <div id="s1Container" style={s1pst}>
                 <SVG type={'logo'} size={0} circle={[]} BorW={`#989898`}/>
                 <p>
                     <span>WORLD-LEADING</span><br />
