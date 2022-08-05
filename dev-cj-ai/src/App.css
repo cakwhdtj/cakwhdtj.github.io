@@ -229,7 +229,6 @@ section h2 {
 
 #rotateSVG {
   position: absolute;
-  width: 600px;
   height: 800px;
   bottom: 0;
   right: 0;
@@ -541,8 +540,8 @@ section h2 {
     width: 210px;
     height: 210px;
   }
-  #rotateSVG {
-    border: 1px solid red;
+  #rotateSVG SVG {
+    transition: all .3s ease;
   }
 }
 
