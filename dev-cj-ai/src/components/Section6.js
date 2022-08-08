@@ -14,7 +14,7 @@ const Section6 = (props) => {
                 <div>
                     <h2>VISIT US</h2>
                     <address>서울특별시 강남구 강남대로 652 신사스퀘어 12-15F</address>
-                    <Link to="#" className="btn">문의하기<SVG type={'ico2'} size={0} circle={[]}/></Link>
+                    <Link to="#" className="btn">주소복사하기<SVG type={'ico2'} size={0} circle={[]}/></Link>
                 </div>
             </div>
         </section>

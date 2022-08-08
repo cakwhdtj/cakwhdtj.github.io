@@ -16,17 +16,27 @@ const Section2 = (props) => {
     `최첨단 AI 연구와 AI 원천기술 확보를 통해 CJ의 미래 성장동력을 확보합니다.`,
     `AI를 통한 인사이트를 발굴하여 비즈니스를 확장합니다.`
     ];
-
+    const stTransition = 'all .3s ease';
+    const s2bg = {
+        transition : stTransition
+    }
+    const s2h3st = {
+        transition : stTransition,
+        fontSize : `${(props.dataSet.width >= 1240) ? (26 +'px') : (22+'px')}`
+    }
+    const s2pst = {
+        transition : stTransition,
+        fontSize : `${(props.dataSet.width >= 1240) ? (16 +'px') : (14+'px')}`
+    }
     let liSet = svgType.map((svgType,index) => 
+        (
         <li key={svgType+`svg`}>
             <SVG type={svgType} size={190} circle={circProps[index]} BorW={props.borw} />
-            <h3>{li_h3[index]}</h3>
-            <p>{li_p[index]}</p>
+            <h3 style={s2h3st}>{li_h3[index]}</h3>
+            <p style={s2pst}>{li_p[index]}</p>
         </li>
+        )
     )
-    const s2bg = {
-        transition : `all .3s ease`
-    }
     return (
         <section id="section2" style={s2bg}>
             <div>

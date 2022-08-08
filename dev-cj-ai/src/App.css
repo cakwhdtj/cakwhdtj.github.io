@@ -136,8 +136,9 @@ header nav ul:hover li{color: #666;}
 header nav ul li:hover {color: #fff;}
 
 section h2 {
-  font-size: 38px;
+  font-size: 42px;
   margin-bottom: 32px;
+  transition: all .3s ease;
 }
 
 #section1 {
@@ -314,6 +315,7 @@ section h2 {
   font-size: 16px;
   opacity: .8;
 }
+#section2 ul SVG {transition: all .3s ease;}
 
 .sInner {
   position: relative;
@@ -442,9 +444,8 @@ section h2 {
   opacity: .3;
   right: 20%;
 }
-#section6 {
-  padding: 88px 0 80px;
-}
+
+#section6 {padding: 88px 0 80px;}
 #section6 .sInner {
   display: flex;
   height: 100%;
@@ -493,9 +494,15 @@ section h2 {
   color: #000;
 }
 
-
+/* media query */
 @media (max-width:1240px) {
   #headerContainer {max-width: 1080px;}
+  section h2 {font-size: 32px;}
+  #section2 ul SVG {transform: scale(.85);}
+  #section2 > div,
+  footer .sInner,
+  section > .sInner {width: calc(100% - 60px);}
+  
 }
 @media (max-width:1024px) {
   header {
@@ -543,7 +550,102 @@ section h2 {
   #rotateSVG SVG {
     transition: all .3s ease;
   }
+  #section2 {
+  margin-bottom: 200px;
+  }
+  #section2 ul li {
+    box-sizing: border-box;
+    float: none;
+    display: inline-block;
+    width: 50%;
+    padding-left: 12%;
+    text-align: center; 
+  }
 }
+@media (max-width:770px) {
+  #section2 {
+    margin-bottom: 800px;
+    text-align: center;
+  }
+  #section2 div > p {font-size: 20px;}
+  #section2 ul li {
+    box-sizing: border-box;
+    float: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    word-break: keep-all;
+  }
+  #section3 {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+  }
+  #section3 .sInner > ul > li {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  #section4 ul li {width: 100%;}
+  #section4 ul li:nth-child(even) {top: 0; margin-left: 0;}
+  #section5 {
+    text-align: center;
+    height: 500px;
+  }
+  #section5 .objs {
+    transition: all .3s ease;
+    transform: scale(.8);
+    top: 170%; right: -40%;
+  }
+
+  #section6 {
+    padding: none;
+    text-align: center;
+  }
+  #section6 .sInner {display: block;}
+  #section6 .sInner > div {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  #section6 .sInner > div:nth-child(2) {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  #section6 .sinner > div {display: block;}
+  
+  #footer {
+    text-align: center;
+    height: 150px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  #footer > .sInner {
+    border-top: 1px solid rgba(102, 102, 102, 0.492);
+    height: 100%;
+    padding: 0;
+    padding-top: 30px;
+  }
+  #footer .sInner p {
+    float: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+  }
+  #footer .sInner p span{padding-top: 0px;}
+  #footer .sInner ul {float: none;}
+  #footer ul li {
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+/* keyfreames */
 
 @keyframes scrollDownArrow {
   0% {opacity: 0;}
