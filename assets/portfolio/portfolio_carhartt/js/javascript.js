@@ -1,6 +1,6 @@
 "use strict";
 //main checking
-var winWidth = $(window).width();
+let winWidth = $(window).width();
 
 if ($("main").attr("class") === "lookbook") {
   $(".nav__menuSide").css({ display: "block" });
@@ -38,15 +38,15 @@ if ($("main").attr("class") === "shop") {
 // nav btn animatin
 $(".nav__menuBtn").append("<span></span><span></span><span></span>");
 
-var active = 0;
-var navBtn = $("button.nav__menuBtn");
-var activeCheck = 0;
+let active = 0;
+let navBtn = $("button.nav__menuBtn");
+let activeCheck = 0;
 navBtn.on("click", function () {
   winWidth = $(window).width();
   $(navBtn).toggleClass("active");
   $("nav").removeClass("on");
   navSideActivate();
-  var hihi = $(navBtn).attr("class");
+  let hihi = $(navBtn).attr("class");
   if (winWidth < 720 && hihi === "nav__menuBtn active") {
     $("nav").before('<div id="layer-mask"></div>');
   } else {
@@ -55,7 +55,7 @@ navBtn.on("click", function () {
 });
 
 function pageIndicator() {
-  var mainCheck = $("main").attr("class");
+  let mainCheck = $("main").attr("class");
   $("nav").append(
     "<div id='pageIndicator'><a href='index.html' class='pfEmph'>home</a> > " +
     mainCheck +
@@ -78,14 +78,14 @@ function navSideActivate() {
 // section1 main img slide
 
 function slideCarou(n) {
-  var numSlide = $("div.imgSlide_div img.mainImg_slide").length;
-  var slideNow = 0;
-  var slidePrev = 0;
-  var slideNext = 0;
-  var firstSlide = 1;
-  var timerId = "";
-  var isTimerOn = true;
-  var timerSpeed = 4000;
+  let numSlide = $("div.imgSlide_div img.mainImg_slide").length;
+  let slideNow = 0;
+  let slidePrev = 0;
+  let slideNext = 0;
+  let firstSlide = 1;
+  let timerId = "";
+  let isTimerOn = true;
+  let timerSpeed = 4000;
   showImg(firstSlide);
 
   function showImg(n) {
@@ -106,10 +106,10 @@ function slideCarou(n) {
 // section2 show hiddne div
 
 function showDiv() {
-  var divHeight = $("div.mainArticle").height();
-  var divCount = $("div.mainArticle").length;
-  var setHeight = divHeight * divCount;
-  var section2Top = $(".section2").offset().top;
+  let divHeight = $("div.mainArticle").height();
+  let divCount = $("div.mainArticle").length;
+  let setHeight = divHeight * divCount;
+  let section2Top = $(".section2").offset().top;
 
   section2Initialize();
   section2SlideBtn(section2Top);
@@ -164,9 +164,9 @@ function showDiv() {
 //shop
 sizeIndication();
 function sizeIndication() {
-  var sBoxWidth = 0;
+  let sBoxWidth = 0;
   mouseOverOnProduct();
-  var sizeBoxWidth = $(".shop .section1 ul li ul li > span").width();
+  let sizeBoxWidth = $(".shop .section1 ul li ul li > span").width();
 
   function mouseOverOnProduct() {
     $(".shop .section1 ul li ul li img").on("mouseover", function () {
@@ -199,20 +199,20 @@ function mCheck() {
   });
 }
 function section2SlideBtn(s2Top) {
-  var btnContainerTop = s2Top + 350 + "px";
+  let btnContainerTop = s2Top + 350 + "px";
   $("div.btnContainer button").css({ top: btnContainerTop });
 }
 //section3
 section2Click();
 function section2Click() {
-  var numSlide = $(".section2 > ul li").length;
-  var slideNow = 0;
-  var slidePrev = 0;
-  var slideNext = 0;
-  var firstSlide = 1;
-  var timerId = "";
-  var isTimerOn = false;
-  var timerSpeed = 4000;
+  let numSlide = $(".section2 > ul li").length;
+  let slideNow = 0;
+  let slidePrev = 0;
+  let slideNext = 0;
+  let firstSlide = 1;
+  let timerId = "";
+  let isTimerOn = false;
+  let timerSpeed = 4000;
 
   showSlide(firstSlide);
   $("div.btnContainer button:nth-child(1)").on("click", function () {
@@ -239,9 +239,9 @@ function section2Click() {
 }
 
 function scrolling(n) {
-  var section1Top = 0;
-  var section2Top = 0;
-  var scrollAmt = 0;
+  let section1Top = 0;
+  let section2Top = 0;
+  let scrollAmt = 0;
 
   $(document).on("scroll", function () {
     section1Top = $(".section1").offset().top;
@@ -276,7 +276,7 @@ function scrolling(n) {
 
 lookbook_1();
 function lookbook_1() {
-  var timerId = "";
+  let timerId = "";
   if ($("main").attr("class") === "lookbook_1") {
     if (winWidth > 720) {
       $(".nav__menuBtn").css({ display: "none" });

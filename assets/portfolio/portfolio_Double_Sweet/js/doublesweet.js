@@ -1,4 +1,5 @@
 'use strict';
+
 $('a').on('click', function (e) {
     ($(this).attr('href') === '#') ? e.preventDefault() : null
 });
@@ -178,10 +179,23 @@ function getRotationDegrees(obj) {
     } else { var angle = 0; }
     return /*(angle < 0) ? angle + 360 : */ angle;
 }
+const mainScaleChange = () => {
+    let initWidth = $(window).width();
+    let resizeWidth = initWidth;
+    let width = 100;
+    initWidth < 1512 ? width = (initWidth/1512)*100 : width = width;
+    $('.section1 > .indicator').css({"scale" : `${width}%`});
+    $(window).resize(()=>{
+        resizeWidth =  $(window).width();
+        width = (resizeWidth/1512)*100;
+        $('.section1 > .indicator').css({"scale" : `${width}%`});
+    });
+}
+mainScaleChange();
 
-$('.section3 .gallery li').addClass('pfEmph');
 
 //portfolio global
+$('.section3 .gallery li').addClass('pfEmph');
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
 window.onload = function () {
     $('#kooflix').on('mouseover', function () {

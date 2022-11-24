@@ -1,5 +1,9 @@
 "use strict";
-var scrollAmt = $(document).scrollTop();
+let scrollAmt = $(document).scrollTop();
+let winWidth = $(window).width();
+$(window).on('resize', function () {
+  winWidth = $(window).width();
+});
 headerEffect();
 $(document).on('click', 'a[href="#"]', function (e) {
   e.preventDefault();
@@ -20,7 +24,7 @@ $("#closeSideBtn > a").on("click", function () {
 });
 $('#hashtag > li > a, a#downArrow').on('click', function () {
   if (this.hash !== '') {
-    var hash = this.hash;
+    let hash = this.hash;
     $('html, body').stop(true).animate({ 'scrollTop': $(hash).offset().top }, 500, function () {
       window.location.hash = hash;
     });
@@ -51,7 +55,7 @@ $('.scrolled .sectionTitle > a').on('click', function () {
 });
 
 $(".slideInSection .indicator > li > a").on('click', function () {
-  var sectionCheck = $(this).parent().parent().parent().parent().attr('id');
+  let sectionCheck = $(this).parent().parent().parent().parent().attr('id');
   cleaner(this, 2, 'on');
   $(this).parent().addClass("on")
   imgSlider($(this).parent(), sectionCheck);
@@ -63,34 +67,26 @@ $(window).on('scroll', function (e) {
   cleaner('#hashtag li a', 1, 'on');
   headerEffect();
 });
-var onloadWidth = $(window).width();
-var resizeWidth = 1024;
-$(window).on('resize', function () {
-  resizeWidth = $(window).width();
-});
-var numPage = $('section').length;
-var pageNow = 0;
-var pagePrev = 0;
-var pageNext = 0;
+
+let numPage = $('section').length;
+let pageNow = 0;
+let pagePrev = 0;
+let pageNext = 0;
 scrollEvent();
 function scrollEvent() {
-  // var numPage = $('section').length;
-  // var pageNow = 0;
-  // var pagePrev = 0;
-  // var pageNext = 0;
-  var scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll'; //browser 확인
-  var isBlocked = false;
-  var timerDebounce = 0;
-
+  let scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll'; //browser 확인
+  let isBlocked = false;
+  let timerDebounce = 0;
   window.addEventListener(scrollEvent, function (e) {
-    console.log(isBlocked)
-    if ($('#headerRightBtn').find('ul').attr('class') === 'open' || resizeWidth < 1024) {
-      return false;
+    // || resizeWidth < 1024
+    if ($('#headerRightBtn').find('ul').attr('class') === 'open') {
+      isBlocked = true
     }
+    // console.log(e.path.includes($('ul#headerRightBtn')[0]))
     e.preventDefault();
     if (isBlocked === true) return false;
     isBlocked = true;
-    var delWheel = 0;
+    let delWheel = 0;
     if (scrollEvent === 'mousewheel') {
       delWheel = e.wheelDelta / -120;
     } else {
@@ -151,7 +147,7 @@ function slideOpener(selector) {
 // R 이면 다음형제에 on이랑 , L이면 이전형제에 on
 function sliderIndicator(selector, section) {
   // click 된 a가 있는 section에 div.slideInSection 안에 indicator 효과
-  var indicatorLength = ((selector.offset().left + selector.outerWidth()) - $(".slideInSection .indicator").offset().left);
+  let indicatorLength = ((selector.offset().left + selector.outerWidth()) - $(".slideInSection .indicator").offset().left);
   section = '#' + section;
   $(section + " .indicator_bar").width(indicatorLength + 3);
 }
@@ -169,10 +165,10 @@ function cleaner(selector, depth, Removing) {
   }
 }
 function marginAdder(sectionCheck) {
-  var section = sectionReturn(sectionCheck);
+  let section = sectionReturn(sectionCheck);
   $(section + ' > li').each(function () {
-    var boxWidth = $(this).width();
-    var margin = [Math.abs(boxWidth - 1400) / 2];
+    let boxWidth = $(this).width();
+    let margin = [Math.abs(boxWidth - 1400) / 2];
     boxWidth = [boxWidth];
     if ($(window).width() <= 1440) {
       margin = margin / 2;
@@ -182,17 +178,17 @@ function marginAdder(sectionCheck) {
 }
 function imgSlider(n, section) {
   n = $(n);
-  var selected = '#' + section + ' ul.imageSlide';
-  var index = n.index() - 1;
-  var slideLeft = $(selected).offset().left;
-  var boxLeft = $(selected + ' > li:eq(' + index + ')').offset().left;
-  var boxWidth = $(selected + ' > li:eq(' + index + ')').width();
-  var halfWindow = ($(window).width() / 2);
-  var moveAmt = ((boxLeft - slideLeft) * -1) + halfWindow - (boxWidth / 2);
+  let selected = '#' + section + ' ul.imageSlide';
+  let index = n.index() - 1;
+  let slideLeft = $(selected).offset().left;
+  let boxLeft = $(selected + ' > li:eq(' + index + ')').offset().left;
+  let boxWidth = $(selected + ' > li:eq(' + index + ')').width();
+  let halfWindow = ($(window).width() / 2);
+  let moveAmt = ((boxLeft - slideLeft) * -1) + halfWindow - (boxWidth / 2);
   $(selected).offset({ left: moveAmt });
 }
 function sectionReturn(sectionCheck) {
-  var section = $(sectionCheck).parent().parent().attr('id');
+  let section = $(sectionCheck).parent().parent().attr('id');
   section = '#' + section + ' ul.imageSlide';
   return section;
 }

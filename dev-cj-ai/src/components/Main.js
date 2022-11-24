@@ -9,6 +9,7 @@ import Section5 from './Section5';
 import Section6 from './Section6';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import Kooflix from './kooflix';
 
 //section1 overflow 해결
 // section5 버튼 hover
@@ -45,6 +46,7 @@ const Main = (props) => {
         <Section4 s4Title={menu_items} />
         <Section5 s5Title={menu_items} />
         <Section6 s6Title={menu_items} />
+        <Kooflix />
         <Footer />
         </div>
     );

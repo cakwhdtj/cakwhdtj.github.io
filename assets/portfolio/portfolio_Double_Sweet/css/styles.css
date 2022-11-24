@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 /* reset */
-body {margin: 0;}
+body {margin: 0; max-width: 1512px;}
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 main {display: block;}

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-cj-ai/static/css/main.69cb64b2.css",
-    "main.js": "/react-cj-ai/static/js/main.bad6930d.js",
+    "main.js": "/react-cj-ai/static/js/main.2f1ff2ba.js",
     "static/js/787.bb193f58.chunk.js": "/react-cj-ai/static/js/787.bb193f58.chunk.js",
     "static/media/CJ+ONLYONE+Bold.ttf": "/react-cj-ai/static/media/CJ+ONLYONE+Bold.7be3a36859d5baea59f3.ttf",
     "static/media/CJ+ONLYONE+Medium.ttf": "/react-cj-ai/static/media/CJ+ONLYONE+Medium.f6bc83e8d41c48f0ef3e.ttf",
     "index.html": "/react-cj-ai/index.html",
     "main.69cb64b2.css.map": "/react-cj-ai/static/css/main.69cb64b2.css.map",
-    "main.bad6930d.js.map": "/react-cj-ai/static/js/main.bad6930d.js.map",
+    "main.2f1ff2ba.js.map": "/react-cj-ai/static/js/main.2f1ff2ba.js.map",
     "787.bb193f58.chunk.js.map": "/react-cj-ai/static/js/787.bb193f58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.69cb64b2.css",
-    "static/js/main.bad6930d.js"
+    "static/js/main.2f1ff2ba.js"
   ]
 }

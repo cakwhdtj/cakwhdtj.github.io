@@ -12,9 +12,11 @@ class API extends Component {
         script.onload = () => {
             kakao.maps.load(() => {
                 let el = document.getElementById('map');
-                let map = new kakao.maps.Map(el, { // eslint-disable-line no-unused-vars
-                    center: new kakao.maps.LatLng(33.450701, 126.570667)
-                });
+                let options = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+                let map = new kakao.maps.Map(el, options);
             });
         };
     }
