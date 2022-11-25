@@ -73,7 +73,6 @@ $("#kooflix").on("mouseenter", function (e) {
 
 
 function emphEffect() {
-    // console.log(pfEmph.length)
     for (let i = 0; i < pfEmph.length; i++) {
         $("body").append("<div class='emphEffect " + "e" + [i] + "'><span></span><span></span><span></span><span></span></div>");
         $(".e" + [i]).css({

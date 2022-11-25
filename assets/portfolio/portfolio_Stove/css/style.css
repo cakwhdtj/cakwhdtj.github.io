@@ -1,0 +1,78 @@
+/* reset */
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit;text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+
+.hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
+.mobile_only {display: none !important;}
+
+#skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
+#skipNav:focus {top: 0;}
+
+/* header */
+header {
+    box-sizing: border-box;
+    border: 1px solid red;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    padding: 20px 40px;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+header > * {
+    border: 1px solid orange;
+}
+#logo {width: 150px;}
+#games {width: 100%;}
+#games > * {
+    display: inline-block;
+    margin-right: 40px;
+}
+#games > li > ul {
+    border-radius: 5px;
+    box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%), 0 0 1px 0 rgb(0 0 0 / 20%);
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#games > li > ul > li {
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+}
+#games > li > ul > li  > * {
+    display: inline-block;
+    height: 100%;
+    margin-right: 5px;
+}
+
+#games > li > ul > li > a {
+    border: 1px solid blue;
+    width: 64px; height: 64px;
+}
+#games > li > ul > li h3 {
+    font-size: 16px;
+}
+#games > li > ul > li .updateMark {
+    color : #9b54f6;
+    margin-left: 4px;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: bold;
+    letter-spacing: 0.33px;
+    white-space: nowrap;
+}
+#games > li > ul > li p {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    font-size: 13px;
+}
