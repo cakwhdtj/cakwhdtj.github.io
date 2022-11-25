@@ -23,7 +23,7 @@ html, body {overflow-x: hidden; position: relative;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
 
-#header {position: absolute; max-width: 1920px; width: 100%; height: 76px; z-index: 10;}
+#header {position: fixed; max-width: 1920px; width: 100%; height: 76px; z-index: 10;}
 #header h1 {position: absolute; top: 30px; left: 30px;}
 #header h1 a {display: block; width: 85px; height: 17px; background: url(../img/sp_header.png) no-repeat -198px 0; background-size: 344px 136px;}
 

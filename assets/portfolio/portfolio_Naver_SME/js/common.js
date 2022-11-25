@@ -78,11 +78,10 @@ function scrollEvent() {
   let isBlocked = false;
   let timerDebounce = 0;
   window.addEventListener(scrollEvent, function (e) {
-    // || resizeWidth < 1024
-    if ($('#headerRightBtn').find('ul').attr('class') === 'open') {
-      isBlocked = true
+    if ($('#headerRightBtn').find('ul').attr('class') === 'open' || winWidth < 1024) {
+      // if ($('nav')[0] === e.path[0]) {}
+      return false
     }
-    // console.log(e.path.includes($('ul#headerRightBtn')[0]))
     e.preventDefault();
     if (isBlocked === true) return false;
     isBlocked = true;
@@ -152,7 +151,6 @@ function sliderIndicator(selector, section) {
   $(section + " .indicator_bar").width(indicatorLength + 3);
 }
 function cleaner(selector, depth, Removing) {
-  // parameter 로 받고 class를 지운다
   selector = $(selector);
   if (depth === 'no') {
     selector.removeClass(Removing);

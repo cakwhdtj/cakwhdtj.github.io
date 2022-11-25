@@ -153,13 +153,6 @@ p.sectionTitle > a i {font-weight: 600;}
 
 /* mediaquery */
 @media only screen and (min-width: 1920px) {
-  /* .wrapper {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0);
-    max-width: 1920px;
-    border: 1px solid red;
-  } */
   #header {
     max-width: 1920px;
     left: 50%;
