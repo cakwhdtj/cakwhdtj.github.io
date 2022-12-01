@@ -1,0 +1,3080 @@
+/* fonts by lang */
+:lang(ko) #stoveGnb a,
+:lang(ko) #stoveGnb strong,
+:lang(ko) #stoveGnb body,
+:lang(ko) #stoveGnb button,
+:lang(ko) #stoveGnb h1,
+:lang(ko) #stoveGnb h2,
+:lang(ko) #stoveGnb h3,
+:lang(ko) #stoveGnb h4,
+:lang(ko) #stoveGnb h5,
+:lang(ko) #stoveGnb h6,
+:lang(ko) #stoveGnb input,
+:lang(ko) #stoveGnb textarea,
+:lang(ko) #stoveGnb select {
+    font-family: Spoqa Han Sans Neo KR, -apple-system, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.gnb-stove a,
+.gnb-stove address,
+.gnb-stove article,
+.gnb-stove aside,
+.gnb-stove blockquote,
+.gnb-stove body,
+.gnb-stove button,
+.gnb-stove canvas,
+.gnb-stove caption,
+.gnb-stove dd,
+.gnb-stove div,
+.gnb-stove dl,
+.gnb-stove dt,
+.gnb-stove em,
+.gnb-stove fieldset,
+.gnb-stove figcaption,
+.gnb-stove figure,
+.gnb-stove footer,
+.gnb-stove form,
+.gnb-stove h1,
+.gnb-stove h2,
+.gnb-stove h3,
+.gnb-stove h4,
+.gnb-stove h5,
+.gnb-stove h6,
+.gnb-stove header,
+.gnb-stove hgroup,
+.gnb-stove html,
+.gnb-stove i,
+.gnb-stove iframe,
+.gnb-stove img,
+.gnb-stove input,
+.gnb-stove label,
+.gnb-stove legend,
+.gnb-stove li,
+.gnb-stove mark,
+.gnb-stove menu,
+.gnb-stove nav,
+.gnb-stove ol,
+.gnb-stove p,
+.gnb-stove pre,
+.gnb-stove section,
+.gnb-stove span,
+.gnb-stove strong,
+.gnb-stove summary,
+.gnb-stove table,
+.gnb-stove tbody,
+.gnb-stove td,
+.gnb-stove textarea,
+.gnb-stove tfoot,
+.gnb-stove th,
+.gnb-stove thead,
+.gnb-stove time,
+.gnb-stove tr,
+.gnb-stove ul,
+.gnb-stove video {
+    font: revert;
+}
+/* reset */
+/* common */
+html {
+    width: 100%;
+}
+.gnb-stove {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+/* gnb-stove-badge */
+.gnb-stove-badge,
+.gnb-stove .gnb-stove-badge {
+    margin-left: 4px;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: bold;
+    letter-spacing: 0.33px;
+    white-space: nowrap;
+}
+.gnb-stove {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.gnb-stove.gnb-game-badge.orange,
+.gnb-stove-badge.orange {
+    color: #fc6020;
+}
+.gnb-stove.gnb-game-badge.red,
+.gnb-stove-badge.red {
+    color: #ec3b47;
+}
+
+.gnb-stove.gnb-game-badge.purple,
+.gnb-stove-badge.purple {
+    color: #9b54f6;
+}
+.gnb-stove.gnb-game-badge.blue,
+.gnb-stove-badge.blue {
+    color: #1e88e5;
+}
+.gnb-stove.gnb-game-badge.gray,
+.gnb-stove-badge.gray {
+    color: #6e6e6e;
+}
+/* gnb */
+.gnb-stove.gnb-default-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.gnb-stove .ic-control-close-line::before,
+.gnb-stove .gnb-menu-icon::before,
+.gnb-stove .gnb-icon::before {
+    display: none !important;
+    font-size: 0 !important;
+    opacity: 0 !important;
+}
+.gnb-stove {
+    letter-spacing: 0;
+    -ms-overflow-style: none;
+    background-color: #fff;
+    height: 68px;
+}
+.gnb-stove:after {
+    content: '';
+    clear: both;
+    display: block;
+    overflow: hidden;
+}
+.gnb-stove a {
+    text-decoration: none;
+    font-size: inherit;
+}
+.gnb-stove img {
+    border: none;
+    display: flex;
+    align-self: flex-start;
+}
+.gnb-stove button.gnb-icon {
+    background-color: transparent;
+    border: 0;
+}
+.gnb-stove button:focus {
+    outline: none;
+}
+.gnb-stove .gnb-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-top: 1px;
+    font-size: inherit;
+    line-height: 0;
+}
+.gnb-stove .gnb-title > *:first-child {
+    margin-left: 0;
+}
+.gnb-stove .gnb-title > * {
+    margin-left: 8px;
+}
+.gnb-stove .gnb-title > *:last-child {
+    margin-right: 64px;
+}
+.gnb-stove.gnb-default-rwd .logo-stove,
+.gnb-stove.gnb-default-rwd .logo-service {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gnb-stove .logo-stove.stove,
+.gnb-stove .logo-stove.stove-mini {
+    width: 88px;
+    height: 20px;
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bi.svg);
+}
+.gnb-stove .logo-stove,
+.gnb-stove .logo-service {
+    display: inline-block;
+    height: 20px;
+}
+.gnb-stove .logo-service.indie {
+    display: inline-block;
+    width: 75px;
+    height: 20px;
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icons-bi-indie.svg);
+}
+.gnb-stove .logo-stove-mini {
+    display: inline-block;
+    height: 28px;
+    margin-right: 64px;
+}
+.gnb-stove .stove-service-txt {
+    display: inline-block;
+    white-space: nowrap;
+    color: #000;
+    font-size: 20px;
+}
+.gnb-stove .logo-stove img,
+.gnb-stove .logo-service img,
+.gnb-stove .logo-stove-mini img {
+    height: 20px;
+}
+
+.gnb-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 48px;
+}
+.gnb-dark-theme .gnb-inner {
+    border-bottom: 0;
+}
+.gnb-inner .gnb-nav,
+.gnb-inner .gnb-nav-wrap {
+    display: flex;
+    flex-direction: row;
+    /*margin-right: auto;*/
+    flex-grow: 1;
+}
+.gnb-inner .gnb-nav .gnb-dropdown {
+    margin-right: 40px;
+}
+.gnb-inner .gnb-dropdown {
+    position: relative;
+}
+.gnb-inner .gnb-nav .gnb-dropdown-content {
+    left: 0;
+}
+.gnb-dropdown .gnb-dropdown-content {
+    position: absolute;
+    top: 50%;
+    min-width: 162px;
+    margin-top: 26px;
+    background-color: #fff;
+    /*box-shadow: 0 4px 16px 0 rgba(27, 29, 37, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+.gnb-dropdown .menu-notice {
+    min-height: 478px;
+}
+.gnb-dropdown.is-game-menu .gnb-dropdown-content {
+    padding: 24px;
+    border-radius: 5px;
+}
+.menu-custom {
+    position: relative;
+    margin-left: 0;
+    padding-right: 17px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1px;
+}
+.menu-custom > div {
+    padding: 0;
+}
+.menu-custom > div .gnb-dropdown-toggle {
+    display: flex;
+}
+.gnb-inner .gnb-nav .menu-custom .gnb-dropdown {
+    margin-right: 0;
+}
+.menu-custom:after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: translateY(-50%);
+}
+.menu-custom > * {
+    margin-left: 16px;
+}
+.menu-custom .btn-menu-custom {
+    padding: 0 12px;
+    height: 26px;
+    border: 1px solid #6e6e6e;
+    border-radius: 14px;
+    font-size: 13px;
+    white-space: nowrap;
+    color: #1a1a1a;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    color: #3a3a3a;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: flex-start;
+    margin-top: 1px;
+}
+.gnb-stove.gnb-default-mini .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom {
+    /*line-height: 20px;*/
+    height: 20px;
+}
+.menu-custom .btn-menu-custom:hover {
+    background-color: #f3f3f3;
+    border: 1px solid #999999;
+}
+.menu-custom .btn-menu-custom:active {
+    background-color: #e0e0e0;
+    border: 1px solid #cacaca;
+}
+.menu-custom .btn-menu-custom:focus {
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #6e6e6e;
+    box-shadow: inset 0 0 0 2px #6e6e6e;
+}
+.menu-custom .btn-menu-custom:disabled,
+.menu-custom .btn-menu-custom.disabled {
+    background-color: #eaeaea;
+    border: 1px solid #d5d5d5;
+}
+.gnb-right-list .gnb-dropdown .gnb-dropdown-content {
+    border-radius: 5px;
+}
+.gnb-dropdown.is-game-menu .gnb-dropdown-content,
+.gnb-dropdown.is-right .gnb-dropdown-content {
+    display: none;
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(-10%);
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-dropdown-content {
+    max-width: 463px;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-dropdown-content,
+.gnb-dropdown.is-right.is-open .gnb-dropdown-content {
+    display: block;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 101;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-dropdown-content {
+}
+
+.gnb-dropdown.is-right.menu-notice a.ic-navigation-alarm-line {
+    display: none;
+}
+.gnb-dropdown.is-right.menu-user .gnb-dropdown-content {
+    min-width: 236px;
+}
+.gnb-stove .menu-all.menu-all-pc {
+    display: block;
+}
+.gnb-stove .menu-all.menu-all-mobile {
+    display: none;
+}
+
+.gnb-dropdown.is-game-menu.is-open .gnb-dropdown-content {
+    overflow-y: auto;
+    width: max-content;
+    max-height: 552px;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-game-group-item .gnb-game-group-title {
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-game-group-item .gnb-game-list {
+    margin: 0 -24px;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-game-group-item .gnb-game-list + .gnb-game-group-title {
+    padding-top: 12px;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-game-list-link:last-child {
+    margin-left: 16px;
+    margin-right: 25px;
+}
+.gnb-dropdown.is-game-menu.is-open .gnb-game-list-link:first-child {
+    margin-left: 25px;
+    margin-right: 0;
+}
+.gnb-game-group-container .gnb-game-list {
+    position: relative;
+    display: flex;
+    padding: 12px 0;
+}
+.gnb-game-group-container .gnb-game-list:first-child {
+    padding-top: 0;
+}
+.gnb-game-group-container .gnb-game-list:last-child {
+    padding-bottom: 0;
+}
+.gnb-game-group-container .gnb-game-list:after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 76px);
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.gnb-game-group-container .gnb-game-list:last-child:after {
+    display: none;
+}
+.gnb-game-group-container .gnb-game-list-img {
+    flex-shrink: 0;
+    width: 64px;
+    margin-right: 12px;
+}
+.gnb-game-group-container .gnb-game-list-img img {
+    width: 64px !important;
+    border-radius: 8px;
+}
+.gnb-game-group-container .gnb-game-list-desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.gnb-game-group-container .gnb-game-list-desc .gnb-game-list-tit {
+    padding: 0;
+    line-height: 26px;
+    word-break: break-all;
+    font-size: 16px;
+    font-weight: bold;
+}
+.gnb-game-group-container .gnb-game-list-desc .gnb-game-list-tit a {
+    color: #1a1a1a;
+}
+.gnb-game-group-container .gnb-game-list-desc .gnb-game-list-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+.gnb-game-group-container .gnb-game-list-desc .gnb-game-list-btn-wrap .gnb-game-list-btn {
+    margin-right: 8px;
+}
+.gnb-game-group-container .gnb-game-list-desc .gnb-game-list-btn-wrap .gnb-game-list-btn:last-child {
+    margin-right: 0;
+}
+.gnb-stove .gnb-game-list-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: #3a3a3a;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+    font-weight: bold;
+    padding: 0 12px;
+    height: 28px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.gnb-stove .gnb-game-list-btn .btn-txt {
+    display: inline-block;
+    color: inherit;
+    /* width: 100%;
+    width: calc(100% - 1px); */
+    font-size: 13px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+/*bg-gray*/
+.gnb-game-list-btn {
+    background-color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    color: #3a3a3a;
+}
+.gnb-game-list-btn:hover {
+    background-color: #eaeaea;
+    border: 2px solid #eaeaea;
+}
+.gnb-game-list-btn:active {
+    background-color: #d5d5d5;
+    border: 2px solid #d5d5d5;
+}
+.gnb-game-list-btn:focus {
+    outline: none;
+    background-color: #eaeaea;
+    border: 2px solid #f5f5f5;
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.gnb-game-list-btn:disabled,
+.gnb-game-list-btn.disabled {
+    background: #eaeaea;
+    border-color: #eaeaea;
+}
+
+.gnb-inner .gnb-nav .gnb-text {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1a1a1a;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-right: 40px;
+    padding-top: 3px;
+}
+.gnb-inner .gnb-nav .gnb-dropdown .gnb-text {
+    margin-right: 0;
+}
+.gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text {
+    color: #fc6020;
+}
+.gnb-inner .gnb-right-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+}
+
+.gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-inner .gnb-right-list .gnb-text {
+    margin-left: 16px;
+    color: #1a1a1a;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link .gnb-game-list-text {
+    color: #1a1a1a;
+}
+.gnb-inner .gnb-right-list .gnb-text {
+    cursor: pointer;
+}
+.gnb-inner .gnb-right-list .gnb-text.menu-login {
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+.gnb-inner .gnb-right-list .gnb-text.is-underline:hover {
+    text-decoration: underline;
+}
+.gnb-inner .gnb-right-list .gnb-dropdown .gnb-dropdown-toggle {
+    display: flex;
+}
+.gnb-inner .gnb-right-list .gnb-dropdown-content {
+    right: 0;
+}
+.gnb-inner .gnb-right-list .gnb-dropdown .btn-user {
+    width: 36px;
+    height: 36px;
+}
+.gnb-inner .gnb-right-list .gnb-dropdown .btn-user .user-img {
+}
+.gnb-inner .gnb-right-list .gnb-dropdown .btn-user .user-img img {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 18px;
+}
+
+/* badge */
+.gnb-stove .gnb-badge {
+    position: absolute;
+    top: -8px;
+    right: -6px;
+    display: block;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 2px;
+    border-radius: 9px;
+    background-color: #ff5000;
+    text-align: center;
+    font-size: 10px;
+    color: #fff !important;
+    line-height: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.gnb-stove .gnb-game-badge {
+    display: inline-block;
+    height: auto;
+    padding: 3px 6px;
+    line-height: 15px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.gnb-game-list-item .gnb-game-list-link .gnb-game-badge,
+.gnb-stove .gnb-game-list-link:hover .gnb-game-badge {
+    color: #fff;
+}
+.gnb-stove .gnb-game-badge.bg-orange {
+    background-color: #ff5000;
+}
+.gnb-stove .gnb-game-badge.bg-blue {
+    background-color: #0086ef;
+}
+
+/* icons */
+.gnb-stove .gnb-icon {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    overflow: hidden;
+}
+.gnb-stove .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove .gnb-icon.ic-navigation-language-line,
+.gnb-stove .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove .gnb-icon.ic-navigation-search-line,
+.gnb-stove .gnb-icon.ic-navigation-cart-line {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+.gnb-stove .gnb-menu-icon.icon-sc {
+    left: 3px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icon_user-sc.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-icon.ic-navigation-apps-fill {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-apps-fill-enabled.svg);
+}
+.gnb-stove .gnb-dropdown.is-open .gnb-icon.ic-navigation-apps-fill {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-apps-fill-focused.svg);
+}
+/*.gnb-stove .gnb-icon.ic-navigation-apps-fill:focus, */
+.gnb-stove .gnb-icon.ic-navigation-apps-fill:hover {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-apps-fill-focused.svg) !important;
+}
+.gnb-stove .gnb-icon.ic-navigation-apps-fill:disabled {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-apps-fill-disabled.svg);
+}
+
+.gnb-stove .gnb-icon.ic-navigation-alarm-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-enabled.svg);
+    background-size: 100% 100%;
+}
+.gnb-stove .gnb-dropdown.is-open button.gnb-icon.ic-navigation-alarm-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-focused.svg);
+}
+/* .gnb-stove button.gnb-icon.ic-navigation-alarm-line:focus, */
+.gnb-stove button.gnb-icon.ic-navigation-alarm-line:hover {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-focused.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-alarm-line:disabled {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-disabled.svg);
+}
+
+.gnb-stove .gnb-icon.ic-navigation-language-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-enabled.svg);
+}
+.gnb-stove .gnb-dropdown.is-open .gnb-icon.ic-navigation-language-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-focused.svg);
+}
+/*.gnb-stove .gnb-icon.ic-navigation-language-line:focus ,*/
+.gnb-stove .gnb-icon.ic-navigation-language-line:hover {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-focused.svg) !important;
+}
+.gnb-stove .gnb-icon.ic-navigation-language-line:disabled {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-disabled.svg);
+}
+/*custom icon*/
+.gnb-stove .gnb-icon.ic-navigation-search-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-search-line-enabled.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-search-line:focus {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-search-line-focused.svg);
+}
+.gnb-stove .gnb-dropdown.is-open .gnb-icon.ic-navigation-search-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-search-line-focused.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-search-line:disabled {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-search-line-disabled.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-enabled.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-cart-line:focus {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-focused.svg);
+}
+.gnb-stove .gnb-dropdown.is-open .gnb-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-focused.svg);
+}
+.gnb-stove .gnb-icon.ic-navigation-cart-line:disabled {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-disabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-list .gnb-menu-link:focus .gnb-menu-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-link:focus .gnb-menu-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-focused.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-community-send-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-community-send-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-message-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-message-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-coupon-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-coupon-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-profile-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-profile-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-security-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-security-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-object-help-center-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-help-center-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-object-report-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-report-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-logout-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-logout-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-home-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-language-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-menu-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-board-timeline-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-board-timeline-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-link:disabled .gnb-menu-icon.ic-navigation-board-timeline-line,
+.gnb-stove .gnb-menu-link.is-disabled .gnb-menu-icon.ic-navigation-board-timeline-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-board-timeline-line-disabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-community-person-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-community-person-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-link:disabled .gnb-menu-icon.ic-community-person-line,
+.gnb-stove .gnb-menu-link.is-disabled .gnb-menu-icon.ic-community-person-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-community-person-line-disabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-alarm-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-link:focus .gnb-menu-icon.ic-navigation-alarm-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-focused.svg);
+}
+.gnb-stove .gnb-menu-link:disabled .gnb-menu-icon.ic-navigation-alarm-line,
+.gnb-stove .gnb-menu-link.is-disabled .gnb-menu-icon.ic-navigation-alarm-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-disabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-hardware-desktop-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-hardware-desktop-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-hardware-smartphone-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-hardware-smartphone-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-object-game-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-game-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-toonspoon-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-toonspoon-line-enabled.svg);
+}
+.gnb-stove .gnb-menu-icon.ic-navigation-ppool-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-ppool-line.svg);
+}
+
+.gnb-stove .gnb-icon.ic-navigation-home-line,
+.gnb-stove .gnb-icon.ic-navigation-community-line {
+    width: 20px;
+    height: 20px;
+}
+.gnb-stove .gnb-icon.ic-navigation-home-line ~ span,
+.gnb-stove .gnb-icon.ic-navigation-community-line ~ span {
+    display: none;
+}
+.gnb-stove .gnb-icon.ic-navigation-home-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-enabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:hover .gnb-icon.ic-navigation-home-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-hover.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:active .gnb-icon.ic-navigation-home-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-pressed.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:focus .gnb-icon.ic-navigation-home-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-focused.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:disabled .gnb-icon.ic-navigation-home-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-disabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-icon.ic-navigation-community-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-community-line-enabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:hover .gnb-icon.ic-navigation-community-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-community-line-hover.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:active .gnb-icon.ic-navigation-community-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-community-line-pressed.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:focus .gnb-icon.ic-navigation-community-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-community-line-focused.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-game-list-link:disabled .gnb-icon.ic-navigation-community-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-community-line-disabled.svg) no-repeat 0 0;
+}
+
+.gnb-stove .gnb-icon.ic-control-web-link-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-web-link-line-enabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:hover .gnb-icon.ic-control-web-link-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-web-link-line-hover.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:active .gnb-icon.ic-control-web-link-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-web-link-line-pressed.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:focus .gnb-icon.ic-control-web-link-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-web-link-line-focused.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:disabled .gnb-icon.ic-control-web-link-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-web-link-line-disabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-icon.ic-control-arrow-right-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-right-line-enabled.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:hover .gnb-icon.ic-control-arrow-right-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-right-line-hover.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:active .gnb-icon.ic-control-arrow-right-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-right-line-pressed.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:focus .gnb-icon.ic-control-arrow-right-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-right-line-focused.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-menu-link:disabled .gnb-icon.ic-control-arrow-right-line {
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-right-line-disabled.svg) no-repeat 0 0;
+}
+/* mobile only */
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-hardware-desktop-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-hardware-desktop-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-navigation-ppool-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-ppool-line-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-hardware-smartphone-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-hardware-smartphone-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-object-game-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-game-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-navigation-toonspoon-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-toonspoon-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-navigation-coupon-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-coupon-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-navigation-message-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-message-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-navigation-security-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-security-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-object-help-center-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-help-center-line-enabled-m.svg);
+}
+.gnb-stove .mobile-menu .gnb-menu-icon.ic-object-report-line {
+    background-image: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-report-line-enabled-m.svg);
+}
+
+/* tooltip */
+.gnb-stove .gnb-icon .gnb-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 8px;
+    padding: 4px 6px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background-color: #3a3a3a;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+}
+.gnb-stove .gnb-icon:hover .gnb-tooltip {
+    display: block;
+    opacity: 1;
+}
+.gnb-stove .gnb-dropdown.is-open.is-game-menu.game-all .gnb-icon .gnb-tooltip,
+.gnb-stove .gnb-dropdown.is-right.is-open .gnb-icon .gnb-tooltip {
+    display: none;
+    opacity: 0;
+}
+
+/* game group */
+.gnb-stove .gnb-game-group {
+    display: flex;
+    flex-direction: row;
+}
+.gnb-stove .gnb-game-group-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 358px;
+    max-width: 358px;
+    padding-bottom: 24px;
+    max-height: 576px;
+    overflow-y: auto;
+}
+.gnb-stove .gnb-game-group .gnb-game-group-wrap:first-child:after {
+    display: none;
+}
+.gnb-stove .gnb-game-group-wrap:after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #dddddd;
+    width: 1px;
+    height: calc(100% - 48px);
+    transform: translateY(-50%);
+}
+.gnb-stove .gnb-game-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    list-style: none;
+}
+.gnb-stove .gnb-game-list-item:hover {
+    background-color: #f5f5f5;
+}
+.gnb-stove .gnb-game-list-item > a {
+    align-items: center;
+}
+.gnb-stove .gnb-game-group-item .gnb-game-group-title {
+    display: block;
+    margin-left: 32px;
+    padding: 24px 0 9px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+.gnb-stove .gnb-game-group-item {
+}
+.gnb-stove .gnb-game-group-item .gnb-game-list {
+    margin: 0;
+    padding: 0;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link {
+    min-width: 20px;
+    color: #1a1a1a;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link .gnb-icon {
+    display: flex;
+    align-items: center;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link-wrap {
+    /*.display: flex;*/
+
+    flex-shrink: 1;
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    vertical-align: middle;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link-wrap .gnb-game-list-text {
+    line-height: 23px;
+    vertical-align: top;
+    display: inline-block;
+    /*border:1px solid green;*/
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link-wrap .gnb-stove-badge-wrap {
+    /*border:1px solid red !important;*/
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    padding-top: 4px;
+    /*border:1px solid green;*/
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link-wrap .gnb-stove-badge-wrap .gnb-stove-badge {
+    white-space: nowrap;
+    line-height: 16px;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link-wrap .gnb-stove-badge-wrap .gnb-stove-badge:first-child {
+    margin-left: 0;
+}
+.gnb-stove .gnb-game-list-text {
+    display: inline-block;
+    margin-right: 0;
+    padding: 0 4px 0 0;
+    /*max-width: 100%;*/
+    font-weight: normal;
+    /*text-overflow: ellipsis;*/
+    /*vertical-align: inherit;*/
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*flex-shrink: 1;*/
+    /*word-break: break-word;*/
+    /*word-wrap: break-word;*/
+    /*white-space: normal;*/
+}
+.gnb-stove .gnb-game-list-link-wrap .gnb-game-badge-wrap {
+    display: block;
+    flex-shrink: 0;
+    /*margin-top: -2px;*/
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link:first-child {
+    flex-grow: 1;
+    margin-left: 32px;
+    padding: 9px 5px 9px 0;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link:last-child {
+    margin-left: 16px;
+    margin-right: 24px;
+}
+.gnb-stove .gnb-game-list-item .gnb-game-list-link:first-child {
+    margin-left: 32px;
+}
+.gnb-stove .gnb-game-list-link:nth-child(2) {
+    flex-shrink: 0;
+    padding-left: 0;
+    text-align: right;
+    white-space: nowrap;
+    width: 20px;
+}
+
+.gnb-stove .gnb-game-list-link:nth-child(2),
+.gnb-stove .gnb-game-list-link:nth-child(3) {
+    align-self: flex-start;
+    padding-top: 11px;
+}
+/*notice*/
+.gnb-stove .gnb-notice {
+    text-align: left;
+    min-width: 440px;
+    min-height: 437px;
+    margin-top: 0px;
+    padding: 0;
+    font-size: 12px;
+    background-color: #fff;
+    /* box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.gnb-stove .gnb-notice-header {
+    position: relative;
+    margin-bottom: 0;
+}
+.gnb-stove .gnb-notice-header .gnb-icon {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    text-indent: -1000em;
+    opacity: 0.2;
+}
+.gnb-stove .gnb-notice-header .gnb-icon:hover,
+.gnb-stove .gnb-notice-header .gnb-icon:focus {
+    opacity: 1;
+}
+.gnb-stove .gnb-notice-title {
+    min-height: 52px;
+    margin-left: 24px;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: flex-start;
+    -ms-flex-pack: center;
+}
+.gnb-stove .gnb-notice-content {
+    height: 316px;
+    overflow: auto;
+}
+.gnb-stove .gnb-notice-footer {
+    height: 60px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 16px 0 0 0;
+    position: relative;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.gnb-stove .gnb-notice-footer::before {
+    /*content: '';*/
+    /*height: 1px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 24px;*/
+    /*right: 24px;*/
+    /*background: #ebebeb;*/
+}
+.gnb-stove .gnb-notice-content + .gnb-notice-footer {
+    padding-bottom: 0;
+}
+.gnb-stove .gnb-notice-empty {
+    line-height: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.gnb-stove .gnb-notice .gnb-tab {
+    /* margin: 20px 0 0; */
+}
+.gnb-stove .gnb-tab {
+    display: table;
+    width: 100%;
+    white-space: normal;
+}
+/*.gnb-stove .gnb-tab-item {*/
+/*  position: relative;*/
+/*  display: table-cell;*/
+/*  width: 50%;*/
+/*  padding: 15px 10px 15px 10px;*/
+/*  font-size: 14px;*/
+/*  color: #333;*/
+/*  text-align: center;*/
+/*  background-color: #fff;*/
+/*  border-top: 1px solid #dddddd;*/
+/*  border-bottom: 1px solid #dddddd;*/
+/*  cursor: pointer;*/
+/*  white-space: nowrap;*/
+/*}*/
+
+.gnb-stove .gnb-tab-item {
+    position: relative;
+    display: table-cell;
+    width: 50%;
+    height: 48px;
+    padding: 0 10px 0 10px;
+    font-size: 15px;
+    color: #1a1a1a;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.gnb-stove .gnb-tab-item.-active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+.gnb-stove .gnb-tab-item:first-child.-active {
+    border-right: none;
+}
+.gnb-stove .gnb-tab-item:last-child.-active {
+    border-left: none;
+}
+.gnb-stove .gnb-tab-item.-active:before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ff5000;
+}
+.gnb-stove .gnb-tab-count {
+    font-weight: bold;
+    color: #ff5000 !important;
+}
+.gnb-stove .gnb-text-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gnb-stove .gnb-text-list-item {
+    padding: 13px 0 13px 25px;
+    position: relative;
+    /*border-top: 1px solid #f2f2f2;*/
+}
+.gnb-stove .gnb-text-list-item .gnb-text-list-link {
+    position: relative;
+    z-index: 1;
+}
+.gnb-stove .gnb-notice .gnb-text-list-item:not(:first-of-type):before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    display: block;
+    margin-left: 24px;
+    margin-right: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+.gnb-stove .gnb-text-list-item:hover::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f3f3f3;
+}
+.gnb-stove .gnb-text-list-item.none-hover:hover::after {
+    display: none;
+}
+
+.gnb-stove .gnb-text-list-item:first-child {
+    border-top: none;
+}
+.gnb-stove .gnb-text-list-item.none-hover {
+    padding: 0;
+}
+.gnb-stove .gnb-text-list-item.none-hover:hover {
+    background: none;
+}
+
+.gnb-stove .gnb-notice-content .gnb-text-list-item {
+    padding: 0;
+}
+.gnb-stove .gnb-notice-content .gnb-text-list-link {
+    display: block;
+    padding: 12px 0 12px 61px;
+}
+.gnb-stove .gnb-notice-content .gnb-text-list-img {
+    top: 14px;
+    left: 25px;
+}
+.gnb-stove .gnb-notice-content .gnb-text-list-link .gnb-text-list-badge {
+    left: 13px;
+    top: 27px;
+}
+.gnb-stove .gnb-notice-content .gnb-text-list .gnb-notice-empty {
+    min-height: 316px;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.gnb-stove .gnb-text-list-link {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    min-height: 28px;
+    color: #666;
+    line-height: 1.2;
+    white-space: normal;
+}
+.gnb-stove .gnb-text-list-link .gnb-text-list-badge {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ff5000;
+    z-index: 10;
+}
+.gnb-stove .gnb-text-list-link:hover .gnb-text-list-text {
+    /*text-decoration: underline;*/
+    color: #333;
+}
+.gnb-stove .gnb-text-list-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 !important;
+}
+.gnb-stove .gnb-text-list-text {
+    margin: 0 0 1px 0;
+    line-height: 20px;
+    font-size: 14px;
+    padding-right: 25px;
+    color: #6e6e6e;
+}
+.gnb-stove .gnb-text-list-text .gnb-icon {
+    margin: -2px 0 0 4px;
+}
+.gnb-stove .gnb-text-list-link:hover .gnb-text-list-small {
+    color: #999;
+}
+.gnb-stove .gnb-text-list-small {
+    font-size: 13px;
+    line-height: 19px;
+    color: #999;
+}
+.gnb-stove .gnb-text-list-more {
+    color: #3a3a3a;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+/*.gnb-stove .gnb-text-list-more:focus,*/
+/*.gnb-stove .gnb-text-list-more:hover {*/
+/*  color: #333;*/
+/*}*/
+/*gnb-menu*/
+.gnb-stove .gnb-menu {
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.01), 0 0 1px 0 rgba(0, 0, 0, 0.01);
+    background-color: #fff;
+    font-size: 14px;
+}
+.gnb-stove .gnb-menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+.gnb-stove .gnb-menu-list.lang-wrap {
+    max-width: 162px;
+    height: 416px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*
+    display: flex;
+    align-content: start;
+    justify-content: start;
+    flex-flow: column wrap;*/
+}
+.gnb-stove .gnb-menu-list.lang-wrap .gnb-menu-item {
+    position: relative;
+    min-width: 162px;
+    max-width: 162px;
+}
+/*
+.gnb-stove .gnb-menu-list.lang-wrap .gnb-menu-item:nth-child(n + 2):nth-child(10n + 1):before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 416px;
+  margin-left: -1px;
+}
+.gnb-stove .gnb-menu-list.lang-wrap .gnb-menu-item:nth-child(n + 2):nth-child(10n + 1):before {
+  background-color: #f0f2f7;
+}
+*/
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    cursor: pointer;
+}
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link > span:first-child {
+    flex-shrink: 0;
+    width: 20px;
+}
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link > span:nth-child(2) {
+    flex-grow: 1;
+}
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link > span.gnb-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+}
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link > span.gnb-icon.ic-control-web-link-line,
+.gnb-stove .gnb-menu-list.is-icon .gnb-menu-link > span.gnb-icon.ic-control-arrow-right-line {
+    width: 16px;
+    height: 16px;
+}
+.gnb-stove .gnb-menu-list.is-select .gnb-menu-link {
+    padding-left: 40px;
+}
+.gnb-stove .gnb-menu-list.is-select .gnb-menu-link > span:nth-child(2) {
+    display: block;
+    flex-grow: 1;
+    width: 20px;
+}
+.gnb-stove .gnb-menu-list.is-select .gnb-menu-link > * {
+    flex-grow: 1;
+}
+.gnb-stove .gnb-menu-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 12px 16px 12px 16px;
+    color: #666;
+    line-height: 1;
+    box-sizing: border-box;
+}
+.gnb-stove .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove .gnb-menu-link:hover > span,
+.gnb-stove .gnb-menu-link:hover {
+    color: #3a3a3a;
+}
+.gnb-stove .gnb-menu-link:hover .gnb-menu-text.is-orange {
+    color: #ff5000;
+}
+
+.gnb-stove .gnb-menu-link .gnb-icon {
+    flex-shrink: 0;
+    width: 16px;
+    margin-left: 6px;
+}
+.gnb-stove .gnb-menu-list.is-select .gnb-menu-link:hover:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-check-line-gray.svg) no-repeat 0 0;
+    transform: translateY(-50%);
+}
+.gnb-stove .gnb-menu-list.is-select .gnb-menu-link.is-active:hover:after,
+.gnb-stove .gnb-menu-link.is-active:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-check-line.svg) no-repeat 0 0;
+    transform: translateY(-50%);
+}
+.gnb-stove .gnb-menu-link:hover,
+.gnb-stove .gnb-menu-link:active,
+.gnb-stove .gnb-menu-link:focus {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.gnb-stove .gnb-menu-link.is-active {
+    background-color: #f5f5f5;
+    color: #3a3a3a;
+}
+.gnb-stove .gnb-menu-text.is-orange {
+    color: #ff5000;
+    flex-grow: 1;
+}
+.gnb-stove .gnb-menu-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    margin-top: -1px;
+    background-size: auto 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.gnb-stove .m-menu-user-menu .gnb-menu-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-size: auto 24px;
+}
+
+.gnb-stove .gnb-spacer {
+    margin-top: 8px;
+}
+.gnb-stove .gnb-spacer::before {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: calc(100% - 48px);
+    height: 1px;
+    transform: translateX(-50%);
+    background: #eee;
+}
+.gnb-stove .gnb-user {
+    position: relative;
+    display: block;
+    max-width: 190px;
+    margin: 8px 24px;
+    height: 44px;
+    overflow: hidden;
+    color: #333;
+}
+.gnb-stove .gnb-user-link {
+    color: #333;
+}
+.gnb-stove .gnb-user > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.gnb-stove .gnb-user img {
+    margin-right: 10px;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50%;
+}
+.gnb-stove .gnb-user-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    max-height: 35px;
+    padding-left: 53px;
+    line-height: 1.2;
+
+    /* line-clamp */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+.gnb-stove .gnb-user .gnb-user-text:hover {
+    text-decoration: underline;
+}
+.gnb-stove .gnb-cash {
+    position: relative;
+    margin: 12px 24px;
+    line-height: 15px;
+}
+.gnb-stove .gnb-cash dl {
+    margin-left: 5px;
+}
+.gnb-stove .gnb-cash dt,
+.gnb-stove .gnb-cash dd {
+    margin: 0;
+}
+.gnb-stove .gnb-cash dt {
+    margin: 4px 0;
+    font-size: 12px;
+    color: #666;
+}
+.gnb-stove .gnb-cash dd {
+    line-height: 15px;
+    font-size: 15px;
+    color: #ff5000;
+}
+
+.gnb-stove .gnb-cash-btn {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    padding-left: 4px;
+    padding: 0 10px;
+    height: 24px;
+    border-radius: 18px;
+    border: solid 1px #d5d5d5;
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    line-height: 23px;
+}
+.gnb-stove .gnb-cash-btn:hover,
+.gnb-stove .gnb-cash-btn:focus {
+    border: 1px solid #666;
+}
+.gnb-stove .gnb-download {
+    display: inline-block;
+    padding: 0 16px;
+    height: 100%;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 52px;
+    background-color: #494f7d;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.gnb-stove .gnb-download:hover {
+    background-color: #6372e2;
+}
+.gnb-stove .gnb-download img {
+    position: relative;
+    top: -1px;
+    width: 16px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+.gnb-stove .gnb-icon.is-external-link {
+    width: 16px;
+    height: 16px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icon_external-link-gray.svg) no-repeat 0 0;
+}
+.gnb-stove .gnb-icon.is-depth-menu-link {
+    width: 16px;
+    height: 16px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icon_depth-menu-gray.svg) no-repeat 0 0;
+}
+/* gnb-bluegray-theme */
+.gnb-stove.gnb-bluegray-theme {
+    background-color: #1f2128;
+}
+
+/* gnb-dark-theme */
+
+.gnb-stove.gnb-dark-theme .gnb-icon.is-plus,
+.gnb-stove.gnb-dark-mini .gnb-icon.is-plus,
+.gnb-stove.gnb-dark-mix.gnb-icon.is-plus,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.is-plus {
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-dark-normal2.svg) no-repeat 0 0;
+}
+.gnb-stove.gnb-dark-theme .gnb-icon.is-plus:hover,
+.gnb-stove.gnb-dark-mini .gnb-icon.is-plus:hover,
+.gnb-stove.gnb-dark-mix .gnb-icon.is-plus:hover,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.is-plus:hover {
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-dark-hover2.svg) no-repeat 0 0;
+}
+
+.gnb-stove.gnb-dark-theme .gnb-text-list-item:not(:first-of-type):before,
+.gnb-stove.gnb-dark-mini .gnb-text-list-item:not(:first-of-type):before,
+.gnb-stove.gnb-dark-mix .gnb-text-list-item:not(:first-of-type):before,
+.gnb-stove.gnb-dark-mix-mini .gnb-text-list-item:not(:first-of-type):before {
+    background: #333;
+}
+
+.gnb-stove.gnb-dark-theme .gnb-text-list-item:hover::after,
+.gnb-stove.gnb-dark-mini .gnb-text-list-item:hover::after,
+.gnb-stove.gnb-dark-mix .gnb-text-list-item:hover::after,
+.gnb-stove.gnb-dark-mix-mini .gnb-text-list-item:hover::after {
+    background: #333;
+}
+.gnb-stove.gnb-dark-theme,
+.gnb-stove.gnb-dark-mini,
+.gnb-stove.gnb-dark-mix,
+.gnb-stove.gnb-dark-mix-mini {
+    background-color: #1a1a1a;
+}
+.gnb-stove.gnb-dark-theme .gnb-game-list-desc .gnb-game-list-tit a,
+.gnb-stove.gnb-dark-mini .gnb-game-list-desc .gnb-game-list-tit a,
+.gnb-stove.gnb-dark-mix .gnb-game-list-desc .gnb-game-list-tit a,
+.gnb-stove.gnb-dark-mix-mini .gnb-game-list-desc .gnb-game-list-tit a {
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-game-group-item .gnb-game-group-title,
+.gnb-stove.gnb-dark-mini .gnb-game-group-item .gnb-game-group-title,
+.gnb-stove.gnb-dark-mix .gnb-game-group-item .gnb-game-group-title,
+.gnb-stove.gnb-dark-mix-mini .gnb-game-group-item .gnb-game-group-title {
+    color: #fff;
+}
+/* dark-theme 공통 */
+.gnb-stove.gnb-bluegray-theme .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-theme .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-mix .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-nav .gnb-text {
+    color: #fff;
+}
+.gnb-stove.gnb-bluegray-theme .gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text,
+.gnb-stove.gnb-dark-theme .gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text,
+.gnb-stove.gnb-dark-mix .gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-nav .is-game-menu.is-open .gnb-text {
+    color: #fc6020;
+}
+.gnb-stove.gnb-bluegray-theme .gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-theme .gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mix .gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-text {
+    color: #fff;
+}
+.gnb-stove.gnb-bluegray-theme .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-theme .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-mix .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-alarm-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-alarm-line-enabled-w.svg);
+}
+.gnb-stove.gnb-bluegray-theme .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-theme .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-mix .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-language-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-enabled-w.svg);
+}
+.gnb-stove.gnb-bluegray-theme .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-theme .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-mix .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-apps-fill {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-apps-fill-enabled-w.svg);
+}
+.gnb-stove.gnb-bluegray-theme .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-theme .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-mix .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-search-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-search-line-enabled-w.svg);
+}
+.gnb-stove.gnb-bluegray-theme .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-theme .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mix .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-enabled-w.svg);
+}
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom:hover,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom:hover,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom:hover,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom:hover,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+}
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom:active,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom:active,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom:active,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom:active,
+.gnb-stove.gnb-dark-mini.menu-custom .btn-menu-custom:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+}
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom:focus,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom:focus,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom:focus,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom:focus,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom:disabled,
+.gnb-stove.gnb-bluegray-theme .menu-custom .btn-menu-custom.disabled,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom:disabled,
+.gnb-stove.gnb-dark-theme .menu-custom .btn-menu-custom.disabled,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom:disabled,
+.gnb-stove.gnb-dark-mix .menu-custom .btn-menu-custom.disabled,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom:disabled,
+.gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom.disabled,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom:disabled,
+.gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom.disabled {
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.gnb-stove.bluegray-theme .menu-custom:after,
+.gnb-stove.gnb-dark-theme .menu-custom:after,
+.gnb-stove.gnb-dark-mix .menu-custom:after,
+.gnb-stove.gnb-dark-mix-mini .menu-custom:after,
+.gnb-stove.gnb-dark-mini .menu-custom:after {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+/*
+.gnb-stove.gnb-bluegray-theme .menu-custom:after,
+.gnb-stove.gnb-dark-theme .menu-custom:after {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.gnb-stove.gnb-bluegray-theme .btn-menu-custom,
+.gnb-stove.gnb-dark-theme .btn-menu-custom {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}*/
+.gnb-stove.gnb-bluegray-theme .stove-service-txt,
+.gnb-stove.gnb-dark-theme .stove-service-txt,
+.gnb-stove.gnb-dark-mix .stove-service-txt,
+.gnb-stove.gnb-dark-mix-mini .stove-service-txt,
+.gnb-stove.gnb-dark-mini .stove-service-txt {
+    color: #fff;
+}
+
+/* dark-theme */
+.gnb-stove.gnb-dark-theme,
+.gnb-stove.gnb-dark-mini {
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-cash dt,
+.gnb-stove.gnb-dark-mini .gnb-cash dt {
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-dropdown .gnb-dropdown-content,
+.gnb-stove.gnb-dark-mini .gnb-dropdown .gnb-dropdown-content {
+    background-color: #222;
+}
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-game-list-btn,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-game-list-btn {
+    background-color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-stove.gnb-dark-theme .gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-text {
+    color: #fff;
+}
+
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-game-list-item:hover,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-game-list-item:hover,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-game-list-item:hover,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-game-list-item:hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-game-list-item:hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-game-list-item:hover {
+    background-color: #333;
+}
+.gnb-stove.gnb-dark-theme .gnb-game-list-item .gnb-game-list-link,
+.gnb-stove.gnb-dark-mini .gnb-game-list-item .gnb-game-list-link {
+    color: #fff;
+}
+
+.gnb-stove.gnb-dark-theme .gnb-game-list-item .gnb-game-list-link .gnb-game-list-text,
+.gnb-stove.gnb-dark-mini .gnb-game-list-item .gnb-game-list-link .gnb-game-list-text {
+    color: #ccc;
+}
+
+.gnb-stove.gnb-dark-theme .gnb-game-group-wrap:after,
+.gnb-stove.gnb-dark-mini .gnb-game-group-wrap:after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.gnb-stove.gnb-dark-theme .gnb-notice,
+.gnb-stove.gnb-dark-mini .gnb-notice {
+    background-color: #222;
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-notice-title,
+.gnb-stove.gnb-dark-mini .gnb-notice-title {
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-tab-item,
+.gnb-stove.gnb-dark-mini .gnb-tab-item {
+    background-color: #222;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #333;
+    color: #fff;
+}
+/*.gnb-stove.gnb-dark-theme .gnb-text-list-item,*/
+/*.gnb-stove.gnb-dark-mini .gnb-text-list-item {*/
+/*  border-top: 1px solid #333;*/
+/*}*/
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-text-list-item:hover,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-text-list-item:hover,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-text-list-item:hover,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-text-list-item:hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-text-list-item:hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-text-list-item:hover {
+    /*background-color: #333;*/
+}
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-text-list-item.none-hover,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-text-list-item.none-hover,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-text-list-item.none-hover,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-text-list-item.none-hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-text-list-item.none-hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-text-list-item.none-hover {
+    padding: 0;
+}
+
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-text-list-item.none-hover:hover,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-text-list-item.none-hover:hover,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-text-list-item.none-hover:hover,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-text-list-item.none-hover:hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-text-list-item.none-hover:hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-text-list-item.none-hover:hover {
+    background: none;
+}
+.gnb-stove.gnb-dark-theme .gnb-text-list-text,
+.gnb-stove.gnb-dark-mini .gnb-text-list-text,
+.gnb-stove.gnb-dark-mix .gnb-text-list-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-text-list-text {
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-text-list-link,
+.gnb-stove.gnb-dark-mini .gnb-text-list-link {
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-text-list-link:hover .gnb-text-list-text,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-text-list-link:hover .gnb-text-list-text,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-text-list-link:hover .gnb-text-list-text,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-text-list-link:hover .gnb-text-list-text,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-text-list-link:hover .gnb-text-list-text,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-text-list-link:hover .gnb-text-list-text {
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-notice-footer,
+.gnb-stove.gnb-dark-mini .gnb-notice-footer {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.gnb-stove.gnb-dark-theme .gnb-text-list-more,
+.gnb-stove.gnb-dark-mini .gnb-text-list-more {
+    color: #999;
+}
+
+.gnb-stove.gnb-dark-theme .gnb-notice-empty,
+.gnb-stove.gnb-dark-mini .gnb-notice-empty {
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-menu,
+.gnb-stove.gnb-dark-mini .gnb-menu {
+    background-color: #222;
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-cash-btn,
+.gnb-stove.gnb-dark-mini .gnb-cash-btn {
+    background-color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-menu-link,
+.gnb-stove.gnb-dark-mini .gnb-menu-link {
+    color: #ccc;
+}
+
+.gnb-stove.gnb-dark-theme .is-icon .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-mini .is-icon .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-menu-link:hover .gnb-menu-text,
+.gnb-stove.gnb-dark-theme .is-icon .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-mini .is-icon .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-menu-link:hover > span,
+.gnb-stove.gnb-dark-theme .is-icon .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-mini .is-icon .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-theme .gnb-notice .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-mini .gnb-notice .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-menu-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-menu-link:hover,
+.gnb-stove.gnb-dark-theme .lang-wrap .gnb-menu-link.is-active,
+.gnb-stove.gnb-dark-mini .lang-wrap .gnb-menu-link.is-active,
+.gnb-stove.gnb-dark-theme .gnb-game-group.pc-menu .gnb-menu-link.is-active,
+.gnb-stove.gnb-dark-mini .gnb-game-group.pc-menu .gnb-menu-link.is-active {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+.gnb-stove.gnb-dark-theme .gnb-user-text,
+.gnb-stove.gnb-dark-mini .gnb-user-text {
+    color: #ccc;
+}
+.gnb-stove.gnb-dark-theme .gnb-spacer::before,
+.gnb-stove.gnb-dark-mini .gnb-spacer::before {
+    background-color: #333;
+}
+.gnb-stove.gnb-dark-theme .gnb-menu-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mini .gnb-menu-icon.ic-navigation-cart-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-cart-line-enabled-w.svg);
+}
+.gnb-stove.gnb-dark-theme .gnb-menu-icon.ic-navigation-home-line,
+.gnb-stove.gnb-dark-mini .gnb-menu-icon.ic-navigation-home-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-home-line-enabled.svg);
+}
+.gnb-stove.gnb-dark-theme .gnb-menu-icon.ic-community-send-line,
+.gnb-stove.gnb-dark-mini .gnb-menu-icon.ic-community-send-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-community-send-line-enabled-w.svg);
+}
+
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-navigation-message-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-navigation-message-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-message-line-enabled-w.svg);
+    /* border:1px solid green !important;*/
+}
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-navigation-coupon-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-navigation-coupon-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-coupon-line-enabled-w.svg);
+}
+
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-navigation-profile-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-navigation-profile-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-profile-line-enabled-w.svg);
+}
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-navigation-security-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-navigation-security-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-security-line-enabled-w.svg);
+}
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-object-help-center-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-object-help-center-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-help-center-line-enabled-w.svg);
+}
+.gnb-stove.gnb-dark-theme .menu-user .gnb-menu-icon.ic-object-report-line,
+.gnb-stove.gnb-dark-mini .menu-user .gnb-menu-icon.ic-object-report-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-object-report-line-enabled-w.svg);
+}
+.gnb-stove.gnb-dark-theme .gnb-menu-icon.ic-navigation-logout-line,
+.gnb-stove.gnb-dark-mini .gnb-menu-icon.ic-navigation-logout-line {
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-logout-line-enabled-w.svg);
+}
+
+/*mini*/
+.gnb-stove.gnb-default-mini .gnb-badge,
+.gnb-stove.gnb-dark-mini .gnb-badge,
+.gnb-stove.gnb-dark-mix-mini .gnb-badge {
+    top: 0;
+    right: 0;
+    font-size: 0;
+    min-width: 5px;
+    width: 5px;
+    height: 5px;
+}
+.gnb-stove.gnb-default-mini,
+.gnb-stove.gnb-dark-mini,
+.gnb-stove.gnb-dark-mix-mini {
+    height: 48px;
+    box-sizing: border-box;
+}
+.gnb-stove.gnb-default-mini .logo-stove.stove,
+.gnb-stove.gnb-default-mini .logo-stove.stove-mini,
+.gnb-stove.gnb-dark-mini .logo-stove.stove,
+.gnb-stove.gnb-dark-mini .logo-stove.stove-mini,
+.gnb-stove.gnb-dark-mix-mini .logo-stove.stove,
+.gnb-stove.gnb-dark-mix-mini .logo-stove.stove-mini {
+    width: 71px;
+    height: 16px;
+    background-size: cover;
+}
+
+.gnb-stove.gnb-default-mini .logo-stove img {
+    height: 16px;
+    width: auto;
+}
+.gnb-stove.gnb-default-mini .logo-service.indie,
+.gnb-stove.gnb-dark-mini .logo-service.indie,
+.gnb-stove.gnb-dark-mix-mini .logo-service.indie {
+    width: 46px;
+    height: 12px;
+    background-size: cover;
+}
+.gnb-stove.gnb-default-mini .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-nav .gnb-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-nav .gnb-text {
+    font-size: 12px;
+}
+.gnb-stove.gnb-default-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user {
+    width: 24px;
+    height: 24px;
+}
+.gnb-stove.gnb-default-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user img,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user img,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-right-list .gnb-dropdown .btn-user img {
+    width: 24px !important;
+    height: 24px !important;
+}
+.gnb-stove.gnb-default-mini .gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mini .gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-inner .gnb-right-list .gnb-text,
+.gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-right-list .gnb-dropdown,
+.gnb-inner .gnb-right-list .gnb-text {
+    font-size: 12px;
+}
+.gnb-stove.gnb-default-mini .gnb-inner {
+    margin: 0 auto;
+    width: auto;
+}
+
+.gnb-stove.gnb-default-mini .gnb-dropdown .gnb-dropdown-content,
+.gnb-stove.gnb-dark-mini .gnb-dropdown .gnb-dropdown-content,
+.gnb-stove.gnb-dark-mix-mini .gnb-dropdown .gnb-dropdown-content {
+    top: 0;
+}
+.gnb-stove.gnb-default-mini .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-default-mini .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-default-mini .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-default-mini .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-default-mini .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-mini .gnb-icon.ic-navigation-cart-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-alarm-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-language-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-apps-fill,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-search-line,
+.gnb-stove.gnb-dark-mix-mini .gnb-icon.ic-navigation-cart-line {
+    width: 24px;
+    height: 24px;
+}
+
+/* 모바일 전체메뉴 */
+.gnb-stove .gnb-game-group.mobile-menu,
+.gnb-stove.gnb-default-rwd .gnb-game-group.mobile-menu {
+    opacity: 0;
+    display: none;
+}
+.gnb-stove .gnb-game-group.mobile-menu .menu-dimmed,
+.gnb-stove.gnb-default-rwd .gnb-game-group.mobile-menu .menu-dimmed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: default !important;
+}
+.m-menu-user-menu {
+}
+.m-menu-user-menu > ul {
+    display: flex;
+    flex-direction: row;
+}
+.m-menu-user-menu li {
+    overflow: hidden;
+    flex: 1;
+}
+/* 모바일 s 에서 사용되는 팝업용 */
+.m-menu-all-container .m-menu-all-container-wrap {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    box-sizing: border-box;
+    position: relative;
+}
+.m-menu-all-container .m-menu-all-container-wrap.logout-menu-fix {
+    min-height: 100vh;
+}
+.m-menu-all-container ul {
+    padding: 0;
+    margin: 0;
+}
+.m-menu-all-container .gnb-game-list {
+    margin: 0;
+    padding: 0;
+}
+.m-menu-all-container ul.m-menu-list-group-item {
+    margin: 12px 16px;
+    padding: 8px 0 4px 0;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-link {
+}
+.m-menu-all-container .m-menu-list {
+    padding-top: 12px;
+}
+.m-menu-all-container .m-menu-list-group-item li {
+    min-height: 49px;
+}
+.m-menu-all-container .m-menu-list-group-item li .gnb-menu-link.gnb-spacer {
+    margin: 0;
+}
+.gnb-menu-text {
+}
+/*.m-menu-all-container ul .m-menu-list-group-depth:after {*/
+/*  content: '';*/
+/*  clear: both;*/
+/*  display: block;*/
+/*  width: 16px;*/
+/*  height: 16px;*/
+/*  background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-down-line.svg) no-repeat 0 0;*/
+/*  position: absolute;*/
+/*  top: 15px;*/
+/*  right: 28px;*/
+/*}*/
+.m-menu-all-container ul .m-menu-list-group-depth .gnb-menu-link:after {
+    content: '';
+    clear: both;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-arrow-down-line.svg) no-repeat 0 0;
+    position: absolute;
+    top: 13px;
+    right: 28px;
+}
+/*.m-menu-all-container ul .m-menu-list-group-depth.menu-active:after {*/
+/*  transform: rotate(-180deg);*/
+/*}*/
+
+.m-menu-all-container ul .m-menu-list-group-depth.menu-active .gnb-menu-link:after {
+    transform: rotate(-180deg);
+}
+
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-link {
+    padding-left: 24px;
+    padding-right: 24px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    color: #1a1a1a;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-link .gnb-menu-text {
+    flex: 1;
+    padding-top: 1px;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+    align-self: start;
+    text-align: left;
+    font-weight: normal;
+}
+.m-menu-all-container ul.m-menu-list-group-item ~ .m-menu-list-group-item {
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+.m-menu-all-container ul.m-menu-list-group-item .m-menu-list-depth {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-depth-link {
+    display: flex;
+    align-items: center;
+    padding: 7px 0 7px 54px;
+    background: none;
+    border: 0;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-depth-link .gnb-game-img {
+    border-radius: 8px;
+    width: 40px !important;
+    height: 40px !important;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-depth-link .gnb-menu-depth-text {
+    padding-left: 12px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3a3a3a;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.m-menu-all-container ul.m-menu-list-group-item .gnb-menu-depth-link .gnb-menu-depth-text .gnb-stove-badge {
+    white-space: nowrap;
+}
+.m-menu-all-container li {
+    position: relative;
+    list-style: none;
+    font-size: 16px;
+}
+.m-menu-all-container .m-menu-user-menu li:after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.m-menu-all-container li:first-child .gnb-spacer {
+    margin-top: 0;
+}
+.m-menu-all-container li:first-child .gnb-spacer::before {
+    display: none;
+}
+.m-menu-all-container .m-menu-user-menu li:last-child:after {
+    display: none;
+}
+.m-menu-all-container li.m-menu-list-group-depth .m-menu-list-depth {
+    display: none;
+}
+.m-menu-all-container li.m-menu-list-group-depth.menu-active .m-menu-list-depth {
+    display: block;
+}
+.m-menu-user-menu {
+    padding-bottom: 24px;
+}
+.m-menu-user-menu .gnb-menu-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-break: break-all;
+    white-space: normal;
+}
+.m-menu-user-menu .gnb-menu-link.is-disabled {
+    cursor: auto;
+}
+.m-menu-user-menu .gnb-menu-link .gnb-menu-icon {
+    margin-right: 0;
+}
+.m-menu-user-menu .gnb-menu-link .gnb-menu-icon ~ span {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 19px;
+    word-break: break-all;
+    word-wrap: break-word;
+    width: 100%;
+}
+.m-menu-user-menu .gnb-menu-link:hover .gnb-menu-icon ~ span,
+.m-menu-user-menu .gnb-menu-link:active .gnb-menu-icon ~ span,
+.m-menu-user-menu .gnb-menu-link:focus .gnb-menu-icon ~ span {
+    color: #666;
+}
+.m-menu-user-menu .gnb-menu-link:disabled .gnb-menu-icon ~ span,
+.m-menu-user-menu .gnb-menu-link.is-disabled .gnb-menu-icon ~ span {
+    color: #b3b3b3;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .btn-m-menu-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+.gnb-stove .ic-control-close-line {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-control-close-line.svg) no-repeat 0 0;
+    cursor: pointer;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-user-info {
+    padding: 25px 16px 24px;
+    background-color: #fff;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .dropdown-header-link {
+    display: flex;
+    flex-direction: row;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .dropdown-header-link .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 19px;
+    color: #6e6e6e;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .dropdown-header-link .info .name {
+    width: 90%;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1a1a1a;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    white-space: normal;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .dropdown-header-link .info .name span {
+    font-weight: normal;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-user-info .thumb {
+    margin-right: 12px;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-user-info .thumb img {
+    border-radius: 50%;
+    width: 44px !important;
+    height: 44px !important;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-user-menu {
+    background-color: #fff;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-banner {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/img-banner-app-icon.png);
+    background-color: #fe763c;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-banner-txt {
+    display: block;
+    max-width: 240px;
+    padding-left: 32px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.35px;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-list {
+    /* height: calc(100vh - 324px);
+    overflow-y: auto;
+    */
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-list .gnb-spacer::before {
+    background-color: #eee;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-login {
+    position: relative;
+    /*position: absolute;
+    bottom: 0;
+    right: 0;*/
+    width: 100%;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-login::after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-login .gnb-game-list-btn {
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-login .gnb-game-list-btn:focus {
+    border: 2px solid transparent;
+    box-shadow: inset 0 0 0 2px transparent;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-login .gnb-game-list-btn .btn-txt {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3a3a3a;
+}
+.gnb-stove.gnb-default-rwd .m-menu-all-container {
+}
+/* select btn */
+.gnb-stove.gnb-default-rwd .element-btn {
+    display: inline-block;
+    align-items: center;
+    height: 44px;
+    border-radius: 4px;
+    background: #fff;
+    color: #666;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 0;
+    font-weight: bold;
+    padding: 0 24px;
+    white-space: nowrap;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+}
+/*
+.gnb-stove.gnb-default-rwd .element-btn:before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+}*/
+.gnb-stove.gnb-default-rwd .element-btn:hover {
+    color: #333;
+    background: #ebebeb;
+}
+
+.gnb-stove.gnb-default-rwd .element-btn.btn-trans-line {
+    background: #fff;
+    color: #666;
+    border: 1px solid transparent;
+}
+.gnb-stove.gnb-default-rwd .element-btn.btn-gray-line:disabled .btn-txt {
+    color: #aaa;
+    vertical-align: middle;
+}
+.gnb-stove.gnb-default-rwd .element-btn.btn-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px 30px 1px 24px;
+    z-index: 10;
+    text-align: left;
+}
+.gnb-stove.gnb-default-rwd .element-btn.btn-select .btn-txt {
+    text-align: left;
+    /* max-width: 170px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #666;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.gnb-stove.gnb-default-rwd .element-btn.btn-square {
+    height: 44px;
+    border-radius: 0 !important;
+    padding: 1px 16px;
+}
+
+/* dropdown */
+.gnb-stove.gnb-default-rwd .module-dropdown {
+    position: absolute;
+    display: block;
+    padding: 8px 0;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background: #fff;
+    box-shadow: 0 6px 20px 0 rgba(85, 92, 107, 0.3), 0 1px 4px 0 rgba(0, 0, 0, 0.18), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    z-index: 21;
+}
+.gnb-stove.gnb-default-rwd .module-dropdown .element-btn {
+    display: block;
+    text-align: left;
+    width: 100%;
+    white-space: nowrap;
+    border: 0;
+    vertical-align: middle;
+}
+.gnb-stove.gnb-default-rwd .module-dropdown .element-btn.btn-square {
+    line-height: 44px;
+}
+.gnb-stove.gnb-default-rwd .module-dropdown .element-btn > .btn-txt {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 44px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* select */
+.gnb-stove.gnb-default-rwd .element-btn.btn-select:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    /*background: url(ic-fill-direction-down-s16-c666.svg);*/
+    background-size: cover;
+}
+
+.gnb-stove.gnb-default-rwd .base-select-wrap {
+    margin-top: 8px;
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base {
+    position: relative;
+    vertical-align: top;
+    /* z-index: 50; */
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base > .element-btn {
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    z-index: 10;
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base > .element-btn:focus {
+    outline: none;
+    background-color: #f5f5f5;
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base select {
+    width: 100%;
+    height: 100%;
+    padding: 12px 0 12px 60px;
+    font-size: 16px;
+    border: 1px solid transparent;
+}
+
+.gnb-stove.gnb-default-rwd .element-select-lang.element-select select {
+    appearance: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    font-weight: normal;
+    outline: 0;
+}
+.gnb-stove.gnb-default-rwd .element-select-lang.element-select select:focus {
+    outline: none;
+    border: 0;
+}
+.gnb-stove.gnb-default-rwd .element-select-lang.element-select select option {
+}
+.gnb-stove.gnb-default-rwd .element-select-lang:after {
+    content: '';
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-navigation-language-line-menu-enabled.svg);
+}
+/*
+.gnb-stove.gnb-default-rwd .element-select.select-base select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base .module-dropdown {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 424px;
+  overflow-y: auto;
+  display: table;
+}
+.gnb-stove.gnb-default-rwd .element-select.select-base .module-dropdown li {
+  padding: 0;
+}
+*/
+
+/*.m-menu-all-container .m-menu-all-container-wrap {*/
+/*  flex: 1;*/
+/*  min-height: 281px;*/
+/*}*/
+/*.m-menu-all-container .m-menu-all-container-wrap .m-menu-all-container-resize {*/
+/*  flex: none;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*}*/
+/*.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-list {*/
+/*  flex: 1;*/
+/*  overflow-y: auto;*/
+/*}*/
+.gnb-stove.gnb-default-rwd .m-menu-all-container .m-menu-banner {
+    flex: none;
+}
+.gnb-stove .gnb-icon.is-plus {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-white-normal2.svg) no-repeat 0 0;
+    opacity: 1 !important;
+}
+
+/* [example] */
+.gnb-stove .gnb-icon.is-plus:hover {
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-white-hover2.svg) no-repeat 0 0;
+}
+
+/*.gnb-stove .gnb-notice-header .gnb-icon {*/
+/*  position: absolute;*/
+/*  top: 0px;*/
+/*  right: 24px;*/
+/*  text-indent: -1000em;*/
+/*  opacity: 0.2;*/
+/*}*/
+/*.gnb-stove .gnb-notice-header .gnb-icon:hover,*/
+/*.gnb-stove .gnb-notice-header .gnb-icon:focus {*/
+/*  opacity: 1;*/
+/*}*/
+/*.gnb-stove .gnb-icon.is-plus {*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icon_plus-black.svg) no-repeat 0 0;*/
+/*}*/
+/*.gnb-stove.gnb-dark-theme .gnb-icon.is-plus {*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/icon_plus-white.svg) no-repeat 0 0;*/
+/*}*/
+/*landscape portrait*/
+/* xs */
+@media screen and (pointer: coarse) {
+    .gnb-stove .gnb-menu-list.is-icon .gnb-menu-link,
+    .gnb-stove .gnb-icon.ic-navigation-alarm-line,
+    .gnb-stove .gnb-icon.ic-navigation-language-line,
+    .gnb-stove .gnb-icon.ic-navigation-apps-fill,
+    .gnb-stove .gnb-icon.ic-navigation-search-line,
+    .gnb-stove .gnb-icon.ic-navigation-cart-line,
+    .gnb-stove .gnb-icon,
+    .gnb-inner .gnb-right-list .gnb-dropdown,
+    .gnb-inner .gnb-right-list .gnb-text,
+    .m-menu-all-container ul.m-menu-list-group-item .gnb-menu-link,
+    .gnb-inner .gnb-nav .gnb-text,
+    .gnb-stove .gnb-tab-item,
+    .gnb-stove .gnb-text-list-more,
+    .gnb-stove .gnb-cash-btn,
+    .gnb-stove .ic-control-close-line,
+    .gnb-stove .gnb-game-list-btn,
+    .gnb-stove.gnb-default-rwd .element-select-lang.element-select select {
+        cursor: default;
+    }
+}
+@media screen and (min-width: 0) and (max-width: 1279px), screen and (pointer: coarse) {
+    .scroll-disabled {
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        /*height:100%;*/
+    }
+}
+@media screen and (min-width: 0) and (max-width: 1279px) {
+    .gnb-stove.gnb-default-rwd .gnb-title > *:first-child {
+        margin-left: 12px;
+    }
+    .gnb-stove.gnb-default-rwd .logo-stove.stove {
+        width: 70px;
+        height: 16px;
+        background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bi.svg);
+    }
+    .gnb-stove.gnb-default-rwd .logo-stove.stove-mini {
+        width: 28px;
+        height: 28px;
+        background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bi-mini.svg);
+    }
+    .gnb-stove .logo-service.indie {
+        width: 60px;
+        height: 16px;
+    }
+    .gnb-stove.gnb-default-rwd .stove-service-txt {
+        font-size: 16px;
+    }
+    /*.gnb-stove.gnb-default-rwd .menu-all {*/
+    /*  margin-right: 12px;*/
+    /*}*/
+    .gnb-stove.gnb-default-rwd .gnb-inner .gnb-right-list .menu-all .gnb-dropdown-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 999;
+        background: rgba(30, 30, 30, 0.6);
+        transition: all 0.01s;
+        border-radius: 0;
+    }
+    .gnb-stove.gnb-default-rwd .gnb-inner .gnb-right-list .menu-all .m-menu-all-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 375px;
+        margin: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 1000;
+        background: #f5f5f5;
+    }
+    /*.gnb-stove.gnb-default-rwd .gnb-inner {*/
+    /*  padding: 0;*/
+    /*}*/
+    .gnb-stove.gnb-default-rwd {
+        height: 48px;
+    }
+    .gnb-stove.gnb-default-rwd .logo-stove,
+    .gnb-stove.gnb-default-rwd .logo-service,
+    .gnb-stove.gnb-default-rwd .logo-stove img,
+    .gnb-stove.gnb-default-rwd .logo-service img {
+        height: 16px;
+    }
+    .gnb-stove.gnb-default-rwd .menu-custom,
+    .gnb-stove.gnb-default-mini .menu-custom,
+    .gnb-stove.gnb-dark-mini .menu-custom,
+    .gnb-stove.gnb-dark-mix-mini .menu-custom {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .gnb-stove.gnb-default-rwd .menu-custom:after,
+    .gnb-stove.gnb-default-rwd .gnb-inner .gnb-nav .gnb-nav-wrap,
+    .gnb-stove.gnb-default-rwd .menu-custom .btn-menu-custom,
+    .gnb-stove.gnb-default-mini .menu-custom:after,
+    .gnb-stove.gnb-default-mini .gnb-inner .gnb-nav .gnb-nav-wrap,
+    .gnb-stove.gnb-default-mini .menu-custom .btn-menu-custom,
+    .gnb-stove.gnb-dark-mini .menu-custom:after,
+    .gnb-stove.gnb-dark-mini .gnb-inner .gnb-nav .gnb-nav-wrap,
+    .gnb-stove.gnb-dark-mini .menu-custom .btn-menu-custom,
+    .gnb-stove.gnb-dark-mix-mini .menu-custom:after,
+    .gnb-stove.gnb-dark-mix-mini .gnb-inner .gnb-nav .gnb-nav-wrap,
+    .gnb-stove.gnb-dark-mix-mini .menu-custom .btn-menu-custom {
+        display: none;
+    }
+    .gnb-stove.gnb-default-rwd .menu-all.menu-all-pc,
+    .gnb-stove.gnb-default-rwd .menu-all .pc-menu {
+        display: none;
+    }
+    .gnb-stove.gnb-default-rwd .menu-all.menu-all-mobile,
+    .gnb-stove.gnb-default-rwd .menu-all .mobile-menu {
+        display: block;
+        opacity: 1;
+    }
+    .gnb-stove.gnb-default-rwd .menu-language,
+    .gnb-stove.gnb-default-rwd .menu-notice button.ic-navigation-alarm-line,
+        /*.gnb-stove.gnb-default-rwd .menu-user,*/
+    .gnb-stove.gnb-default-rwd .menu-login,
+    .gnb-stove.gnb-default-rwd .menu-notice .gnb-dropdown-content,
+    .gnb-stove.gnb-default-rwd .menu-user,
+        /*.gnb-stove.gnb-default-mini .menu-language,*/
+        /*.gnb-stove.gnb-default-mini .menu-notice button.ic-navigation-alarm-line,*/
+        /*.gnb-stove.gnb-default-mini .menu-user,*/
+        /*.gnb-stove.gnb-default-mini .menu-login,*/
+        /*.gnb-stove.gnb-default-mini .menu-notice .gnb-dropdown-content,*/
+    .gnb-stove.gnb-dark-mini .menu-language,
+    .gnb-stove.gnb-dark-mini .menu-notice button.ic-navigation-alarm-line,
+    .gnb-stove.gnb-dark-mini .menu-user,
+    .gnb-stove.gnb-dark-mini .menu-login,
+    .gnb-stove.gnb-dark-mini .menu-notice .gnb-dropdown-content,
+    .gnb-stove.gnb-dark-mix-mini .menu-language,
+    .gnb-stove.gnb-dark-mix-mini .menu-notice button.ic-navigation-alarm-line,
+    .gnb-stove.gnb-dark-mix-mini .menu-user,
+    .gnb-stove.gnb-dark-mix-mini .menu-login,
+    .gnb-stove.gnb-dark-mix-mini .menu-notice .gnb-dropdown-content {
+        display: none !important;
+    }
+    .gnb-stove .menu-notice button.ic-navigation-alarm-line {
+        display: block !important;
+    }
+    .gnb-stove .menu-notice a.ic-navigation-alarm-line {
+        display: none !important;
+    }
+    .gnb-stove.gnb-default-rwd .menu-notice a.ic-navigation-alarm-line,
+        /*.gnb-stove.gnb-default-mini .menu-notice a.ic-navigation-alarm-line,*/
+    .gnb-stove.gnb-dark-mini .menu-notice a.ic-navigation-alarm-line,
+    .gnb-stove.gnb-dark-mix-mini .menu-notice a.ic-navigation-alarm-line {
+        display: block !important;
+    }
+}
+
+.gnb-stove.gnb-indie .gnb-game-list-item .gnb-game-list-link .gnb-game-list-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.gnb-stove.gnb-indie .gnb-text-list-item::before {
+    background-color: hsla(0, 0%, 100%, 0.08);
+}
+.gnb-stove.gnb-indie .gnb-text-list-item:hover::after {
+    background: #333;
+}
+.gnb-stove.gnb-indie .gnb-notice-footer::before {
+    background: #444;
+    border-color: hsla(0, 0%, 100%, 0.08);
+}
+.gnb-stove.gnb-indie .gnb-icon.is-plus {
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-dark-normal2.svg) no-repeat 0 0;
+}
+.gnb-stove.gnb-indie .gnb-icon.is-plus:hover {
+    background: url(//static-cdn.onstove.com/0.0.1/img/gnb-responsive/ic-plus-24-dark-hover2.svg) no-repeat 0 0;
+}
+.gnb-stove.gnb-indie .gnb-notice .gnb-tab {
+    margin-top: 0;
+}
+.gnb-stove.gnb-indie .gnb-notice {
+    padding-top: 0;
+}
+.gnb-stove.gnb-indie .gnb-notice {
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gnb-stove.gnb-indie .gnb-right-list .gnb-dropdown .gnb-dropdown-content {
+    box-shadow: none;
+}
+.gnb-stove.gnb-indie .gnb-icon.is-plus {
+    top: 14px;
+    right: 24px;
+}
+.gnb-stove.gnb-indie .gnb-notice .gnb-text-list-item:not(:first-of-type):before {
+    left: 0;
+    right: 0;
+}
+
+.slide .popup.second-to-first .popup-filter {
+}
+.gnb-alerts * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gnb-alerts.gnb-old-browser {
+    overflow: hidden;
+    height: 120px;
+    position: relative;
+}
+.gnb-alerts.gnb-old-browser {
+    overflow: hidden;
+    height: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
+}
+.gnb-alerts.gnb-old-browser::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bg-brower-l-m.png) no-repeat center 0;
+    background-size: auto 120px;
+    z-index: 1;
+}
+.gnb-alerts.gnb-old-browser::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #5d5de2;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-center {
+    height: 120px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+    padding-right: 252px;
+}
+
+.gnb-alerts.gnb-old-browser .gnb-alerts-center::before {
+    content: '';
+    width: 170px;
+    height: 102px;
+    position: absolute;
+    left: 40px;
+    background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/img-brower.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-title {
+    font-size: 24px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-title br {
+    display: none;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-text {
+    font-size: 12px;
+    padding-top: 4px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-actions {
+    position: absolute;
+    top: 38px;
+    right: 92px;
+}
+.gnb-alerts.gnb-old-browser .gnb-alerts-actions a {
+    min-width: 118px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 44px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    align-content: normal;
+    font-weight: 500;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+    .gnb-alerts.gnb-old-browser .gnb-alerts-center::before {
+        width: 130px;
+        height: 78px;
+        left: 12px;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-center {
+        padding-left: 166px;
+        padding-right: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: normal;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-title {
+        text-align: left;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-text {
+        display: none;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-title br {
+        display: block;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-actions {
+        position: static;
+        padding-top: 11px;
+    }
+    .gnb-alerts.gnb-old-browser .gnb-alerts-actions a {
+        height: 24px;
+        min-width: auto;
+        font-size: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+        line-height: 18px;
+    }
+    .gnb-alerts.gnb-old-browser::before {
+        background: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bg-brower-s-xs.png) no-repeat center 0;
+        background-size: auto 120px;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 375px) {
+    .gnb-stove.gnb-default-rwd .gnb-inner .gnb-right-list .menu-all .m-menu-all-container {
+        width: 100%;
+    }
+}
+#cpGnb {
+    z-index: 1;
+    position: relative;
+}
+.gnb-stove.gnb-default-fixed .gnb-inner {
+    width: auto;
+}

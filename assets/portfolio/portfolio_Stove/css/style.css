@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
 /* reset */
 body {margin: 0;}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
@@ -12,54 +15,77 @@ li {list-style: none;}
 
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
-
-/* header */
-header {
-    box-sizing: border-box;
-    border: 1px solid red;
+.wrapper {
     width: 100%;
-    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 1300px;
     display: flex;
-    padding: 20px 40px;
+    padding: 20px 0;
     align-content: center;
     justify-content: space-between;
     align-items: center;
 }
-header > * {
-    border: 1px solid orange;
+/* header */
+body {background: #f5f5f5;}
+
+header {
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%; height: 68px;
+    position: fixed;
 }
-#logo {width: 150px;}
-#games {width: 100%;}
+#logo {
+    width: 88px;
+    height: 20px;
+    background-image: url(https://static-cdn.onstove.com/0.0.1/img/gnb-responsive/bi.svg);
+}
+#games {width: calc(100% - 140px - 150px);}
+.updateMark {opacity: 0;}
+.updateMark.on {opacity: 1;}
 #games > * {
     display: inline-block;
     margin-right: 40px;
 }
+#games h2 {
+    font-size: 22px;
+}
 #games > li > ul {
+    display: none;
     border-radius: 5px;
     box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%), 0 0 1px 0 rgb(0 0 0 / 20%);
     background-color: #fff;
-    width: 300px;
+    width: 320px;
     position: absolute;
     box-sizing: border-box;
     padding: 20px;
 }
 #games > li > ul > li {
-    border: 1px solid green;
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 #games > li > ul > li  > * {
     display: inline-block;
+    position: relative;
     height: 100%;
     margin-right: 5px;
 }
-
+#games > li > ul > li > div {
+    padding: 5px;
+}
 #games > li > ul > li > a {
-    border: 1px solid blue;
+    background-color: blue;
     width: 64px; height: 64px;
 }
 #games > li > ul > li h3 {
     font-size: 16px;
+}
+#games > li > ul > li > div {
+    width: calc(100% - 64px);
+    border-bottom: 1px solid #a0a0a03b;
 }
 #games > li > ul > li .updateMark {
     color : #9b54f6;
@@ -75,4 +101,122 @@ header > * {
     flex-direction: row;
     margin-top: 8px;
     font-size: 13px;
+    justify-content: space-between;
+}
+#games > li > ul > li p > a {
+    display: flex; position: relative;
+    box-sizing: border-box;
+    justify-content: center; align-content: center;
+    border-radius: 2px; color: #3a3a3a;
+    text-align: center; overflow: hidden;
+    padding: 5px 12px; height: 28px;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    background-color: rgba(204, 204, 204, 0.474);
+}
+#gnb_side {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#gnb_side > li {display: inline-block;}
+#gnb_side > li > ul {
+    position: absolute;
+    display: none;
+}
+
+/* #gnb_side #lang {} */
+#gnb_side #lang h3,
+#gnb_side #gnb h3
+ {position: relative;}
+#gnb_side #lang h3:hover::after {
+    content: '한국어';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-top: 8px;
+    padding: 4px 6px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background-color: #3a3a3a;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+}
+#gnb_side #gnb h3:hover::after {
+    content: '전체메뉴';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-top: 8px;
+    padding: 4px 6px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background-color: #3a3a3a;
+    font-size: 12px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+#gnb_side #login {
+    font-size: 15px;
+    transform: translateY(-1px);
+}
+#gnb_side #login:hover {
+    text-decoration: underline;
+}
+.material-symbols-outlined:hover {color:#fc6020}
+
+
+/* main */
+main {
+    margin-top: 100px;
+}
+#section1 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 360px;
+    border: 1px solid red;
+}
+#section1 > div {
+    border: 1px solid orange;
+    display: inline-block;
+    border-radius: 4px;
+    height: 100%;
+}
+#section1 > div a {
+    display: block;
+    width: 100%; height: 100%;
+}
+#section1 > div:nth-child(1) {width: 860px;}
+#section1 > div:nth-child(2),
+#section1 > div:nth-child(3) {
+    width: 200px;
+    display: block;
+    background-size: cover!important;
+    background-position: center 0!important;
+    border-radius: 4px;
+}
+#section1 > div:nth-child(2) {background-image: url("https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_01_통합형배너_kards2_main_short_LM.png");}
+#section1 > div:nth-child(3) {background-image: url("https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/(CAoA)드래곤관찰일지_온스토브메인_세로형(1).png");}
+
+#section1 .slide {
+    width: 100%; height: 100%;
+    position: relative;
+}
+#section1 .indicator {
+    border: 1px solid red;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+}
+#section1 .indicator li {
+    
+    display: inline-block;
 }
