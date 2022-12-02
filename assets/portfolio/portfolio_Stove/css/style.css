@@ -176,17 +176,20 @@ header {
 /* main */
 main {
     margin-top: 100px;
+    flex-direction: column;
+}
+main section {
+    margin-bottom: 50px;
 }
 #section1 {
     box-sizing: border-box;
     display: flex;
+    position: relative;
     justify-content: space-between;
     width: 100%;
     height: 360px;
-    border: 1px solid red;
 }
 #section1 > div {
-    border: 1px solid orange;
     display: inline-block;
     border-radius: 4px;
     height: 100%;
@@ -206,17 +209,100 @@ main {
 }
 #section1 > div:nth-child(2) {background-image: url("https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/메인_01_통합형배너_kards2_main_short_LM.png");}
 #section1 > div:nth-child(3) {background-image: url("https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/(CAoA)드래곤관찰일지_온스토브메인_세로형(1).png");}
-
-#section1 .slide {
-    width: 100%; height: 100%;
-    position: relative;
+#section1 .slide_container {position: relative;}
+#section1 .slides {
+    border: 1px solid orange;
+    width: 100%; height: 100%; position: relative; }
+#section1 .slides > li, #section1 .slides > li > a {
+    position:absolute; width: 100%; height: 100%;
+    text-align: center;
 }
 #section1 .indicator {
-    border: 1px solid red;
     position: absolute;
     left: 50%; transform: translateX(-50%);
+    bottom: 25px;
 }
 #section1 .indicator li {
-    
     display: inline-block;
+    position: relative;
+    /* border: 1px solid orange; */
+    background-color: #828282;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+}
+#section1 .indicator li.on {
+    background-color: #fff;
+    width: 24px; height: 9px; border-radius: 4px;
+}
+#section1 .indicator li a {
+    width: 100%; height: 100%;
+}
+/* #section1 .control {position: absolute; left: 50%; transform: translateX(-50%);} */
+#section1 .control button {position: absolute; top: 50%; transform: translateY(-50%);}
+#section1 .control button.left {left: 0;}
+#section1 .control button.right  {right: 0;}
+
+
+#section2 {
+    border: 1px solid red;
+    width: 100%; height: 280px;
+    display: block;
+    position: relative;
+}
+#section2 h2 {margin-bottom: 20px;}
+#section2 > ul {
+    width: 100%; height: calc(100% - 30px);
+    border: 1px solid orange;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#section2 > ul > li {
+    height: 33.33%;
+}
+/* #section2 > ul > li a {
+    display: flex;
+} */
+#section2 > ul > li a > * {
+    text-align: center;
+    /* display: inline-block; */
+}
+#section2 h4 {
+    height: 100%; width: 20%;
+    position: relative;
+}
+#section2 h4 span {
+    position: absolute;
+    font-size: 1.4rem;
+    width: 70%;
+    top: 50%; 
+    transform: translateY(-50%) translateX(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    position: absolute;
+    text-decoration: none;
+    color: #ccc;
+    text-align: center;
+}
+#section2 li div {
+    position: absolute;
+    display: none;
+    top: 0; right: 0;
+    width: 80%; height: 100%;
+    border: 1px solid blue;
+}
+#section2 li.on h4 {background: #292929;}
+#section2 li.on span{color: white;}
+#section2 li.on h4::after {
+    content: "";
+    position: absolute;
+    width: 20px; height: 20px;
+    background-color: #292929;
+    right: -3px; top: 50%;
+    transform:rotate(45deg) translateY(-50%);
+}
+#section2 li.on div {
+    display: block;
 }

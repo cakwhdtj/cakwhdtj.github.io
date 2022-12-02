@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <a id="skipNav" href="#">본문바로가기</a>
+  <a id="skipNav" href="#main">본문바로가기</a>
   <header>
     <div class="wrapper">
     <a href="#">
@@ -191,42 +191,72 @@
     <section id="section1">
       <div class="slide_container">
         <ul class="slides">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-      </ul>
-      <ul class="indicator">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>11</li>
-        <li>12</li>
-      </ul>
-      <p class="control">
-        <button><span>left</span></button>
-        <button><span>right</span></button>
-      </p>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">12</a></li>
+        </ul>
+        <ul class="indicator">
+          <li class="on"><a href="#"><span class="hide_clipPath">1번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">2번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">3번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">4번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">5번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">6번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">7번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">8번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">9번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">10번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">11번 슬라이드</span></a></li>
+          <li><a href="#"><span class="hide_clipPath">12번 슬라이드</span></a></li>
+        </ul>
+        <p class="control">
+          <button class="left"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+          <button class="right"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+        </p>
       </div>
       <div><a href="#"></a></div>
       <div><a href="#"></a></div>
     </section>
+    <section id="section2">
+      <h2>STOVE 인기게임!</h3>
+      <ul>
+        <li >
+          <a href="#">
+            <h4><span>Lost Ark</span></h4>
+            <div>
+              1
+            </div>
+          </a>
+        </li>
+        <li class="on">
+          <a href="#">
+            <h4><span>센추리: 에이지오브 애쉬즈</span></h4>
+            <div>
+              2
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h4><span>테일즈런너</span></h4>
+            <div>
+              3
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
+  <script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
   <script src="js/common_js.js" charset="utf-8"></script>
   <script src="../../js/portfolioGlobal.js" charset="utf-8"></script>
   <footer></footer>
