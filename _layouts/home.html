@@ -45,7 +45,13 @@ layout: main
     <!-- Posts -->
     <section id="grid" class="row flex-grid">
         {% for post in posts offset: offset %}
+        <!-- (hide library  -->
+        {% if post.category == "library" %}<article class="box-item" style="display: none;">{% else %}
+        <!-- hide library) -->
         <article class="box-item">
+        <!-- (hide library -->
+        {% endif %}
+        <!-- hide library) -->
             {% if post.category == "library" %}<span class="category" style="margin-bottom: 20px;">{% else %}
                 <span class="category">
                     {% endif %}
