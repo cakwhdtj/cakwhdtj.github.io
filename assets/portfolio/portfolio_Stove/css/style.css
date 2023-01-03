@@ -176,6 +176,11 @@ header {
 
 /* main */
 main {
+    border: 1px solid blue;
+    height: 2000px; 
+    /* ** */
+}
+main > .wrapper {
     margin-top: 100px;
     flex-direction: column;
 }
@@ -243,6 +248,20 @@ main section {
 #section1 .control button.left {left: 0;}
 #section1 .control button.right  {right: 0;}
 
+/*  */
+#getamped {
+    width: 100vw;
+    background: #9b3839;
+    height: 120px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+#getamped > p.wrapper {
+    color: #fff;
+    font-size: 22px;
+    padding: 30px 120px;
+}
+/*  */
 
 #section2 {
     border: 1px solid red;
@@ -308,3 +327,12 @@ main section {
     display: block;
 }
 
+#section3 {
+    width: 100%;
+}
+
+footer {
+    background: rgba(169, 169, 169, 0.457);
+    /* top: 100vmax; */
+    display: flex;
+}
