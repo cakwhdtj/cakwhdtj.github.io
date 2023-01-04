@@ -176,7 +176,7 @@ header {
 
 /* main */
 main {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 2000px; 
     /* ** */
 }
@@ -329,10 +329,27 @@ main section {
 
 #section3 {
     width: 100%;
+    border: 1px solid red;
+}
+#section3 h2 {
+    margin-bottom: 24px;
+}
+#section3 > div {
+    width: 100vw; 
+    height: 365px;
+    position: relative;
+}
+#section3 #bg {
+    position: absolute; 
+    z-index: -99;
+    top: 0; left: 0;
+    height: 365px;
+    width: 100vw; ;
+    background-image: url(../img/메인_06_인디게임리뷰_게임명_review_211f1f.jpg);
 }
 
 footer {
     background: rgba(169, 169, 169, 0.457);
-    /* top: 100vmax; */
+    top: 4000px;
     display: flex;
 }
