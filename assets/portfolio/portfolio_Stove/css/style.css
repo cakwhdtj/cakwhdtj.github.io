@@ -343,7 +343,7 @@ main section {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 /* #section3 #bg {
     position: absolute; 
@@ -357,8 +357,14 @@ main section {
     border: 1px solid orange;
     height: 100%;
 }
+#section3 > div h3 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #fff;
+}
 #section3 > div > div {
     display: flex;
+    height: 200px;
     justify-content: flex-end;
     flex-direction: column;
 }
@@ -368,12 +374,36 @@ main section {
 }
 #section3 > div > div button {
     box-sizing: border-box;
+    padding: 8px;
     border: 1px solid #fff; background-color: #fff;
     width: 100px; height: 100%;
+    font-size: 12px;
 }
 #section3 > div > div button:nth-child(2) {
     color: #fff; background: transparent;
 }
+
+#section3 ul {
+    display: flex;
+    width: 640px;
+    justify-content: space-between;
+}
+#section3 ul li {
+    border: 1px solid red;
+    width: calc(33% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+#section3 ul .user > * {
+    display: inline-block;
+}
+#section3 ul .user img {
+    border: 1px solid blue;
+    width: 50px; height: 50px;
+}
+
 
 footer {
     background: rgba(169, 169, 169, 0.457);
