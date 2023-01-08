@@ -354,7 +354,6 @@ main section {
     background-image: url(../img/메인_06_인디게임리뷰_게임명_review_211f1f.jpg);
 } */
 #section3 > div > * {
-    border: 1px solid orange;
     height: 100%;
 }
 #section3 > div h3 {
@@ -383,25 +382,49 @@ main section {
     color: #fff; background: transparent;
 }
 
-#section3 ul {
+#section3 #reviews {
     display: flex;
     width: 640px;
     justify-content: space-between;
+    color: #999;
 }
-#section3 ul li {
+#section3 #reviews li {
     border: 1px solid red;
     width: calc(33% - 10px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 24px;
+    padding: 20px;
 }
-#section3 ul .user > * {
-    display: inline-block;
+#section3 #reviews .user {
+    border: 1px solid teal;
+    width: 100%; 
 }
-#section3 ul .user img {
+#section3 #reviews .user > * {
+    font-size: 14px;
+}
+#section3 #reviews .user img {
     border: 1px solid blue;
+    display: inline-block;
     width: 50px; height: 50px;
+}
+#section3 .userInfo {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid orange;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#section3 .userID {
+    border: 1px solid red;
+    display: inline;
+    color: #000;
+    width: 40%;
+}
+.timePlayed {
+    display: block;
+    border: 1px solid red;
 }
 
 
