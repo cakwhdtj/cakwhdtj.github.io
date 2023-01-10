@@ -472,29 +472,39 @@ section h2 {
     display: flex;
     justify-content: space-around;
 }
-#section4 #s4Upper .s4Desc ul > li {
-    position: relative;
-    border: 1px solid blue;
+#section4 #s4Upper .s4Desc > ul li {
+    box-shadow: #000;
     border-radius: 5px;
+    position: relative;
+    background: #fff;
     width: 25%;
     height: 356px;
 }
 #section4 #s4Upper .s4Desc ul > li + li {margin-left: 15px;}
+#section4 #s4Upper .s4Desc ul > li a {
+    width: 100%; height: 100%;
+    display: inline-block;
+}
 #section4 #s4Upper .s4Desc ul > li a img {
-    /* border: 1px solid red; */
-    display: block;
+    border: 1px solid red;
     height: 50%; width: 100%;
 }
-.s4Desc a {
-    position: relative;
-    height: 100%;
+.s4Desc h5 {
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
 }
-.s4Desc a .tag{
+.s4Desc div {
+    padding: 20px 15px;
+}
+.s4Desc .tag{
     position: absolute;
     display: inline-block;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
     top: 0; left: 0;
+    border: 1px solid red;
 }
 .tag .sale, .tag .new, .tag .update, .tag .sOnly {
     border-radius: 1px;
