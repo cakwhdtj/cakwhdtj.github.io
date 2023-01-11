@@ -465,7 +465,7 @@ section h2 {
     display: block;
     box-sizing: border-box;
     margin-top: 56px;
-    padding: 15px;
+    padding: 20px;
     background: pink;
 }
 #section4 #s4Upper .s4Desc ul {
@@ -489,12 +489,40 @@ section h2 {
     border: 1px solid red;
     height: 50%; width: 100%;
 }
-.s4Desc h5 {
-    font-size: 18px;
+.s4Desc ul li a > div {
+    width: 80%;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-break: break-all;
 }
+.s4Desc h5 {
+    font-size: 18px;
+    display: inline;
+}
+.s4Desc div p {
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 250%;
+}
+.s4Desc .price {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+}
+.s4Desc .price .discount {
+    display: none;
+}
+.s4Desc .price .discount {
+    display: inline-block;
+    font-style: normal;
+    color: #fc6020;
+}
+.s4Desc .price .won {
+    font-style: normal;
+}
+
 .s4Desc div {
     padding: 20px 15px;
 }
