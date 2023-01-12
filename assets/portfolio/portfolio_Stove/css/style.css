@@ -267,7 +267,6 @@ section h2 {
 /*  */
 
 #section2 {
-    border: 1px solid red;
     width: 100%; height: 280px;
     display: block;
     position: relative;
@@ -486,7 +485,6 @@ section h2 {
     display: inline-block;
 }
 #section4 #s4Upper .s4Desc ul > li a img {
-    border: 1px solid red;
     height: 50%; width: 100%;
 }
 .s4Desc ul li a > div {
@@ -532,7 +530,6 @@ section h2 {
     text-align: center;
     /* width: 100%; */
     top: 0; left: 0;
-    border: 1px solid red;
 }
 .tag .sale, .tag .new, .tag .update, .tag .sOnly {
     border-radius: 1px;
@@ -545,6 +542,19 @@ section h2 {
 .tag .sale {background-color: #ec3b48;}
 .tag .new {background-color: #fc6020;}
 .tag .update {background-color: #944cec;}
+
+#pcOnline ul li a > div {
+    text-overflow: unset;
+}
+#pcOnline div button {
+    display: inline-block;
+    border: .5px solid ;
+    padding: 8px;
+    border: 1px solid #ececec; 
+    background-color: #fff;
+    width: 49%; height: 100%;
+    font-size: 12px;
+}
 /* .tag .sOnly{position:absolute; right: 0;} */
 
 
