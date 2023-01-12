@@ -554,9 +554,8 @@ section h2 {
     background-color: #fff;
     width: 49%; height: 100%;
     font-size: 12px;
+    text-overflow: ellipsis;
 }
-/* .tag .sOnly{position:absolute; right: 0;} */
-
 
 
 #section4 #s4Lower {
