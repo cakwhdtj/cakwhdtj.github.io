@@ -543,16 +543,27 @@ section h2 {
 .tag .new {background-color: #fc6020;}
 .tag .update {background-color: #944cec;}
 
-#pcOnline ul li a > div {
+#pcOnline ul li a .buttons {
     text-overflow: unset;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    white-space: nowrap;
+    word-break: break-all;
+    position: absolute;
+}
+#pcOnline ul li a .buttons button:hover {
+    cursor: pointer;
 }
 #pcOnline div button {
-    display: inline-block;
+    display: inline;
     border: .5px solid ;
     padding: 8px;
     border: 1px solid #ececec; 
     background-color: #fff;
+    color: #3a3a3a;
     width: 49%; height: 100%;
+    font-weight: bold;
     font-size: 12px;
     text-overflow: ellipsis;
 }
