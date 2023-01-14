@@ -434,7 +434,13 @@ section h2 {
     font-size: 12px;
 }
 
-#section4 {width: 100%;}
+#section4 {
+    width: 100%;
+    border: 1px solid yellow;
+}
+#section4 #s4Upper {
+    height: 500px;
+}
 #section4 #s4Upper h4 {
     position: absolute;
     box-sizing: border-box;
@@ -465,7 +471,6 @@ section h2 {
     box-sizing: border-box;
     margin-top: 56px;
     padding: 20px;
-    background: pink;
 }
 #section4 #s4Upper .s4Desc ul {
     display: flex;
@@ -473,7 +478,7 @@ section h2 {
 }
 #section4 #s4Upper .s4Desc > ul li {
     box-shadow: #000;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     background: #fff;
     width: 25%;
@@ -570,11 +575,30 @@ section h2 {
 
 
 #section4 #s4Lower {
+    border-bottom: 2px solid #828282;
+}
+#s4Lower > li {
+    display: inline-block;
+}
+#s4Lower > li > a {
+    transform: translateY(1px);
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-right: 50px;
+}
+#s4Lower > li.on > a {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+#s4Lower > li > ul {
+    /* position: absolute; */
     display: none;
 }
-#section4 > div {
-    display: none;
+#s4Lower > li.on > ul {
+    display: block;
 }
+
+
 
 footer {
     background: rgba(169, 169, 169, 0.457);
