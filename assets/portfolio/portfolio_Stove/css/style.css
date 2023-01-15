@@ -576,6 +576,7 @@ section h2 {
 
 #section4 #s4Lower {
     border-bottom: 2px solid #828282;
+
 }
 #s4Lower > li {
     display: inline-block;
@@ -589,10 +590,6 @@ section h2 {
 #s4Lower > li.on > a {
     font-weight: bold;
     border-bottom: 2px solid #000;
-}
-#s4Lower > li > ul {
-    /* position: absolute; */
-    display: none;
 }
 #s4Lower > li.on > ul {
     display: block;
