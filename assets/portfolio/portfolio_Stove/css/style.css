@@ -576,7 +576,7 @@ section h2 {
 
 #section4 #s4Lower {
     border-bottom: 2px solid #828282;
-
+    margin-bottom: 500px;
 }
 #s4Lower > li {
     display: inline-block;
@@ -591,10 +591,73 @@ section h2 {
     font-weight: bold;
     border-bottom: 2px solid #000;
 }
+#s4Lower > li > ul {
+    position: absolute;
+    display: none;
+}
 #s4Lower > li.on > ul {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - 15px));
+    gap: 20px 20px;
+    grid-template-rows: repeat(3 , 140px);
+    padding: 20px 0;
+    width: 100%;
+}
+#s4Lower > li > ul > li {
+    border: 1px solid blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+#s4Lower ul li > a {
     display: block;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
 }
 
+#s4Lower ul li > a:hover:before {
+    content: "";
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 14px;
+    position: absolute;
+    width: 100%; height: 50px;
+    background: #29292989;
+    color: #f5f5f5;
+    bottom: 30px; left: -20px;
+}
+#s4Indie ul li > a:hover:after{
+    content: "인디게임 자세히 보기";
+    opacity: 1;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 14px;
+    position: absolute;
+    width: 100%; height: 50px;
+    color: #f5f5f5;
+    bottom: 30px; left: -20px;
+}
+
+
+#s4Lower #s4indie h3 {
+    display: inline;
+ }
+ #s4Lower #s4indie span {
+     display: block;
+    margin-top: 5px;
+    font-size: 14px;
+ }
+ 
 
 
 footer {
