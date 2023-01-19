@@ -650,10 +650,16 @@ section h2 {
     bottom: 30px; left: 50%;
 }
 #s4Lower ul li > a:hover .more {opacity: 1; color: #3a3a3a;}
-#s4PCGame .more i {position: absolute; font-style: normal;}
-#s4PCGame .more i:nth-child(1){left: 15%;}
+#s4Lower ul li > a .more i {box-sizing: border-box; padding: 0 10px 5px 0;}
+#s4Lower ul li > a .more i:hover {color: #fff;}
+#s4PCGame .more i,
+#s4MobileGame .more i {position: absolute; font-style: normal;}
+#s4PCGame .more i:nth-child(1),
+#s4MobileGame .more i:nth-child(1)
+{left: 15%;}
 
-#s4PCGame .more::after {
+#s4PCGame .more::after,
+#s4MobileGame .more::after {
     content: "";
     position: absolute;
     transform: translateY(2.5px);
