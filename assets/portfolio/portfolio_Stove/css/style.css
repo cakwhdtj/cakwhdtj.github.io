@@ -659,7 +659,7 @@ section h2 {
 {left: 15%;}
 
 #s4PCGame .more::after,
-#s4MobileGame .more::after {
+#s4MobileGame .more:not(.no):after {
     content: "";
     position: absolute;
     transform: translateY(2.5px);
@@ -667,7 +667,7 @@ section h2 {
     border-left: 1px solid rgba(255, 255, 255, 0.514);
 }
  #s4PCGame .more i:nth-child(2){right: calc(15% + 20px);}
-
+ #s4MobileGame .more.no > i:nth-child(1) {left: 50%; transform: translateX(-50%);}
 
 footer {
     background: rgba(169, 169, 169, 0.457);
