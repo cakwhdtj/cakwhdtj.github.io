@@ -191,18 +191,18 @@
       <section id="section1">
           <div class="slide_container">
             <ul class="slides">
-              <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li><a href="#">9</a></li>
-            <li><a href="#">10</a></li>
-            <li><a href="#">11</a></li>
-            <li><a href="#">12</a></li>
+              <li class="on"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li><a href="#">11</a></li>
+              <li><a href="#">12</a></li>
           </ul>
           <ul class="indicator">
             <li class="on"><a href="#"><span class="hide_clipPath">1번 슬라이드</span></a></li>
@@ -717,24 +717,36 @@
           </li>
         </ul>
         <div id="s4Banner">
-          <div>STOVE 커뮤니티에서 새로운 소식을 확인하세요.</div>
-          <div>STOVE PC클라이언트가 새롭게 바뀝니다.</div>
+          <div>
+            <a href="#">
+                <span>STOVE 커뮤니티에서</span>
+                <span>새로운 소식을 확인하세요.</span>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+                <span>STOVE PC클라이언트가</span>
+                <span>새롭게 바뀝니다.</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
   </main>
-  <footer class="wrapper">
+  <footer>
     <div>
-      <h3>공지사항</h3>
-      <ul>
-        <li>1/2(월) 일부 스토브 서비스 접속 불가 현상 안내(정상화)</li> 
-        <li>12/30(금) 일부 결제수단 중 BC카드/우리카드 결제불가 안내(해결)</li>
-        <li>2023년 새해 福 많이 받으세요!</li>
-        <li>12/29(목) STOVE APP을 통한 일부 Apple ID 수동 로그인 및 신규 가입 불가 안내 (완료)</li>
-        <li>12/30(금) STOVE 결제 시스템 점검 안내</li>
-      </ul>
+      <div>
+        <h3>공지사항</h3>
+        <ul id="fAnnouncement">
+          <li class="on"><a href="#">1/2(월) 일부 스토브 서비스 접속 불가 현상 안내(정상화)</a></li> 
+          <li><a href="#">12/30(금) 일부 결제수단 중 BC카드/우리카드 결제불가 안내(해결</a>)</li>
+          <li><a href="#">2023년 새해 福 많이 받으세요</a>!</li>
+          <li><a href="#">12/29(목) STOVE APP을 통한 일부 Apple ID 수동 로그인 및 신규 가입 불가 안내 (완료</a>)</li>
+          <li><a href="#">12/30(금) STOVE 결제 시스템 점검 안</a>내</li>
+        </ul>
+      </div>
       <hr />
-      <ul>
+      <ul id="finfo">
         <li>회사소개</li>
         <li>이용약관</li>
         <li>개인정보처리방침</li>
@@ -744,13 +756,20 @@
         <li>고객센터</li>
       </ul>
       <hr />
-      <p>
-        (주)스마일게이트홀딩스 대표이사:성준호 <address>주소: 경기도 성남시 분당구 판교역로 220(삼평동) 쏠리드 스페이스 빌딩 5층</address><br />
-        사업자 등록번호 : 132-81-60298  통신판매업 신고번호 : 제20220-성남분당A-1071호 <a href="#">사업자정보확인</a><br />
-        대표번호 : <a href="tel:0000000">1670-0399</a> 팩스 : <a href="tel:00000">02-6020-8213</a> 이메일 : <a href="dd@dd.dd">stove@smilegate.com</a>
+      <address id="fid">
+        <span>(주)스마일게이트홀딩스</span>
+        <span>대표이사:성준호</span>
+        <span>주소: 경기도 성남시 분당구 판교역로 220(삼평동) 쏠리드 스페이스 빌딩 5층</span><br />
+        <span>사업자 등록번호 : 132-81-60298</span>
+        <span>통신판매업 신고번호 : 제20220-성남분당A-1071호 <a href="#">사업자정보확인</a></span><br />
+        <span>대표번호 : <a href="tel:0000000">1670-0399</a></span>
+        <span>팩스 : <a href="tel:00000">02-6020-8213</a></span>
+        <span>이메일 : <a href="dd@dd.dd">stove@smilegate.com</a></span>
         <br /><br />
         © Smilegate. All Rights Reserved.
-      </p>
+      </address>
+      <br />
+      <br />
       <h2><a href="#">smilegate</a></h2>
     </div>
   </footer>
