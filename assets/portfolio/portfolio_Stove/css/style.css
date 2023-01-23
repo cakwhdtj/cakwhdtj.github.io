@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 
+
 /* reset */
 body {margin: 0;}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
@@ -176,6 +177,7 @@ header {
 
 /* main */
 main {
+    /* border: 1px solid blue; */
     height: 2950px; 
     /* ** */
 }
@@ -578,7 +580,6 @@ section h2 {
 #section4 #s4Lower {
     border-bottom: 2px solid #828282;
     margin-bottom: 400px;
-    /*  */
 }
 #s4Lower > li {display: inline-block;}
 #s4Lower > li#s4PCGame > ul {transform: translateX(-120px);}
@@ -670,7 +671,6 @@ section h2 {
 }
  #s4PCGame .more i:nth-child(2){right: calc(15% + 20px);}
  #s4MobileGame .more.no > i:nth-child(1) {left: 50%; transform: translateX(-50%);}
-
 #s4Banner {
     box-sizing: border-box;
     display: flex;
@@ -692,7 +692,6 @@ section h2 {
     padding-left: 250px;
     width: 100%; height: 100%;
 }
-
 footer {
     background-color: #1f1f1f;
     color: #7d7d7d;
