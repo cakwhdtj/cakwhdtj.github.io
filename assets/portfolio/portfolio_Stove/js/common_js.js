@@ -1,22 +1,18 @@
-const { indexOf } = require("lodash");
-
 $('a[href="#"]').on('click', function (e) {
   e.preventDefault();
 });
 
-document.querySelector(".slide_container").addEventListener("click" , e => {
-  showSlide(e);
-})
+$("body").on("click" , function (e) {
+  onAdder(e, '#games');
+  console.log(e)
+});
 
 
-let showSlide = (e) => {
-  let selector = $(e.currentTarget);
-  console.log(indexOf(selector.find('li.on')))
-  // selector.find(".indicator li").removeClass('on');
 
+let onAdder = (e) => {
+  let selector = e.target;
+  $(selector).closest('li').siblings('.on').removeClass('on')
+  $(selector).closest('li').toggleClass('on');
 }
-
-
-
 
 //portfolio global
