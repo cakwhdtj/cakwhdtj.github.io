@@ -3,7 +3,9 @@ $('a[href="#"]').on('click', function (e) {
 });
 
 $("body").on("click" , function (e) {
-  console.log($(e.target));
+  // $(e.target).parents() ? console.log('yes') : console.log('no');
+  // console.log($(e.target).parents().find("#games li.on"))
+  console.log($(e.target).parents().find("#games"))
   
 })
 
