@@ -2,18 +2,6 @@ $('a[href="#"]').on('click', function (e) {
   e.preventDefault();
 });
 
-$("body").on("click" , function (e) {
-  console.log(e)
-  e.target.parents("#games") ? null : $("#games").find("li.on").removeClass('on');
-
-  // if ($("#games").find("li.on")) {
-  //   $("#games").find("li.on").removeClass('on');
-  // }
-});
-
-$("#games").on("click" , function (e) {
-  onAdder(e, '#games');
-});
 
 
 
