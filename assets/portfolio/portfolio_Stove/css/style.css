@@ -232,7 +232,10 @@ section h2 {
     border-radius: 4px;
     width: 100%; height: 100%; position: relative;
 }
-#section1 .slides li {display: none;}
+#section1 .slides li {
+    position: absolute;
+    display: none;
+}
 #section1 .slides li.on {display: inline-block;}
 #section1 .slides > li, #section1 .slides > li > a {
     position:absolute; width: 100%; height: 100%;
