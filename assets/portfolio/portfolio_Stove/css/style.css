@@ -228,15 +228,21 @@ section h2 {
 #section1 > div:nth-child(3) {background-image: url("https://d2x8kymwjom7h7.cloudfront.net/live/application_no/10009/application_no/10009/iop-center-front/(CAoA)드래곤관찰일지_온스토브메인_세로형(1).png");}
 #section1 .slide_container {position: relative;}
 #section1 .slides {
+    position: relative;
     border: 1px solid orange;
     border-radius: 4px;
-    width: 100%; height: 100%; position: relative;
+    width: 100%; height: 100%; 
 }
 #section1 .slides li {
     position: absolute;
     display: none;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
-#section1 .slides li.on {display: inline-block;}
+#section1 .slides li.on {
+    display: inline-block;
+}
 #section1 .slides > li, #section1 .slides > li > a {
     position:absolute; width: 100%; height: 100%;
     text-align: center;
