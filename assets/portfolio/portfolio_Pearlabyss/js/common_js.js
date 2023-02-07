@@ -235,7 +235,6 @@ function setImageSlide(selector, first, status, speed, type) {
     if (type === '.gallery' && window.outerWidth < 1024) {
       let scrGoTo = ($('#game .galScroll > li:eq(' + (n - 1) + ')').offset().top) - $('#header').height();
       $('body, html').animate({ 'scrollTop': scrGoTo }, 500);
-      console.log('hi')
     }
     $selector.find('.indicator li').removeClass('on');
     $selector.find('.indicator li:eq(' + (n - 1) + ')').addClass('on');
