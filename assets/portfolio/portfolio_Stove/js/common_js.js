@@ -2,16 +2,30 @@ $('a[href="#"]').on('click', function (e) {
   e.preventDefault();
 });
 
-setSlides("#games")
-setSlides("#section1 > div.slide_container");
-setSlides("#section1 > div.slide_container");
+$(document).on('click', function(e) {
+  $(e.target).closest('#games').length ? '' : $('#games .on').removeClass('on');
+});
+$('#games').on('click', 'li', function() {
+  $('#games .on').removeClass('on');
+  $(this).addClass('on');
+});
 
 
 
-function setSlides(selector) {
+setSlides("#section1 > div.slide_container", 'slide' , 1);
+setSlides("#section2.slide_container", 'label', 1);
+
+
+
+function setSlides(selector , type , firstSlide) {
   let $selector = $(selector);
-  let numSlide = $selector.find(".slides > li").length;
+  let slideType = ''; //slide , label, 
   let slideFirst = 1;
+  slideType = type || 'slide';
+  slideFirst = firstSlide !== undefined ? firstSlide : slideFirst;
+
+  
+  let numSlide = $selector.find(".slides > li").length;
   let slideNow = 0;
   let slideNext = 0;
   let slidePrev = 0;
@@ -22,23 +36,26 @@ function setSlides(selector) {
   });
   showSlide(slideFirst);
  
-
-  
-  $selector.find(".control > button").on("click" , function () {
+  $selector.find('.control > button').on('click' , function () {
     $(this).attr('class') === 'right' ? showSlide(slideNext) : showSlide(slidePrev);
   });
+  $selector.find('.indicator > li').on('click' , function (e) {
+    showSlide($(this).index() + 1)
+  })
+
 
   function showSlide(n) {
-    $selector.find(".indicator li").removeClass("on");
-    $selector.find(".indicator li:eq(" + (n-1) + ")").addClass("on");
+    $selector.find('.indicator li').removeClass('on');
+    $selector.find('.indicator li:eq(' + (n-1) + ')').addClass('on');
     slideNow = n;
-    $selector.find(".slides li").removeClass("on");
-    $selector.find(".slides li:eq(" + (n-1) + ")").addClass("on");
+    $selector.find('.slides li').removeClass('on');
+    $selector.find('.slides li:eq(' + (n-1) + ')').addClass('on');
     slidePrev = (n === 1) ? numSlide : (n - 1);
     slideNext = (n === numSlide) ? 1 : (n + 1);
 
-    $selector.find(".slides").css({'left': -((n - 1) * 100) + '%' });
-    // (n === numSlide) ? 
+    (slideType === 'slide') ?
+     $selector.find('.slides').css({'left': -((n - 1) * 100) + '%' }) 
+     : null;
   }
 }
 
