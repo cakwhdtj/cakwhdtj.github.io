@@ -485,6 +485,7 @@ section h2 {
     box-shadow: #1f1f1f;
     height: 56px;
     width: 25%;
+    z-index: 2;
 }
 #section4 #s4Upper li.on h4 {
     color: #fff;

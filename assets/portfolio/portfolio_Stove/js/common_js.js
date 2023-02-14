@@ -12,19 +12,21 @@ $('#games').on('click', 'li', function() {
 
 
 
-setSlides("#section1 > div.slide_container", 'slide' , 1);
-setSlides("#section2.slide_container", 'label', 1);
-setSlides("#section4 .slide_container", 'label', 3);
+setSlides("#section1 > div.slide_container", 'slide' , 1, false);
+setSlides("#section2.slide_container", 'label', 1, false);
+setSlides("#section4 .slide_container", 'label', 1, false);
 
 
 
 
-function setSlides(selector , type , firstSlide) {
+function setSlides(selector , type , firstSlide , timer) {
   let $selector = $(selector);
   let slideType = ''; //slide , label, 
   let slideFirst = 1;
   slideType = type || 'slide';
   slideFirst = firstSlide !== undefined ? firstSlide : slideFirst;
+  let isTimer = false;
+  isTimer = timer !== undefined ? timer : isTimer;
 
   
   let numSlide = $selector.find(".slides > li").length;
@@ -47,7 +49,11 @@ function setSlides(selector , type , firstSlide) {
   $selector.find('.slides li h4').on('click' , function (e) {
     showSlide($(this).parents("li").index()+ 1)
   });
-
+  if (isTimer = true) {
+    setInterval(() => {
+      showSlide(slideNext);
+    }, 5000);
+  }
 
   function showSlide(n) {
     $selector.find('.indicator li').removeClass('on');
