@@ -50,9 +50,7 @@ function setSlides(selector , type , firstSlide , timer) {
     showSlide($(this).parents("li").index()+ 1)
   });
   if (isTimer = true) {
-    setInterval(() => {
-      showSlide(slideNext);
-    }, 5000);
+    interval();
   }
 
   function showSlide(n) {
@@ -67,6 +65,11 @@ function setSlides(selector , type , firstSlide , timer) {
     (slideType === 'slide') ?
      $selector.find('.slides').css({'left': -((n - 1) * 100) + '%' }) 
      : null;
+  }
+  function interval() {
+    setInterval(() => {
+      showSlide(slideNext);
+    }, 5000);
   }
 }
 
