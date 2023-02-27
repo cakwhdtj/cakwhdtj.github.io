@@ -36,12 +36,40 @@ main {
     width: 100%;
 }
 main ul {
+    display: flex;
     width: 100%;
     height: 100%;
 }
 main ul li {
-    display: inline-block;
+    box-sizing: border-box;
     height: 100%;
     width: 25%;
     border: 1px solid yellow;
+    overflow: hidden;
+}
+main ul li a {
+    display: block;
+    width: 100%; height: 100%;
+    transition: all .3s ease;
+
+}
+main ul li a {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main ul li:nth-child(1) a {background-image: url(../img/1.jpg);}
+main ul li:nth-child(2) a {
+    background-image: url(../img/2.jpg);
+    background-position-x: 10%;
+}
+main ul li:nth-child(3) a {
+    background-image: url(../img/3.jpg);
+    background-position-x: 50%;
+}
+main ul li:nth-child(4) a {
+    background-image: url(../img/4.jpg);
+    background-position-x: 40%;
+}
+main ul li:hover a{
+    transform: scale(1.2);
 }
