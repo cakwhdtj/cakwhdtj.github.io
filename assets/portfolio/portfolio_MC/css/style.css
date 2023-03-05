@@ -15,23 +15,36 @@ li {list-style: none;}
 /*  */
 header {
     width: 100%;
-    border: 1px solid red;
     position: fixed;
-    display: none;
+    z-index: 10;
+    display: flex;
+    border: 1px solid red;
+    height: 100px;
     justify-content: space-between;
+    align-items: center;
 }
-header ul {
-    border: 1px solid orange;
+header > * {
+    display: inline-block;
+    /* border: 1px solid red; */
 }
 header ul li {
     display: inline-block;
-    width: 100px; height: 100px;
     border: 1px solid yellow;
+    width: 100px; height: 100px;
+}
+header ul li a {
+    display: block;
+    transform: scale(.8);
+    background-color: white;
+    width: 100%; height: 100%;
+    transition: all .3s ease;
+}
+header ul li:hover a {
+    transform: scale(.8) translateY(-10px);
 }
 
 main {
     display: block;
-    border: 1px solid red;
     height: 100vh;
     width: 100%;
 }
@@ -44,29 +57,50 @@ main ul li {
     box-sizing: border-box;
     height: 100%;
     width: 25%;
-    border: 1px solid yellow;
     overflow: hidden;
+    position: relative;
+    transition: all .3s ease;
 }
-main ul li a {
+/* main ul li.on { 
+    width: 60%;
+}
+main ul li:not(.on) {
+    width: calc(40%/3);
+} */
+main ul li > a {
     display: block;
     width: 100%; height: 100%;
-    transition: all .3s ease;
+    transition: all .8s ease;
 
 }
-main ul li a {
+main ul li > a {
     background-size: cover;
     background-repeat: no-repeat;
 }
-main ul li:nth-child(1) a {background-image: url(../img/1.jpg);}
-main ul li:nth-child(2) a {
+main ul li div {
+    position: absolute;
+    /* display: ; */
+    width: 0%; height: 100%;
+    background: white;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+main ul li.on div {
+    width: 100%;
+}
+
+main ul li:nth-child(1) > a {background-image: url(../img/1.jpg);}
+main ul li:nth-child(2) > a {
     background-image: url(../img/2.jpg);
     background-position-x: 10%;
 }
-main ul li:nth-child(3) a {
+main ul li:nth-child(3) > a {
     background-image: url(../img/3.jpg);
     background-position-x: 50%;
 }
-main ul li:nth-child(4) a {
+main ul li:nth-child(4) > a {
     background-image: url(../img/4.jpg);
     background-position-x: 40%;
 }
