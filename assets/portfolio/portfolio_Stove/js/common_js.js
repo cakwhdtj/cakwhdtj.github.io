@@ -12,7 +12,7 @@ $('#games').on('click', 'li', function() {
 
 
 
-setSlides("#section1 > div.slide_container", 'slide' , 1, false);
+setSlides("#section1 > div.slide_container", 'slide' , 1, true);
 setSlides("#section2.slide_container", 'label', 1, false);
 setSlides("#section4 .slide_container", 'label', 1, false);
 
@@ -25,10 +25,8 @@ function setSlides(selector , type , firstSlide , timer) {
   let slideFirst = 1;
   slideType = type || 'slide';
   slideFirst = firstSlide !== undefined ? firstSlide : slideFirst;
-  let isTimer = false;
-  isTimer = timer !== undefined ? timer : isTimer;
-
-  
+  let isTimer = (timer === undefined) ? false : timer;
+  let intervalId;
   let numSlide = $selector.find(".slides > li").length;
   let slideNow = 0;
   let slideNext = 0;
@@ -39,19 +37,22 @@ function setSlides(selector , type , firstSlide , timer) {
     $selector.find('.indicator').append('<li><a href="#"><span  class="hide_clipPath">' + (i + 1) + '번 슬라이드</span></a></li>\n');
   });
   showSlide(slideFirst);
- 
+  if (timer) {startInterval();}
+  
+  
+  
   $selector.find('.control > button').on('click' , function () {
     $(this).attr('class') === 'right' ? showSlide(slideNext) : showSlide(slidePrev);
+    resetInterval();
   });
   $selector.find('.indicator > li').on('click' , function (e) {
-    showSlide($(this).index() + 1)
+    showSlide($(this).index() + 1);
+    resetInterval();
   });
   $selector.find('.slides li h4').on('click' , function (e) {
-    showSlide($(this).parents("li").index()+ 1)
+    showSlide($(this).parents("li").index()+ 1);
+    resetInterval();
   });
-  if (isTimer = true) {
-    interval();
-  }
 
   function showSlide(n) {
     $selector.find('.indicator li').removeClass('on');
@@ -61,15 +62,23 @@ function setSlides(selector , type , firstSlide , timer) {
     $selector.find('.slides > li:eq(' + (n-1) + ')').addClass('on');
     slidePrev = (n === 1) ? numSlide : (n - 1);
     slideNext = (n === numSlide) ? 1 : (n + 1);
-
     (slideType === 'slide') ?
      $selector.find('.slides').css({'left': -((n - 1) * 100) + '%' }) 
      : null;
   }
-  function interval() {
-    setInterval(() => {
+  function startInterval() {
+    intervalId = setInterval(function() {
       showSlide(slideNext);
     }, 5000);
+  }
+  function stopInterval() {
+    clearInterval(intervalId);
+  }
+  function resetInterval() {
+    if (timer) {
+      stopInterval();
+      startInterval();
+    }
   }
 }
 
