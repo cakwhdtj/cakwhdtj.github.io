@@ -29,6 +29,31 @@ li {list-style: none;}
     justify-content: space-between;
     align-items: center;
 }
+.slides {
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+.thumbnails {
+    display: block;
+    width: 64px; height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.thumbnails.ga {background-image: url("../img/thumbGa.png");}
+.thumbnails.la {background-image: url("../img/thumbLa.png");}
+.thumbnails.tr {background-image: url("../img/thumbTr.jpeg");}
+.thumbnails.ca {background-image: url("../img/thumbCa.jpg");}
+.thumbnails.kd {background-image: url("../img/thumbKd.jpg");}
+.thumbnails.wb {background-image: url("../img/thumbWb.png");}
+.thumbnails.es {background-image: url("../img/thumbEs.png");}
+.thumbnails.ga {background-image: url("../img/thumbGa.png");}
+.thumbnails.st {background-image: url("../img/thumbSt.png");}
+.thumbnails.qr {background-image: url("../img/thumbQr.png");}
+.thumbnails.my {background-image: url("../img/thumbMy.jpg");}
+
+
+
 /* header */
 body {background: #f5f5f5;}
 
@@ -78,15 +103,10 @@ header {
 #games > li > ul > li  > * {
     display: inline-block;
     position: relative;
-    height: 100%;
     margin-right: 5px;
 }
 #games > li > ul > li > div {
     padding: 5px;
-}
-#games > li > ul > li > a {
-    background-color: blue;
-    width: 64px; height: 64px;
 }
 #games > li > ul > li h3 {
     font-size: 16px;
@@ -134,7 +154,6 @@ header {
     display: none;
 }
 
-/* #gnb_side #lang {} */
 #gnb_side #lang h3,
 #gnb_side #gnb h3
  {position: relative;}
@@ -184,9 +203,7 @@ header {
 
 /* main */
 main {
-    /* border: 1px solid blue; */
     height: 2950px; 
-    /* ** */
 }
 main > .wrapper {
     margin-top: 100px;
@@ -242,7 +259,6 @@ section h2 {
 #section1 .slides li {
     display: inline-block;
     box-sizing: border-box;
-    margin-right: -5px;
     width: 100%; height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,37 +322,41 @@ section h2 {
     position: relative;
     box-sizing: border-box;
 }
-#section2 .slides{
+#section2 .slides {
     box-sizing: border-box;
-    border: 1px solid red;
-    width: 100%; height:calc(100% - 50px);
+    position: relative;
+    width: 100%; height:225px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 #section2 .slides > li {
-    border: 1px solid blue;
     position: absolute;
     right: 0;
-    width: calc(100% - 246px); height:calc(100% - 50px);;
+    width: calc(100% - 246px); height:100%;
+    border: 1px solid green;
 }
 
 #section2 .slides > li .desc {
+    border: 1px solid blue;
     width: 100%; height: 100%;
     display: none;
-    background-size: cover;
+    transform: translateX(10%);
+    background-size: contain;
     background-repeat: no-repeat;
 }
-#section2 .slides > li .desc > a {
+#section2 .slides > li.on .desc > a {
+    border: 1px solid red;
     position: absolute;
     right: 0; top: 0;
-    background: #000;
-    opacity: .3;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 1;
 }
 #section2 .slides > li.on .desc {display: block;}
-#section2 .slides > li:nth-child(1) .desc {
-    background-image: url("../img/s2d1.png");
-}
+#section2 .slides > li:nth-child(1) .desc {background-image: url("../img/s2d1.png");}
+#section2 .slides > li:nth-child(2) .desc {background-image: url("../img/s2d2.png");}
+#section2 .slides > li:nth-child(3) .desc {background-image: url("../img/s2d3.png");}
+
 
 #section2 .indicator {
     position: absolute;
@@ -349,9 +369,11 @@ section h2 {
 }
 #section2 h4 {
     position: absolute;
+    background-color: #fff;
     left: -246px;
     width: 246px; height:calc(100% / 3);
 }
+
 
 #section2 h4 span {
     position: absolute;
