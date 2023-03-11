@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useRef} from 'react';
 
 import Header from './Header'
 import Section1 from './Section1';
@@ -35,6 +35,14 @@ const Main = (props) => {
         backgroundColor : `${dataSet.scroll < 1040 ? 'black' : 'white'}`,
         transition: 'all .3s ease'
     }
+    // const myElementRef = useRef(null);
+
+    // useEffect(() => {
+    //     const elementOffsetTop = myElementRef.current.offsetTop;
+    //     console.log("Offset top:", elementOffsetTop);
+    // }, []);
+
+
     return (
         <div style={fontBorW}>
         <Fns getScroll={getScroll} getWidth={getWidth}/>

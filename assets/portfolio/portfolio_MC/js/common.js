@@ -10,6 +10,7 @@ $(".close").on('click', function (e) {
 });
 
 
+
 function doOnClick() {
     $("main ul li.on").css({"width" : 60+"%"});
     $("main ul li").not("li.on").css({"width": (40/3)+"%"});
