@@ -23,20 +23,38 @@ header {
     z-index: 10;
     padding: 30px;
     color: #fff;
-    border: 1px solid red;
+}
+header h1 {
+    color: red;
 }
 header > ul {
-    border: 1px solid yellow;
+    width: 400px;
     display: flex;
+    justify-content: space-evenly;
 }
 header > ul > li {
-    border: 1px solid red;
     width: 80px; height: 80px;
     text-align: center;
+    transition: all .3s ease;
+}
+header > ul > li:hover {transform: translateY(-5px);}
+
+header > ul > li a {
+    display: block;
+    position: relative;
+    height: 100%;
 }
 header > ul > li a span:nth-child(1) {
     display: block;
     font-size: 50px;
+}
+header > ul > li a span:nth-child(2) {
+    display: block;
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: 100%;
+    transform: translateX(-50%);
+    
 }
 header #headerKakao span:nth-child(1) {
     background-image: url("../img/kakao.svg");
@@ -48,10 +66,14 @@ header #headerBlog span:nth-child(1) {
     background-image: url("../img/blog.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: 5px;
+    margin-top: 8px;
     height: 40px;
     transform: translateX(15px);
 }
-
+header #headerBlog span:nth-child(2) {
+    bottom: 8px;
+}
 
 
 main {
@@ -113,6 +135,7 @@ main .telecom p {
     font-size: 18px;
     font-weight: 500;
     position: relative;
+    cursor: pointer;
 }
 main .telecom p::after {
     content: ">";
