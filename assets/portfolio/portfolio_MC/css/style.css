@@ -12,58 +12,65 @@ li {list-style: none;}
 
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
+
 /*  */
 header {
     box-sizing: border-box;
-    width: 100%;
     position: fixed;
-    z-index: 10;
     display: flex;
-    border: 1px solid red;
-    height: 100px;
     justify-content: space-between;
-    align-items: center;
+    width: 100%; height: 120px;
+    z-index: 10;
     padding: 30px;
+    color: #fff;
+    border: 1px solid red;
 }
-header > * {
-    display: inline-block;
-}
-header ul {
-    position: relative;
-    border: 1px solid blue;
-}
-header ul li {
-    display: inline-block;
+header > ul {
     border: 1px solid yellow;
+    display: flex;
+}
+header > ul > li {
+    border: 1px solid red;
     width: 80px; height: 80px;
+    text-align: center;
 }
-header ul li a {
+header > ul > li a span:nth-child(1) {
     display: block;
-    transform: scale(.8);
-    background-color: white;
-    width: 100%; height: 100%;
-    transition: all .3s ease;
+    font-size: 50px;
+}
+header #headerKakao span:nth-child(1) {
+    background-image: url("../img/kakao.svg");
+    background-repeat: no-repeat;
+    height: 50px;
+    transform: translateX(15px);
+}
+header #headerBlog span:nth-child(1) {
+    background-image: url("../img/blog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    transform: translateX(15px);
 }
 
-header ul li:hover a {
-    transform: scale(.8) translateY(-10px);
-} 
 
-header ul li a span {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border:1px solid red;
-}
-header #reserve {
-    /* position: absolute; */
-}
 
 main {
     display: block;
     height: 100vh;
     width: 100%;
 }
+/* main *::-webkit-scrollbar {
+        display: none;
+} */
+main *::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+main *::-webkit-scrollbar-thumb {
+background-color: #7f7f7f79;
+border-radius: 10px;
+}
+
 main ul {
     display: flex;
     width: 100%;
@@ -87,7 +94,55 @@ main ul li > a {
     background-size: cover;
     background-repeat: no-repeat;
 }
-main ul li > div {
+main ul li .telecom {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px; height: 300px;
+    box-sizing: border-box;
+    padding: 50px;
+}
+main .telecom h2 {
+    width: 100%; height: 100px;
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+main .telecom p {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+main .telecom p::after {
+    content: ">";
+    position: absolute;
+    top: 60px; left: 0;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    font-size: 45px;
+    width: 45px; height: 45px;
+    border: 1px solid #000;
+    transition: all .3s ease;
+}
+main ul li .telecom p:hover::after {
+    color: #fff;
+    background-color: #00000087;
+    border: none;
+}
+
+#SKB h2 {background-image: url("../img/skb.svg");}
+#uPlus h2 {background-image: url("../img/lgu.svg");}
+#KT h2 {
+    width: 40%;
+    background-image: url("../img/kt.svg");
+}
+#KTSkylife h2 {background-image: url("../img/kts.svg");}
+
+
+
+
+main ul li .content {
     position: absolute;
     width: 0%; height: 100%;
     background: white;
@@ -96,39 +151,66 @@ main ul li > div {
     overflow: scroll;
     text-align: center;
 }
-main ul li.on > div {
+main ul li.on .content {
     width: 100%;
 }
+  
 main ul .close {
     position: absolute;
     right: 15px; top: 15px;
     z-index: 2;
 }
-main ul p {
-    /* position: absolute; */
-    display: block;
-    border: 1px solid red;
-    box-sizing: border-box;
-    padding: 30px;
-    scroll-behavior: smooth;
-}
 
-main ul li:nth-child(1) > a {background-image: url(../img/1.jpg);}
-main ul li:nth-child(2) > a {
+
+
+main > ul > li:nth-child(1) > a {background-image: url(../img/1.jpg);}
+main > ul > li:nth-child(2) > a {
     background-image: url(../img/2.jpg);
     background-position-x: 10%;
 }
-main ul li:nth-child(3) > a {
+main > ul > li:nth-child(3) > a {
     background-image: url(../img/3.jpg);
     background-position-x: 50%;
 }
-main ul li:nth-child(4) > a {
+main > ul > li:nth-child(4) > a {
     background-image: url(../img/4.jpg);
     background-position-x: 40%;
 }
-main ul li:hover a{
+main > ul > li:hover a{
     transform: scale(1.2);
 }
+main > ul .content > div {
+    display: block;
+    border: 1px solid red;
+}
+main > ul .content {
+    display: none;
+    box-sizing: border-box;
+    padding: 120px 20px 0 20px;
+}
+main > ul > li.on .content {
+    display: block;
+}
+
+.content .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+.content .grid-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.internetTv .grid-container{grid-template-columns: repeat(4, 1fr);}
+.internet .grid-container{grid-template-columns: repeat(3, 1fr);}
+
+#KTSkylife .internetTv .grid-container{grid-template-columns: repeat(3, 1fr);}
+#KTSkylife .internet .grid-container{grid-template-columns: repeat(4, 1fr);}
+
 
 
 footer {
