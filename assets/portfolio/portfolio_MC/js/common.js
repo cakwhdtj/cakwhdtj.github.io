@@ -7,6 +7,8 @@ $(".close").on('click', function (e) {
     e.stopPropagation()
     $("main ul li").removeClass('on');
     doOnClick();
+    $(".telecom").css({"transform" : "translate(-50%,-50%) scale(1)"})
+
 });
 
 
@@ -20,5 +22,8 @@ function doOnClick() {
         } else {
             $("main ul li").css({"width":25+"%"});
             $("header").css({"display":"flex"});
-        }
+        };
+    $(".telecom").css({"transform" : "translate(-50%,-50%) scale(.5)"})
+
+    
 }

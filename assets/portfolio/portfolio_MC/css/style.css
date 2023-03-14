@@ -123,7 +123,9 @@ main ul li .telecom {
     width: 300px; height: 300px;
     box-sizing: border-box;
     padding: 50px;
+    transition: all .3s ease;
 }
+
 main .telecom h2 {
     width: 100%; height: 100px;
     background-size: contain;
@@ -153,6 +155,7 @@ main ul li .telecom p:hover::after {
     background-color: #00000087;
     border: none;
 }
+
 
 #SKB h2 {background-image: url("../img/skb.svg");}
 #uPlus h2 {background-image: url("../img/lgu.svg");}
@@ -202,31 +205,28 @@ main > ul > li:nth-child(4) > a {
 main > ul > li:hover a{
     transform: scale(1.2);
 }
-main > ul .content > div {
-    display: block;
-    border: 1px solid red;
-}
+main > ul .content > div {display: block;}
 main > ul .content {
     display: none;
     box-sizing: border-box;
     padding: 120px 20px 0 20px;
 }
-main > ul > li.on .content {
-    display: block;
-}
+main > ul > li.on .content {display: block;}
 
 .content .grid-container {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 0px;
     background-color: #f1f1f1;
     padding: 10px;
 }
 .content .grid-item {
     background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+    border: .5px solid #ccc;
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 .internetTv .grid-container{grid-template-columns: repeat(4, 1fr);}
 .internet .grid-container{grid-template-columns: repeat(3, 1fr);}
@@ -234,7 +234,16 @@ main > ul > li.on .content {
 #KTSkylife .internetTv .grid-container{grid-template-columns: repeat(3, 1fr);}
 #KTSkylife .internet .grid-container{grid-template-columns: repeat(4, 1fr);}
 
-
+.grid-container .th {
+    color: #fff;
+    background-color: rgb(50, 100, 183);
+}
+.grid-container .th.thE {
+    background-color: rgb(80, 175, 220);
+ }
+.grid-container .tr2 {
+    background-color: rgba(50, 101, 183, 0.01);
+}
 
 footer {
     display: none;
