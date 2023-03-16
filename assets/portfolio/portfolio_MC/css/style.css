@@ -122,33 +122,49 @@ main ul li .telecom {
     transform: translate(-50%,-50%);
     width: 300px; height: 300px;
     box-sizing: border-box;
-    padding: 50px;
+    padding: 25px 25px 0px 25px;
     transition: all .3s ease;
+    cursor: pointer;
 }
+/* main ul li .telecom:hover {
+    background-color: #0000005d;
+    color: #fff;
+} */
 
 main .telecom h2 {
     width: 100%; height: 100px;
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 main .telecom p {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     position: relative;
-    cursor: pointer;
+    word-break: keep-all;
+    font-family: 'NanumBarunPen';
+    font-weight: bold;
+}
+main .telecom:hover p::before,
+main .telecom:hover p::after {
+    animation: left0to-n 1s ease-in-out infinite;
+}
+main .telecom p::before {
+    content: "";
+    position: absolute;
+    width: 30px; height: 3px;
+    background-color: #000;
+    bottom: -25px; left: 0;
+    transform: rotate(-30deg);
 }
 main .telecom p::after {
-    content: ">";
+    content: "";
     position: absolute;
-    top: 60px; left: 0;
-    box-sizing: border-box;
-    padding: 0 0 0 10px;
-    font-size: 45px;
-    width: 45px; height: 45px;
-    border: 1px solid #000;
-    transition: all .3s ease;
+    width: 30px; height: 3px;
+    background-color: #000;
+    bottom: -40px; left: 0;
+    transform: rotate(30deg);
 }
 main ul li .telecom p:hover::after {
     color: #fff;
@@ -256,3 +272,12 @@ footer {
         width: 100%;
     }
 } */
+
+@keyframes left0to-n {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -5%;
+    }
+}
