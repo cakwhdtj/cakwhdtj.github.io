@@ -1,5 +1,8 @@
 /* reset */
-body {margin: 0;}
+body {
+    margin: 0;
+    font-family: 'NanumBarunGothic';
+}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 a {color: inherit;text-decoration: inherit;}
@@ -12,6 +15,27 @@ li {list-style: none;}
 
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
+/* 
+font-family: 'NanumBarunGothicExtraLight';
+font-family: 'NanumBarunGothicLight';
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold';
+ */
+.buttonSt {
+    background-color: #fff;
+    color: #1553AD;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #1553AD;
+    font-family: 'NanumBarunGothic';
+    font-weight:lighter;
+    transition: all .3s ease;
+}
+.buttonSt:hover {
+    background-color: #1553AD;
+    color: #fff;
+}
 
 /*  */
 header {
@@ -25,7 +49,10 @@ header {
     color: #fff;
 }
 header h1 {
-    color: red;
+    background-size: contain    ;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo.svg");
+    width: 80px; height: 80px;
 }
 header > ul {
     width: 400px;
@@ -47,13 +74,17 @@ header > ul > li a {
 header > ul > li a span:nth-child(1) {
     display: block;
     font-size: 50px;
+    color: #1553AD;
 }
 header > ul > li a span:nth-child(2) {
     display: block;
     position: absolute;
     left: 50%; bottom: 0;
+    word-break: keep-all;
     width: 100%;
+    font-size: 14px;
     transform: translateX(-50%);
+    color: #edfaff;
     
 }
 header #headerKakao span:nth-child(1) {
@@ -75,30 +106,25 @@ header #headerBlog span:nth-child(2) {
     bottom: 8px;
 }
 
-
 main {
     display: block;
     height: 100vh;
     width: 100%;
 }
-/* main *::-webkit-scrollbar {
-        display: none;
-} */
 main *::-webkit-scrollbar {
     width: 5px;
-  }
-  
+  } 
 main *::-webkit-scrollbar-thumb {
 background-color: #7f7f7f79;
 border-radius: 10px;
 }
 
-main ul {
+main > ul {
     display: flex;
     width: 100%;
     height: 100%;
 }
-main ul li {
+main > ul > li {
     box-sizing: border-box;
     height: 100%;
     width: 25%;
@@ -106,11 +132,10 @@ main ul li {
     position: relative;
     transition: all .3s ease;
 }
-main ul li > a {
+main > ul > li > a {
     display: block;
     width: 100%; height: 100%;
     transition: all .8s ease;
-
 }
 main ul li > a {
     background-size: cover;
@@ -126,11 +151,10 @@ main ul li .telecom {
     transition: all .3s ease;
     cursor: pointer;
 }
-/* main ul li .telecom:hover {
-    background-color: #0000005d;
+main ul li:hover .telecom {
+    background: #00000048;
     color: #fff;
-} */
-
+}
 main .telecom h2 {
     width: 100%; height: 100px;
     background-size: contain;
@@ -139,16 +163,16 @@ main .telecom h2 {
     margin-bottom: 25px;
 }
 main .telecom p {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     position: relative;
     word-break: keep-all;
-    font-family: 'NanumBarunPen';
-    font-weight: bold;
+    font-weight: 400;
 }
-main .telecom:hover p::before,
-main .telecom:hover p::after {
+main li:hover .telecom p::before,
+main li:hover .telecom p::after {
     animation: left0to-n 1s ease-in-out infinite;
+    background-color: #fff;
 }
 main .telecom p::before {
     content: "";
@@ -166,11 +190,7 @@ main .telecom p::after {
     bottom: -40px; left: 0;
     transform: rotate(30deg);
 }
-main ul li .telecom p:hover::after {
-    color: #fff;
-    background-color: #00000087;
-    border: none;
-}
+
 
 
 #SKB h2 {background-image: url("../img/skb.svg");}
@@ -218,7 +238,7 @@ main > ul > li:nth-child(4) > a {
     background-image: url(../img/4.jpg);
     background-position-x: 40%;
 }
-main > ul > li:hover a{
+main > ul > li:hover > a{
     transform: scale(1.2);
 }
 main > ul .content > div {display: block;}
@@ -229,6 +249,21 @@ main > ul .content {
 }
 main > ul > li.on .content {display: block;}
 
+.content > div {
+    margin-bottom: 80px;
+}
+.content h3 {
+    color: #1553AD;
+    font-family: 'NanumBarunGothicBold';
+    font-weight: 900;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.content h3 > span.material-symbols-outlined {
+    font-size: 45px;
+    margin-right: 10px;
+    transform: translateY(10px);
+}
 .content .grid-container {
     display: grid;
     grid-gap: 0px;
@@ -252,14 +287,53 @@ main > ul > li.on .content {display: block;}
 
 .grid-container .th {
     color: #fff;
-    background-color: rgb(50, 100, 183);
+    background-color: #1553AD;
 }
 .grid-container .th.thE {
-    background-color: rgb(80, 175, 220);
+    background-color: #009DD5;
  }
 .grid-container .tr2 {
     background-color: rgba(50, 101, 183, 0.01);
 }
+
+.content .info > div ul {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+    white-space: nowrap;
+}
+.content .info li {overflow: visible;}
+.content .info li > a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.content .info li a > * {
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+.content .info li a span {
+    font-size: 100px;
+    color: #1553AD;
+}
+ .content .notice ul {
+    box-sizing: border-box;
+    padding: 50px 0px 50px 100px;
+    border: 1px solid #009DD5;
+    border-left: none; 
+    border-right: none;
+    text-align: left;
+    word-break: keep-all;
+ }
+ .content .notice ul li {
+    width: 100%;
+    list-style: outside;
+    margin: 15px 0;
+ }
+
+
+
 
 footer {
     display: none;
