@@ -317,7 +317,8 @@ main > ul > li.on .content {display: block;}
     font-size: 100px;
     color: #1553AD;
 }
- .content .notice ul {
+ .content .notice ul,
+ .content .caution ul {
     box-sizing: border-box;
     padding: 50px 0px 50px 100px;
     border: 1px solid #009DD5;
@@ -326,7 +327,8 @@ main > ul > li.on .content {display: block;}
     text-align: left;
     word-break: keep-all;
  }
- .content .notice ul li {
+ .content .notice ul li,
+ .content .caution ul li {
     width: 100%;
     list-style: outside;
     margin: 15px 0;
