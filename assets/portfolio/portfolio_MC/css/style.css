@@ -256,6 +256,7 @@ main > ul > li.on .plans {display: block;}
     font-weight: 900;
     font-size: 45px;
     margin-bottom: 50px;
+    word-break: keep-all;
 }
 .plans h3 > span.material-symbols-outlined {
     font-size: 45px;
@@ -272,7 +273,7 @@ main > ul > li.on .plans {display: block;}
     background-color: #ffffff;
     border: .5px solid #ccc;
     display: flex;
-    font-size: 11px;
+    font-size: 14px;
     align-items: center;
     justify-content: center;
     height: 50px;
