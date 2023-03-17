@@ -48,8 +48,8 @@ header {
     padding: 30px;
     color: #fff;
 }
-header h1 {
-    background-size: contain    ;
+h1.logo {
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../img/logo.svg");
     width: 140px; height: 140px;
@@ -121,7 +121,6 @@ main *::-webkit-scrollbar-thumb {
 background-color: #7f7f7f79;
 border-radius: 10px;
 }
-
 main > ul {
     display: flex;
     width: 100%;
@@ -135,6 +134,7 @@ main > ul > li {
     position: relative;
     transition: all .3s ease;
 }
+main > ul > li.on {width: 60%;}
 main > ul > li > a {
     display: block;
     width: 100%; height: 100%;
@@ -153,13 +153,20 @@ main ul li .telecom {
     padding: 50px 30px 0px 30px;
     transition: all .3s ease;
     cursor: pointer;
-    border-radius: 40%;
-}
-main ul li:hover .telecom {
-    background: #009cd58e;
-    /* background: #ffffff; */
+    border-radius: 10%;
+    background: #00000085;
     color: #fff;
 }
+.contents .logo {
+    position: absolute;
+    top: 30px; left: 30px;
+    width: 80px;
+}
+
+/* main ul li:hover .telecom {
+    background: #009cd58e;
+    color: #fff;
+} */
 main .telecom h2 {
     width: 100%; height: 100px;
     background-size: contain;
@@ -189,7 +196,7 @@ main .telecom p {
 
 
 
-main ul li .content {
+main ul li .contents {
     position: absolute;
     width: 0%; height: 100%;
     background: white;
@@ -198,7 +205,7 @@ main ul li .content {
     overflow: scroll;
     text-align: center;
 }
-main ul li.on .content {width: 100%;}
+main ul li.on .contents {width: 100%;}
 main ul .close {
     position: absolute;
     display: flex;
@@ -223,48 +230,48 @@ main ul .close:hover::after {background: #fff;}
 
 main > ul > li:nth-child(1) > a {background-image: url(../img/1.jpg);}
 main > ul > li:nth-child(2) > a {
-    background-image: url(../img/2.jpg);
-    background-position-x: 10%;
+    background-image: url(../img/2.jpeg);
+    background-position-x: 75%;
 }
 main > ul > li:nth-child(3) > a {
-    background-image: url(../img/3.jpg);
+    background-image: url(../img/3.jpeg);
     background-position-x: 50%;
 }
 main > ul > li:nth-child(4) > a {
-    background-image: url(../img/4.jpg);
+    background-image: url(../img/4.jpeg);
     background-position-x: 40%;
 }
 main > ul > li:hover > a{
     transform: scale(1.2);
 }
-main > ul .content > div {display: block;}
-main > ul .content {
+main > ul .contents > div {display: block;}
+main > ul .contents {
     display: none;
     box-sizing: border-box;
     padding: 120px 20px 0 20px;
 }
-main > ul > li.on .content {display: block;}
+main > ul > li.on .contents {display: block;}
 
-.content > div {margin-bottom: 100px;}
-.content h3 {
+.contents > div {margin-bottom: 100px;}
+.contents h3 {
     color: #1553AD;
     font-family: 'NanumBarunGothicBold';
     font-weight: 900;
     font-size: 45px;
     margin-bottom: 50px;
 }
-.content h3 > span.material-symbols-outlined {
+.contents h3 > span.material-symbols-outlined {
     font-size: 45px;
     margin-right: 10px;
     transform: translateY(10px);
 }
-.content .grid-container {
+.contents .grid-container {
     display: grid;
     grid-gap: 0px;
     background-color: #f1f1f1;
     padding: 10px;
 }
-.content .grid-item {
+.contents .grid-item {
     background-color: #ffffff;
     border: .5px solid #ccc;
     display: flex;
@@ -290,29 +297,29 @@ main > ul > li.on .content {display: block;}
     background-color: #f1f1f1;
 }
 
-.content .info > div ul {
+.contents .info > div ul {
     display: flex;
     padding-top: 20px;
     justify-content: space-around;
     white-space: nowrap;
 }
-.content .info li {overflow: visible;}
-.content .info li > a {
+.contents .info li {overflow: visible;}
+.contents .info li > a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
 }
-.content .info li a > * {
+.contents .info li a > * {
     margin-bottom: 20px;
     word-break: keep-all;
 }
-.content .info li a span {
+.contents .info li a span {
     font-size: 100px;
     color: #1553AD;
 }
- .content .notice ul,
- .content .caution ul {
+ .contents .notice ul,
+ .contents .caution ul {
     box-sizing: border-box;
     padding: 50px 0px 50px 100px;
     border: 1px solid #009DD5;
@@ -321,27 +328,101 @@ main > ul > li.on .content {display: block;}
     text-align: left;
     word-break: keep-all;
  }
- .content .notice ul li,
- .content .caution ul li {
+ .contents .notice ul li,
+ .contents .caution ul li {
     width: 100%;
     list-style: outside;
     margin: 15px 0;
  }
 
-
-
-
 footer {
     display: none;
 }
 
-/* @media (max-width: 800px) {
-    main ul {
-        display: flex;
-        flex-direction: column;
+@media (max-width: 1024px) {
+    header {
+        position: relative;
+        display: block;
+        height: 0;
+        padding: 0;
+    }
+    header > .logo {
+        position: absolute;
+        background-size: cover;
+        top: 10px; left: 10px;
+        width: 75px; height: 50px;
+    }
+    header > ul {
+        position: fixed;
+        background-color: #fff;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-around;
+    }
+    main {
+        height: calc(100vh - 100px);
+    }
+    main > ul {
+        display: block;
         width: 100%;
     }
-} */
+    header > ul > li a span:nth-child(2) {
+        color: #1553AD;
+    }
+    main > ul > li {
+        width: 100%;
+        height: 25%;
+    }
+    main > ul > li.on {
+        width: 100%;
+        height: 120%;
+    }
+    main > ul > li > a {
+        background-size: 50% auto;
+        background-position-y: 60%;
+    }
+    main > ul > li.on > a {
+        position: relative;
+        background-position-y: top;
+    }
+    main > ul > li:nth-child(1) > a {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/1.jpg');
+        background-position-x: 100%;
+    }
+    main > ul > li:nth-child(2) > a {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/2.jpeg');
+        background-position-x: 100%;
+    }
+    main > ul > li:nth-child(3) > a {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/3.jpeg');
+        background-position-x: 100%;
+    }
+    main > ul > li:nth-child(4) > a {
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/4.jpeg');
+        background-position-x: 100%;
+    }
+    main ul li .telecom {
+        background: none;
+        left: 15px;
+        top: -15px;
+        transform: none;
+    }
+    main .telecom h2 {
+        margin-bottom: 10px;
+    }
+    main .telecom p {
+        font-size: 15px;
+        color: black;
+        white-space: nowrap;
+    }
+    main ul li.on .contents {
+        margin-top: 40%;
+        box-sizing: border-box;
+        border: 2px solid #009DD5;
+    }
+}
 
 @keyframes left0to-n {
     0% {
