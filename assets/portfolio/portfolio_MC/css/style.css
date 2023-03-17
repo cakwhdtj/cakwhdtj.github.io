@@ -132,13 +132,13 @@ main > ul > li {
     width: 25%;
     overflow: hidden;
     position: relative;
-    transition: all .3s ease;
+    transition: all .8s ease;
 }
 main > ul > li.on {width: 60%;}
 main > ul > li > a {
     display: block;
     width: 100%; height: 100%;
-    transition: all .8s ease;
+    transition: all .3s ease;
 }
 main ul li > a {
     background-size: cover;
@@ -348,7 +348,8 @@ footer {
         position: absolute;
         background-size: cover;
         top: 10px; left: 10px;
-        width: 75px; height: 50px;
+        width: 60px;
+        height: 40px;
     }
     header > ul {
         position: fixed;
@@ -403,9 +404,10 @@ footer {
     }
     main ul li .telecom {
         background: none;
-        left: 15px;
-        top: -15px;
+        left: 10px;
+        top: -50px;
         transform: none;
+        width: 200px;
     }
     main .telecom h2 {
         margin-bottom: 10px;
@@ -427,6 +429,9 @@ footer {
         left: 10px;
         width: 75px;
         height: 50px;
+    }
+    .plans .grid-item {
+        font-size: 11px;
     }
 }
 
