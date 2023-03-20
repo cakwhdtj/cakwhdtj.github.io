@@ -138,12 +138,29 @@ main > ul > li.on {width: 60%;}
 main > ul > li > a {
     display: block;
     width: 100%; height: 100%;
-    transition: all .3s ease;
-}
-main ul li > a {
+    transition: all .3s;
     background-size: cover;
     background-repeat: no-repeat;
+    will-change: width;
 }
+main > ul > li:hover > a {transform: scale(1.2);}
+main > ul > li.on > a {display: none;}
+main > ul > li:nth-child(1) > a {background-image: url(../img/1.jpg);}
+main > ul > li:nth-child(2) > a {
+    background-image: url(../img/2.jpeg);
+    background-position-x: 75%;
+}
+main > ul > li:nth-child(3) > a {
+    background-image: url(../img/3.jpeg);
+    background-position-x: 50%;
+}
+main > ul > li:nth-child(4) > a {
+    background-image: url(../img/4.jpeg);
+    background-position-x: 40%;
+}
+
+
+
 main ul li .telecom {
     position: absolute;
     left: 50%; top: 50%;
@@ -225,22 +242,6 @@ main ul .close::after {transform: rotate(-45deg);}
 main ul .close:hover::before,
 main ul .close:hover::after {background: #fff;}
 
-main > ul > li:nth-child(1) > a {background-image: url(../img/1.jpg);}
-main > ul > li:nth-child(2) > a {
-    background-image: url(../img/2.jpeg);
-    background-position-x: 75%;
-}
-main > ul > li:nth-child(3) > a {
-    background-image: url(../img/3.jpeg);
-    background-position-x: 50%;
-}
-main > ul > li:nth-child(4) > a {
-    background-image: url(../img/4.jpeg);
-    background-position-x: 40%;
-}
-main > ul > li:hover > a{
-    transform: scale(1.2);
-}
 main > ul .plans > div {display: block;}
 main > ul .plans {
     display: none;
@@ -369,6 +370,9 @@ footer {
         display: block;
         width: 100%;
     }
+    main > ul > li.on > a {
+        display: block;
+    }
     header > ul > li a span:nth-child(2) {
         color: #1553AD;
     }
@@ -389,19 +393,19 @@ footer {
         background-position-y: top;
     }
     main > ul > li:nth-child(1) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/1.jpg');
+        /* background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/1.jpg'); */
         background-position-x: 100%;
     }
     main > ul > li:nth-child(2) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/2.jpeg');
+        /* background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/2.jpeg'); */
         background-position-x: 100%;
     }
     main > ul > li:nth-child(3) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/3.jpeg');
+        /* background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/3.jpeg'); */
         background-position-x: 100%;
     }
     main > ul > li:nth-child(4) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/4.jpeg');
+        /* background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/4.jpeg'); */
         background-position-x: 100%;
     }
     main ul li .telecom {

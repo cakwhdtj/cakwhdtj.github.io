@@ -6,7 +6,6 @@ $("main > ul > li").on('click', function () {
 $(".close").on('click', function (e) {
     e.stopPropagation()
     $(this).parents("li.on").removeClass("on");
-    console.log($('li.on').length)
     $("header").toggle(!$('li.on').length);
     $(".telecom").removeAttr("style");
 });
