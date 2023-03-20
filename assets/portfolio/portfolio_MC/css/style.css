@@ -339,6 +339,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    @supports (-webkit-touch-callout: none) {
+        height: -webkit-fill-available;
+    }
     .mobileOnly {display: initial;}
     header {
         position: relative;
