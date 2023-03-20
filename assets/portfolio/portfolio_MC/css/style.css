@@ -347,10 +347,11 @@ footer {
     }
     header > .logo {
         position: absolute;
-        background-size: cover;
-        top: 10px; left: 10px;
-        width: 60px;
-        height: 40px;
+        background-size: contain;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 35px;
     }
     header > ul {
         position: fixed;
