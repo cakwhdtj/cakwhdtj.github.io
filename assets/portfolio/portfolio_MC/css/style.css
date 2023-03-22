@@ -171,8 +171,11 @@ main ul li .telecom {
     transition: all .3s ease;
     cursor: pointer;
     border-radius: 10%;
-    background: #00000085;
-    color: #fff;
+    background: #ffffffd1;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .plans .logo {
     position: absolute;
@@ -180,12 +183,9 @@ main ul li .telecom {
     width: 80px;
 }
 
-/* main ul li:hover .telecom {
-    background: #009cd58e;
-    color: #fff;
-} */
 main .telecom h2 {
-    width: 100%; height: 100px;
+     width: 100%; 
+    height: 100px;
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -197,6 +197,9 @@ main .telecom p {
     position: relative;
     word-break: keep-all;
     font-weight: 400;
+    width: 100%;
+
+    text-align: center;
 }
 
 #SKB h2 {background-image: url("../img/skb.svg");}
@@ -339,9 +342,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    @supports (-webkit-touch-callout: none) {
-        height: -webkit-fill-available;
-    }
     .mobileOnly {display: initial;}
     header {
         position: relative;
@@ -412,11 +412,7 @@ footer {
         background-position-x: 100%;
     }
     main ul li .telecom {
-        background: none;
-        left: 10px;
-        top: -50px;
-        transform: none;
-        width: 200px;
+        
     }
     main .telecom h2 {
         margin-bottom: 10px;
