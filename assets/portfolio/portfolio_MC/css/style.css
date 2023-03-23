@@ -365,7 +365,7 @@ footer {
         padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
         padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
         bottom: 0;
-        border-top: 4px solid #009DD5;
+        border-top: 3px solid #009DD5;
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
@@ -442,7 +442,7 @@ footer {
     main ul li.on .plans {
         box-sizing: border-box;
         transform: translateX(-50%);
-        border: 4px solid #009DD5;
+        border: 3px solid #009DD5;
         border-bottom: none;
         top: 0;
         /* height: calc(100vh - 80px - env(safe-area-inset-bottom)); */
