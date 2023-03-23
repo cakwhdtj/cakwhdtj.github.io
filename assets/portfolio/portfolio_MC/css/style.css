@@ -381,11 +381,12 @@ footer {
     main {
         box-sizing: border-box;
         position: relative;
-        height: calc(100vh - constant(safe-area-inset-bottom) - 80px);
-        height: calc(100vh - env(safe-area-inset-bottom) - 80px);
+        /* height: calc(100vh - constant(safe-area-inset-bottom) - 80px);
+        height: calc(100vh - env(safe-area-inset-bottom) - 80px); */
+        height: calc(100vh - 80px);
         padding-bottom: env(safe-area-inset-bottom);
     }
-    
+
     main > ul {
         display: block;
         width: 100%;
