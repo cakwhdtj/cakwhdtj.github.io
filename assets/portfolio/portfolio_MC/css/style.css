@@ -365,6 +365,7 @@ footer {
         padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
         padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
         bottom: 0;
+        border-top: 4px solid #009DD5;
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
@@ -407,20 +408,24 @@ footer {
         background-position-y: top;
     }
     main > ul > li:nth-child(1) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/1.jpg');
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+        url(../img/1.jpg);
         background-position-x: 100%;
     }
     main > ul > li:nth-child(2) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/2.jpeg');
-        background-position-x: 100%;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+        url(../img/2.jpeg);
+    background-position-x: 100%;
     }
     main > ul > li:nth-child(3) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/3.jpeg');
-        background-position-x: 100%;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+        url(../img/3.jpeg);
+    background-position-x: 100%;
     }
     main > ul > li:nth-child(4) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../img/4.jpeg');
-        background-position-x: 100%;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+        url(../img/4.jpeg);
+    background-position-x: 100%;
     }
     main ul li .telecom {
         scale: .6;
@@ -438,6 +443,7 @@ footer {
         box-sizing: border-box;
         transform: translateX(-50%);
         border: 4px solid #009DD5;
+        border-bottom: none;
         top: 0;
         /* height: calc(100vh - 80px - env(safe-area-inset-bottom)); */
     }
