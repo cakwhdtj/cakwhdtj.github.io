@@ -403,30 +403,22 @@ footer {
         background-size: 50% auto;
         background-position-y: 60%;
     }
+    main > ul > li > a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
     main > ul > li.on > a {
         position: relative;
         background-position-y: top;
     }
-    main > ul > li:nth-child(1) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
-        url(../img/1.jpg);
-        background-position-x: 100%;
-    }
-    main > ul > li:nth-child(2) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
-        url(../img/2.jpeg);
-    background-position-x: 100%;
-    }
-    main > ul > li:nth-child(3) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
-        url(../img/3.jpeg);
-    background-position-x: 100%;
-    }
-    main > ul > li:nth-child(4) > a {
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
-        url(../img/4.jpeg);
-    background-position-x: 100%;
-    }
+    main > ul > li:nth-child(1) > a {background-position-x: 100%;}
+    main > ul > li:nth-child(2) > a {background-position-x: 100%;}
+    main > ul > li:nth-child(3) > a {background-position-x: 100%;}
+    main > ul > li:nth-child(4) > a {background-position-x: 100%;}
     main ul li .telecom {
         scale: .6;
         transform-origin: top left;
