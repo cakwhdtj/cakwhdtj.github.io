@@ -2,6 +2,7 @@ let clickedLis = [];
 
 $("main > ul > li").on('click', function () {
     $(window).width() >= 1024 && $("header").hide();
+    $(window).width() < 1024 && $("h1.logo").hide();
     const $this = $(this);
     
     if (!clickedLis.includes($this[0])) {
@@ -17,10 +18,13 @@ $("main > ul > li").on('click', function () {
         $this.toggleClass('on');
     }
 
+    $(window).width() < 1024 && $("main > ul > li:not(.on)").hide();
 });
 
 $(".close").on('click', function (e) {
     e.stopPropagation();
+    $(window).width() < 1024 && $("h1.logo").show();
+    $(window).width() >= 1024 && $("h1.logo").removeAttr("style");
     const $li = $(this).parents("li.on");
     const liIndex = clickedLis.indexOf($li[0]);
     if (liIndex !== -1) {
@@ -29,4 +33,15 @@ $(".close").on('click', function (e) {
     $li.removeClass("on");
     $("header").toggle(!$('li.on').length);
     $(".telecom").removeAttr("style");
+    $("main > ul > li").removeAttr("style")
+  });
+
+  $(".plans").on('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  $(window).on('resize' , function () {
+    $("main > ul > li.on").length ? $("header").hide() : null;
+    $("main > ul > li").removeAttr("style");
   });
