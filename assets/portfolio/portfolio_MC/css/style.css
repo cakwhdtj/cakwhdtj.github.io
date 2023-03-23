@@ -382,9 +382,7 @@ footer {
         position: relative;
         height: calc(100vh - constant(safe-area-inset-bottom) - 80px);
         height: calc(100vh - env(safe-area-inset-bottom) - 80px);
-        /* padding: 0 0 calc(constant(safe-area-inset-bottom) + 80px);
-        padding: 0 0 calc(env(safe-area-inset-bottom) + 80px); */
-        /* margin-bottom: 80px; */
+        padding-bottom: env(safe-area-inset-bottom);
     }
     main > ul {
         display: block;
@@ -445,10 +443,7 @@ footer {
         box-sizing: border-box;
         transform: translateX(-50%);
         border: 3px solid #009DD5;
-        /* border-bottom: none; */
         top: 0;
-        padding: 140px 0 calc(constant(safe-area-inset-bottom) + 80px);
-        padding: 140px 0 calc(env(safe-area-inset-bottom) + 80px);
     }
     .plans .logo {
         top: 20px;
