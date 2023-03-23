@@ -249,7 +249,7 @@ main > ul .plans > div {display: block;}
 main > ul .plans {
     display: none;
     box-sizing: border-box;
-    padding: 120px 20px 0 20px;
+    padding: 135px 20px 0 20px;
 }
 main > ul > li.on .plans {display: block;}
 
@@ -350,7 +350,6 @@ footer {
         display: block;
         height: 0;
         padding: 0;
-        opacity: .5;
     }
     header > .logo {
         position: absolute;
@@ -366,34 +365,18 @@ footer {
         padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
         padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
         bottom: 0;
-        /* border-top: 3px solid #009DD5; */
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
+        box-shadow: 0 -1px 2px 0 #1553AD;
     }
-    header > ul > li {
-        scale: .6;
-    }
-    header > ul > li a span:nth-child(2) {
-        color: #1553AD;
-    }
-
-    /* main {
-        box-sizing: border-box;
-        position: relative;
-        height: calc(100vh - constant(safe-area-inset-bottom) - 80px);
-        height: calc(100vh - env(safe-area-inset-bottom) - 80px);
-        height: calc(100vh - 80px);
-        padding-bottom: env(safe-area-inset-bottom);
-    } */
-
+    header > ul > li {scale: .6;}
+    header > ul > li a span:nth-child(2) {color: #1553AD;}
     main > ul {
         display: block;
         width: 100%;
     }
-    main > ul > li.on > a {
-        display: block;
-    }
+    main > ul > li.on > a {display: block;}
     main > ul > li {
         width: 100%;
         height: 25%;
@@ -427,9 +410,7 @@ footer {
         transform-origin: top left;
         background: none;
     }
-    main .telecom h2 {
-        margin-bottom: 25px;
-    }
+    main .telecom h2 {margin-bottom: 25px;}
     main .telecom p {
         font-size: 20px;
         color: black;
@@ -453,10 +434,6 @@ footer {
 }
 
 @keyframes left0to-n {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -5%;
-    }
+    0% {left: 0;}
+    100% {left: -5%;}
 }
