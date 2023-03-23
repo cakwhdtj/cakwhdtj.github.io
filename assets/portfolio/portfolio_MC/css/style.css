@@ -422,15 +422,16 @@ footer {
         background-position-x: 100%;
     }
     main ul li .telecom {
-        
+        scale: .6;
+        transform-origin: top left;
+        background: none;
     }
     main .telecom h2 {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     main .telecom p {
-        font-size: 15px;
+        font-size: 20px;
         color: black;
-        white-space: nowrap;
     }
     main ul li.on .plans {
         height: 70%;
