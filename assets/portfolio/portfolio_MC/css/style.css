@@ -387,6 +387,8 @@ footer {
     main > ul {
         display: block;
         width: 100%;
+        padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
+        padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
     }
     main > ul > li.on > a {
         display: block;
