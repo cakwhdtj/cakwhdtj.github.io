@@ -375,8 +375,12 @@ footer {
     header > ul > li a span:nth-child(2) {
         color: #1553AD;
     }
+
     main {
-        height: calc(100vh - 100px);
+        box-sizing: border-box;
+        height: 100vh;
+        padding: 0 0 calc(constant(safe-area-inset-bottom) + 80px);
+        padding: 0 0 calc(env(safe-area-inset-bottom) + 80px);
     }
     main > ul {
         display: block;
