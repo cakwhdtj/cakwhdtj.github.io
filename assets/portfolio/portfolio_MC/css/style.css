@@ -350,6 +350,7 @@ footer {
         display: block;
         height: 0;
         padding: 0;
+        opacity: .5;
     }
     header > .logo {
         position: absolute;
