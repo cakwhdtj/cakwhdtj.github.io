@@ -447,15 +447,15 @@ footer {
         border: 3px solid #009DD5;
         border-bottom: none;
         top: 0;
-        padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
-        padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
+        padding: 140px 0 calc(constant(safe-area-inset-bottom) + 80px);
+        padding: 140px 0 calc(env(safe-area-inset-bottom) + 80px);
     }
     .plans .logo {
-        background-size: cover;
-        top: 15px;
-        left: 10px;
-        width: 75px;
-        height: 50px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 80px;
     }
     .plans .grid-item {
         font-size: 11px;

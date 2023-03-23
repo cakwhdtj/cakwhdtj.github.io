@@ -2,7 +2,7 @@ let clickedLis = [];
 
 $("main > ul > li").on('click', function () {
     $(window).width() >= 1024 && $("header").hide();
-    $(window).width() < 1024 && $("h1.logo").hide();
+    $(window).width() < 1024 && $("header h1.logo").hide();
     const $this = $(this);
     
     if (!clickedLis.includes($this[0])) {
@@ -23,8 +23,8 @@ $("main > ul > li").on('click', function () {
 
 $(".close").on('click', function (e) {
     e.stopPropagation();
-    $(window).width() < 1024 && $("h1.logo").show();
-    $(window).width() >= 1024 && $("h1.logo").removeAttr("style");
+    $(window).width() < 1024 && $("header h1.logo").show();
+    $(window).width() >= 1024 && $("header h1.logo").removeAttr("style");
     const $li = $(this).parents("li.on");
     const liIndex = clickedLis.indexOf($li[0]);
     if (liIndex !== -1) {
