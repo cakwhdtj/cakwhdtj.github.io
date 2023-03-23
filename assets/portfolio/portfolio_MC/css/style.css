@@ -1,7 +1,7 @@
 /* reset */
 body {
     margin: 0;
-    font-family: 'NanumBarunGothic';
+    font-family: 'NanumSquareRound';
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
@@ -21,18 +21,23 @@ font-family: 'NanumBarunGothicLight';
 font-family: 'NanumBarunGothic';
 font-family: 'NanumBarunGothicBold';
  */
-.buttonSt {
+ /* 
+ font-family: 'NanumSquareRoundLight';
+font-family: 'NanumSquareRound';
+font-family: 'NanumSquareRoundBold';
+font-family: 'NanumSquareRoundExtraBold';
+ */
+.btnSt {
     background-color: #fff;
     color: #1553AD;
     padding: 8px 10px;
     cursor: pointer;
     border-radius: 10px;
     border: 2px solid #1553AD;
-    font-family: 'NanumBarunGothic';
     font-weight:lighter;
     transition: all .3s ease;
 }
-.buttonSt:hover {
+.btnSt:hover {
     background-color: #1553AD;
     color: #fff;
 }
@@ -68,6 +73,10 @@ header > ul > li {
     transition: all .3s ease;
 }
 header > ul > li:hover {transform: translateY(-5px);}
+header > ul > li:hover a span:nth-child(2) {
+    background-color: #1553AD;
+    color: #fff;
+}
 
 header > ul > li a {
     display: block;
@@ -87,9 +96,9 @@ header > ul > li a span:nth-child(2) {
     width: 100%;
     font-size: 14px;
     transform: translateX(-50%);
-    color: #fff;
-    
+    padding: 2px;
 }
+
 header #headerKakao span:nth-child(1) {
     background-image: url("../img/kakao.svg");
     background-repeat: no-repeat;
@@ -161,7 +170,7 @@ main > ul > li:nth-child(4) > a {
 
 
 
-main ul li .telecom {
+main ul li .brand {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%,-50%);
@@ -183,7 +192,7 @@ main ul li .telecom {
     width: 80px;
 }
 
-main .telecom h2 {
+main .brand h2 {
      width: 100%; 
     height: 100px;
     background-size: contain;
@@ -191,16 +200,17 @@ main .telecom h2 {
     background-repeat: no-repeat;
     margin-bottom: 30px;
 }
-main .telecom p {
+main .brand p {
     font-size: 20px;
     font-weight: 500;
     position: relative;
     word-break: keep-all;
     font-weight: 400;
     width: 100%;
-
     text-align: center;
 }
+
+
 
 #SKB h2 {background-image: url("../img/skb.svg");}
 #uPlus h2 {background-image: url("../img/lgu.svg");}
@@ -256,7 +266,6 @@ main > ul > li.on .plans {display: block;}
 .plans > div {margin-bottom: 100px;}
 .plans h3 {
     color: #1553AD;
-    font-family: 'NanumBarunGothicBold';
     font-weight: 900;
     font-size: 45px;
     margin-bottom: 50px;
@@ -368,7 +377,7 @@ footer {
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
-        box-shadow: 0 -1px 2px 0 #1553AD;
+        box-shadow: 0 -1px 2px 0 #009DD5;
     }
     header > ul > li {scale: .6;}
     header > ul > li a span:nth-child(2) {color: #1553AD;}
@@ -405,13 +414,13 @@ footer {
     main > ul > li:nth-child(2) > a {background-position-x: 100%;}
     main > ul > li:nth-child(3) > a {background-position-x: 100%;}
     main > ul > li:nth-child(4) > a {background-position-x: 100%;}
-    main ul li .telecom {
+    main ul li .brand {
         scale: .6;
         transform-origin: top left;
         background: none;
     }
-    main .telecom h2 {margin-bottom: 25px;}
-    main .telecom p {
+    main .brand h2 {margin-bottom: 25px;}
+    main .brand p {
         font-size: 20px;
         color: black;
     }
@@ -433,7 +442,28 @@ footer {
     }
 }
 
+
+/* animation */
+header .logo {
+    /* animation: left0to-n .8s ease-in forwards; */
+}
+main .brand > * {
+    opacity: 0;
+    animation: left0to-n .8s ease-in forwards;
+}
+
+#SKB .brand > * {animation-delay: 0s;}
+#uPlus .brand > * {animation-delay: .2s;}
+#KT .brand > * {animation-delay: .6s;}
+#KTSkylife .brand > * {animation-delay: .8s;}
+
 @keyframes left0to-n {
-    0% {left: 0;}
-    100% {left: -5%;}
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

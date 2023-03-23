@@ -39,9 +39,17 @@ $(".close").on('click', function (e) {
   $(".plans").on('click', function(e){
     e.preventDefault();
     e.stopPropagation();
-  });
+});
 
-  $(window).on('resize' , function () {
-    $("main > ul > li.on").length ? $("header").hide() : null;
-    $("main > ul > li").removeAttr("style");
+
+var lastWidth = $(window).width();
+
+$(window).on('resize' , function () {
+    var newWidth = $(window).width();
+    if (newWidth != lastWidth) {
+        $("li.on .close").click();
+        $("main > ul > li.on").length ? $("header").hide() : null;
+        $("main > ul > li").removeAttr("style");
+    }
+    lastWidth = newWidth;
   });
