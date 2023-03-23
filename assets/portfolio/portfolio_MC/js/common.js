@@ -1,7 +1,7 @@
 let clickedLis = [];
 
 $("main > ul > li").on('click', function () {
-    $("header").css({"display" : "none"});
+    $(window).width() >= 1024 && $("header").hide();
     const $this = $(this);
     
     if (!clickedLis.includes($this[0])) {
@@ -16,6 +16,7 @@ $("main > ul > li").on('click', function () {
         clickedLis.splice(clickedLis.indexOf($this[0]), 1);
         $this.toggleClass('on');
     }
+
 });
 
 $(".close").on('click', function (e) {

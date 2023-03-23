@@ -342,7 +342,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .mobileOnly {display: initial;}
+    .mobileOnly {
+        display: initial;
+    }
     header {
         position: relative;
         display: block;
@@ -360,11 +362,18 @@ footer {
     header > ul {
         position: fixed;
         background-color: #fff;
-        padding: 10px;
+        padding: 0 0 calc(constant(safe-area-inset-bottom) + 0);
+        padding: 0 0 calc(env(safe-area-inset-bottom) + 0);
         bottom: 0;
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
+    }
+    header > ul > li {
+        scale: .6;
+    }
+    header > ul > li a span:nth-child(2) {
+        color: #1553AD;
     }
     main {
         height: calc(100vh - 100px);
@@ -375,9 +384,6 @@ footer {
     }
     main > ul > li.on > a {
         display: block;
-    }
-    header > ul > li a span:nth-child(2) {
-        color: #1553AD;
     }
     main > ul > li {
         width: 100%;
