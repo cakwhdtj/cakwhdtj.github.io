@@ -386,7 +386,7 @@ footer {
 
     main > ul {
         box-sizing: border-box;
-        padding-top: 75px;
+        /* padding-top: 75px; */
         display: block;
         width: 100%;
 
@@ -443,9 +443,7 @@ footer {
         width: 90px;
         height: 80px;
     }
-    .plans .grid-item {
-        font-size: 11px;
-    }
+    .plans .grid-item {font-size: 11px;}
 }
 
 
