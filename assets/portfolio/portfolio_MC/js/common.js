@@ -40,7 +40,7 @@ $(".close").on('click', function (e) {
   });
 
   $(".plans").on('click', function(e){
-    e.preventDefault();
+    // e.preventDefault();
     e.stopPropagation();
 });
 
