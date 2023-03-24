@@ -280,6 +280,15 @@ main > ul > li.on .plans {display: block;}
     background-color: #f1f1f1;
     padding: 10px;
 }
+.plans .grid-container::after {
+    content: "* 부가세 및 와이파이 임대료 모두 포함된 금액입니다.";
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 10px;
+    right: calc(0% + 24px);
+    transform: translateY(-25px);
+}
 .plans .grid-item {
     background-color: #ffffff;
     border: .5px solid #ccc;
@@ -386,7 +395,7 @@ footer {
 
     main > ul {
         box-sizing: border-box;
-        /* padding-top: 75px; */
+        padding-top: 75px;
         display: block;
         width: 100%;
 
