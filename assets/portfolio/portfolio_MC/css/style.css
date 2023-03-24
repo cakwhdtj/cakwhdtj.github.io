@@ -363,7 +363,7 @@ footer {
         background-size: contain;
         top: 10px;
         left: 10px;
-        width: 80px;
+        width: 75px;
         height: 75px
     }
     header > ul {
@@ -377,11 +377,19 @@ footer {
         justify-content: space-around;
         box-shadow: 0 -1px 2px 0 #009DD5;
     }
-    header > ul > li {scale: .6;}
-    header > ul > li a span:nth-child(2) {color: #1553AD;}
+    header > ul > li {scale: .8;}
+    header > ul > li a span:nth-child(2) {
+        color: #1553AD;
+        font-size: 20px;
+        width: 135%;
+    }
+
     main > ul {
+        box-sizing: border-box;
+        padding-top: 75px;
         display: block;
         width: 100%;
+
     }
     main > ul > li.on > a {display: block;}
     main > ul > li {
