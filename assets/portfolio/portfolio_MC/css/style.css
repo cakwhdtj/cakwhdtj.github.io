@@ -1,8 +1,5 @@
 /* reset */
-body {
-    margin: 0;
-    font-family: 'NanumSquareRound';
-}
+body {margin: 0; font-family: 'NanumSquareRound';}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 a {color: inherit;text-decoration: inherit;}
@@ -15,12 +12,6 @@ li {list-style: none;}
 
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
-/* 
-font-family: 'NanumBarunGothicExtraLight';
-font-family: 'NanumBarunGothicLight';
-font-family: 'NanumBarunGothic';
-font-family: 'NanumBarunGothicBold';
- */
  /* 
  font-family: 'NanumSquareRoundLight';
 font-family: 'NanumSquareRound';
@@ -59,7 +50,6 @@ h1.logo {
     width: 140px; height: 140px;
 }
 header h1 a {display: block; width: 100%; height: 100%;}
-
 header > ul {
     display: flex;
     width: 400px;
@@ -72,11 +62,6 @@ header > ul > li {
     transition: all .3s ease;
 }
 header > ul > li:hover {transform: translateY(-5px);}
-/* header > ul > li:hover a span:nth-child(2) {
-    background-color: #1553AD;
-    color: #fff;
-} */
-
 header > ul > li a {
     display: block;
     position: relative;
@@ -97,7 +82,6 @@ header > ul > li a span:nth-child(2) {
     transform: translateX(-50%);
     padding: 2px;
 }
-
 header #headerKakao span:nth-child(1) {
     background-image: url("../img/kakao.svg");
     background-repeat: no-repeat;
@@ -164,9 +148,6 @@ main > ul > li:nth-child(4) > a {
     background-image: url("../img/4.jpeg");
     background-position-x: 40%;
 }
-
-
-
 main ul li .brand {
     position: absolute;
     left: 50%; top: 50%;
@@ -188,7 +169,6 @@ main ul li .brand {
     top: 30px; left: 30px;
     width: 80px;
 }
-
 main .brand h2 {
      width: 100%; 
     height: 100px;
@@ -206,9 +186,6 @@ main .brand p {
     width: 100%;
     text-align: center;
 }
-
-
-
 #SKB h2 {background-image: url("../img/skb.svg");}
 #uPlus h2 {background-image: url("../img/lgu.svg");}
 #KT h2 {
@@ -216,10 +193,6 @@ main .brand p {
     background-image: url("../img/kt.svg");
 }
 #KTSkylife h2 {background-image: url("../img/kts.svg");}
-
-
-
-
 main ul li .plans {
     position: absolute;
     width: 0%; height: 100%;
@@ -259,7 +232,6 @@ main > ul .plans {
     padding: 135px 20px 0 20px;
 }
 main > ul > li.on .plans {display: block;}
-
 .plans > div {margin-bottom: 100px;}
 .plans h3 {
     color: #1553AD;
@@ -307,13 +279,8 @@ main > ul > li.on .plans {display: block;}
     color: #fff;
     background-color: #1553AD;
 }
-.grid-container .th.thE {
-    background-color: #009DD5;
- }
-.grid-container .tr2 {
-    background-color: #f1f1f1;
-}
-
+.grid-container .th.thE {background-color: #009DD5;}
+.grid-container .tr2 {background-color: #f1f1f1;}
 .plans .info > div ul {
     display: flex;
     padding-top: 20px;
@@ -351,10 +318,7 @@ main > ul > li.on .plans {display: block;}
     list-style: outside;
     margin: 15px 0;
  }
-
-footer {
-    display: none;
-}
+footer {display: none;}
 
 @media (max-width: 1024px) {
     .mobileOnly {
@@ -456,9 +420,6 @@ footer {
 
 
 /* animation */
-header .logo {
-    /* animation: left0to-n .8s ease-in forwards; */
-}
 main .brand > * {
     opacity: 0;
     animation: left0to-n .8s ease-in forwards;
