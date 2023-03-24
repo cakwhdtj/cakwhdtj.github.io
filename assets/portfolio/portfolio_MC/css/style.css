@@ -51,7 +51,7 @@ header {
     width: 100%; height: 120px;
     z-index: 10;
     padding: 30px;
-    color: #fff;
+    color: #1553AD;
 }
 h1.logo {
     background-size: contain;
@@ -73,10 +73,10 @@ header > ul > li {
     transition: all .3s ease;
 }
 header > ul > li:hover {transform: translateY(-5px);}
-header > ul > li:hover a span:nth-child(2) {
+/* header > ul > li:hover a span:nth-child(2) {
     background-color: #1553AD;
     color: #fff;
-}
+} */
 
 header > ul > li a {
     display: block;
@@ -114,9 +114,7 @@ header #headerBlog span:nth-child(1) {
     height: 40px;
     transform: translateX(15px);
 }
-header #headerBlog span:nth-child(2) {
-    bottom: 8px;
-}
+header #headerBlog span:nth-child(2) {bottom: 8px;}
 
 main {
     display: block;
