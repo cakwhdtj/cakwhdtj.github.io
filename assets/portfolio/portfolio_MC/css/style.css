@@ -2,22 +2,16 @@
 body {margin: 0; font-family: 'NanumSquareRound';}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
-a {color: inherit;text-decoration: inherit;}
+a {color: inherit; text-decoration: inherit;}
 img {vertical-align: middle;}
 a img {border: none;}
 li {list-style: none;}
-
 .hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
 .mobileOnly {display: none;}
-
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
- /* 
- font-family: 'NanumSquareRoundLight';
-font-family: 'NanumSquareRound';
-font-family: 'NanumSquareRoundBold';
-font-family: 'NanumSquareRoundExtraBold';
- */
+
+/* style */
 .btnSt {
     background-color: #fff;
     color: #1553AD;
@@ -27,11 +21,7 @@ font-family: 'NanumSquareRoundExtraBold';
     border: 2px solid #1553AD;
     transition: all .3s ease;
 }
-.btnSt:hover {
-    background-color: #1553AD;
-    color: #fff;
-}
-
+.btnSt:hover {background-color: #1553AD; color: #fff;}
 /*  */
 header {
     box-sizing: border-box;
@@ -69,8 +59,7 @@ header > ul > li a {
 }
 header > ul > li a span:nth-child(1) {
     display: block;
-    font-size: 50px;
-    color: #1553AD;
+    font-size: 50px; color: #1553AD;
 }
 header > ul > li a span:nth-child(2) {
     display: block;
@@ -101,20 +90,16 @@ header #headerBlog span:nth-child(2) {bottom: 8px;}
 
 main {
     display: block;
-    height: 100vh;
-    width: 100%;
+    height: 100vh; width: 100%;
 }
-main *::-webkit-scrollbar {
-    width: 5px;
-} 
+main *::-webkit-scrollbar {width: 5px;}
 main *::-webkit-scrollbar-thumb {
     background-color: #7f7f7f79;
     border-radius: 10px;
 }
 main > ul {
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
 }
 main > ul > li {
     box-sizing: border-box;
@@ -170,8 +155,7 @@ main ul li .brand {
     width: 80px;
 }
 main .brand h2 {
-     width: 100%; 
-    height: 100px;
+    width: 100%; height: 100px;
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -188,16 +172,13 @@ main .brand p {
 }
 #SKB h2 {background-image: url("../img/skb.svg");}
 #uPlus h2 {background-image: url("../img/lgu.svg");}
-#KT h2 {
-    width: 40%;
-    background-image: url("../img/kt.svg");
-}
+#KT h2 {background-image: url("../img/kt.svg"); width: 40%;}
 #KTSkylife h2 {background-image: url("../img/kts.svg");}
 main ul li .plans {
     position: absolute;
+    top: 50%; left: 50%;
     width: 0%; height: 100%;
     background: white;
-    top: 50%; left: 50%;
     transform: translate(-50%,-50%);
     overflow: scroll;
     text-align: center;
@@ -271,14 +252,9 @@ main > ul > li.on .plans {display: block;}
 }
 .internetTv .grid-container{grid-template-columns: repeat(4, 1fr);}
 .internet .grid-container{grid-template-columns: repeat(3, 1fr);}
-
 #KTSkylife .internetTv .grid-container{grid-template-columns: repeat(3, 1fr);}
 #KTSkylife .internet .grid-container{grid-template-columns: repeat(4, 1fr);}
-
-.grid-container .th {
-    color: #fff;
-    background-color: #1553AD;
-}
+.grid-container .th {color: #fff; background-color: #1553AD;}
 .grid-container .th.thE {background-color: #009DD5;}
 .grid-container .tr2 {background-color: #f1f1f1;}
 .plans .info > div ul {
@@ -294,14 +270,8 @@ main > ul > li.on .plans {display: block;}
     flex-wrap: nowrap;
     align-items: center;
 }
-.plans .info li a > * {
-    margin-bottom: 20px;
-    word-break: keep-all;
-}
-.plans .info li a span {
-    font-size: 100px;
-    color: #1553AD;
-}
+.plans .info li a > * {margin-bottom: 20px; word-break: keep-all;}
+.plans .info li a span {font-size: 100px; color: #1553AD;}
  .plans .notice ul,
  .plans .caution ul {
     box-sizing: border-box;
@@ -333,10 +303,8 @@ footer {display: none;}
     header > .logo {
         position: absolute;
         background-size: contain;
-        top: 10px;
-        left: 10px;
-        width: 75px;
-        height: 75px
+        top: 10px; left: 10px;
+        width: 75px; height: 75px
     }
     header > ul {
         position: fixed;
@@ -355,23 +323,15 @@ footer {display: none;}
         font-size: 20px;
         width: 135%;
     }
-
     main > ul {
         box-sizing: border-box;
         padding-top: 75px;
         display: block;
         width: 100%;
-
     }
     main > ul > li.on > a {display: block;}
-    main > ul > li {
-        width: 100%;
-        height: 25%;
-    }
-    main > ul > li.on {
-        width: 100%;
-        height: 100%;
-    }
+    main > ul > li {width: 100%; height: 25%;}
+    main > ul > li.on {width: 100%; height: 100%;}
     main > ul > li > a {
         background-size: 50% auto;
         background-position-y: 60%;
@@ -380,8 +340,7 @@ footer {display: none;}
         content: "";
         position: absolute;
         left: 50%;
-        width: 100%;
-        height: 100%;
+        width: 100%; height: 100%;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
     }
     main > ul > li.on > a {
@@ -398,10 +357,7 @@ footer {display: none;}
         background: none;
     }
     main .brand h2 {margin-bottom: 25px;}
-    main .brand p {
-        font-size: 20px;
-        color: black;
-    }
+    main .brand p {font-size: 20px; color: black;}
     main ul li.on .plans {
         box-sizing: border-box;
         transform: translateX(-50%);
@@ -409,16 +365,12 @@ footer {display: none;}
         top: 0;
     }
     .plans .logo {
-        top: 20px;
-        left: 50%;
+        top: 20px; left: 50%;
         transform: translateX(-50%);
-        width: 90px;
-        height: 80px;
+        width: 90px; height: 80px;
     }
     .plans .grid-item {font-size: 11px;}
 }
-
-
 /* animation */
 main .brand > * {
     opacity: 0;
