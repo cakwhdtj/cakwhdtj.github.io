@@ -10,13 +10,10 @@ $('#games').on('click', 'li', function() {
   $(this).addClass('on');
 });
 
-
-
 setSlides("#section1 > div.slide_container", 'slide' , 1, true);
 setSlides("#section2.slide_container", 'label', 1, false);
-setSlides("#section4 .slide_container", 'label', 1, false);
-
-
+setSlides("#section4 #s4Upper", 'label', 1, true);
+setSlides("#section4 #s4Lower", 'label', 1, false);
 
 
 function setSlides(selector , type , firstSlide , timer) {
@@ -39,8 +36,6 @@ function setSlides(selector , type , firstSlide , timer) {
   showSlide(slideFirst);
   if (timer) {startInterval();}
   
-  
-  
   $selector.find('.control > button').on('click' , function () {
     $(this).attr('class') === 'right' ? showSlide(slideNext) : showSlide(slidePrev);
     resetInterval();
@@ -49,7 +44,7 @@ function setSlides(selector , type , firstSlide , timer) {
     showSlide($(this).index() + 1);
     resetInterval();
   });
-  $selector.find('.slides li h4').on('click' , function (e) {
+  $selector.find('.slides li .showThis').on('click' , function (e) {
     showSlide($(this).parents("li").index()+ 1);
     resetInterval();
   });
@@ -69,7 +64,7 @@ function setSlides(selector , type , firstSlide , timer) {
   function startInterval() {
     intervalId = setInterval(function() {
       showSlide(slideNext);
-    }, 5000);
+    }, 8000);
   }
   function stopInterval() {
     clearInterval(intervalId);

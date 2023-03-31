@@ -333,11 +333,9 @@ section h2 {
     position: absolute;
     right: 0;
     width: calc(100% - 246px); height:100%;
-    border: 1px solid green;
 }
 
 #section2 .slides > li .desc {
-    border: 1px solid blue;
     width: 100%; height: 100%;
     display: none;
     transform: translateX(10%);
@@ -345,7 +343,6 @@ section h2 {
     background-repeat: no-repeat;
 }
 #section2 .slides > li.on .desc > a {
-    border: 1px solid red;
     position: absolute;
     right: 0; top: 0;
     width: 100%;
@@ -493,7 +490,6 @@ section h2 {
     font-size: 14px;
 }
 #section3 #reviews .user img {
-    border: 1px solid blue;
     border-radius: 50%;
     margin-right: 7px;
     display: inline-block;
@@ -517,67 +513,58 @@ section h2 {
     margin-top: 5px;
     font-size: 12px;
 }
-/* #hi {
-    background-color: black;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      position: fixed;
-}  */
-#section4 {width: 100%;border: 1px solid yellow;}
-#section4 #s4Upper {height: 500px;}
-#section4 #s4Upper h4 {
+
+#section4 {width: 100%;}
+#section4 #s4Upper > ul.slides {height: 500px;}
+#section4 #s4Upper > ul.slides h4 {
     position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; align-items: center;
     box-sizing: border-box;
     background-color: #fff;
-    box-shadow: #1f1f1f;
+    border-bottom: 1px solid #d6d6d6;
     height: 56px;
     width: 25%;
     z-index: 2;
 }
-#section4 #s4Upper li.on h4 {
-    color: #fff;
-    background-color: #1f1f1f;
-}
-#section4 #s4Upper h4 span {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%,-50%);
-}
-#section4 #s4Upper li:nth-child(2) h4 {left: 25%;}
-#section4 #s4Upper li:nth-child(3) h4 {left: 50%;}
-#section4 #s4Upper li:nth-child(4) h4 {left: 75%;}
-#section4 #s4Upper > li {
+#section4 #s4Upper > ul.slides li.on h4 {color: #fff; background-color: #1f1f1f;}
+#section4 #s4Upper > ul.slides h4 span {font-size: 1rem; font-weight: 400;}
+#section4 #s4Upper > ul.slides li:nth-child(2) h4 {left: 25%;}
+#section4 #s4Upper > ul.slides li:nth-child(3) h4 {left: 50%;}
+#section4 #s4Upper > ul.slides li:nth-child(4) h4 {left: 75%;}
+#section4 #s4Upper > ul.slides > li {
     position: absolute;
     width: 100%;
 }
-#section4 #s4Upper li .s4Desc {display: none;}
-#section4 #s4Upper li.on .s4Desc {
+#section4 #s4Upper > ul.slides li .s4Desc {display: none;}
+#section4 #s4Upper > ul.slides li.on .s4Desc {
     display: block;
     box-sizing: border-box;
     margin-top: 56px;
-    padding: 20px;
+    padding: 20px 0;
+    
 }
-#section4 #s4Upper .s4Desc ul {
+#section4 #s4Upper > ul.slides .s4Desc ul {
     display: flex;
     justify-content: space-around;
 }
-#section4 #s4Upper .s4Desc > ul li {
+#section4 #s4Upper > ul.slides .s4Desc > ul li {
     box-shadow: #000;
     border-radius: 10px;
     position: relative;
     background: #fff;
     width: 25%;
     height: 356px;
+    border: 1px solid #d6d6d6df;
 }
-#section4 #s4Upper .s4Desc ul > li + li {margin-left: 15px;}
-#section4 #s4Upper .s4Desc ul > li a {
+#section4 #s4Upper > ul.slides .s4Desc ul > li + li {margin-left: 15px;}
+#section4 #s4Upper > ul.slides .s4Desc ul > li a {
     width: 100%; height: 100%;
     display: inline-block;
 }
-#section4 #s4Upper .s4Desc ul > li a img {
-    height: 50%; width: 100%;
-}
+#section4 #s4Upper > ul.slides .s4Desc ul > li a img {position: relative; height: 50%; width: 100%;}
+
 .s4Desc ul li a > div {
     width: 80%;
     overflow: hidden;
@@ -660,29 +647,28 @@ section h2 {
 }
 
 
-#section4 #s4Lower {
+#section4 #s4Lower > ul.slides {
     border-bottom: 2px solid #828282;
     margin-bottom: 400px;
+    font-size: inherit;
 }
-#s4Lower > li {display: inline-block;}
-#s4Lower > li#s4PCGame > ul {transform: translateX(-120px);}
-#s4Lower > li#s4MobileGame > ul {transform: translateX(-232px);}
-
-#s4Lower > li > a {
+#s4Lower > ul.slides > li {display: inline-block;}
+#s4Lower > ul.slides > li > a {
     transform: translateY(1px);
     display: inline-block;
     padding-bottom: 20px;
     margin-right: 50px;
 }
-#s4Lower > li.on > a {
+#s4Lower > ul.slides > li.on > a {
     font-weight: bold;
     border-bottom: 2px solid #000;
 }
-#s4Lower > li > ul {
+#s4Lower > ul.slides > li > ul {
     position: absolute;
     display: none;
+    left: 0;
 }
-#s4Lower > li.on > ul {
+#s4Lower > ul.slides > li.on > ul {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(4, calc(25% - 15px));
@@ -691,7 +677,7 @@ section h2 {
     padding: 20px 0;
     width: 100%;
 }
-#s4Lower > li > ul > li {
+#s4Lower > ul.slides > li > ul > li {
     border: 1px solid blue;
     border-radius: 5px;
     box-sizing: border-box;
@@ -701,7 +687,7 @@ section h2 {
     text-overflow: ellipsis;
    
 }
-#s4Lower ul li > a {
+#s4Lower > ul.slides ul li > a {
     display: block;
     position: relative;
     padding: 20px;
@@ -713,17 +699,17 @@ section h2 {
     text-overflow: ellipsis; 
 }
 
-#s4Lower ul a h3 {
+#s4Lower > ul.slides ul a h3 {
     font-size: 16px;
     font-weight: 600;
     display: inline;
  }
- #s4Lower ul a span {
+ #s4Lower > ul.slides ul a span {
     display: block;
     margin-top: 5px;
     font-size: 14px;
  }
-#s4Lower ul li > a .more {
+#s4Lower > ul.slides ul li > a .more {
     box-sizing: border-box;
     opacity: 0;
     text-align: center;
@@ -735,9 +721,9 @@ section h2 {
     transform: translateX(-50%);
     bottom: 30px; left: 50%;
 }
-#s4Lower ul li > a:hover .more {opacity: 1; color: #3a3a3a;}
-#s4Lower ul li > a .more i {box-sizing: border-box; padding: 0 10px 5px 0;}
-#s4Lower ul li > a .more i:hover {color: #fff;}
+#s4Lower > ul.slides ul li > a:hover .more {opacity: 1; color: #3a3a3a;}
+#s4Lower > ul.slides ul li > a .more i {box-sizing: border-box; padding: 0 10px 5px 0;}
+#s4Lower > ul.slides ul li > a .more i:hover {color: #fff;}
 #s4PCGame .more i,
 #s4MobileGame .more i {position: absolute; font-style: normal;}
 #s4PCGame .more i:nth-child(1),
@@ -755,6 +741,9 @@ section h2 {
  #s4PCGame .more i:nth-child(2){right: calc(15% + 20px);}
  #s4MobileGame .more.no > i:nth-child(1) {left: 50%; transform: translateX(-50%);}
 #s4Banner {
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 75px);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
