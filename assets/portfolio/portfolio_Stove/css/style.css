@@ -533,10 +533,7 @@ section h2 {
 #section4 #s4Upper > ul.slides li:nth-child(2) h4 {left: 25%;}
 #section4 #s4Upper > ul.slides li:nth-child(3) h4 {left: 50%;}
 #section4 #s4Upper > ul.slides li:nth-child(4) h4 {left: 75%;}
-#section4 #s4Upper > ul.slides > li {
-    position: absolute;
-    width: 100%;
-}
+#section4 #s4Upper > ul.slides > li {position: absolute; width: 100%;}
 #section4 #s4Upper > ul.slides li .s4Desc {display: none;}
 #section4 #s4Upper > ul.slides li.on .s4Desc {
     display: block;
@@ -550,7 +547,6 @@ section h2 {
     justify-content: space-around;
 }
 #section4 #s4Upper > ul.slides .s4Desc > ul li {
-    box-shadow: #000;
     border-radius: 10px;
     position: relative;
     background: #fff;
@@ -558,12 +554,51 @@ section h2 {
     height: 356px;
     border: 1px solid #d6d6d6df;
 }
+#section4 #s4Upper > ul.slides .s4Desc > ul li:hover {box-shadow: #7d7d7d 1px 1px 10px -2px;}
 #section4 #s4Upper > ul.slides .s4Desc ul > li + li {margin-left: 15px;}
 #section4 #s4Upper > ul.slides .s4Desc ul > li a {
     width: 100%; height: 100%;
     display: inline-block;
 }
-#section4 #s4Upper > ul.slides .s4Desc ul > li a img {position: relative; height: 50%; width: 100%;}
+#section4 #s4Upper > ul.slides .s4Desc ul > li a div.s4Visu {
+    position: relative; height: 50%; width: 100%;
+    background-size: cover;
+}
+
+.s4Desc div {box-sizing: border-box; padding: 20px 15px;}
+
+#new .s4Desc > ul > li:nth-child(1) .s4Visu {background-image: url("../img/s4d21.jpg");}
+#new .s4Desc > ul > li:nth-child(2) .s4Visu {background-image: url("../img/s4d22.jpg");}
+#new .s4Desc > ul > li:nth-child(3) .s4Visu {background-image: url("../img/s4d23.jpg");}
+#new .s4Desc > ul > li:nth-child(4) .s4Visu {background-image: url("../img/s4d24.jpg");}
+#new .s4Desc > ul > li:nth-child(1):hover .s4Visu {background-image: url("../img/s4d21h.jpg");}
+#new .s4Desc > ul > li:nth-child(2):hover .s4Visu {background-image: url("../img/s4d22h.png");}
+#new .s4Desc > ul > li:nth-child(3):hover .s4Visu {background-image: url("../img/s4d23h.jpg");}
+#new .s4Desc > ul > li:nth-child(4):hover .s4Visu {background-image: url("../img/s4d24h.jpg");} 
+#onlyStove .s4Desc > ul > li:nth-child(1) .s4Visu {background-image: url("../img/s4d11.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(2) .s4Visu {background-image: url("../img/s4d12.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(3) .s4Visu {background-image: url("../img/s4d13.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(4) .s4Visu {background-image: url("../img/s4d14.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(1):hover .s4Visu {background-image: url("../img/s4d11h.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(2):hover .s4Visu {background-image: url("../img/s4d12h.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(3):hover .s4Visu {background-image: url("../img/s4d13h.jpg");}
+#onlyStove .s4Desc > ul > li:nth-child(4):hover .s4Visu {background-image: url("../img/s4d14h.gif");} 
+#kr .s4Desc > ul > li:nth-child(1) .s4Visu {background-image: url("../img/s4d31.jpg");}
+#kr .s4Desc > ul > li:nth-child(2) .s4Visu {background-image: url("../img/s4d32.jpg");}
+#kr .s4Desc > ul > li:nth-child(3) .s4Visu {background-image: url("../img/s4d33.jpg");}
+#kr .s4Desc > ul > li:nth-child(4) .s4Visu {background-image: url("../img/s4d34.jpg");}
+#kr .s4Desc > ul > li:nth-child(1):hover .s4Visu {background-image: url("../img/s4d31h.jpg");}
+#kr .s4Desc > ul > li:nth-child(2):hover .s4Visu {background-image: url("../img/s4d32h.png");}
+#kr .s4Desc > ul > li:nth-child(3):hover .s4Visu {background-image: url("../img/s4d33h.jpg");}
+#kr .s4Desc > ul > li:nth-child(4):hover .s4Visu {background-image: url("../img/s4d34h.gif");} 
+#pcOnline .s4Desc > ul > li:nth-child(1) .s4Visu {background-image: url("../img/s4d41.png");}
+#pcOnline .s4Desc > ul > li:nth-child(2) .s4Visu {background-image: url("../img/s4d42.jpg");}
+#pcOnline .s4Desc > ul > li:nth-child(3) .s4Visu {background-image: url("../img/s4d43.png");}
+#pcOnline .s4Desc > ul > li:nth-child(4) .s4Visu {background-image: url("../img/s4d44.png");}
+#pcOnline .s4Desc > ul > li:nth-child(1):hover .s4Visu {background-image: url("../img/s4d41h.png");}
+#pcOnline .s4Desc > ul > li:nth-child(2):hover .s4Visu {background-image: url("../img/s4d42h.jpg");}
+#pcOnline .s4Desc > ul > li:nth-child(3):hover .s4Visu {background-image: url("../img/s4d43h.png");}
+#pcOnline .s4Desc > ul > li:nth-child(4):hover .s4Visu {background-image: url("../img/s4d44h.gif");} 
 
 .s4Desc ul li a > div {
     width: 80%;
@@ -585,31 +620,28 @@ section h2 {
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    bottom: 20px;
+    bottom: 20px; left: 15px;
 }
-.s4Desc .price .discount {
-    display: none;
-}
-.s4Desc .price .discount {
+.discount {
     display: inline-block;
     font-style: normal;
     color: #fc6020;
 }
-.s4Desc .price .won {
-    font-style: normal;
-}
+.s4Desc .price .won {font-style: normal;}
 
-.s4Desc div {
-    padding: 20px 15px;
-}
-.s4Desc .tag{
+.tag,
+.tag i
+ {display: none;}
+.s4Desc .tag.on{
     position: absolute;
     display: inline-block;
     text-align: center;
-    /* width: 100%; */
-    top: 0; left: 0;
+    top: 5px; left: 5px;
 }
-.tag .sale, .tag .new, .tag .update, .tag .sOnly {
+.tag i.on {display: inline-block;}
+.tag .sale, 
+.tag .new, 
+.tag .update {
     border-radius: 1px;
     padding: 2px 8px;
     color: #fff;
@@ -678,21 +710,52 @@ section h2 {
     width: 100%;
 }
 #s4Lower > ul.slides > li > ul > li {
-    border: 1px solid blue;
     border-radius: 5px;
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
     word-break: break-all;
     text-overflow: ellipsis;
-   
+    background-size: cover; background-position: right;
 }
+.s4Lower .tag{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 0; left: 0;
+}
+#s4Lower #s4Indie > ul > li:nth-child(1) {background-image: url("../img/s4l11.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(2) {background-image: url("../img/s4l12.png");}
+#s4Lower #s4Indie > ul > li:nth-child(3) {background-image: url("../img/s4l13.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(4) {background-image: url("../img/s4l14.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(5) {background-image: url("../img/s4l15.png");}
+#s4Lower #s4Indie > ul > li:nth-child(6) {background-image: url("../img/s4l16.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(7) {background-image: url("../img/s4l17.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(8) {background-image: url("../img/s4l18.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(9) {background-image: url("../img/s4l19.png");}
+#s4Lower #s4Indie > ul > li:nth-child(10) {background-image: url("../img/s4l110.png");}
+#s4Lower #s4Indie > ul > li:nth-child(11) {background-image: url("../img/s4l111.jpg");}
+#s4Lower #s4Indie > ul > li:nth-child(12) {background-image: url("../img/s4l112.png");}
+#s4Lower #s4PCGame > ul > li:nth-child(1) {background-image: url("../img/s4l21.jpg");}
+#s4Lower #s4PCGame > ul > li:nth-child(2) {background-image: url("../img/s4l22.png");}
+#s4Lower #s4PCGame > ul > li:nth-child(3) {background-image: url("../img/s4l23.jpg");}
+#s4Lower #s4PCGame > ul > li:nth-child(4) {background-image: url("../img/s4l24.png");}
+#s4Lower #s4PCGame > ul > li:nth-child(5) {background-image: url("../img/s4l25.png");}
+#s4Lower #s4PCGame > ul > li:nth-child(6) {background-image: url("../img/s4l26.png");}
+#s4Lower #s4PCGame > ul > li:nth-child(7) {background-image: url("../img/s4l27.png");}
+#s4Lower #s4MobileGame > ul > li:nth-child(1) {background-image: url("../img/s4l31.jpg");}
+#s4Lower #s4MobileGame > ul > li:nth-child(2) {background-image: url("../img/s4l32.png");}
+#s4Lower #s4MobileGame > ul > li:nth-child(3) {background-image: url("../img/s4l33.png");}
+#s4Lower #s4MobileGame > ul > li:nth-child(4) {background-image: url("../img/s4l34.png");}
+#s4Lower #s4MobileGame > ul > li:nth-child(5) {background-image: url("../img/s4l35.png");}
+#s4Lower #s4MobileGame > ul > li:nth-child(6) {background-image: url("../img/s4l36.png");}
+
 #s4Lower > ul.slides ul li > a {
     display: block;
     position: relative;
+    box-sizing: border-box;
     padding: 20px;
-    width: calc(100% - 40px);
-    height: 100%;
+    width: 100%; height: 100%;
     overflow: hidden;
     white-space: nowrap;
     word-break: break-all;
@@ -708,38 +771,26 @@ section h2 {
     display: block;
     margin-top: 5px;
     font-size: 14px;
- }
+}
+#s4Lower > ul.slides ul a .tag.on {position: absolute; bottom: 30px;}
+
+
 #s4Lower > ul.slides ul li > a .more {
     box-sizing: border-box;
     opacity: 0;
     text-align: center;
-    display: inline-block;
-    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly; align-items: center;
     position: absolute;
     width: 100%; height: 50px;
     background: #000000af;
     transform: translateX(-50%);
-    bottom: 30px; left: 50%;
+    bottom: 0; left: 50%;
 }
-#s4Lower > ul.slides ul li > a:hover .more {opacity: 1; color: #3a3a3a;}
-#s4Lower > ul.slides ul li > a .more i {box-sizing: border-box; padding: 0 10px 5px 0;}
-#s4Lower > ul.slides ul li > a .more i:hover {color: #fff;}
-#s4PCGame .more i,
-#s4MobileGame .more i {position: absolute; font-style: normal;}
-#s4PCGame .more i:nth-child(1),
-#s4MobileGame .more i:nth-child(1)
-{left: 15%;}
+#s4Lower > ul.slides ul li > a:hover .more {opacity: 1; color: #fff;}
+#s4Lower > ul.slides ul li > a:hover .tag {display: none;}
+#s4Lower > ul.slides ul li > a .more i {box-sizing: border-box; font-style: normal;}
 
-#s4PCGame .more::after,
-#s4MobileGame .more:not(.no):after {
-    content: "";
-    position: absolute;
-    transform: translateY(2.5px);
-    width: 1px; height: 15px;
-    border-left: 1px solid rgba(255, 255, 255, 0.514);
-}
- #s4PCGame .more i:nth-child(2){right: calc(15% + 20px);}
- #s4MobileGame .more.no > i:nth-child(1) {left: 50%; transform: translateX(-50%);}
 #s4Banner {
     position: absolute;
     width: 100%;
@@ -765,6 +816,7 @@ section h2 {
     padding-left: 250px;
     width: 100%; height: 100%;
 }
+
 footer {
     background-color: #1f1f1f;
     color: #7d7d7d;

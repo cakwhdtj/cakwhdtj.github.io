@@ -12,8 +12,8 @@ $('#games').on('click', 'li', function() {
 
 setSlides("#section1 > div.slide_container", 'slide' , 1, true);
 setSlides("#section2.slide_container", 'label', 1, false);
-setSlides("#section4 #s4Upper", 'label', 1, true);
-setSlides("#section4 #s4Lower", 'label', 1, false);
+setSlides("#section4 #s4Upper", 'label', 1, false);
+setSlides("#section4 #s4Lower", 'label', 3, false);
 
 
 function setSlides(selector , type , firstSlide , timer) {
