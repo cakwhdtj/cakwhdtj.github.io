@@ -53,10 +53,10 @@ li {list-style: none;}
 .thumbnails.my {background-image: url("../img/thumbMy.jpg");}
 
 
+.icon.apple {background-image: url("../img/apple.logo@2x.png");}
 
 /* header */
 body {background: #f5f5f5;}
-
 header {
     box-sizing: border-box;
     background: #fff;
@@ -203,7 +203,7 @@ header {
 
 /* main */
 main {
-    height: 2950px; 
+    height: 2600px;
 }
 main > .wrapper {
     margin-top: 100px;
@@ -790,11 +790,10 @@ section h2 {
 #s4Lower > ul.slides ul li > a:hover .more {opacity: 1; color: #fff;}
 #s4Lower > ul.slides ul li > a:hover .tag {display: none;}
 #s4Lower > ul.slides ul li > a .more i {box-sizing: border-box; font-style: normal;}
+.more i.fa-apple {font-size: 20px;}
 
 #s4Banner {
-    position: absolute;
     width: 100%;
-    top: calc(100% + 75px);
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -804,20 +803,23 @@ section h2 {
     font-weight: bold;
     height: 150px;
     width: calc(50% - 10px);
-    font-size: 18px;
-    border: 1px solid red;
+    font-size: 24px;
     border-radius: 10px;
+    color: #fff;
 }
 #s4Banner > div a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 250px;
+    padding-left: 300px;
     width: 100%; height: 100%;
 }
+#s4Banner > div:nth-child(1) {background-image: url("../img/s4b1.png");}
+#s4Banner > div:nth-child(2) {background-image: url("../img/s4b2.png");}
 
 footer {
+    position: relative;
     background-color: #1f1f1f;
     color: #7d7d7d;
     box-sizing: border-box;
@@ -825,6 +827,7 @@ footer {
     text-align: center;
     padding: 30px;
     font-size: 1em;
+    clear: both;
 }
 footer hr {
     margin: 20px 0;
