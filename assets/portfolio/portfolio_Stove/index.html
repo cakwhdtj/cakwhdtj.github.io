@@ -143,14 +143,14 @@
       </li>
     </ul>
     <ul id="gnb_side">               
-      <li id="lang">
+      <li id="lang" class="">
         <h3>
           <a href="#">
           <span class="material-symbols-outlined">language</span>
           </a>
         </h3>
         <ul>       
-          <li><a href="#">한국어</a></li>
+          <li class="on"><a href="#">한국어</a></li>
           <li><a href="#">Deutsch</a></li>
           <li><a href="#">English (US)</a></li>
           <li><a href="#">Español (LA)</a></li>
@@ -162,12 +162,12 @@
           <li><a href="#">Italiano</a></li>
         </ul>
       </li>
-      <li id="gnb">
+      <li id="gnb" class="on">
         <h3><a href="#"><span class="material-symbols-outlined">apps</span></h3></a>
         <ul>
-          <!-- will be copied -->
-          <!-- pc games -->
-          <!-- mobile games -->
+          <li id="gnb_games">
+            <!-- prepend to -->
+          </li>
           <li id="gnb_service">
             <h2><a href="#">서비스</a></h2>
             <ul>
@@ -202,14 +202,7 @@
               <li><a href="#"><span class="hide_clipPath">6번 슬라이드</span></a></li>
               <li><a href="#"><span class="hide_clipPath">7번 슬라이드</span></a></li>
           </ul>
-          <ul class="indicator">
-            <!-- <li class="on"><a href="#"><span class="hide_clipPath">1번 슬라이드</span></a></li>
-            <li><a href="#"><span class="hide_clipPath">2번 슬라이드</span></a></li>
-            <li><a href="#"><span class="hide_clipPath">3번 슬라이드</span></a></li>
-            <li><a href="#"><span class="hide_clipPath">4번 슬라이드</span></a></li>
-            <li><a href="#"><span class="hide_clipPath">5번 슬라이드</span></a></li>
-            <li><a href="#"><span class="hide_clipPath">6번 슬라이드</span></a></li>-->
-          </ul>
+          <ul class="indicator"></ul>
           <p class="control">
             <button class="left"><span class="material-symbols-outlined">arrow_back_ios</span></button>
             <button class="right"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
@@ -883,14 +876,17 @@
   </main>
   <footer>
     <div>
-      <div>
+      <div class="slide_container">
         <h3>공지사항</h3>
-        <ul id="fAnnouncement">
-          <li class="on"><a href="#">1/2(월) 일부 스토브 서비스 접속 불가 현상 안내(정상화)</a></li> 
-          <li><a href="#">12/30(금) 일부 결제수단 중 BC카드/우리카드 결제불가 안내(해결</a>)</li>
-          <li><a href="#">2023년 새해 福 많이 받으세요</a>!</li>
-          <li><a href="#">12/29(목) STOVE APP을 통한 일부 Apple ID 수동 로그인 및 신규 가입 불가 안내 (완료</a>)</li>
-          <li><a href="#">12/30(금) STOVE 결제 시스템 점검 안</a>내</li>
+        <ul class="slides" id="fAnnouncement">
+          <li class="on"><a href="#">공지사항 1</a></li> 
+          <li><a href="#">공지사항 2</a></li>
+          <li><a href="#">공지사항 3</a></li>
+          <li><a href="#">공지사항 4</a></li>
+          <li><a href="#">공지사항 5</a></li>
+          <li><a href="#">공지사항 6</a></li>
+          <li><a href="#">공지사항 7</a></li>
+          <li><a href="#">공지사항 8</a></li>
         </ul>
       </div>
       <hr />

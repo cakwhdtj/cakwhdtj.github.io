@@ -4,16 +4,25 @@ $('a[href="#"]').on('click', function (e) {
 
 $(document).on('click', function(e) {
   $(e.target).closest('#games').length ? '' : $('#games .on').removeClass('on');
+  $(e.target).closest('#gnb_side > li').length ? '' : $('#gnb_side .on').removeClass('on');
+
 });
 $('#games').on('click', 'li', function() {
-  $('#games .on').removeClass('on');
+  $('#games li.on').removeClass('on');
   $(this).addClass('on');
 });
+$('#gnb_side').on('click', '> li', function () {
+  $('#gnb_side .on').removeClass('on');
+  $(this).addClass('on');
+});
+$('#games').clone().prependTo('#gnb_games');
+
 
 setSlides("#section1 > div.slide_container", 'slide' , 1, true);
 setSlides("#section2.slide_container", 'label', 1, false);
 setSlides("#section4 #s4Upper", 'label', 1, false);
 setSlides("#section4 #s4Lower", 'label', 3, false);
+setSlides("footer div.slide_container", 'label', 1, true);
 
 
 function setSlides(selector , type , firstSlide , timer) {
