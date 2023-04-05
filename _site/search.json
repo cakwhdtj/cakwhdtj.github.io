@@ -19,6 +19,14 @@
     } ,
   
     {
+      "title"    : "ONSTOVE",
+      "tags"     : "",
+      "categories" : "portfolio",
+      "url"      : "/stove/",
+      "date"     : "06/21/2021"
+    } ,
+  
+    {
       "title"    : "PEARLABYSS",
       "tags"     : "반응형",
       "categories" : "portfolio",
@@ -28,7 +36,7 @@
   
     {
       "title"    : "DOUBLESWEET",
-      "tags"     : "적응형",
+      "tags"     : "",
       "categories" : "portfolio",
       "url"      : "/double_sweet/",
       "date"     : "06/21/2021"

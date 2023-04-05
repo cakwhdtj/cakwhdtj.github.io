@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 퍼블리셔 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Mar 2023 14:56:37 +0900</pubDate>
-    <lastBuildDate>Sat, 11 Mar 2023 14:56:37 +0900</lastBuildDate>
+    <pubDate>Wed, 05 Apr 2023 17:25:40 +0900</pubDate>
+    <lastBuildDate>Wed, 05 Apr 2023 17:25:40 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -62,6 +62,20 @@
       </item>
     
       <item>
+        <title>ONSTOVE</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_Stove/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
+다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
+        <link>http://localhost:4000/stove/</link>
+        <guid isPermaLink="true">http://localhost:4000/stove/</guid>
+        
+        <category>portfolio</category>
+      </item>
+    
+      <item>
         <title>PEARLABYSS</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_Pearlabyss/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
@@ -87,8 +101,6 @@
         <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
         <link>http://localhost:4000/double_sweet/</link>
         <guid isPermaLink="true">http://localhost:4000/double_sweet/</guid>
-        
-        <category>적응형</category>
         
         <category>portfolio</category>
       </item>

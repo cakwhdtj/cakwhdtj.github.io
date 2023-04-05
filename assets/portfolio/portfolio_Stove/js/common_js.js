@@ -3,18 +3,15 @@ $('a[href="#"]').on('click', function (e) {
 });
 
 $(document).on('click', function(e) {
-  $(e.target).closest('#games').length ? '' : $('#games .on').removeClass('on');
-  $(e.target).closest('#gnb_side > li').length ? '' : $('#gnb_side .on').removeClass('on');
-
+  $(e.target).closest('#games').length ? '' : $('#games li.on').removeClass('on');
+  $(e.target).closest('#gnb_side > li').length ? '' : $('#gnb_side li.on').removeClass('on');
 });
-$('#games').on('click', 'li', function() {
+$('#games, #gnb_side').on('click', 'li', function() {
   $('#games li.on').removeClass('on');
+  $('#gnb_side li.on').removeClass('on');
   $(this).addClass('on');
 });
-$('#gnb_side').on('click', '> li', function () {
-  $('#gnb_side .on').removeClass('on');
-  $(this).addClass('on');
-});
+
 $('#games').clone().prependTo('#gnb_games');
 
 
@@ -85,7 +82,5 @@ function setSlides(selector , type , firstSlide , timer) {
     }
   }
 }
-
-
 
 //portfolio global
