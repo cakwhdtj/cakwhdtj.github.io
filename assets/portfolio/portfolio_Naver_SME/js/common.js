@@ -79,7 +79,6 @@ function scrollEvent() {
   let timerDebounce = 0;
   window.addEventListener(scrollEvent, function (e) {
     if ($('#headerRightBtn').find('ul').attr('class') === 'open' || winWidth < 1024) {
-      // if ($('nav')[0] === e.path[0]) {}
       return false
     }
     e.preventDefault();
@@ -130,8 +129,6 @@ function headerEffect() {
   };
 }
 function slideOpener(selector) {
-  // click 된 a가 있는 section에 div.slideInSection 을 연다
-  // scroll을 안움직이게 한다
   selector.parent().parent().find(".slideInSection").addClass('open');
   selector.parent().parent().find(".slideInSection .indicator li:eq(1)").addClass('on');
   $(document).scrollTop(selector.parent().parent().offset().top);
@@ -142,10 +139,7 @@ function slideOpener(selector) {
     });
   }
 }
-// indicator 에 paremeter 하나 더 받아서 (RorL) if 위에서 R,L 구해서 넣어줌
-// R 이면 다음형제에 on이랑 , L이면 이전형제에 on
 function sliderIndicator(selector, section) {
-  // click 된 a가 있는 section에 div.slideInSection 안에 indicator 효과
   let indicatorLength = ((selector.offset().left + selector.outerWidth()) - $(".slideInSection .indicator").offset().left);
   section = '#' + section;
   $(section + " .indicator_bar").width(indicatorLength + 3);
@@ -193,12 +187,9 @@ function sectionReturn(sectionCheck) {
 
 
 //portfolio global
-
 $('.scrolled > .sectionTitle a span.textEmph').addClass("pfEmph");
 document.write("<script src='../../../assets/js/portfolioGlobal.js'></script>");
 pfAdjustment();
-
-
 function pfAdjustment() {
   let arr = $('.pfEmph');
   let speci = [];
