@@ -48,14 +48,10 @@
                 </a>
             </li>
             <li>
-                <a id="headerKakao" data-channel-public-id="_NxoxcUxj">
+                <a id="headerKakao" href="javascript:addChannel()" data-channel-public-id="_NxoxcUxj">
                     <span><i class="hide_clipPath">실시간 상담</i></span>
                     <span >실시간 상담</span>
                 </a>
-                <a id="add-channel-button" href="javascript:addChannel()">
-                    <img src="/tool/resource/static/img/button/channel/add/channel_add_small.png"
-                      alt="카카오톡 채널 추가하기 버튼" />
-                  </a>
             </li>
             <li id="headerBlog">
                 <a target="_blank" href="https://m.blog.naver.com/PostList.naver?blogId=minc72600">
@@ -447,7 +443,7 @@
         });
         function addChannel() {
             Kakao.Channel.addChannel({
-              channelPublicId: '_xixkPtxj',
+              channelPublicId: '_NxoxcUxj',
             });
           }
     </script>
