@@ -52,6 +52,10 @@
                     <span><i class="hide_clipPath">실시간 상담</i></span>
                     <span >실시간 상담</span>
                 </a>
+                <a id="add-channel-button" href="javascript:addChannel()">
+                    <img src="/tool/resource/static/img/button/channel/add/channel_add_small.png"
+                      alt="카카오톡 채널 추가하기 버튼" />
+                  </a>
             </li>
             <li id="headerBlog">
                 <a target="_blank" href="https://m.blog.naver.com/PostList.naver?blogId=minc72600">
@@ -441,22 +445,18 @@
             const { innerHeight } = window;
             document.documentElement.style.setProperty("--app-height", `${innerHeight - 80}px`);
         });
-        window.kakaoAsyncInit = function() {
-            Kakao.Channel.chat({
-            container: '#headerKakao',
+        function addChannel() {
+            Kakao.Channel.addChannel({
+              channelPublicId: '_xixkPtxj',
             });
-        }; 
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.channel.min.js';
-            js.integrity = 'sha384-MEvxc+j9wOPB2TZ85/N6G3bt3K1/CgHSGNSM+88GoytFuzP4C9szmANjTCNfgKep';
-            js.crossOrigin = 'anonymous';
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'kakao-js-sdk');
+          }
     </script>
     <script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
     <script src="js/common.js" charset="utf-8"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+  integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('7ec9d55155d07a25881b3fa27298d6ed'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
 </body>
 </html>
