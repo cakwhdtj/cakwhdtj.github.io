@@ -2,6 +2,8 @@ let clickedLis = [];
 $("main > ul > li").on('click', function () {
     $(window).width() > 1024 && $("header").hide();
     $(window).width() <= 1024 && $("header h1.logo").hide();
+    $(window).width() <= 1024 && $("header h2#logo_title").hide();
+
     $(window).width() <= 1024 && $("main > ul").css({"padding-top" : 0});
     const $this = $(this);
     if (!clickedLis.includes($this[0])) {
@@ -20,6 +22,7 @@ $("main > ul > li").on('click', function () {
 $(".close").on('click', function (e) {
     e.stopPropagation();
     $(window).width() <= 1024 && $("header h1.logo").show();
+    $(window).width() <= 1024 && $("header h2#logo_title").show();
     $(window).width() > 1024 && $("header h1.logo").removeAttr("style");
     $(window).width() <= 1024 && $("main > ul").removeAttr("style");
 

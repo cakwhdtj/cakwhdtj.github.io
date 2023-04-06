@@ -40,6 +40,17 @@ h1.logo {
     width: 140px; height: 140px;
 }
 header h1 a {display: block; width: 100%; height: 100%;}
+header h2 {position: absolute; right: 10px; top: 10px;}
+header h2#logo_title { 
+    top: 30px; right: 20px;
+    width: 177px; height: 33px;
+    background-size: 120px 120px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-image: url(../img/logo.svg);
+    font-size: 14px;
+}
+#logo_title a {position: absolute; right: -2px; top: -15px;}
 header > ul {
     display: flex;
     width: 400px;
@@ -50,6 +61,7 @@ header > ul > li {
     width: 80px; height: 80px;
     text-align: center;
     transition: all .3s ease;
+    font-weight: 800;
 }
 header > ul > li:hover {transform: translateY(-5px);}
 header > ul > li a {
@@ -166,7 +178,7 @@ main .brand p {
     font-weight: 500;
     position: relative;
     word-break: keep-all;
-    font-weight: 400;
+    font-weight: bolder;
     width: 100%;
     text-align: center;
 }
@@ -302,9 +314,9 @@ footer {display: none;}
     }
     header > .logo {
         position: absolute;
-        background-size: contain;
-        top: 10px; left: 10px;
-        width: 75px; height: 75px
+        background-size: cover;
+        top: 10px; left: 0;
+        width: 90px; height: 55px
     }
     header > ul {
         position: fixed;
@@ -357,7 +369,7 @@ footer {display: none;}
         background: none;
     }
     main .brand h2 {margin-bottom: 25px;}
-    main .brand p {font-size: 20px; color: black;}
+    main .brand p {width:400px; font-size: 30px; color: black;}
     main ul li.on .plans {
         box-sizing: border-box;
         transform: translateX(-50%);
