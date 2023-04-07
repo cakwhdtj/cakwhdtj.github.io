@@ -1,12 +1,25 @@
 "use strict";
 let scrollAmt = $(document).scrollTop();
 let winWidth = $(window).width();
+const sections = Array.from(document.querySelectorAll('section'));
+const numSections = sections.length;
+let currentPage = 0;
+let isBlocked = false;
+let timerDebounce = null;
+
 $(window).on('resize', function () {
   winWidth = $(window).width();
 });
 headerEffect();
 $(document).on('click', 'a[href="#"]', function (e) {
   e.preventDefault();
+});
+$('#hashtag a').click(function(e) {
+  e.preventDefault();
+  var targetPage = $(this).attr('href'); 
+  var targetOffset = $(targetPage).offset().top;
+  showPage(targetPage, targetOffset);
+  $('html').stop(true).animate({ 'scrollTop': targetOffset }, 500); 
 });
 
 $("#headerRightBtn > li:nth-child(2) > a").on("click", function () {
@@ -68,66 +81,58 @@ $(window).on('scroll', function (e) {
   headerEffect();
 });
 
-let numPage = $('section').length;
-let pageNow = 0;
-let pagePrev = 0;
-let pageNext = 0;
-scrollEvent();
-function scrollEvent() {
-  let scrollEvent = ('onmousewheel' in window) ? 'mousewheel' : 'DOMMouseScroll'; //browser 확인
-  let isBlocked = false;
-  let timerDebounce = 0;
-  window.addEventListener(scrollEvent, function (e) {
-    if ($('#headerRightBtn').find('ul').attr('class') === 'open' || winWidth < 1024) {
-      return false
-    }
-    e.preventDefault();
-    if (isBlocked === true) return false;
-    isBlocked = true;
-    let delWheel = 0;
-    if (scrollEvent === 'mousewheel') {
-      delWheel = e.wheelDelta / -120;
-    } else {
-      delWheel = e.detail / 3;
-    }
-    if (delWheel > 0) {
-      showPage(pageNext);
-    } else if (delWheel < 0) {
-      showPage(pagePrev);
-    }
-  }, { 'passive': false });
 
-  function showPage(n) {
-    timerDebounce = setTimeout(() => {
-      scrollAmt = $('section:eq(' + (n - 1) + ')').offset().top;
-      $('html').stop(true).animate({ 'scrollTop': scrollAmt }, 500, function () {
-        isBlocked = false;
-      });
-      pageNow = n;
-      pagePrev = (n <= 1) ? 1 : (n - 1);
-      pageNext = (n >= numPage) ? numPage : (n + 1);
-    }, 700);
+function handleScroll(event) {
+  if ($('#headerRightBtn ul').hasClass('open') || window.innerWidth < 1024) {
+    return;
   }
+  event.preventDefault();
+
+  if (isBlocked) {return;}
+
+  isBlocked = true;
+
+  const deltaY = event.deltaY || event.detail || (-event.wheelDelta);
+  if (deltaY > 0) {
+    showPage(currentPage + 1);
+  } else if (deltaY < 0) {
+    showPage(currentPage - 1);
+  }
+}
+function showPage(n, offset) {
+  if (n < 0 || n >= numSections) {
+    isBlocked = false;
+    return;
+  }
+  const section = sections[n];
+  scrollAmt = offset || section.offsetTop;
+
   clearTimeout(timerDebounce);
-}
+
+  timerDebounce = setTimeout(() => {
+    $('html').animate({ scrollTop: scrollAmt }, 500, () => {
+      isBlocked = false;
+    });
+    currentPage = n;
+  }, 700);
+};
+document.addEventListener('wheel', handleScroll, { passive: false });
+document.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+
 function headerEffect() {
-  if (($('#section_2').offset().top > scrollAmt)) {
-    $('#hashtag > li:nth-child(1) > a').addClass('on');
-  };
-  if (($('#section_2').offset().top <= scrollAmt)) {
-    $('#header').addClass('scrolled');
-    $('#footer').addClass('scrolled');
-    if (($('#section_2').offset().top <= scrollAmt) && ($('#section_3').offset().top > scrollAmt)) {
-      $('#hashtag > li:nth-child(2) > a').addClass('on');
+  const sections = ['#section_2', '#section_3'];
+  const hashtagLinks = ['#hashtag > li:nth-child(1) > a', '#hashtag > li:nth-child(2) > a', '#hashtag > li:nth-child(3) > a']
+  let sectionIndex = 0;
+  for (let i = 0; i < sections.length; i++) {
+    if ($(sections[i]).offset().top <= scrollAmt) {
+      sectionIndex = i + 1;
     }
-    if (($('#section_3').offset().top <= scrollAmt)) {
-      $('#hashtag > li:nth-child(3) > a').addClass('on');
-    }
-  } else {
-    cleaner('#header', 'no', 'scrolled');
-    cleaner('#footer', 'no', 'scrolled');
-  };
+  }
+  $('#hashtag > li > a').removeClass('on');
+  $(hashtagLinks[sectionIndex]).addClass('on');
+  $('#header, #footer').toggleClass('scrolled', $('#section_2').offset().top <= scrollAmt);
 }
+
 function slideOpener(selector) {
   selector.parent().parent().find(".slideInSection").addClass('open');
   selector.parent().parent().find(".slideInSection .indicator li:eq(1)").addClass('on');
