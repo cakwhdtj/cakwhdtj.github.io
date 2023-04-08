@@ -10,10 +10,15 @@ let timerDebounce = null;
 $(window).on('resize', function () {
   winWidth = $(window).width();
 });
-headerEffect();
+$(window).on('scroll', function (e) {
+  scrollAmt = $(document).scrollTop();
+  cleaner('#hashtag li a', 1, 'on');
+  headerEffect();
+});
 $(document).on('click', 'a[href="#"]', function (e) {
   e.preventDefault();
 });
+headerEffect();
 $('#hashtag a').click(function(e) {
   e.preventDefault();
   var targetPage = $(this).attr('href'); 
@@ -21,28 +26,22 @@ $('#hashtag a').click(function(e) {
   showPage(targetPage, targetOffset);
   $('html').stop(true).animate({ 'scrollTop': targetOffset }, 500); 
 });
-
-$("#headerRightBtn > li:nth-child(2) > a").on("click", function () {
+$("#headerRightBtn > li:nth-child(2) > a").click(function() {
   $("#headerRightBtn li > ul").addClass("open");
-  $(".wrapper").addClass("bg");
-  $("ul#hashtag").after("<div class='bg'></div>");
-  $("nav > div").on("click", function () {
-    $("#closeSideBtn > a").trigger('click');
-  })
+  $(".wrapper").addClass("bg").after("<div class='bg'></div>");
+  $("nav > div").click(() => $("#closeSideBtn > a").click());
 });
-$("#closeSideBtn > a").on("click", function () {
-  cleaner('#headerRightBtn li > ul', 'no', 'open');
-  cleaner('.bg', 'no', 'bg');
+
+$("#closeSideBtn > a").click(() => {
+  cleaner('#headerRightBtn li > ul, .bg', 'no', 'open bg');
   $("nav > div").remove();
 });
-$('#hashtag > li > a, a#downArrow').on('click', function () {
-  if (this.hash !== '') {
-    let hash = this.hash;
-    $('html, body').stop(true).animate({ 'scrollTop': $(hash).offset().top }, 500, function () {
-      window.location.hash = hash;
-    });
-  }
+
+$('#hashtag > li > a, a#downArrow').click(function() {
+  const hash = this.hash;
+  if (hash) $('html, body').stop(true).animate({ scrollTop: $(hash).offset().top }, 500, () => window.location.hash = hash);
 });
+
 
 $("#section_1 > p").clone().prependTo("#section_2");
 $("#section_2 > p.sectionTitle").clone().prependTo("#section_2 .imageSlide > li:nth-child(1)");
@@ -74,13 +73,6 @@ $(".slideInSection .indicator > li > a").on('click', function () {
   imgSlider($(this).parent(), sectionCheck);
   sliderIndicator($(this), sectionCheck);
 });
-
-$(window).on('scroll', function (e) {
-  scrollAmt = $(document).scrollTop();
-  cleaner('#hashtag li a', 1, 'on');
-  headerEffect();
-});
-
 
 function handleScroll(event) {
   if ($('#headerRightBtn ul').hasClass('open') || window.innerWidth < 1024) {
@@ -123,6 +115,11 @@ function headerEffect() {
   const sections = ['#section_2', '#section_3'];
   const hashtagLinks = ['#hashtag > li:nth-child(1) > a', '#hashtag > li:nth-child(2) > a', '#hashtag > li:nth-child(3) > a']
   let sectionIndex = 0;
+  $('#hashtag li:first-child a').click(function(e) {
+    e.preventDefault();
+    showPage(0);
+    $('html').stop(true).animate({ 'scrollTop': 0 }, 500); 
+  });
   for (let i = 0; i < sections.length; i++) {
     if ($(sections[i]).offset().top <= scrollAmt) {
       sectionIndex = i + 1;
@@ -132,7 +129,6 @@ function headerEffect() {
   $(hashtagLinks[sectionIndex]).addClass('on');
   $('#header, #footer').toggleClass('scrolled', $('#section_2').offset().top <= scrollAmt);
 }
-
 function slideOpener(selector) {
   selector.parent().parent().find(".slideInSection").addClass('open');
   selector.parent().parent().find(".slideInSection .indicator li:eq(1)").addClass('on');
