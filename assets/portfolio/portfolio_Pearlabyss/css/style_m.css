@@ -94,10 +94,11 @@ body.main #section2 div.news ul li > a > p {
     text-overflow: ellipsis; white-space: nowrap;
 }
 body.main #section2 div:nth-child(2) {margin-top: 50px;}
-body.main #section2 div > .gallery {height: 576px; overflow: hidden;}
+body.main #section2 div > .gallery {height: 1000px; overflow: hidden;}
 
 body.main #section2 div > .gallery li {    
-    float: left; position: relative; width: 20%; height: 100%;
+    position: relative; width: 100%; height: 20%;
+    display: inline-block;
     overflow: hidden; 
 }
 body.main #section2 div > .gallery li a {position: absolute; height: 100%; width: 100%; left: 0;}
