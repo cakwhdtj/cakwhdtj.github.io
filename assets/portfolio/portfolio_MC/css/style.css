@@ -10,18 +10,22 @@ li {list-style: none;}
 .mobileOnly {display: none;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
-
+/*  */
+:root {
+    --main: #1553AD;
+    --sub: #009DD5;
+  }
 /* style */
 .btnSt {
     background-color: #fff;
-    color: #1553AD;
+    color: var(--main);
     padding: 8px 10px;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px solid #1553AD;
+    border: 2px solid var(--main);
     transition: all .3s ease;
 }
-.btnSt:hover {background-color: #1553AD; color: #fff;}
+.btnSt:hover {background-color: var(--main); color: #fff;}
 /*  */
 header {
     box-sizing: border-box;
@@ -31,7 +35,7 @@ header {
     width: 100%; height: 120px;
     z-index: 10;
     padding: 30px;
-    color: #1553AD;
+    color: var(--main);
 }
 h1.logo {
     background-size: contain;
@@ -71,7 +75,7 @@ header > ul > li a {
 }
 header > ul > li a span:nth-child(1) {
     display: block;
-    font-size: 50px; color: #1553AD;
+    font-size: 50px; color: var(--main);
 }
 header > ul > li a span:nth-child(2) {
     display: block;
@@ -211,7 +215,7 @@ main ul .close::after {
     content: "";
     position: absolute;
     width: 15px; height: 3px;
-    background: #1553AD;
+    background: var(--main);
 }
 main ul .close::before {transform: rotate(45deg);}
 main ul .close::after {transform: rotate(-45deg);}
@@ -227,7 +231,7 @@ main > ul .plans {
 main > ul > li.on .plans {display: block;}
 .plans > div {margin-bottom: 100px;}
 .plans h3 {
-    color: #1553AD;
+    color: var(--main);
     font-weight: 900;
     font-size: 45px;
     margin-bottom: 50px;
@@ -266,8 +270,8 @@ main > ul > li.on .plans {display: block;}
 .internet .grid-container{grid-template-columns: repeat(3, 1fr);}
 #KTSkylife .internetTv .grid-container{grid-template-columns: repeat(3, 1fr);}
 #KTSkylife .internet .grid-container{grid-template-columns: repeat(4, 1fr);}
-.grid-container .th {color: #fff; background-color: #1553AD;}
-.grid-container .th.thE {background-color: #009DD5;}
+.grid-container .th {color: #fff; background-color: var(--main);}
+.grid-container .th.thE {background-color: var(--sub)}
 .grid-container .tr2 {background-color: #f1f1f1;}
 .plans .info > div ul {
     display: flex;
@@ -283,12 +287,12 @@ main > ul > li.on .plans {display: block;}
     align-items: center;
 }
 .plans .info li a > * {margin-bottom: 20px; word-break: keep-all;}
-.plans .info li a span {font-size: 100px; color: #1553AD;}
+.plans .info li a span {font-size: 100px; color: var(--main);}
  .plans .notice ul,
  .plans .caution ul {
     box-sizing: border-box;
     padding: 50px 10% 50px 15%;
-    border: 1px solid #009DD5;
+    border: 1px solid var(--sub);
     border-left: none; 
     border-right: none;
     text-align: left;
@@ -327,11 +331,11 @@ footer {display: none;}
         width: 100%;
         box-sizing: border-box;
         justify-content: space-around;
-        box-shadow: 0 -1px 2px 0 #009DD5;
+        box-shadow: 0 -1px 2px 0 var(--sub);
     }
     header > ul > li {scale: .8;}
     header > ul > li a span:nth-child(2) {
-        color: #1553AD;
+        color: var(--main);
         font-size: 20px;
         width: 135%;
     }
@@ -373,7 +377,7 @@ footer {display: none;}
     main ul li.on .plans {
         box-sizing: border-box;
         transform: translateX(-50%);
-        border: 3px solid #009DD5;
+        border: 3px solid var(--sub);
         top: 0;
     }
     .plans .logo {

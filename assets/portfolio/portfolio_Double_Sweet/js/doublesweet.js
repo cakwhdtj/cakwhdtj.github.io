@@ -3,12 +3,9 @@
 $('a').on('click', function (e) {
     ($(this).attr('href') === '#') ? e.preventDefault() : null
 });
-$('a.menu').on('click', function () {
+$('.menu, .gnb_close').click(function() {
     onAdder($('.gnb'));
-});
-$('a.gnb_close').on('click', function () {
-    onAdder($('.gnb'));
-});
+});  
 $('.quick_menu > a:first-child').on('click', function () {
     onAdder($('.quick_menu > ul'));
 })
