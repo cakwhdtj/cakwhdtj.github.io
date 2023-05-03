@@ -7,7 +7,7 @@
       "tags"     : "welcome and blog",
       "categories" : "intro",
       "url"      : "/feature/",
-      "date"     : "06/21/2022"
+      "date"     : "05/03/2023"
     } ,
   
     {
@@ -15,7 +15,7 @@
       "tags"     : "반응형 and React",
       "categories" : "portfolio",
       "url"      : "/cj_ai/",
-      "date"     : "06/22/2021"
+      "date"     : "04/03/2023"
     } ,
   
     {
@@ -23,7 +23,7 @@
       "tags"     : "",
       "categories" : "portfolio",
       "url"      : "/stove/",
-      "date"     : "06/21/2021"
+      "date"     : "04/02/2023"
     } ,
   
     {
@@ -31,6 +31,14 @@
       "tags"     : "반응형",
       "categories" : "portfolio",
       "url"      : "/pearlabyss/",
+      "date"     : "06/21/2021"
+    } ,
+  
+    {
+      "title"    : "INTERNETDOCTOR",
+      "tags"     : "",
+      "categories" : "portfolio",
+      "url"      : "/internetdoctor/",
       "date"     : "06/21/2021"
     } ,
   

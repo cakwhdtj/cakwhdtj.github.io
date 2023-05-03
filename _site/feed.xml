@@ -5,8 +5,8 @@
     <description>안녕하세요. 성장하는 퍼블리셔 구종서의 개인 포트폴리오 페이지 입니다.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Apr 2023 15:06:47 +0900</pubDate>
-    <lastBuildDate>Tue, 11 Apr 2023 15:06:47 +0900</lastBuildDate>
+    <pubDate>Wed, 03 May 2023 15:13:37 +0900</pubDate>
+    <lastBuildDate>Wed, 03 May 2023 15:13:37 +0900</lastBuildDate>
     <generator>Jekyll v3.9.1</generator>
     
       <item>
@@ -32,7 +32,7 @@
 &lt;p&gt;&lt;a href=&quot;/category/portfolio/&quot; title=&quot;portfolio&quot;&gt;포트폴리오 보러가기&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 21 Jun 2022 16:26:28 +0900</pubDate>
+        <pubDate>Wed, 03 May 2023 09:00:00 +0900</pubDate>
         <link>http://localhost:4000/feature/</link>
         <guid isPermaLink="true">http://localhost:4000/feature/</guid>
         
@@ -50,7 +50,7 @@
 깔끔한 디자인이 인상적인 페이지 입니다. React를 사용했습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Tue, 22 Jun 2021 16:18:46 +0900</pubDate>
+        <pubDate>Mon, 03 Apr 2023 09:00:00 +0900</pubDate>
         <link>http://localhost:4000/cj_ai/</link>
         <guid isPermaLink="true">http://localhost:4000/cj_ai/</guid>
         
@@ -68,7 +68,7 @@
 다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
+        <pubDate>Sun, 02 Apr 2023 09:00:00 +0900</pubDate>
         <link>http://localhost:4000/stove/</link>
         <guid isPermaLink="true">http://localhost:4000/stove/</guid>
         
@@ -82,11 +82,25 @@
 다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-        <pubDate>Mon, 21 Jun 2021 16:18:46 +0900</pubDate>
+        <pubDate>Mon, 21 Jun 2021 16:18:48 +0900</pubDate>
         <link>http://localhost:4000/pearlabyss/</link>
         <guid isPermaLink="true">http://localhost:4000/pearlabyss/</guid>
         
         <category>반응형</category>
+        
+        <category>portfolio</category>
+      </item>
+    
+      <item>
+        <title>INTERNETDOCTOR</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/assets/portfolio/portfolio_Internetdoctor/index.html&quot; target=&quot;_blank&quot;&gt;보러가기&lt;/a&gt;&lt;br /&gt;
+지인의 의뢰로 직접 작업한 페이지입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 21 Jun 2021 16:18:47 +0900</pubDate>
+        <link>http://localhost:4000/internetdoctor/</link>
+        <guid isPermaLink="true">http://localhost:4000/internetdoctor/</guid>
         
         <category>portfolio</category>
       </item>
