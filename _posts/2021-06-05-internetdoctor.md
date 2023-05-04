@@ -7,7 +7,8 @@ description: 지인의 의뢰로 직접 작업한 페이지입니다.
 image: /assets/img/thumnails/internetdoctor_main.png
 optimized_image: /assets/img/thumnails/internetdoctor_main.png
 category: portfolio
-tags:
+tags: 
+    - 반응형
 author: JongSeoKoo
 paginate: false
 ---
