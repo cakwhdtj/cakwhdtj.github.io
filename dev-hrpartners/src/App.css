@@ -1,75 +1,84 @@
-  /* reset */
-  body {margin: 0;}
-  h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
-  h1, h2, h3, h4, h5, h6 {font-weight: 700;}
-  a {color: inherit;text-decoration: inherit;}
-  img {vertical-align: middle;}
-  a img {border: none;}
-  li {list-style: none;}
-  .hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
-  .mobile_only {display: none !important;}
-  #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
-  #skipNav:focus {top: 0;}
-  /*  */
-  .logoDiv {
-    border: 1px solid red;
-    width: 80%;
-    position: fixed;
-    top: 70%;
-  }
-  .textDiv {
-    border: 1px solid red;
-    position: fixed;
-    right: 10%;
-    height: 100%;
-  }
-  .textDiv > div {
-    animation-delay: .2s;
-  }
-  main {
-    position: absolute;
-    top: 100vh;
-    height: 100vh; width: 100%;
-    background: #00000073;
-  }
-
-
-  .fade-in-left {
-    animation: fade-in-left 1s ease;
-  }
-  .fade-in-top {
-    animation: fade-in-top 1s ease;
-  }
-  @keyframes fade-in-left {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  @keyframes fade-in-top {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-
-  .bg-image {
-    background-image: url('./logo.svg');
-    background-size: cover;
-    background-position: center;
+/* reset */
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit;text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+.hide_clipPath {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
+.mobile_only {display: none !important;}
+#skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
+#skipNav:focus {top: 0;}
+/*  */
+.landingEffect {
+  height: 100vh;
+  position: relative;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+}
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://placekitten.com/1200/800');
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.logoDiv {
+  border: 1px solid red;
+  width: 80%;
+  position: fixed;
+  top: 70%;
+}
+.textDiv {
+  border: 1px solid red;
+  position: fixed;
+  right: 10%;
+  height: 100%;
+}
+.textDiv > div {
+  animation-delay: .3s;
+}
+main {
+  position: absolute;
+  top: 100vh;
+  height: 100vh; width: 100%;
+  background: #00000073;
+}
+.bg-image.fade-in {
+  opacity: 1;
+}
+.landingEffect.fade-in{
+  opacity: 1;
+}
+.fade-in-left {
+  animation: fade-in-left 1s ease;
+}
+.fade-in-top {
+  animation: fade-in-top 1s ease;
+}
+@keyframes fade-in-left {
+  from {
     opacity: 0;
-    transition: opacity 1s ease;
+    transform: translateX(-100%);
   }
-
-  .bg-image.show {
+  to {
     opacity: 1;
+    transform: translateX(0);
   }
+}
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

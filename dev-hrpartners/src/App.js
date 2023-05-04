@@ -8,12 +8,10 @@ const App = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const logoDivOffset = document.querySelector('.logoDiv').offsetTop;
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const isVisible = scrollTop > logoDivOffset - window.innerHeight;
-      setShowHeader(isVisible);
-      setShowContent(isVisible);
-      setShowBg(scrollTop <= logoDivOffset);
+      const position = window.scrollY;
+      setShowHeader(position < window.innerHeight);
+      setShowContent(position < window.innerHeight);
+      setShowBg(position < window.innerHeight); 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,7 +20,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <div className={`landingEffect`}>
+      <div className={`landingEffect${showContent ? ' fade-in' : ''}`}>
         <div className={`bg-image${showBg ? ' fade-in' : ''}`}></div>
         <div className="logoDiv">
           <h1 className={`logo${showHeader ? ' fade-in-left' : ''}`}>logo</h1>
