@@ -36,20 +36,43 @@ li {list-style: none;}
   top: 70%;
 }
 .textDiv {
-  border: 1px solid red;
+  height: 100vh;
   position: fixed;
-  right: 10%;
-  height: 100%;
+  right: 8%;
+  transition: all .1s ease;
+  width: 15%;
+  min-width: 250px;
+  border: 1px solid red;
+
 }
 .textDiv > div {
   animation-delay: .3s;
+  border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  top: 50%; transform: translateY(-50%);
+}
+
+nav {
+  position: absolute;
+  /* width: ; */
+  right: 10%;
+  border: 1px solid blue;
+  top: 100vh;
+  height: 600vh;
 }
 main {
-  position: absolute;
-  top: 100vh;
-  height: 100vh; width: 100%;
+  position: relative;
+  /* top: 100vh; */
+  width: 100%;
   background: #00000073;
 }
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
 .bg-image.fade-in {
   opacity: 1;
 }
