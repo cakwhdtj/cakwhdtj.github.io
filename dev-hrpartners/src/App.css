@@ -38,39 +38,116 @@ li {list-style: none;}
 .textDiv {
   height: 100vh;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   right: 8%;
   transition: all .1s ease;
   width: 15%;
   min-width: 250px;
   border: 1px solid red;
-
+  will-change: auto;
 }
 .textDiv > div {
-  animation-delay: .3s;
+  /* animation-delay: .3s; */
   border: 1px solid red;
-  position: absolute;
   width: 100%;
-  top: 50%; transform: translateY(-50%);
 }
 
 nav {
   position: absolute;
-  /* width: ; */
-  right: 10%;
+  right: 18%;
+  border-radius: 10%;
+  box-sizing: border-box;
+  top: 120vh;
+  height: 70vh;
+  min-height: 360px;
+  width: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2; 
+  color: #ddd;
+  font-family:'Times New Roman', Times, serifxs;
+}
+nav ul {
   border: 1px solid blue;
-  top: 100vh;
-  height: 600vh;
+  height: 100%;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+nav ul > li {
+  border: 1px solid red;
+  font-size: 20px;
+  padding-left: 20px;
+}
+nav ul > li > span {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  font-size: 19px;
+}
+nav ul > li > span i {
+  position: absolute;
+  font-size: 15px;
+  font-style: normal;
+  font-family: ;
+}
+nav ul > li:not(:last-child) > span::before {
+  /* 0 */
+  content: '';
+  position: absolute;
+  background: #dadada;
+  border-radius: 50%;
+  width: 12px; height: 12px;
+  top: 50%; left: -30px;
+  transform: translateY(-50%);
+} 
+nav ul > li.on > span::before {
+  background: #ffffff;
+  box-shadow: 0 0 6px 1px #fff;
+}
+nav ul > li > span::after {
+  /* l */
+  content: '';
+  position: absolute;
+  height: 12vh;
+  min-height: 50px;
+  width: 2px;
+  background-color: #ffffff87;
+  top: -35%;
+  left: -30px;
+  transform: translate(5px, -100%);
+}
+nav ul > li:first-child > span::after {
+  background-image: linear-gradient(to bottom, transparent 90%, #ffffff87);
+  border-radius: 60% 60% 0 0;
+}
+nav ul > li:last-child > span::after {
+  background-image: linear-gradient(to bottom, #ffffff87 10%, transparent);
+  border-radius: 0 0 60% 60%;
 }
 main {
   position: relative;
-  /* top: 100vh; */
   width: 100%;
-  background: #00000073;
+  background: green;
 }
 section {
   position: relative;
   height: 100vh;
   width: 100%;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+section > div {
+  position: absolute;
+  border: 1px solid red;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 90px;
 }
 
 .bg-image.fade-in {
