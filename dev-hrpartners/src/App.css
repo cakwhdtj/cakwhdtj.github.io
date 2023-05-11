@@ -42,7 +42,6 @@ li {list-style: none;}
   flex-direction: column;
   justify-content: center;
   right: 8%;
-  transition: all .1s ease;
   width: 15%;
   min-width: 250px;
   border: 1px solid red;
@@ -71,7 +70,6 @@ nav {
   font-family:'Times New Roman', Times, serifxs;
 }
 nav ul {
-  border: 1px solid blue;
   height: 100%;
   width: 150px;
   display: flex;
@@ -80,7 +78,6 @@ nav ul {
   
 }
 nav ul > li {
-  border: 1px solid red;
   font-size: 20px;
   padding-left: 20px;
 }
@@ -149,6 +146,10 @@ section > div {
   transform: translate(-50%,-50%);
   font-size: 90px;
 }
+#section1 > div {
+  left: 40%;
+  font-size: 14px;
+}
 
 .bg-image.fade-in {
   opacity: 1;
@@ -161,6 +162,9 @@ section > div {
 }
 .fade-in-top {
   animation: fade-in-top 1s ease;
+}
+.fade-in-bottom {
+  animation: fade-in-bottom 1s ease;
 }
 @keyframes fade-in-left {
   from {
@@ -176,6 +180,16 @@ section > div {
   from {
     opacity: 0;
     transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
   to {
     opacity: 1;
