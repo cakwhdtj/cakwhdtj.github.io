@@ -6,7 +6,7 @@ subtitle: 가입부터 관리까지 인터넷닥터. <sup><a href="https://www.i
 description: 지인의 의뢰로 직접 작업한 페이지입니다. 
 image: /assets/img/thumnails/internetdoctor_main.png
 optimized_image: /assets/img/thumnails/internetdoctor_main.png
-category: portfolio
+category: portfolio_project
 tags: 
     - 반응형
 author: JongSeoKoo

@@ -6,7 +6,7 @@ subtitle: 플레이를 통해 세상에 영감을 주는 것이 저희의 목표
 description: 다양한 이미지 슬라이드들이 주요 요소인 게임 개발사 페이지 입니다. 한 개의 서브페이지를 포함하고 있습니다.
 image: /assets/img/thumnails/ea_main.png
 optimized_image: /assets/img/thumnails/ea_main.png
-category: portfolio
+category: portfolio_clone
 tags:
     - 반응형
 author: JongSeoKoo

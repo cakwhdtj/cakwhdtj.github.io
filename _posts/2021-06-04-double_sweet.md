@@ -6,7 +6,7 @@ subtitle: 더블스윗은 최상급 원재료만을 엄선하여 수제마카롱
 description: 메인 비주얼에 UI가 주요 요소인 온라인 마카롱 업체의 홈페이지입니다.
 image: /assets/img/thumnails/doublesweet_main.png
 optimized_image: /assets/img/thumnails/doublesweet_main.png
-category: portfolio
+category: portfolio_clone
 tags:
 author: JongSeoKoo
 paginate: false
