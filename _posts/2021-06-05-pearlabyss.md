@@ -8,7 +8,6 @@ image: /assets/img/thumnails/pearlabyss_main.png
 optimized_image: /assets/img/thumnails/pearlabyss_main.png
 category: portfolio
 tags:
-    - 반응형
 author: JongSeoKoo
 paginate: false
 ---
