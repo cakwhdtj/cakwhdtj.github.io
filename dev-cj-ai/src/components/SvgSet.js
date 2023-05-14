@@ -4,7 +4,7 @@ const SVG = (props) => {
     const type = props.type;
     const size = props.size;
     const circle = props.circle;
-    const BorW = props.BorW;
+    const BorW = props.BorW; //black or white
     const viewBox = props.viewbox;
     const stroke = props.stroke
 
