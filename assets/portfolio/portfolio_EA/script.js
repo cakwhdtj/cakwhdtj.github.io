@@ -3,12 +3,6 @@ var winWidth = $(window).width();
 $('a[href="#"]').on('click', function (e) {
   e.preventDefault();
 });
-$(window).on("resize", function () {
-  if (winWidth < 800) {
-    menuBtn();
-  }
-});
-if (winWidth < 800) {menuBtn();}
 gnbMouseover();
 topLineHide();
 langugaeBtn();
@@ -20,14 +14,10 @@ if ($("main").attr("id") === "sub1_game_main") {
   section_bar(2);
   section4_btn(2);
 }
-
-function menuBtn() {
-  $(".menuBtn").on("click", function () {
-    add_On($(this));
-    add_On($("#gnb > div:nth-child(2) > div > ul"));
-  });
-}
-
+$(".menuBtn").on("click", function () {
+  add_On($(this));
+  add_On($("#gnb > div:nth-child(2) > div > ul"));
+});
 function topLineHide() {
   var lastScrollTop = 0;
   $(window).on("scroll", function () {
