@@ -55,8 +55,6 @@ class ImageSlide { //imageslide
   constructor(id, options) {
     var slide = this;
     var $selector = $('#' + id);
-
-
     this.#selector = $('#' + id);
     this.#numSlide = this.#selector.find('.slide li').length;
     this.#slideFirst = (options === undefined || options.slideFirst === undefined) ? 1 : options.slideFirst;
