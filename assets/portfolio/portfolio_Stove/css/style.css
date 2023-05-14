@@ -582,7 +582,7 @@ section h2 {margin-bottom: 24px;}
     font-size: 12px;
     text-overflow: ellipsis;
 }
-#section4 #s4Lower > ul.slides {border-bottom: 2px solid #828282; margin-bottom: 400px; font-size: inherit;}
+#section4 #s4Lower > ul.slides {border-bottom: 2px solid #828282; margin-bottom: 500px; font-size: inherit;}
 #s4Lower > ul.slides > li {display: inline-block;}
 #s4Lower > ul.slides > li > a {
     transform: translateY(1px);
@@ -701,6 +701,7 @@ footer {
     padding: 30px;
     font-size: 1em;
     clear: both;
+    margin-top: 100px;
 }
 footer hr {margin: 20px 0; border: 1px solid; border-top: 0;}
 footer div {display: inline-block; width: 100%; max-width: 1280px; text-align: left;}
