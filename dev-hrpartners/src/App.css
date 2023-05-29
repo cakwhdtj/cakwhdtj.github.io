@@ -16,6 +16,7 @@ li {list-style: none;}
   position: relative;
   transition: opacity .3s ease-in-out;
   opacity: 0;
+  overflow-x: hidden;
 }
 .bg-image {
   position: absolute;
@@ -48,27 +49,31 @@ li {list-style: none;}
   will-change: auto;
 }
 .textDiv > div {
-  /* animation-delay: .3s; */
   border: 1px solid red;
   width: 100%;
 }
-
+main {
+  overflow-x: hidden;
+}
 nav {
   position: absolute;
-  right: 18%;
-  border-radius: 10%;
+  right: 5%;
   box-sizing: border-box;
-  top: 120vh;
+  top: 23vh;
   height: 70vh;
   min-height: 360px;
-  width: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2; 
   color: #ddd;
   font-family:'Times New Roman', Times, serifxs;
+  border: 1px solid red;
+  width: 130px;
+  transition: .3s ease;
 }
+nav.fixed {position: fixed;}
+nav.mobile {width: 0;}
 nav ul {
   height: 100%;
   width: 150px;
@@ -85,14 +90,19 @@ nav ul > li > span {
   position: relative;
   display: inline-block;
   height: 20px;
-  font-size: 19px;
+  width: 100%;
 }
 nav ul > li > span i {
+  border: 1px solid blue;
+  overflow: hidden;
   position: absolute;
-  font-size: 15px;
   font-style: normal;
-  font-family: ;
+  font-size: 15px;
 }
+nav ul > li > span .mobile {
+  width: 0;
+}
+
 nav ul > li:not(:last-child) > span::before {
   /* 0 */
   content: '';
@@ -138,6 +148,7 @@ section {
   width: 100%;
   border: 1px solid red;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 section > div {
   position: absolute;

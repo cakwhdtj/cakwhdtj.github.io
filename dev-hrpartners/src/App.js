@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 const App = (props) => {
   const [showContent, setShowContent] = useState(true);
   const [deltaY, setDeltaY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isNavFixed, setIsNavFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,11 +13,20 @@ const App = (props) => {
       const newDeltaY = (position / window.innerHeight) * 100;
       setShowContent(position < window.innerHeight);
       setDeltaY(newDeltaY);
+      setIsNavFixed(window.scrollY > window.innerHeight);
+    }; 
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };  
   }, []);
+  const isMobileView = windowWidth < 720;
+  const navClassName = `${isMobileView ? 'mobile ' : ''}${isNavFixed ? 'fixed' : ''}`;
 
   return (
     <div className="App">
@@ -36,16 +47,34 @@ const App = (props) => {
           <div className={`${showContent ? ' fade-in-top' : ''}`}>HR PARTNERS</div>
         </div>
       </div>
-      <nav>
-        <ul>
-          <li className='on'><span>CEO Message<br></br><i>인사말</i></span></li>
-          <li><span>Orgainzatin<br></br><i>조직도</i></span></li>
-          <li><span>Business Scope<br></br><i>사업영역</i></span></li>
-          <li><span>Business History<br></br><i>실적안내</i></span></li>
-          <li><span></span></li>
-        </ul>
-      </nav>
       <main>
+        <nav className={navClassName}> 
+          <ul>
+            <li className='on'>
+              <span>
+                <i className={isMobileView ? 'mobile' : ''}>CEO Message</i>
+                <br></br>
+                <i className={isMobileView ? 'mobile' : ''}>인사말</i>
+              </span>
+            </li>
+            <li>
+              <span>
+                <i className={isMobileView ? 'mobile' : ''}>Orgainzatin</i>
+                <br></br>
+                <i className={isMobileView ? 'mobile' : ''}>조직도</i>
+              </span>
+            </li>
+            <li>
+              <span><i className={isMobileView ? 'mobile' : ''}>Business Scope</i><br></br><i className={isMobileView ? 'mobile' : ''}>사업영역</i></span>
+            </li>
+            <li>
+              <span><i className={isMobileView ? 'mobile' : ''}>Business History</i><br></br><i className={isMobileView ? 'mobile' : ''}>실적안내</i></span>
+            </li>
+            <li>
+              <span></span>
+            </li>
+          </ul>
+        </nav>
         <section id='section1'>
           <div>
             <p>
