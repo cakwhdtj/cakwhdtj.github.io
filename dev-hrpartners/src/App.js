@@ -6,25 +6,54 @@ const App = (props) => {
   const [deltaY, setDeltaY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isNavFixed, setIsNavFixed] = useState(false);
+  const [activeSection, setActiveSection] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState(null);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
+    const handleResize = () => {setWindowWidth(window.innerWidth);};
     const handleScroll = () => {
       const position = window.scrollY;
       const newDeltaY = (position / window.innerHeight) * 100;
+      const sectionIndex = Math.floor(position / window.innerHeight);
+      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScrollPos > prevScrollPos) {
+        setScrollDirection('down');
+      } else if (currentScrollPos < prevScrollPos) {
+        setScrollDirection('up');
+      }
+
+      setPrevScrollPos(currentScrollPos);
+      setActiveSection(sectionIndex);
       setShowContent(position < window.innerHeight);
       setDeltaY(newDeltaY);
       setIsNavFixed(window.scrollY > window.innerHeight);
     }; 
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+
+    const handleWheel = event => {
+      if (event.deltaY > 0) {
+        setScrollDirection('down');
+      } else if (event.deltaY < 0) {
+        setScrollDirection('up');
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll, { passive: false });
+    window.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('wheel', handleWheel);
     };  
-  }, []);
+  }, [prevScrollPos]);
+
+  useEffect(() => {
+    console.log('Scroll Direction:', scrollDirection);
+  }, [scrollDirection]);
+
   const isMobileView = windowWidth < 720;
   const navClassName = `${isMobileView ? 'mobile ' : ''}${isNavFixed ? 'fixed' : ''}`;
 
@@ -50,27 +79,27 @@ const App = (props) => {
       <main>
         <nav className={navClassName}> 
           <ul>
-            <li className='on'>
+            <li className={activeSection === 1 ? 'on' : ''}>
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>CEO Message</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>인사말</i>
               </span>
             </li>
-            <li>
+            <li className={activeSection === 2 ? 'on' : ''}>
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>Orgainzatin</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>조직도</i>
               </span>
             </li>
-            <li>
+            <li className={activeSection === 3 ? 'on' : ''}>
               <span><i className={isMobileView ? 'mobile' : ''}>Business Scope</i><br></br><i className={isMobileView ? 'mobile' : ''}>사업영역</i></span>
             </li>
-            <li>
+            <li className={activeSection === 4 ? 'on' : ''}>
               <span><i className={isMobileView ? 'mobile' : ''}>Business History</i><br></br><i className={isMobileView ? 'mobile' : ''}>실적안내</i></span>
             </li>
-            <li>
+            <li className={activeSection === 4 ? 'on' : ''}>
               <span></span>
             </li>
           </ul>
@@ -104,7 +133,6 @@ const App = (props) => {
         <section id='section2'> <div>2</div> </section>
         <section id='section3'> <div>3</div> </section>
         <section id='section4'> <div>4</div> </section>
-        <section id='section5'> <div>5</div> </section>
       </main>
     </div>
   );

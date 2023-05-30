@@ -70,7 +70,6 @@ nav {
   font-family:'Times New Roman', Times, serifxs;
   border: 1px solid red;
   width: 130px;
-  transition: .3s ease;
 }
 nav.fixed {position: fixed;}
 nav.mobile {width: 0;}
