@@ -2,60 +2,35 @@ import './App.css';
 import { useState, useEffect } from 'react';
 
 const App = (props) => {
-  const [showContent, setShowContent] = useState(true);
-  const [deltaY, setDeltaY] = useState(0);
+  // const [showContent, setShowContent] = useState(true);
+  // const [deltaY, setDeltaY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isNavFixed, setIsNavFixed] = useState(false);
-  const [activeSection, setActiveSection] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState(null);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+
 
   useEffect(() => {
-    const handleResize = () => {setWindowWidth(window.innerWidth);};
-    const handleScroll = () => {
-      const position = window.scrollY;
-      const newDeltaY = (position / window.innerHeight) * 100;
-      const sectionIndex = Math.floor(position / window.innerHeight);
-      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (currentScrollPos > prevScrollPos) {
-        setScrollDirection('down');
-      } else if (currentScrollPos < prevScrollPos) {
-        setScrollDirection('up');
-      }
-
-      setPrevScrollPos(currentScrollPos);
-      setActiveSection(sectionIndex);
-      setShowContent(position < window.innerHeight);
-      setDeltaY(newDeltaY);
-      setIsNavFixed(window.scrollY > window.innerHeight);
-    }; 
-
-    const handleWheel = event => {
-      if (event.deltaY > 0) {
-        setScrollDirection('down');
-      } else if (event.deltaY < 0) {
-        setScrollDirection('up');
-      }
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
     };
-
+    function handleScroll (e) {
+      console.log(e)
+      return false;
+      // const position = window.scrollY;
+      // const newDeltaY = (position / window.innerHeight) * 100;
+      // setShowContent(position < window.innerHeight);
+      // setDeltaY(newDeltaY);
+    }; 
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll, { passive: false });
-    window.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('wheel', handleWheel);
     };  
-  }, [prevScrollPos]);
-
-  useEffect(() => {
-    console.log('Scroll Direction:', scrollDirection);
-  }, [scrollDirection]);
+  }, []);
 
   const isMobileView = windowWidth < 720;
-  const navClassName = `${isMobileView ? 'mobile ' : ''}${isNavFixed ? 'fixed' : ''}`;
+  const navClassName = `${isMobileView ? 'mobile ' : ''}`;
 
   return (
     <div className="App">
@@ -64,7 +39,7 @@ const App = (props) => {
       const mainOffsetTop = document.querySelector('main').offsetTop;
       window.scrollTo({ top: mainOffsetTop, behavior: 'smooth' });
     }}>본문으로</a>
-      <div className={`landingEffect${showContent ? ' fade-in' : ''}`}>
+      {/* <div className={`landingEffect${showContent ? ' fade-in' : ''}`}>
         <div className={`bg-image${showContent ? ' fade-in' : ''}`}></div>
         <div className="logoDiv" style={{ left: `-${deltaY}%` }}>
           <h1 className={`logo${showContent ? ' fade-in-left' : ''}`}>logo</h1>
@@ -75,36 +50,36 @@ const App = (props) => {
           <div className={`${showContent ? ' fade-in-top' : ''}`}>최고의 파트너</div>
           <div className={`${showContent ? ' fade-in-top' : ''}`}>HR PARTNERS</div>
         </div>
-      </div>
+      </div> */}
       <main>
         <nav className={navClassName}> 
           <ul>
-            <li className={activeSection === 1 ? 'on' : ''}>
+            <li className='on'>
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>CEO Message</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>인사말</i>
               </span>
             </li>
-            <li className={activeSection === 2 ? 'on' : ''}>
+            <li >
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>Orgainzatin</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>조직도</i>
               </span>
             </li>
-            <li className={activeSection === 3 ? 'on' : ''}>
+            <li >
               <span><i className={isMobileView ? 'mobile' : ''}>Business Scope</i><br></br><i className={isMobileView ? 'mobile' : ''}>사업영역</i></span>
             </li>
-            <li className={activeSection === 4 ? 'on' : ''}>
+            <li >
               <span><i className={isMobileView ? 'mobile' : ''}>Business History</i><br></br><i className={isMobileView ? 'mobile' : ''}>실적안내</i></span>
             </li>
-            <li className={activeSection === 4 ? 'on' : ''}>
+            <li >
               <span></span>
             </li>
           </ul>
         </nav>
-        <section id='section1'>
+        <section id='section1' className='on' >
           <div>
             <p>
               <span className='fade-in-bottom'>안녕하십니까 ㈜ 에이치알파트너스 대표이사 이해리 입니다.</span>
@@ -130,9 +105,9 @@ const App = (props) => {
             </p>
           </div>
         </section>
-        <section id='section2'> <div>2</div> </section>
-        <section id='section3'> <div>3</div> </section>
-        <section id='section4'> <div>4</div> </section>
+        <section id='section2' > <div>2</div> </section>
+        <section id='section3' > <div>3</div> </section>
+        <section id='section4' > <div>4</div> </section>
       </main>
     </div>
   );
