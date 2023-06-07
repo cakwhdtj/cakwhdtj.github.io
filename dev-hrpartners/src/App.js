@@ -2,35 +2,59 @@ import './App.css';
 import { useState, useEffect } from 'react';
 
 const App = (props) => {
-  // const [showContent, setShowContent] = useState(true);
-  // const [deltaY, setDeltaY] = useState(0);
+  const [showContent, setShowContent] = useState(true);
+  const [deltaY, setDeltaY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-
+  const [isNavFixed, setIsNavFixed] = useState(false);
+  const [activeSection, setActiveSection] = useState(0); 
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    function handleScroll (e) {
-      console.log(e)
-      return false;
-      // const position = window.scrollY;
-      // const newDeltaY = (position / window.innerHeight) * 100;
-      // setShowContent(position < window.innerHeight);
-      // setDeltaY(newDeltaY);
+    const handleScroll = () => {
+      const position = window.scrollY;
+      const newDeltaY = (position / window.innerHeight) * 100;
+      setShowContent(position < window.innerHeight);
+      setDeltaY(newDeltaY);
+      setIsNavFixed(position > window.innerHeight);
+
+      const sections = document.querySelectorAll('section');
+      const sectionOffsets = Array.from(sections).map(
+        (section) => section.offsetTop
+      );
+      const activeSectionIndex = sectionOffsets.findIndex(
+        (offset, index) =>
+          position >= offset - 70 &&
+          position <= offset + sections[index].offsetHeight + 70
+      );
+      setActiveSection(activeSectionIndex);
     }; 
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll, { passive: false });
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll); 
     };  
   }, []);
 
   const isMobileView = windowWidth < 720;
   const navClassName = `${isMobileView ? 'mobile ' : ''}`;
+
+
+  const handleNavClick = (sectionIndex) => {
+    const sections = document.querySelectorAll('section');
+    const sectionOffsets = Array.from(sections).map(
+      (section) => section.offsetTop
+    );
+    const targetOffset = sectionOffsets[sectionIndex] + window.innerHeight;
+    console.log(targetOffset)
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <div className="App">
@@ -39,7 +63,7 @@ const App = (props) => {
       const mainOffsetTop = document.querySelector('main').offsetTop;
       window.scrollTo({ top: mainOffsetTop, behavior: 'smooth' });
     }}>본문으로</a>
-      {/* <div className={`landingEffect${showContent ? ' fade-in' : ''}`}>
+      <div className={`landingEffect${showContent ? ' fade-in' : ''}`}>
         <div className={`bg-image${showContent ? ' fade-in' : ''}`}></div>
         <div className="logoDiv" style={{ left: `-${deltaY}%` }}>
           <h1 className={`logo${showContent ? ' fade-in-left' : ''}`}>logo</h1>
@@ -50,28 +74,40 @@ const App = (props) => {
           <div className={`${showContent ? ' fade-in-top' : ''}`}>최고의 파트너</div>
           <div className={`${showContent ? ' fade-in-top' : ''}`}>HR PARTNERS</div>
         </div>
-      </div> */}
+      </div>
       <main>
-        <nav className={navClassName}> 
+        <nav className={navClassName + `${isNavFixed ? 'fix' : ''}`}> 
           <ul>
-            <li className='on'>
+            <li 
+            className={activeSection === 0 ? 'on' : ''}
+            onClick={() => handleNavClick(0)}
+            >
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>CEO Message</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>인사말</i>
               </span>
             </li>
-            <li >
+            <li 
+            className={activeSection === 1 ? 'on' : ''}
+            onClick={() => handleNavClick(1)}
+            >
               <span>
                 <i className={isMobileView ? 'mobile' : ''}>Orgainzatin</i>
                 <br></br>
                 <i className={isMobileView ? 'mobile' : ''}>조직도</i>
               </span>
             </li>
-            <li >
+            <li 
+            className={activeSection === 2 ? 'on' : ''}
+            onClick={() => handleNavClick(2)}
+            >
               <span><i className={isMobileView ? 'mobile' : ''}>Business Scope</i><br></br><i className={isMobileView ? 'mobile' : ''}>사업영역</i></span>
             </li>
-            <li >
+            <li 
+            className={activeSection === 3 ? 'on' : ''}
+            onClick={() => handleNavClick(3)}
+            >
               <span><i className={isMobileView ? 'mobile' : ''}>Business History</i><br></br><i className={isMobileView ? 'mobile' : ''}>실적안내</i></span>
             </li>
             <li >
