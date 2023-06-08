@@ -141,7 +141,42 @@ const App = (props) => {
             </p>
           </div>
         </section>
-        <section id='section2' > <div>2</div> </section>
+        <section id='section2' >
+          <div className='orgChart'>
+            <h2><span>대표이사</span></h2>
+            <h3><span>총괄관리본부</span></h3>
+            <ul>
+              <li>
+                <h4><span>전략기획본부</span></h4>
+                <ul>
+                  <li>상품기획팀</li>
+                  <li>개발사업팀</li>
+                  <li>전략기획팀</li>
+                  <li>영업기획팀</li>
+                </ul>
+              </li>
+              <li>
+                <h4><span>분양사업부</span></h4>
+                <ul>
+                  <li>마케티영업본부 [비주거사업부]</li>
+                  <li>마케팅영업본부 [주거사업부]</li>
+                  <li>부동산 임대/관리</li>
+                  <li>부동산투자컨설팅</li>
+                </ul>
+              </li>
+              <li>
+                <h4><span>경영지원부</span></h4>
+                <ul>
+                  <li>법률지원</li>
+                  <li>경영지원</li>
+                  <li>재무관리</li>
+                  <li>전문 인사관리</li>
+                </ul>
+              </li>
+            </ul>
+            
+          </div>
+        </section>
         <section id='section3' > <div>3</div> </section>
         <section id='section4' > <div>4</div> </section>
       </main>

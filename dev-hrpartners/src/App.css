@@ -65,7 +65,6 @@ nav {
   z-index: 2; 
   color: #ddd;
   font-family:'Times New Roman', Times, serifxs;
-  border: 1px solid red;
   width: 130px;
 }
 nav.fix {position: fixed;}
@@ -89,7 +88,6 @@ nav ul > li > span {
   width: 100%;
 }
 nav ul > li > span i {
-  border: 1px solid blue;
   overflow: hidden;
   position: absolute;
   font-style: normal;
@@ -158,6 +156,116 @@ section > div {
 #section1 > div {
   left: 40%;
   font-size: 14px;
+}
+
+#section2 .orgChart {
+  font-size: .7em;
+  color: #dadada;
+  word-break: keep-all;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+.orgChart h2 {
+  position: relative;
+  background: #1c3c6d;
+  width: 130px; height: 130px;
+  border-radius: 50%;
+}
+.orgChart h2::after {
+  position: absolute;
+  content: '';
+  width: 10px; height: 10px;
+  transform: translate(-50%);
+  background: #1c3c6d;
+  border-radius: 50%;
+  bottom: -15px; left: 50%;
+}
+.orgChart h2::before {
+  position: absolute;
+  content: '';
+  width: 110%; height: 110%;
+  transform: translate(-50%) rotate(-45deg);
+  border: 1px solid transparent;
+  border-bottom-color: #1c3c6d;
+  border-left-color: #1c3c6d;
+  border-radius: 50%;
+  left: 50%; top: -5%;
+}
+.orgChart h2 span {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+.orgChart h3 {
+  margin-top: 60px;
+  position: relative;
+  background: #7f9fd3;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+}
+.orgChart h3::after {
+  position: absolute;
+  content: '';
+  width: 8px; height: 8px;
+  transform: translate(-50%);
+  background: #7f9fd3;
+  border-radius: 50%;
+  top: -10px; left: 50%;
+}
+.orgChart h3::before {
+  position: absolute;
+  content: '';
+  width: 110%; height: 110%;
+  transform: translate(-50%) rotate(135deg);
+  border: 1px solid transparent;
+  border-bottom-color: #7f9fd3;
+  border-left-color: #7f9fd3;
+  border-radius: 50%;
+  left: 50%; top: -5%;
+}
+.orgChart h3 span {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+#section2 .orgChart > ul {
+  border: 1px solid orange;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  justify-content: space-around;
+
+}
+.orgChart > ul > li {
+  border: 1px solid yellow;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; height: 200px;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+.orgChart h4 {
+  position: absolute;
+  top: -40px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background-color: #b6d3ff;
+}
+.orgChart h4 span {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  color: #1c3c6d;
+} 
+.orgChart > ul > li > ul { 
+
 }
 
 .bg-image.fade-in {
