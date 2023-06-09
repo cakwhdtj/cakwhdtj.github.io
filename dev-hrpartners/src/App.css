@@ -167,69 +167,49 @@ section > div {
   flex-direction: column;
   width: 70%;
 }
+.orgChart .ornament::after {
+  /* size, b or t */
+  /* bg color */
+  position: absolute;
+  content: '';
+  transform: translate(-50%);
+  border-radius: 50%;
+  left: 50%;
+}
+.orgChart .ornament::before {
+  position: absolute;
+  content: '';
+  width: 110%; height: 110%;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  left: 50%; top: -5%;
+}
+.orgChart .b.ornament::before {transform: translate(-50%) rotate(-45deg);}
+.orgChart .u.ornament::before { transform: translate(-50%) rotate(135deg);}
+
+
 .orgChart h2 {
   position: relative;
   background: #1c3c6d;
   width: 130px; height: 130px;
   border-radius: 50%;
 }
-.orgChart h2::after {
-  position: absolute;
-  content: '';
-  width: 10px; height: 10px;
-  transform: translate(-50%);
-  background: #1c3c6d;
-  border-radius: 50%;
-  bottom: -15px; left: 50%;
-}
-.orgChart h2::before {
-  position: absolute;
-  content: '';
-  width: 110%; height: 110%;
-  transform: translate(-50%) rotate(-45deg);
-  border: 1px solid transparent;
-  border-bottom-color: #1c3c6d;
-  border-left-color: #1c3c6d;
-  border-radius: 50%;
-  left: 50%; top: -5%;
-}
-.orgChart h2 span {
+.orgChart :is(h2, h2 ,h3, h4) span {
   position: absolute;
   left: 50%; top: 50%;
   transform: translate(-50%,-50%);
 }
-.orgChart h3 {
-  margin-top: 60px;
-  position: relative;
-  background: #7f9fd3;
-  width: 110px; height: 110px;
-  border-radius: 50%;
-}
-.orgChart h3::after {
-  position: absolute;
-  content: '';
-  width: 8px; height: 8px;
-  transform: translate(-50%);
-  background: #7f9fd3;
-  border-radius: 50%;
-  top: -10px; left: 50%;
-}
-.orgChart h3::before {
-  position: absolute;
-  content: '';
-  width: 110%; height: 110%;
-  transform: translate(-50%) rotate(135deg);
-  border: 1px solid transparent;
-  border-bottom-color: #7f9fd3;
-  border-left-color: #7f9fd3;
-  border-radius: 50%;
-  left: 50%; top: -5%;
-}
-.orgChart h3 span {
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%,-50%);
-}
+
+.orgChart h2::after {background: #1c3c6d;width: 10px; height: 10px;bottom: -12.5px;}
+.orgChart h2.b::before {border-bottom-color: #1c3c6d; border-left-color: #1c3c6d;}
+.orgChart h3::after { background: #7f9fd3;width: 8px; height: 8px;top: -10px;}
+.orgChart h3.u::before {border-bottom-color: #7f9fd3; border-left-color: #7f9fd3; }
+.orgChart h4 span { color: #1c3c6d;}
+.orgChart h4::after { background: #b6d3ff;width: 4px; height: 4px;top: -6px;}
+.orgChart h4.u::before {border-bottom-color: #b6d3ff; border-left-color: #b6d3ff; }
+
+.orgChart h3 {margin-top: 60px;position: relative;background: #7f9fd3;width: 110px; height: 110px;border-radius: 50%;}
+
 #section2 .orgChart > ul {
   border: 1px solid orange;
   display: flex;
@@ -239,7 +219,7 @@ section > div {
   padding-top: 80px;
   box-sizing: border-box;
   justify-content: space-around;
-
+  
 }
 .orgChart > ul > li {
   border: 1px solid yellow;
@@ -251,22 +231,8 @@ section > div {
   box-sizing: border-box;
   padding-top: 60px;
 }
-.orgChart h4 {
-  position: absolute;
-  top: -40px;
-  width: 80px; height: 80px;
-  border-radius: 50%;
-  background-color: #b6d3ff;
-}
-.orgChart h4 span {
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%,-50%);
-  color: #1c3c6d;
-} 
-.orgChart > ul > li > ul { 
+.orgChart h4 {position: absolute;top: -40px;width: 80px; height: 80px;border-radius: 50%;background-color: #b6d3ff;}
 
-}
 
 .bg-image.fade-in {
   opacity: 1;
