@@ -24,9 +24,9 @@
     "browser-sync": "^2.26.7",
     "child_process": "^1.0.2",
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^6.2.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-include": "^2.4.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.4.0",
@@ -39,6 +39,10 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "create-react-app": "^5.0.1"
+    "create-react-app": "^1.2.1",
+    "fsevents": "^2.3.2",
+    "init": "^0.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
