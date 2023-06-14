@@ -41,13 +41,13 @@ const Main = () => {
 
 
   return (
-    <div>
-        <img 
-          src="http://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
-          alt='배경잎장식' className="m-leaf"
-          style={{ transform: `rotate(${rotation}deg)`}}
-          />
-      <section id="section1">
+    <div className='home cat'>
+      <img 
+        src="http://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
+        alt='배경잎장식' className="m-leaf"
+        style={{ transform: `rotate(${rotation}deg)`}}
+        />
+      <section id="mSection1">
         <div className="react-player-container">
           <div className="react-player-wrapper">
             <ReactPlayer
@@ -65,16 +65,19 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section id="section2">
+      <section id="mSection2">
         <div className="mainVisual">
           <div className={`${isScrolled ? 'l2r' : ''}`}>
             <h3>강남 20분대</h3>
             <p>주거 명당 백운밸리를 만나다!</p>
           </div>
-          <img alt="백운호수푸르지오메인이미지" src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg"></img>
+          <img alt="백운호수푸르지오메인이미지" 
+          src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
+          className={`${isScrolled ? 'l2r' : ''}`}
+          />
         </div>
         <div className='info'>
-          <dl className="info">
+          <dl>
             <dd>상기 이미지는 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다릅니다.</dd>
             <dd>강남에서 20분대 소요시간은 네이버 지도 길찾기(자동차) 기준으로 이동 시간대 및 도로 상황 등에 따라 차이가 있을 수 있습니다.</dd>
             <dd>메종 의왕 등 각종 개발계획 및 교통계획에 관한 사항은 추후 관계기관의 사정에 따라 지연, 변경 및 취소될 수 있으며, 이는 시행사 및 시공사와 무관함을 알려드립니다.</dd>
