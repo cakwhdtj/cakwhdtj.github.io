@@ -1,11 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
+import m30 from '../img/m30.jpg'
+import m31 from '../img/m31.jpg'
+
 
 const Main = () => {
   const url = 'https://player.vimeo.com/video/745297131';
   const playerRef = useRef(null);
   const [rotation, setRotation] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    'http://baekwoonlakeprugio.com/theme/grape/img/na1.jpg',
+    'http://baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
+    'http://baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
+    'http://baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
+  ];
+  const slideLabels = ['백운호수 생태문화공원', '백운산', '바라산 자연휴양림', '모락산'];
+
+  const nextSlide = () => {setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));};
+  const previousSlide = () => {setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));};
 
   const handleProgress = (state) => {
     if (!playerRef.current.seeking) {
@@ -67,15 +82,60 @@ const Main = () => {
       </section>
       <section id="mSection2">
         <div className="mainVisual">
-          <div className={`${isScrolled ? 'l2r' : ''}`}>
+          <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
             <h3>강남 20분대</h3>
-            <p>주거 명당 백운밸리를 만나다!</p>
+            <p>서울, 수도권 최적의 접근성!</p>
           </div>
           <img alt="백운호수푸르지오메인이미지" 
           src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
           className={`${isScrolled ? 'l2r' : ''}`}
           />
+          <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
+            <h3>대자연속 힐링라이프</h3>
+            <p>
+              백운산, 바라산, 모락산으로 둘러쌓인<br />
+              천혜의 자연환경!
+            </p>
+          </div>
+           <div className="slide-container l2r">
+            <ul className="slide">
+              {slides.map((slide, index) => (
+                <li key={index} className={index === currentSlide ? 'on' : ''}>
+                  <img alt="백운호수푸르지오슬라이드사진" src={slide} />
+                </li>
+              ))}
+            </ul>
+            <ul className="indicator">
+              {slideLabels.map((label, index) => (
+              <li key={index} className={index === currentSlide ? 'on' : ''}>{label}</li>
+              ))}
+            </ul>
+            <div className="controller">
+              <div className="left" onClick={previousSlide}>
+                <span className="hide_clipPath">left</span>
+              </div>
+              <div className="right" onClick={nextSlide}>
+                <span className="hide_clipPath">right</span>
+              </div>
+            </div>
+          </div>
+          <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
+            <h3>내집에서 누리는 하이엔드 서비스</h3>
+            <p>
+              "액티브 시니어"를 위한<br />
+              다양한 호텔식 서비스
+            </p>
+          </div>
+          <img alt="백운호수푸르지오메인이미지" 
+          src={m30}
+          className={`${isScrolled ? 'l2r' : ''}`}
+          />
+          <img alt="백운호수푸르지오메인이미지" 
+          src={m31}
+          className={`${isScrolled ? 'l2r' : ''}`}
+          />
         </div>
+
         <div className='info'>
           <dl>
             <dd>상기 이미지는 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다릅니다.</dd>

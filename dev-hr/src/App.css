@@ -179,10 +179,10 @@ section {
 }
 .mainVisual {
   position: relative;
-  margin-top: 50px;
   width: 100%;
 }
 .mainVisual * {transition: all .3s ease;}
+.mTitle {margin: 100px 0;}
 .mainVisual h3 {
   color:#205052;
   font-size: 42px;
@@ -193,10 +193,73 @@ section {
 }
 .mainVisual h3, .mainVisual p {opacity: 0;}
 :is(.mainVisual) .l2r h3, .l2r p {opacity: 1;}
-.mainVisual img {
+.mainVisual > img {
   display: inline-block;
   width: 100%;
   opacity: 0;
+}
+
+.home .slide-container {position: relative; height: 400px; width: 100%;}
+.home .slide-container .slide {position: relative; height: 100%;}
+.home .slide-container .slide li {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+}
+.home .slide-container .slide li.on {opacity: 1;}
+.slide-container .controller > div {
+  position: absolute;
+  bottom: -100px;
+  scale: .45;
+  display: block;
+  background: #00000090;
+  border-radius: 50%;
+  width: 120px; height: 120px;
+  color: #fff;
+  font-size: 100px;
+}
+.slide-container .controller .left {left: -20px;}
+.slide-container .controller .right {right: -20px; transform: rotateY(180deg);}
+.slide-container .controller > div::before, 
+.slide-container .controller > div::after {
+  content: '';
+  width: 50px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  left: 50%; transform-origin: left center;
+} 
+.slide-container .controller .left::before {top: 47.5%; transform: translate(-50%,-50%) rotate(45deg);}
+.slide-container .controller .left::after {top: 52.5%; transform: translate(-50%,-50%) rotate(-45deg);}
+.slide-container .controller .right::before {top: 47.5%; transform: translate(-50%,-50%) rotate(45deg);}
+.slide-container .controller .right::after {top: 52.5%; transform: translate(-50%,-50%) rotate(-45deg);}
+.slide-container .indicator {
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  width: 50%; 
+  text-align: center;
+  word-break: keep-all;
+  padding-top: 20px;
+}
+.slide-container .indicator > li {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 28px;
+  color: #205052;
+  opacity: 0;
+}
+.slide-container .indicator > li.on {opacity: 1;}
+
+
+.slide-container img {
+  display: inline-block;
+  height: 100%;
 }
 .home .info {
   width: 100%;
@@ -297,5 +360,20 @@ footer {
     text-align: left;
     background: #fff;
     color: #000;
+  }
+  .mTitle {
+    transform-origin: left;
+    white-space: nowrap;
+    scale: .5;
+    margin: 20px 0;
+  }
+  .mTitle:nth-of-type(3) {
+    margin: 100px 0;
+  }
+  .home .slide-container .slide {
+    scale: .7;
+  }
+  .slide-container .indicator {
+    padding-top: 0px;
   }
 }
