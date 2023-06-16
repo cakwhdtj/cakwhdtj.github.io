@@ -10,9 +10,7 @@ const HrPrugio = () => {
   const [isOn, setIsOn] = useState(false);
 
   const addOn = () => {
-    const element = document.getElementById('bars');
-    element.classList.toggle('on');
-    setIsOn(prevState => !prevState)
+    setIsOn(prevState => !prevState);
   }
 
   useEffect(() => {
@@ -22,6 +20,7 @@ const HrPrugio = () => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       setShowElement(windowWidth < 720);
+      setIsOn(false);
     };
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -55,7 +54,7 @@ const HrPrugio = () => {
               </Link>
             </h1>
             {showElement && 
-              <div id='bars' onClick={addOn}>
+              <div id='bars' className={isOn ? 'on' : ''} onClick={addOn}>
                 <span className='hide_clipPath'>메뉴</span>
                 <div>
                   <span></span>
@@ -65,10 +64,10 @@ const HrPrugio = () => {
               </div>}
             <nav className={isOn ? 'on' : ''}>
               <ul>
-                <Link className='nav-link' to="/Env"><li><h2 onClick={addOn}>입지환경</h2></li></Link>
-                <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={addOn}>상품안내</h2></li></Link>
-                <Link className='nav-link' to="/"><li><h2 onClick={addOn}>프리미엄</h2></li></Link>
-                <Link className='nav-link' to="/"><li><h2 onClick={addOn}>클럽포시즌</h2></li></Link>
+                <Link className='nav-link' to="/Env"><li><h2 onClick={isOn ? addOn : null}>입지환경</h2></li></Link>
+                <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
+                <Link className='nav-link' to="/"><li><h2 onClick={isOn ? addOn : null}>프리미엄</h2></li></Link>
+                <Link className='nav-link' to="/"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
               </ul> 
             </nav>
           </div>

@@ -199,9 +199,9 @@ section {
   opacity: 0;
 }
 
-.home .slide-container {position: relative; height: 400px; width: 100%;}
-.home .slide-container .slide {position: relative; height: 100%;}
-.home .slide-container .slide li {
+.slide-container {position: relative; height: 400px; width: 100%;}
+.slide-container .slide {position: relative; height: 100%;}
+.slide-container .slide li {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -209,7 +209,7 @@ section {
   opacity: 0;
   overflow: hidden;
 }
-.home .slide-container .slide li.on {opacity: 1;}
+.slide-container .slide li.on {opacity: 1;}
 .slide-container .controller > div {
   position: absolute;
   bottom: -100px;
@@ -255,8 +255,6 @@ section {
   opacity: 0;
 }
 .slide-container .indicator > li.on {opacity: 1;}
-
-
 .slide-container img {
   display: inline-block;
   height: 100%;
@@ -270,6 +268,9 @@ section {
   color: #8f8f8f;
   text-indent: 0;
   font-size: 11px;
+  margin-top: 80px;
+  position: relative;
+
 }
 .info dd {margin-inline-start: 10px;}
 .info dd::before {
@@ -278,19 +279,9 @@ section {
   left: 0;
 }
 
-
-.env .slide-container {
-  width: 100%;
-}
-.env .slide-container section {
-  margin: 0 auto;
-  text-align: left;
-}
-.env section img {
-  display: inline-block;
-  width: 100%;
-}
-
+.env .slide-container {width: 100%;}
+.env .slide-container section {margin: 0 auto; text-align: left;}
+.env section img {display: inline-block; width: 100%;}
 .env #eSection1::before {
   content: '';
   background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0201.svg');
@@ -302,15 +293,94 @@ section {
   width: 80%;
   min-width: 550px;
 }
-#eSection1 img {
-  margin: 20px 0;
-}
+#eSection1 img {margin: 20px 0;}
 
+
+
+/* .merch section {border: 1px solid red;} */
+.merch img {display: inline-block; width: 100%;}
+.merch h3 {
+  color: #205052;
+  font-weight: 800;
+    font-size: 24px;
+    margin: 40px 0;
+}
+.merch section article {width: 100%; display: flex;}
+.merch #mchSection1 .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  width: 100%;
+  text-align: center;
+}
+.merch #mchSection1 .column1 {
+  color: #205052;
+  font-weight: bolder;
+  background-color: #f2f2f2;
+}
+.merch #mchSection1 .table-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  padding-left: 20px;
+  text-align: left;
+  position: relative;
+}
+.merch #mchSection1 .table-title::before {
+  content: '';
+  position: absolute;
+  width: 10px; height: 10px;
+  background: #205052;
+  left: 0; transform: translateY(4.5px);
+}
+.merch #mchSection1 .grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: .5px solid #f2f2f2;
+}
+.merch #mchSection1 .gridColor {color: #205052; font-weight: bold;}
+#mchSection2::before {
+    content: '';
+    background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0301.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 30px solid transparent;
+    height: 138px;
+    width: 80%;
+    min-width: 550px;
+}
+#mchSection2 .slide-container {
+  padding: 40px 0;
+  box-sizing: border-box;
+  width: 100%; height: 550px;
+  margin-bottom: 130px;
+}
+#mchSection2 .slide {border: 1px solid #205052;}
+#mchSection2 .slide-container li {width: 100%; height: 100%;}
+#mchSection2 .slide-container li img {object-fit: contain;}
+#mchSection2 .indicator {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+#mchSection2 .indicator li {
+  opacity: 1;
+  position: relative;
+  font-size: 18px;
+  border: .5px solid #8f8f8f;
+}
+#mchSection2 .indicator li:hover {cursor: pointer;}
 
 footer {
   position: relative;
   box-sizing: border-box;
   background-color:#2c2c2c;
+  margin-top: 100px;
   padding: 20px 40px;
   bottom: 0;
   width: 100%; height: 120px;
@@ -367,13 +437,9 @@ footer {
     scale: .5;
     margin: 20px 0;
   }
-  .mTitle:nth-of-type(3) {
-    margin: 100px 0;
-  }
-  .home .slide-container .slide {
-    scale: .7;
-  }
-  .slide-container .indicator {
-    padding-top: 0px;
-  }
+  :nth-child(3 of .mTitle) {margin-top: 100px;}
+  .home .slide-container .slide {scale: .7;}
+  .slide-container .indicator {padding-top: 0px;}
+  .merch section article {flex-direction: column;}
+  .merch  .grid-item {font-size: 10px;}
 }

@@ -135,7 +135,6 @@ const Main = () => {
           className={`${isScrolled ? 'l2r' : ''}`}
           />
         </div>
-
         <div className='info'>
           <dl>
             <dd>상기 이미지는 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다릅니다.</dd>
