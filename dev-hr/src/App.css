@@ -255,10 +255,7 @@ section {
   opacity: 0;
 }
 .slide-container .indicator > li.on {opacity: 1;}
-.slide-container img {
-  display: inline-block;
-  height: 100%;
-}
+.slide-container img {display: inline-block;height: 100%;}
 .home .info {
   width: 100%;
   display: block;
@@ -270,7 +267,7 @@ section {
   font-size: 11px;
   margin-top: 80px;
   position: relative;
-
+  word-break: keep-all;
 }
 .info dd {margin-inline-start: 10px;}
 .info dd::before {
@@ -376,6 +373,141 @@ section {
 }
 #mchSection2 .indicator li:hover {cursor: pointer;}
 
+#sSection1::before {
+  content: '';
+  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy-pre-img.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 30px solid transparent;
+  height: 138px;
+  width: 80%;
+}
+.service .servCirc {
+  width: 80%;
+  max-width: 1240px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.service .servCirc .serviceDiv {
+  overflow: hidden;
+  position: relative; 
+}
+.service .servCirc .serviceDiv > img {
+  position: absolute;
+  width: 100%;
+  border-radius: 30%;
+  z-index: -1;
+  box-shadow: 0 0 20px 1px #616161;
+}
+.service .servCirc .serviceDiv > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.service .servCirc .serviceDiv > div * {padding-top: 5px;}
+.service .servCirc .serviceDiv > div h3 {font-weight: 800;}
+.service .servCirc .serviceDiv > div p {padding-top: 0; text-align: center;}
+.service .servCirc .serviceDiv > div > h3 {font-size: 30px;}
+.service .servCirc .serviceDiv > div img {height: 25%;}
+.service .servCirc .serviceDiv:nth-child(1) > img {left: 30%; top: 55%;}
+.service .servCirc .serviceDiv:nth-child(1) > div > h3 {color: #2b3d64;}
+.service .servCirc .serviceDiv:nth-child(2) > img {right: 30%; top: 55%;}
+.service .servCirc .serviceDiv:nth-child(2) > div > h3 {color: #205052;}
+.service .servCirc .serviceDiv:nth-child(3) > img {left: 30%; bottom: 55%;}
+.service .servCirc .serviceDiv:nth-child(3) > div > h3 {color: #83302d;}
+.service .servCirc .serviceDiv:nth-child(4) > img {right: 30%; bottom: 55%;}
+.service .servCirc .serviceDiv:nth-child(4) > div > h3 {color: #4b489a;}
+.service .servCirc .serviceDiv:nth-child(odd) > div {align-items: flex-start;}
+.service .servCirc .serviceDiv:nth-child(odd) p {text-align: left;}
+.service .servCirc .serviceDiv:nth-child(even) > div {align-items: flex-end;}
+.service .servCirc .serviceDiv:nth-child(even) p {text-align: right;}
+.service .servCirc .serviceDiv:nth-child(n+3):nth-child(-n+4) > div img {height: 20%;}
+.service .servCirc .serviceDiv:nth-child(n+3):nth-child(-n+4) > div {flex-direction: column-reverse;justify-content: flex-start;}
+
+#sSection2::before {
+  margin-top: 100px;
+  content: '';
+  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy3-img.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 30px solid transparent;
+  height: 138px;
+  width: 80%;
+}
+#sSection2 > div:nth-child(1) {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: space-around;
+}
+.standardServ {
+  border: 1px solid #c7c7c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding: 30px;
+}
+#sSection2 .standardServ {word-break: keep-all;}
+#sSection2 .standardServ p {font-size: 12px;}
+.standardServ h3 {margin: 10px;}
+.standardServ:nth-child(1) h3 {color: #768ec7;}
+.standardServ:nth-child(2) h3 {color: #d86b88;}
+.standardServ:nth-child(3) h3 {color: #58bcaf;}
+#sSection2 .info dl {margin-top: 0;}
+
+#sSection3::before {
+  margin-top: 100px;
+  content: '';
+  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/0801-copy.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 30px solid transparent;
+  height: 138px;
+  width: 80%;
+}
+#sSection3 > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+.premiumServ {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  word-break: keep-all;
+  margin: 20px 0;
+}
+.premiumServ:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.premiumServ img {
+  width: 50%;
+  border-radius: 20px;
+}
+.premiumServ > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.premiumServ > div h3 {
+  font-size: 20px;
+  color: #a9936f;
+  font-weight: 800;
+  margin: 10px;
+}
 footer {
   position: relative;
   box-sizing: border-box;
@@ -383,7 +515,7 @@ footer {
   margin-top: 100px;
   padding: 20px 40px;
   bottom: 0;
-  width: 100%; height: 120px;
+  width: 100%;
   font-size: 12px;
   line-height: 20px;
   color: #8f8f8f;
@@ -442,4 +574,15 @@ footer {
   .slide-container .indicator {padding-top: 0px;}
   .merch section article {flex-direction: column;}
   .merch  .grid-item {font-size: 10px;}
+  .service .servCirc {width: 100%;}
+  .service .servCirc .serviceDiv > div > h3 {font-size: 16px;}
+  .service .servCirc .serviceDiv p h3 {font-size: 12px; }
+  .service .servCirc .serviceDiv p span {display: none; margin-top: 10px;}
+  .standardServ {position: absolute; scale: .8; transition: all .3s ease;}
+  .standardServ:nth-child(2) {transform: translate(calc(-50% - 10px),100%);}
+  .standardServ:nth-child(3) {transform: translate(calc(50% + 10px),100%);}
+}
+
+@media screen and (max-width: 500px) {
+  .standardServ {position: absolute; scale: .7; transition: all .3s ease;}
 }

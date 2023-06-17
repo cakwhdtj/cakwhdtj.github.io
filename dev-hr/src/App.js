@@ -4,14 +4,12 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Main from './components/Main';
 import Env from './components/Env';
 import Merchinfo from './components/Merchinfo';
+import Service from './components/Premium';
 
 const HrPrugio = () => {
   const [showElement, setShowElement] = useState(false);
   const [isOn, setIsOn] = useState(false);
-
-  const addOn = () => {
-    setIsOn(prevState => !prevState);
-  }
+  const addOn = () => {setIsOn(prevState => !prevState);}
 
   useEffect(() => {
     const handleClick = () => {
@@ -66,7 +64,7 @@ const HrPrugio = () => {
               <ul>
                 <Link className='nav-link' to="/Env"><li><h2 onClick={isOn ? addOn : null}>입지환경</h2></li></Link>
                 <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
-                <Link className='nav-link' to="/"><li><h2 onClick={isOn ? addOn : null}>프리미엄</h2></li></Link>
+                <Link className='nav-link' to="/Service"><li><h2 onClick={isOn ? addOn : null}>특화서비스</h2></li></Link>
                 <Link className='nav-link' to="/"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
               </ul> 
             </nav>
@@ -77,15 +75,17 @@ const HrPrugio = () => {
             <Route exact path='/' Component={Main}></Route>
             <Route exact path='/Env' Component={Env}></Route>
             <Route exact path='/Merchinfo' Component={Merchinfo}></Route>
+            <Route exact path='/Service' Component={Service}></Route>
           </Routes>
         </main>
         <footer>
-          <p>에이치알파트너스 &copy; All right reserved.</p>
           <address>
+            에이치알파트너스 <br />
             경기도 화성시 동탄첨단산업1로 27, 금강펜트리움 ix타워 B817호<br />
             Tel. 031-8050-0042 <br />
             E-mail. hrpartners2020@naver.com
           </address>
+          <p>백운호수 푸르지오 숲속의 아침 스위트. &copy; All right reserved.</p>
         </footer>
       </div>
   </BrowserRouter>
