@@ -356,7 +356,6 @@ section {
   width: 100%; height: 550px;
   margin-bottom: 130px;
 }
-#mchSection2 .slide {border: 1px solid #205052;}
 #mchSection2 .slide-container li {width: 100%; height: 100%;}
 #mchSection2 .slide-container li img {object-fit: contain;}
 #mchSection2 .indicator {
@@ -364,6 +363,7 @@ section {
   width: 100%;
   display: flex;
   flex-direction: row;
+  border-radius: 5px;
 }
 #mchSection2 .indicator li {
   opacity: 1;
@@ -508,6 +508,63 @@ section {
   font-weight: 800;
   margin: 10px;
 }
+
+#cSection1::before {
+    content: '';
+    background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy4-img.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 30px solid transparent;
+    height: 138px;
+    width: 80%;
+}
+#cSection1 {
+  border: 1px solid red;
+}
+#cSection1 .slide-container {
+  padding: 40px 0;
+  box-sizing: border-box;
+  width: 100%; height: 550px;
+  margin-bottom: 130px;
+}
+#cSection1 .slide-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cSection1 .slide-container .slide {
+  position: relative;
+}
+#cSection1 .slide-container .slide::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cSection1 .slide-container li {
+  display: flex;
+  flex-direction: column;
+  width: 100%; height: 100%;
+}
+
+#cSection1 .slide-container li img {object-fit: contain;}
+#cSection1 .indicator {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+#cSection1 .indicator li {
+  opacity: 1;
+  position: relative;
+  font-size: 18px;
+  border: .5px solid #8f8f8f;
+}
+#cSection1 .indicator li:hover {cursor: pointer;}
+
+
+
 footer {
   position: relative;
   box-sizing: border-box;

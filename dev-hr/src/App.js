@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Env from './components/Env';
 import Merchinfo from './components/Merchinfo';
 import Service from './components/Premium';
+import Club from './components/Club';
 
 const HrPrugio = () => {
   const [showElement, setShowElement] = useState(false);
@@ -65,7 +66,7 @@ const HrPrugio = () => {
                 <Link className='nav-link' to="/Env"><li><h2 onClick={isOn ? addOn : null}>입지환경</h2></li></Link>
                 <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
                 <Link className='nav-link' to="/Service"><li><h2 onClick={isOn ? addOn : null}>특화서비스</h2></li></Link>
-                <Link className='nav-link' to="/"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
+                <Link className='nav-link' to="/Club"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
               </ul> 
             </nav>
           </div>
@@ -76,6 +77,8 @@ const HrPrugio = () => {
             <Route exact path='/Env' Component={Env}></Route>
             <Route exact path='/Merchinfo' Component={Merchinfo}></Route>
             <Route exact path='/Service' Component={Service}></Route>
+            <Route exact path='/Club' Component={Club}></Route>
+
           </Routes>
         </main>
         <footer>

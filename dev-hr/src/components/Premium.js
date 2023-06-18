@@ -22,7 +22,6 @@ const Service = () => {
 
     return (
         <div className="service cat">
-            {/* <h2>프리미엄 서비스</h2> */}
             <section id="sSection1">
                 <div className="servCirc"
                     ref={servCircRef} style={{ height: squareSize}}>
@@ -112,7 +111,6 @@ const Service = () => {
                     </div>
                 </div>
             </section>
-            {/* <h2>기본 생활서비스</h2> */}
             <section id="sSection2">
                 <div>
                     <div className='standardServ'>
