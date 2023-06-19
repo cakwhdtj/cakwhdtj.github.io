@@ -519,37 +519,26 @@ section {
     height: 138px;
     width: 80%;
 }
-#cSection1 {
-  border: 1px solid red;
-}
+/* #cSection1 {} */
 #cSection1 .slide-container {
   padding: 40px 0;
   box-sizing: border-box;
-  width: 100%; height: 550px;
+  width: 100%; 
   margin-bottom: 130px;
+  height: 600px;
 }
-#cSection1 .slide-container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#cSection1 .slide-container .slide {
-  position: relative;
-}
-#cSection1 .slide-container .slide::after {
-  content: '';
-  display: table;
-  clear: both;
-}
+#cSection1 .slide-container::after {content: ''; display: table; clear: both;}
 #cSection1 .slide-container li {
   display: flex;
   flex-direction: column;
   width: 100%; height: 100%;
 }
-
+#cSection1 .slide li {text-align: center; padding: 20px;}
+#cSection1 .slide li h3 {font-size: 30px;}
+#cSection1 .slide li h3 span {color: #a9936f; margin-right: 10px;}
 #cSection1 .slide-container li img {object-fit: contain;}
 #cSection1 .indicator {
-  margin-top: 10px;
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -560,10 +549,37 @@ section {
   position: relative;
   font-size: 18px;
   border: .5px solid #8f8f8f;
+  padding: 15px;
 }
 #cSection1 .indicator li:hover {cursor: pointer;}
+#cSection1 .imgDiv {display: flex; flex-direction: column}
+#cSection1 .imgDiv img {display: block; width: 100%;}
+#cSection1::after {content: ''; display: table; clear: both;}
 
+#cSection2 {
+  border: 1px solid red;
+}
+#cSection2::before {
+  content: '';
+  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0203.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 30px solid transparent;
+  height: 138px;
+  width: 80%;
+}
+#cSection2 h3 {
+  margin: 40px 0;
+  font-size: 26px;
+}
+#cSection2 h3 span {display: block; font-size: 40px; color: #205052; margin: 20px 0;}
+#cSection2 img {width: 100%;}
 
+.club dl {
+  text-align: left;
+  margin-left: 40px;
+}
 
 footer {
   position: relative;
@@ -638,6 +654,9 @@ footer {
   .standardServ {position: absolute; scale: .8; transition: all .3s ease;}
   .standardServ:nth-child(2) {transform: translate(calc(-50% - 10px),100%);}
   .standardServ:nth-child(3) {transform: translate(calc(50% + 10px),100%);}
+  #cSection1 .indicator {flex-direction: column;}
+  #cSection1 .slide li h3 {font-size: 20px;}
+
 }
 
 @media screen and (max-width: 500px) {
