@@ -14,9 +14,7 @@ li {list-style: none;}
 body {
   /* overflow: hidden; */
 }
-.wrapper {
-  max-width: 1440px;
-}
+.wrapper {max-width: 1440px;}
 section{position: relative;}
 .m-leaf {
   z-index: -1;
@@ -49,10 +47,7 @@ h1.logo {
   background: url(./img/Prugio_signature_w.png) no-repeat;
   background-size: contain;
 }
-h1.logo a {
-  display: block;
-  width: 100%; height: 100%;
-}
+h1.logo a {display: block; width: 100%; height: 100%;}
 #bars {
   scale: .9;
   transform: rotateY(180deg);
@@ -61,9 +56,7 @@ h1.logo a {
   right: 20px;
   z-index: 9999;
 }
-#bars span {
-  transition: all .3s ease;
-}
+#bars span {transition: all .3s ease;}
 #bars div > span {
   display: inline-block;
   border-radius: 2px;
@@ -74,9 +67,7 @@ h1.logo a {
 #bars div > span:nth-child(1) {top: 0;left: 0;}
 #bars div > span:nth-child(2) {top: calc(50% - 1px);left: 0;}
 #bars div > span:nth-child(3) {top: calc(100% - 2px);left: 0;}
-#bars.on div > span {
-  background: #000;
-}
+#bars.on div > span {background: #000;}
 #bars.on div > span:nth-child(1) {
   transform-origin: left;
   top: 2px;
@@ -90,17 +81,16 @@ h1.logo a {
   left: 2px;
   transform: rotate(-45deg);
 }
-
+nav:not(.on) {height: 100%;}
 nav > ul {
   display: flex;
   background: #205052;
   font-size: 12px;
   color: #fff;
+  align-items: center;
+  height: 100%;
 }
-nav > ul > a > li {
-  box-sizing: border-box;
-  padding: 0 12px;
-}
+nav > ul > a > li {box-sizing: border-box; padding: 0 12px;}
 nav.on {
   position: absolute;
   top: 0; right: 0; 
@@ -108,14 +98,33 @@ nav.on {
   width: 60%;
   background: #fff;
 }
-nav.on > ul {
-  
+nav.on h2 {font-size: 22px;}
+nav:not(.on) #call {
+    color: #205052;
+    background: #d8d8d8;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    align-items: center;
+    display: flex;
 }
-nav.on h2 {
-  font-size: 22px;
+nav.on #call {height: unset;}
+button#toTop {
+  position: fixed;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: #205052e5;
+  scale: .8;
+  color: #f2f2f2;
+  white-space: nowrap;
+  width: 50px; height: 50px;
+  right: 30px; bottom: 30px;
+  border: none; border-radius: 50%;
+  z-index: 99;
 }
-
-
+#toTop.visible {
+  opacity: 1;
+}
 
 main {
   padding-top: 100px;
@@ -124,7 +133,6 @@ main {
   position: relative;
   text-align: center;
 }
-
 main .cat h2 {
   color: #205052;
   margin-top: 50px;
@@ -158,11 +166,7 @@ section {
   width: 80%;
   min-width: 550px;
 }
-
-.react-player-container {
-  width: 100%; min-width: 550px;
-  background: #000;
-}
+.react-player-container {width: 100%; min-width: 550px; background: #000;}
 .react-player-wrapper {position: relative; padding-top: 56.25%;}
 .react-player {position: absolute;top: 0;left: 0;}
 
@@ -556,9 +560,7 @@ section {
 #cSection1 .imgDiv img {display: block; width: 100%;}
 #cSection1::after {content: ''; display: table; clear: both;}
 
-#cSection2 {
-  border: 1px solid red;
-}
+/* #cSection2 {border: 1px solid red;} */
 #cSection2::before {
   content: '';
   background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0203.svg');
@@ -575,6 +577,7 @@ section {
 }
 #cSection2 h3 span {display: block; font-size: 40px; color: #205052; margin: 20px 0;}
 #cSection2 img {width: 100%;}
+#cSection2 > div:nth-child(1) p {display: inline-block; width: 60%; word-break: keep-all; margin-bottom: 20px;}
 
 .club dl {
   text-align: left;
@@ -655,7 +658,7 @@ footer {
   .standardServ:nth-child(2) {transform: translate(calc(-50% - 10px),100%);}
   .standardServ:nth-child(3) {transform: translate(calc(50% + 10px),100%);}
   #cSection1 .indicator {flex-direction: column;}
-  #cSection1 .slide li h3 {font-size: 20px;}
+  #cSection1 .slide li h3 {font-size: 20px; margin: 15px;}
 
 }
 

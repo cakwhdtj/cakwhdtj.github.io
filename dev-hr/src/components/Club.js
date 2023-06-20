@@ -72,6 +72,24 @@ const Club = () => {
             </section>
             <section id="cSection2">
                     <div>
+                       <div>
+                        <h3>남다른 스케일에 차별화된 품격까지<span>클럽 포시즌</span></h3>
+                            <p>
+                                월드컵경기장 2개 규모의 초대형 스케일에
+                                호텔식 서비스로 더 높아질 삶의 품격까지!
+                                지금껏 없던 휴양 같은 특별한 일상이
+                                당신의 매일이 됩니다.
+                            </p>
+                       </div>
+                       <img alt="클럽포시즌"
+                        src="http://baekwoonlakeprugio.com/theme/grape/img/fs-pic.png"
+                       />
+                       <img alt="클럽포시즌"
+                        src="http://baekwoonlakeprugio.com/theme/grape/img/0901-3.png"
+                       />
+                       
+                    </div>
+                    <div>
                         <img alt="클럽포시즌"
                         src={clubImg}
                         />

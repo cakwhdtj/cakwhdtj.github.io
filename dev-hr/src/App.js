@@ -10,6 +10,7 @@ import Club from './components/Club';
 const HrPrugio = () => {
   const [showElement, setShowElement] = useState(false);
   const [isOn, setIsOn] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const addOn = () => {setIsOn(prevState => !prevState);}
 
   useEffect(() => {
@@ -24,6 +25,13 @@ const HrPrugio = () => {
     window.addEventListener('resize', handleResize);
     handleResize();
 
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(scrollTop > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
       link.addEventListener('click', handleClick);
@@ -34,6 +42,7 @@ const HrPrugio = () => {
         link.removeEventListener('click', handleClick);
       });
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -67,6 +76,7 @@ const HrPrugio = () => {
                 <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
                 <Link className='nav-link' to="/Service"><li><h2 onClick={isOn ? addOn : null}>특화서비스</h2></li></Link>
                 <Link className='nav-link' to="/Club"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
+                <li id='call'><h2><a href="tel:1234567890">000 - 0000</a></h2></li>
               </ul> 
             </nav>
           </div>
@@ -78,8 +88,11 @@ const HrPrugio = () => {
             <Route exact path='/Merchinfo' Component={Merchinfo}></Route>
             <Route exact path='/Service' Component={Service}></Route>
             <Route exact path='/Club' Component={Club}></Route>
-
           </Routes>
+          <button id='toTop'
+            className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >맨위로</button>
         </main>
         <footer>
           <address>
