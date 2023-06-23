@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a3014b74.css",
-    "main.js": "/static/js/main.7dfef70b.js",
+    "main.js": "/static/js/main.5ba3476f.js",
     "static/js/787.f256d756.chunk.js": "/static/js/787.f256d756.chunk.js",
     "static/media/c4.jpg": "/static/media/c4.2bf6b18a3cc8c0b4af6b.jpg",
     "static/media/m30.jpg": "/static/media/m30.23ea35fee652e9c3badf.jpg",
@@ -9,11 +9,11 @@
     "static/media/Prugio_signature_w.png": "/static/media/Prugio_signature_w.c27a756d855371ff14a3.png",
     "index.html": "/index.html",
     "main.a3014b74.css.map": "/static/css/main.a3014b74.css.map",
-    "main.7dfef70b.js.map": "/static/js/main.7dfef70b.js.map",
+    "main.5ba3476f.js.map": "/static/js/main.5ba3476f.js.map",
     "787.f256d756.chunk.js.map": "/static/js/787.f256d756.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3014b74.css",
-    "static/js/main.7dfef70b.js"
+    "static/js/main.5ba3476f.js"
   ]
 }

@@ -83,11 +83,11 @@ const HrPrugio = () => {
         </header>
         <main>
           <Routes>
-            <Route exact path='/' Component={Main}></Route>
-            <Route exact path='/Env' Component={Env}></Route>
-            <Route exact path='/Merchinfo' Component={Merchinfo}></Route>
-            <Route exact path='/Service' Component={Service}></Route>
-            <Route exact path='/Club' Component={Club}></Route>
+            <Route exact path='/hr-prugio/' Component={Main}></Route>
+            <Route exact path='/hr-prugio/Env' Component={Env}></Route>
+            <Route exact path='/hr-prugio/Merchinfo' Component={Merchinfo}></Route>
+            <Route exact path='/hr-prugio/Service' Component={Service}></Route>
+            <Route exact path='/hr-prugio/Club' Component={Club}></Route>
           </Routes>
           <button id='toTop'
             className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
