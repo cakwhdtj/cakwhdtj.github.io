@@ -16,7 +16,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "purge": "rm -rf ../hr-prugio/static && cp -fR ./build/* ../hr-prugio",
+    "frontmatter": "echo '---\ntitle: HR Prugio\nlayout: null\n---\n' | cat - ../hr-prugio/index.html > temp && mv temp ../hr-prugio/index.html",
+    "deploy": "npm run purge && npm run frontmatter"
   },
   "eslintConfig": {
     "extends": [
