@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a3014b74.css",
-    "main.js": "/static/js/main.5ba3476f.js",
-    "static/js/787.f256d756.chunk.js": "/static/js/787.f256d756.chunk.js",
-    "static/media/c4.jpg": "/static/media/c4.2bf6b18a3cc8c0b4af6b.jpg",
-    "static/media/m30.jpg": "/static/media/m30.23ea35fee652e9c3badf.jpg",
-    "static/media/m31.jpg": "/static/media/m31.3911746bd07cecee787a.jpg",
-    "static/media/Prugio_signature_w.png": "/static/media/Prugio_signature_w.c27a756d855371ff14a3.png",
-    "index.html": "/index.html",
-    "main.a3014b74.css.map": "/static/css/main.a3014b74.css.map",
-    "main.5ba3476f.js.map": "/static/js/main.5ba3476f.js.map",
-    "787.f256d756.chunk.js.map": "/static/js/787.f256d756.chunk.js.map"
+    "main.css": "/hr-prugio/static/css/main.3fe8b05c.css",
+    "main.js": "/hr-prugio/static/js/main.1288a2a3.js",
+    "static/js/787.f256d756.chunk.js": "/hr-prugio/static/js/787.f256d756.chunk.js",
+    "static/media/c4.jpg": "/hr-prugio/static/media/c4.2bf6b18a3cc8c0b4af6b.jpg",
+    "static/media/m30.jpg": "/hr-prugio/static/media/m30.23ea35fee652e9c3badf.jpg",
+    "static/media/m31.jpg": "/hr-prugio/static/media/m31.3911746bd07cecee787a.jpg",
+    "static/media/Prugio_signature_w.png": "/hr-prugio/static/media/Prugio_signature_w.c27a756d855371ff14a3.png",
+    "index.html": "/hr-prugio/index.html",
+    "main.3fe8b05c.css.map": "/hr-prugio/static/css/main.3fe8b05c.css.map",
+    "main.1288a2a3.js.map": "/hr-prugio/static/js/main.1288a2a3.js.map",
+    "787.f256d756.chunk.js.map": "/hr-prugio/static/js/787.f256d756.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3014b74.css",
-    "static/js/main.5ba3476f.js"
+    "static/css/main.3fe8b05c.css",
+    "static/js/main.1288a2a3.js"
   ]
 }
