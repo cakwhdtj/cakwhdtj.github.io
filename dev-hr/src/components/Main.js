@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
-import m30 from '../img/m30.jpg'
-import m31 from '../img/m31.jpg'
+import m30 from '../img/m30.jpg';
+import m31 from '../img/m31.jpg';
+import na1 from '../img/na1.jpg';
 
 
 const Main = () => {
@@ -12,10 +13,10 @@ const Main = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    'baekwoonlakeprugio.com/theme/grape/img/na1.jpg',
-    'baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
-    'baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
-    'baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
+    na1,
+    'http://baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
+    'http://baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
+    'http://baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
   ];
   const slideLabels = ['백운호수 생태문화공원', '백운산', '바라산 자연휴양림', '모락산'];
 
@@ -58,7 +59,7 @@ const Main = () => {
   return (
     <div className='home cat'>
       <img 
-        src="baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
+        src="http://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
         alt='배경잎장식' className="m-leaf"
         style={{ transform: `rotate(${rotation}deg)`}}
         />
@@ -87,7 +88,7 @@ const Main = () => {
             <p>서울, 수도권 최적의 접근성!</p>
           </div>
           <img alt="백운호수푸르지오메인이미지" 
-          src="baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
+          src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
           className={`${isScrolled ? 'l2r' : ''}`}
           />
           <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
