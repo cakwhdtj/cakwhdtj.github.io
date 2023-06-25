@@ -3,6 +3,11 @@ import ReactPlayer from 'react-player';
 import m30 from '../img/m30.jpg';
 import m31 from '../img/m31.jpg';
 import na1 from '../img/na1.jpg';
+import na5 from '../img/na5.jpg';
+import na3 from '../img/na-3.jpg';
+import na6 from '../img/na6.jpg';
+import leaf from '../img/leaf.svg';
+
 
 
 const Main = () => {
@@ -12,12 +17,7 @@ const Main = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    na1,
-    'http://baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
-    'http://baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
-    'http://baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
-  ];
+  const slides = [na1, na5, na3, na6];
   const slideLabels = ['백운호수 생태문화공원', '백운산', '바라산 자연휴양림', '모락산'];
 
   const nextSlide = () => {setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));};
@@ -59,7 +59,7 @@ const Main = () => {
   return (
     <div className='home cat'>
       <img 
-        src="http://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
+        src={leaf} 
         alt='배경잎장식' className="m-leaf"
         style={{ transform: `rotate(${rotation}deg)`}}
         />
