@@ -7,6 +7,7 @@ import na5 from '../img/na5.jpg';
 import na3 from '../img/na-3.jpg';
 import na6 from '../img/na6.jpg';
 import leaf from '../img/leaf.svg';
+import mainImg from '../img/behavior0.jpg';
 
 
 
@@ -88,7 +89,7 @@ const Main = () => {
             <p>서울, 수도권 최적의 접근성!</p>
           </div>
           <img alt="백운호수푸르지오메인이미지" 
-          src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
+          src={mainImg} 
           className={`${isScrolled ? 'l2r' : ''}`}
           />
           <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
