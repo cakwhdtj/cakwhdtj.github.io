@@ -57,7 +57,7 @@ const HrPrugio = () => {
         <header className="header">
           <div className='wrapper'>
             <h1 className='logo'>
-              <Link className='nav-link' to="/">
+              <Link className='nav-link' to="/hr-prugio/">
                 <span className='hide_clipPath'>푸르지오로고</span>
               </Link>
             </h1>
@@ -72,10 +72,10 @@ const HrPrugio = () => {
               </div>}
             <nav className={isOn ? 'on' : ''}>
               <ul>
-                <Link className='nav-link' to="/Env"><li><h2 onClick={isOn ? addOn : null}>입지환경</h2></li></Link>
-                <Link className='nav-link' to="/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
-                <Link className='nav-link' to="/Service"><li><h2 onClick={isOn ? addOn : null}>특화서비스</h2></li></Link>
-                <Link className='nav-link' to="/Club"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
+                <Link className='nav-link' to="/hr-prugio/Env"><li><h2 onClick={isOn ? addOn : null}>입지환경</h2></li></Link>
+                <Link className='nav-link' to="/hr-prugio/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품안내</h2></li></Link>
+                <Link className='nav-link' to="/hr-prugio/Service"><li><h2 onClick={isOn ? addOn : null}>특화서비스</h2></li></Link>
+                <Link className='nav-link' to="/hr-prugio/Club"><li><h2 onClick={isOn ? addOn : null}>클럽포시즌</h2></li></Link>
                 <li id='call'><h2><a href="tel:1234567890">000 - 0000</a></h2></li>
               </ul> 
             </nav>
