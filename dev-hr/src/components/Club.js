@@ -3,16 +3,16 @@ import clubImg from '../img/c4.jpg'
 
 const Club = () => {
     const slides = [
-        'http://baekwoonlakeprugio.com/theme/grape/img/comp1.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/activity-1.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/healing-1.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/com-1.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/comp1.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/activity-1.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/healing-1.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/com-1.jpg',
     ];
     const slides2 = [
-        'http://baekwoonlakeprugio.com/theme/grape/img/comp2.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/activity-2.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/healing-2.jpg',
-        'http://baekwoonlakeprugio.com/theme/grape/img/com-2.jpg'
+        'https://baekwoonlakeprugio.com/theme/grape/img/comp2.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/activity-2.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/healing-2.jpg',
+        'https://baekwoonlakeprugio.com/theme/grape/img/com-2.jpg'
     ]
     const slideLabels = ['클럽포시즌', 'ACTIVITY ZONE', 'HEALING&LIVING ZONE', 'COMMUNITY ZONE'];
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,10 +82,10 @@ const Club = () => {
                             </p>
                        </div>
                        <img alt="클럽포시즌"
-                        src="http://baekwoonlakeprugio.com/theme/grape/img/fs-pic.png"
+                        src="https://baekwoonlakeprugio.com/theme/grape/img/fs-pic.png"
                        />
                        <img alt="클럽포시즌"
-                        src="http://baekwoonlakeprugio.com/theme/grape/img/0901-3.png"
+                        src="https://baekwoonlakeprugio.com/theme/grape/img/0901-3.png"
                        />
                        
                     </div>

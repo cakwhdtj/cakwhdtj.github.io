@@ -6,13 +6,13 @@ const Env = () => {
             <h2>입지환경</h2>
             <section id="eSection1">
                 <img alt="백운호수푸르지오입지환경지도" 
-                src="http://baekwoonlakeprugio.com/theme/grape/img/0102.jpg" 
+                src="https://baekwoonlakeprugio.com/theme/grape/img/0102.jpg" 
                 />
                 <img alt="백운호수푸르지오조감도"
-                src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg"
+                src="https://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg"
                 />
                 <img alt="백운호수푸르지오조감도"
-                src="http://baekwoonlakeprugio.com/theme/grape/img/behavior.jpg"
+                src="https://baekwoonlakeprugio.com/theme/grape/img/behavior.jpg"
                 />
                 <div className='info'>
                     <dl class="info">
@@ -25,13 +25,13 @@ const Env = () => {
             </section>
             <section id="eSection2">
                 <img alt="백운호수푸르지오입지환경지도" 
-                src="http://baekwoonlakeprugio.com/theme/grape/img/0102.jpg" 
+                src="https://baekwoonlakeprugio.com/theme/grape/img/0102.jpg" 
                 />
                 <img alt="백운호수푸르지오조감도"
-                src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg"
+                src="https://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg"
                 />
                 <img alt="백운호수푸르지오조감도"
-                src="http://baekwoonlakeprugio.com/theme/grape/img/behavior.jpg"
+                src="https://baekwoonlakeprugio.com/theme/grape/img/behavior.jpg"
                 />
                 <div className='info'>
                     <dl class="info">

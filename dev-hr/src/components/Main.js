@@ -12,10 +12,10 @@ const Main = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    'http://baekwoonlakeprugio.com/theme/grape/img/na1.jpg',
-    'http://baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
-    'http://baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
-    'http://baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
+    'https://baekwoonlakeprugio.com/theme/grape/img/na1.jpg',
+    'https://baekwoonlakeprugio.com/theme/grape/img/na5.jpg',
+    'https://baekwoonlakeprugio.com/theme/grape/img/na-3.jpg',
+    'https://baekwoonlakeprugio.com/theme/grape/img/na6.jpg'
   ];
   const slideLabels = ['백운호수 생태문화공원', '백운산', '바라산 자연휴양림', '모락산'];
 
@@ -58,7 +58,7 @@ const Main = () => {
   return (
     <div className='home cat'>
       <img 
-        src="http://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
+        src="https://baekwoonlakeprugio.com/theme/grape/img/leaf.svg" 
         alt='배경잎장식' className="m-leaf"
         style={{ transform: `rotate(${rotation}deg)`}}
         />
@@ -87,7 +87,7 @@ const Main = () => {
             <p>서울, 수도권 최적의 접근성!</p>
           </div>
           <img alt="백운호수푸르지오메인이미지" 
-          src="http://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
+          src="https://baekwoonlakeprugio.com/theme/grape/img/behavior0.jpg" 
           className={`${isScrolled ? 'l2r' : ''}`}
           />
           <div className={`${isScrolled ? 'l2r' : ''} mTitle`}>
