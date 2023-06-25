@@ -9,10 +9,6 @@ import env3 from '../img/env3.jpg';
 import info1 from '../img/info1.jpg';
 import info2 from '../img/info2.png';
 
-
-
-
-
 const Merchinfo = () => {
     const slides = [floor1,floor2,floor3,floor4,floor5,floor6];
     const slideLabels = ['99㎡','119㎡A','119㎡B','119㎡C','119㎡D','119㎡E'];

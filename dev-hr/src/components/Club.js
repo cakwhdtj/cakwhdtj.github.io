@@ -1,19 +1,20 @@
 import React, {useState , useEffect} from "react";
-import clubImg from '../img/c4.jpg'
+import clubImg from '../img/c4.jpg';
+import club1 from '../img/club1.jpg';
+import club11 from '../img/club11.jpg';
+import club2 from '../img/club2.jpg';
+import club21 from '../img/club21.jpg';
+import club3 from '../img/club3.jpg';
+import club31 from '../img/club31.jpg';
+import club4 from '../img/club4.jpg';
+import club41 from '../img/club41.jpg';
+import club5 from '../img/club5.png';
+import club6 from '../img/club6.png';
+
 
 const Club = () => {
-    const slides = [
-        'https://baekwoonlakeprugio.com/theme/grape/img/comp1.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/activity-1.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/healing-1.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/com-1.jpg',
-    ];
-    const slides2 = [
-        'https://baekwoonlakeprugio.com/theme/grape/img/comp2.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/activity-2.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/healing-2.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/com-2.jpg'
-    ]
+    const slides = [club1,club2,club3,club4];
+    const slides2 = [club11,club21,club31,club41];
     const slideLabels = ['클럽포시즌', 'ACTIVITY ZONE', 'HEALING&LIVING ZONE', 'COMMUNITY ZONE'];
     const [currentSlide, setCurrentSlide] = useState(0);
     const [squareSize, setSquareSize] = useState(0);
@@ -82,10 +83,10 @@ const Club = () => {
                             </p>
                        </div>
                        <img alt="클럽포시즌"
-                        src="https://baekwoonlakeprugio.com/theme/grape/img/fs-pic.png"
+                        src={club5}
                        />
                        <img alt="클럽포시즌"
-                        src="https://baekwoonlakeprugio.com/theme/grape/img/0901-3.png"
+                        src={club6}
                        />
                        
                     </div>

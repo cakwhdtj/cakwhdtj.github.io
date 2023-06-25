@@ -1,4 +1,17 @@
 import React, { useRef, useEffect, useState } from 'react';
+import s1 from '../img/s1.jpg';
+import s11 from '../img/s11.jpg';
+import s2 from '../img/s2.jpg';
+import s21 from '../img/s21.jpg';
+import s3 from '../img/s3.jpg';
+import s31 from '../img/s31.jpg';
+import s4 from '../img/s4.jpg';
+import s41 from '../img/s41.jpg';
+import s5 from '../img/s5.jpg';
+import s6 from '../img/s6.jpg';
+import s7 from '../img/s7.jpg';
+import s8 from '../img/s8.jpg';
+import s9 from '../img/s9.jpg';
 
 const Service = () => {
     const servCircRef = useRef(null);
@@ -27,11 +40,11 @@ const Service = () => {
                     ref={servCircRef} style={{ height: squareSize}}>
                     <div className="serviceDiv">
                         <img alt="프리미엄서비스법무법인율촌"
-                        src="https://baekwoonlakeprugio.com/theme/grape/img/0802-2.jpg"
+                        src={s1}
                         />
                         <div>
                             <img alt="건강검진센터"
-                            src="https://baekwoonlakeprugio.com/theme/grape/img/0802-2-logo.jpg"
+                            src={s11}
                             />
                             <h3>법무법인 율촌</h3>
                             <p>
@@ -48,11 +61,11 @@ const Service = () => {
                     </div>
                     <div className="serviceDiv">
                         <img alt="프리미엄서비스건강검진센터"
-                        src="https://baekwoonlakeprugio.com/theme/grape/img/0802-1.jpg"
+                        src={s2}
                         />
                         <div>
                             <img alt="건강검진센터"
-                            src="https://baekwoonlakeprugio.com/theme/grape/img/0802-1-logo.jpg"
+                            src={s21}
                             />
                             <h3>국내 No.1 종합병원</h3>
                             <p>
@@ -69,11 +82,11 @@ const Service = () => {
                     </div>
                     <div className="serviceDiv">
                         <img alt="프리미엄서비스가립회계법인"
-                        src="https://baekwoonlakeprugio.com/theme/grape/img/0802-3.jpg"
+                        src={s3}
                         />
                         <div>
                             <img alt="가립회계법인"
-                            src="https://baekwoonlakeprugio.com/theme/grape/img/0802-3-logo.jpg"
+                            src={s31}
                             />
                             <h3>가립회계법인</h3>
                             <p>
@@ -90,11 +103,11 @@ const Service = () => {
                     </div>
                     <div className="serviceDiv">
                         <img alt="프리미엄서비스하나투어"
-                        src="	https://baekwoonlakeprugio.com/theme/grape/img/0802-4.jpg"
+                        src={s4}
                         />
                         <div>
                             <img alt="하나투어"
-                            src="	https://baekwoonlakeprugio.com/theme/grape/img/0802-4-logo.jpg"
+                            src={s41}
                             />
                             <h3>하나투어</h3>
                             <p>
@@ -146,7 +159,7 @@ const Service = () => {
                 <div>
                     <div className='premiumServ'>
                         <img alt='프리미엄서비스'
-                        src='https://baekwoonlakeprugio.com/theme/grape/img/0801-5.jpg'
+                        src={s5}
                         />
                         <div>
                             <h3>365일 식사 서비스</h3>
@@ -157,7 +170,7 @@ const Service = () => {
                     </div>
                     <div className='premiumServ'>
                         <img alt='프리미엄서비스'
-                        src='https://baekwoonlakeprugio.com/theme/grape/img/0801-2.jpg'
+                        src={s6}
                         />
                         <div>
                             <h3>메디컬 케어</h3>
@@ -168,7 +181,7 @@ const Service = () => {
                     </div>
                     <div className='premiumServ'>
                         <img alt='프리미엄서비스'
-                        src='https://baekwoonlakeprugio.com/theme/grape/img/0801-3.jpg'
+                        src={s7}
                         />
                         <div>
                             <h3>하우스키핑 서비스</h3>
@@ -179,7 +192,7 @@ const Service = () => {
                     </div>
                     <div className='premiumServ'>
                         <img alt='프리미엄서비스'
-                        src='	https://baekwoonlakeprugio.com/theme/grape/img/0801-1.jpg'
+                        src={s8}
                         />
                         <div>
                             <h3>호텔식 컨시어지 서비스</h3>
@@ -190,7 +203,7 @@ const Service = () => {
                     </div>
                     <div className='premiumServ'>
                         <img alt='프리미엄서비스'
-                        src='	https://baekwoonlakeprugio.com/theme/grape/img/0801-4.jpg'
+                        src={s9}
                         />
                         <div>
                             <h3>올데이 클래스</h3>
