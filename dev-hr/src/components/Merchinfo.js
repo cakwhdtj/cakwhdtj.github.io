@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import floor1 from '../img/floor1.jpg';
+import floor2 from '../img/floor2.jpg';
+import floor3 from '../img/floor3.jpg';
+import floor4 from '../img/floor4.jpg';
+import floor5 from '../img/floor5.jpg';
+import floor6 from '../img/floor6.jpg';
+import env3 from '../img/env3.jpg';
+import info1 from '../img/info1.jpg';
+import info2 from '../img/info2.png';
+
+
+
 
 
 const Merchinfo = () => {
-    const slides = [
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor1.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor3.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor4.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor4.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor5.jpg',
-        'https://baekwoonlakeprugio.com/theme/grape/img/floor6.jpg',
-    ];
+    const slides = [floor1,floor2,floor3,floor4,floor5,floor6];
     const slideLabels = ['99㎡','119㎡A','119㎡B','119㎡C','119㎡D','119㎡E'];
     const [currentSlide, setCurrentSlide] = useState(0);
     const handleSlideClick = (index) => {
@@ -22,7 +27,7 @@ const Merchinfo = () => {
             <section id="mchSection1">
                 <h3>사업개요</h3>
                 <img alt="백운호수푸르지오사업개요"
-                src="https://baekwoonlakeprugio.com/theme/grape/img/behavior.jpg"/>
+                src={env3}/>
                 <article>
                     <div className="grid-container">
                         <div className="table-title">백운호수 푸르지오 숲속의 아침 1단지</div>
@@ -93,7 +98,7 @@ const Merchinfo = () => {
             </section>
             <section id="mchSection2">
                 <img alt="백운호수푸르지오단지배치도"
-                src="https://baekwoonlakeprugio.com/theme/grape/img/1001.jpg"
+                src={info1}
                 />
                 <div class="info">
                     <dl>
@@ -106,7 +111,7 @@ const Merchinfo = () => {
                 </div>
                 <h3>동호수표</h3>
                 <img alt="백운호수푸르지오동호수표"
-                src="https://baekwoonlakeprugio.com/theme/grape/img/d-table.png"
+                src={info2}
                 />
                 <h3>평면정보</h3>
                 <div className="slide-container">

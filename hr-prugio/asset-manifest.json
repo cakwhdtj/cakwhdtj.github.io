@@ -1,12 +1,20 @@
 {
   "files": {
-    "main.css": "/hr-prugio/static/css/main.3fe8b05c.css",
-    "main.js": "/hr-prugio/static/js/main.ac17abed.js",
+    "main.css": "/hr-prugio/static/css/main.4b95f88b.css",
+    "main.js": "/hr-prugio/static/js/main.34bf57a4.js",
     "static/js/787.f256d756.chunk.js": "/hr-prugio/static/js/787.f256d756.chunk.js",
+    "static/media/info1.jpg": "/hr-prugio/static/media/info1.e197e5d684168714b89c.jpg",
+    "static/media/info2.png": "/hr-prugio/static/media/info2.5272ee2777d71b6c289c.png",
+    "static/media/floor2.jpg": "/hr-prugio/static/media/floor2.36db85350e98e114f9ec.jpg",
     "static/media/na-3.jpg": "/hr-prugio/static/media/na-3.ed2794913c02f9db7433.jpg",
+    "static/media/floor4.jpg": "/hr-prugio/static/media/floor4.d573038f888a05f62946.jpg",
+    "static/media/floor5.jpg": "/hr-prugio/static/media/floor5.555d1b968de003a0e926.jpg",
     "static/media/env3.jpg": "/hr-prugio/static/media/env3.0a2cb9afe52a7f323deb.jpg",
     "static/media/behavior0.jpg": "/hr-prugio/static/media/behavior0.6be084871f7df711aaab.jpg",
     "static/media/env2.jpg": "/hr-prugio/static/media/env2.6be084871f7df711aaab.jpg",
+    "static/media/floor3.jpg": "/hr-prugio/static/media/floor3.e6eee6dbf2c7971627ab.jpg",
+    "static/media/floor6.jpg": "/hr-prugio/static/media/floor6.f0a72a724b8af9b24db6.jpg",
+    "static/media/floor1.jpg": "/hr-prugio/static/media/floor1.a1a5071aae3a6b0e7542.jpg",
     "static/media/c4.jpg": "/hr-prugio/static/media/c4.2bf6b18a3cc8c0b4af6b.jpg",
     "static/media/env1.jpg": "/hr-prugio/static/media/env1.8614bf292d66702f74cb.jpg",
     "static/media/na1.jpg": "/hr-prugio/static/media/na1.7689cd9c900ebb8d9db4.jpg",
@@ -17,12 +25,12 @@
     "static/media/Prugio_signature_w.png": "/hr-prugio/static/media/Prugio_signature_w.c27a756d855371ff14a3.png",
     "static/media/leaf.svg": "/hr-prugio/static/media/leaf.c04409c2cf49e4722123d93df2ea03b2.svg",
     "index.html": "/hr-prugio/index.html",
-    "main.3fe8b05c.css.map": "/hr-prugio/static/css/main.3fe8b05c.css.map",
-    "main.ac17abed.js.map": "/hr-prugio/static/js/main.ac17abed.js.map",
+    "main.4b95f88b.css.map": "/hr-prugio/static/css/main.4b95f88b.css.map",
+    "main.34bf57a4.js.map": "/hr-prugio/static/js/main.34bf57a4.js.map",
     "787.f256d756.chunk.js.map": "/hr-prugio/static/js/787.f256d756.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fe8b05c.css",
-    "static/js/main.ac17abed.js"
+    "static/css/main.4b95f88b.css",
+    "static/js/main.34bf57a4.js"
   ]
 }

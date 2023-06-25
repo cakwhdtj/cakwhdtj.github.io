@@ -157,7 +157,7 @@ section {
 #mSection1 {position: relative;}
 #mSection1::before {
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0101.svg');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0101.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -285,7 +285,7 @@ section {
 .env section img {display: inline-block; width: 100%;}
 .env #eSection1::before {
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0201.svg');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0201.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -345,7 +345,7 @@ section {
 .merch #mchSection1 .gridColor {color: #205052; font-weight: bold;}
 #mchSection2::before {
     content: '';
-    background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0301.svg');
+    background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0301.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -379,7 +379,7 @@ section {
 
 #sSection1::before {
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy-pre-img.png');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/gold-copy-pre-img.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -435,7 +435,7 @@ section {
 #sSection2::before {
   margin-top: 100px;
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy3-img.png');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/gold-copy3-img.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -472,7 +472,7 @@ section {
 #sSection3::before {
   margin-top: 100px;
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/0801-copy.png');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/0801-copy.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -515,7 +515,7 @@ section {
 
 #cSection1::before {
     content: '';
-    background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/gold-copy4-img.png');
+    background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/gold-copy4-img.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -563,7 +563,7 @@ section {
 /* #cSection2 {border: 1px solid red;} */
 #cSection2::before {
   content: '';
-  background-image: url('http://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0203.svg');
+  background-image: url('https://baekwoonlakeprugio.com/theme/grape/img/sub-top-logo-0203.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
