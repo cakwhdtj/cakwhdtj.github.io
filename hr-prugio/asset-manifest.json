@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/hr-prugio/static/css/main.3fe8b05c.css",
-    "main.js": "/hr-prugio/static/js/main.ae37a9ae.js",
+    "main.js": "/hr-prugio/static/js/main.ca2eb78b.js",
     "static/js/787.f256d756.chunk.js": "/hr-prugio/static/js/787.f256d756.chunk.js",
     "static/media/na-3.jpg": "/hr-prugio/static/media/na-3.ed2794913c02f9db7433.jpg",
+    "static/media/behavior0.jpg": "/hr-prugio/static/media/behavior0.6be084871f7df711aaab.jpg",
     "static/media/c4.jpg": "/hr-prugio/static/media/c4.2bf6b18a3cc8c0b4af6b.jpg",
     "static/media/na1.jpg": "/hr-prugio/static/media/na1.7689cd9c900ebb8d9db4.jpg",
     "static/media/na5.jpg": "/hr-prugio/static/media/na5.c1c7c511f3441c304e64.jpg",
@@ -14,11 +15,11 @@
     "static/media/leaf.svg": "/hr-prugio/static/media/leaf.c04409c2cf49e4722123d93df2ea03b2.svg",
     "index.html": "/hr-prugio/index.html",
     "main.3fe8b05c.css.map": "/hr-prugio/static/css/main.3fe8b05c.css.map",
-    "main.ae37a9ae.js.map": "/hr-prugio/static/js/main.ae37a9ae.js.map",
+    "main.ca2eb78b.js.map": "/hr-prugio/static/js/main.ca2eb78b.js.map",
     "787.f256d756.chunk.js.map": "/hr-prugio/static/js/787.f256d756.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fe8b05c.css",
-    "static/js/main.ae37a9ae.js"
+    "static/js/main.ca2eb78b.js"
   ]
 }
