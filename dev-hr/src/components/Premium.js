@@ -47,7 +47,7 @@ const Service = () => {
                             src={s11}
                             />
                             <h3>법무법인 율촌</h3>
-                            <p>
+                            <div className="serviceDetail">
                                 <h3> 
                                 서비스부분 대상,<br />
                                 전문성부분 최우수상 수상
@@ -56,7 +56,7 @@ const Service = () => {
                                 증여, 상속 등 맞춤형<br />
                                 법률 서비스 제공
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className="serviceDiv">
@@ -68,7 +68,7 @@ const Service = () => {
                             src={s21}
                             />
                             <h3>국내 No.1 종합병원</h3>
-                            <p>
+                            <div className="serviceDetail">
                                 <h3> 
                                 국민들이 가장 많이 찾는 <br />
                                 국내 최정상 병원
@@ -77,7 +77,7 @@ const Service = () => {
                                 건강한 삶을 위하여<br />
                                 최고의 건강증진서비스 제공
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className="serviceDiv">
@@ -89,7 +89,7 @@ const Service = () => {
                             src={s31}
                             />
                             <h3>가립회계법인</h3>
-                            <p>
+                            <div className="serviceDetail">
                                 <h3> 
                                 가장 정직하고 전문성있는<br />
                                 최고의 컨설팅 회사
@@ -98,7 +98,7 @@ const Service = () => {
                                 신뢰와 만족을 최우선으로한<br />
                                 재무컨설팅 제공
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className="serviceDiv">
@@ -110,7 +110,7 @@ const Service = () => {
                             src={s41}
                             />
                             <h3>하나투어</h3>
-                            <p>
+                            <div className="serviceDetail">
                                 <h3> 
                                 소비자중심경영의 최우수상<br />
                                 여행 서비스업 부문 6년 연속 1위
@@ -119,7 +119,7 @@ const Service = () => {
                                 30년의 노하우를 기반으로 한<br />
                                 편안하고 행복한 여행플랜 제공
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

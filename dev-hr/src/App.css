@@ -11,9 +11,7 @@ li {list-style: none;}
 #skipNav {display: block; width: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.5); position: absolute; top: -50px; z-index: 99999;}
 #skipNav:focus {top: 0;}
 /*  */
-body {
-  /* overflow: hidden; */
-}
+/* body {overflow: hidden;} */
 .wrapper {max-width: 1440px;}
 section{position: relative;}
 .m-leaf {
@@ -91,14 +89,14 @@ nav > ul {
   height: 100%;
 }
 nav > ul > a > li {box-sizing: border-box; padding: 0 12px;}
-nav.on {
+/* nav.on {
   position: absolute;
   top: 0; right: 0; 
   height: 100vh;
   width: 60%;
   background: #fff;
-}
-nav.on h2 {font-size: 22px;}
+} */
+/* nav.on h2 {font-size: 22px;} */
 nav:not(.on) #call {
     color: #205052;
     background: #d8d8d8;
@@ -108,7 +106,7 @@ nav:not(.on) #call {
     align-items: center;
     display: flex;
 }
-nav.on #call {height: unset;}
+/* nav.on #call {height: unset;} */
 button#toTop {
   position: fixed;
   transition: all .3s ease;
@@ -122,9 +120,7 @@ button#toTop {
   border: none; border-radius: 50%;
   z-index: 99;
 }
-#toTop.visible {
-  opacity: 1;
-}
+#toTop.visible {opacity: 1;}
 
 main {
   padding-top: 100px;
@@ -616,18 +612,16 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
-  nav {transform: translateX(120%);}
-  nav.on {
+  /* nav {transform: translateX(120%);} */
+  /* nav.on {
     transition: all .3s ease;
     transform: translateX(0);
-  }
-  nav h2 {
-    font-size: 12px;
-  }
-  nav > ul > a > li {
-    padding: 0 5px;
-  }
-  nav.on > ul {
+  } */
+  h1.logo {width: 90px;}
+  nav {transform: translateX(25px);}
+  nav h2 {font-size: 12px;}
+  nav > ul > a > li {padding: 0 5px;}
+  /* nav.on > ul {
     justify-content: space-evenly;
     padding: 40px;
     padding-top: 70px;
@@ -636,7 +630,7 @@ footer {
     text-align: left;
     background: #fff;
     color: #000;
-  }
+  } */
   .mTitle {
     transform-origin: left;
     white-space: nowrap;
@@ -650,8 +644,8 @@ footer {
   .merch  .grid-item {font-size: 10px;}
   .service .servCirc {width: 100%;}
   .service .servCirc .serviceDiv > div > h3 {font-size: 16px;}
-  .service .servCirc .serviceDiv p h3 {font-size: 12px; }
-  .service .servCirc .serviceDiv p span {display: none; margin-top: 10px;}
+  .service .servCirc .serviceDiv .serviceDetail h3 {font-size: 12px; }
+  .service .servCirc .serviceDiv .serviceDetail span {display: none; margin-top: 10px;}
   .standardServ {position: absolute; scale: .8; transition: all .3s ease;}
   .standardServ:nth-child(2) {transform: translate(calc(-50% - 10px),100%);}
   .standardServ:nth-child(3) {transform: translate(calc(50% + 10px),100%);}
