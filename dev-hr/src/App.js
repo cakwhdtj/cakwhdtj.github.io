@@ -76,7 +76,7 @@ const HrPrugio = () => {
                 <Link className='nav-link' to="/hr-prugio/Merchinfo"><li><h2 onClick={isOn ? addOn : null}>상품{showElement && <br />}안내</h2></li></Link>
                 <Link className='nav-link' to="/hr-prugio/Service"><li><h2 onClick={isOn ? addOn : null}>특화{showElement && <br />}서비스</h2></li></Link>
                 <Link className='nav-link' to="/hr-prugio/Club"><li><h2 onClick={isOn ? addOn : null}>클럽{showElement && <br />}포시즌</h2></li></Link>
-                <li id='call'><h2><a href="tel:1600-6297">1600-6297</a></h2></li>
+                <li id='call'><h2><a href="tel:1600-6297"><span>전화하기</span><br />1600-6297</a></h2></li>
               </ul> 
             </nav>
           </div>
@@ -93,6 +93,9 @@ const HrPrugio = () => {
             className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >맨위로</button>
+          <div className="register">
+            <iframe title='관심고객등록' src='https://naver.me/5bdi4yfd' height='800px' scrolling='auto'></iframe>
+          </div>
         </main>
         <footer>
           <address>
