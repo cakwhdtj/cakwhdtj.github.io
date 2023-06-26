@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hr-prugio/static/css/main.3f95042e.css",
+    "main.css": "/hr-prugio/static/css/main.ad45d9a5.css",
     "main.js": "/hr-prugio/static/js/main.5d241005.js",
     "static/js/787.f256d756.chunk.js": "/hr-prugio/static/js/787.f256d756.chunk.js",
     "static/media/club6.png": "/hr-prugio/static/media/club6.12fff8a060b753a1493f.png",
@@ -54,12 +54,12 @@
     "static/media/s11.jpg": "/hr-prugio/static/media/s11.6dffd49d10d104bc382e.jpg",
     "static/media/s41.jpg": "/hr-prugio/static/media/s41.f8577c0b54af8fcf2bcf.jpg",
     "index.html": "/hr-prugio/index.html",
-    "main.3f95042e.css.map": "/hr-prugio/static/css/main.3f95042e.css.map",
+    "main.ad45d9a5.css.map": "/hr-prugio/static/css/main.ad45d9a5.css.map",
     "main.5d241005.js.map": "/hr-prugio/static/js/main.5d241005.js.map",
     "787.f256d756.chunk.js.map": "/hr-prugio/static/js/787.f256d756.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f95042e.css",
+    "static/css/main.ad45d9a5.css",
     "static/js/main.5d241005.js"
   ]
 }

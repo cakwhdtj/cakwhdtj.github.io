@@ -14,9 +14,7 @@ const HrPrugio = () => {
   const addOn = () => {setIsOn(prevState => !prevState);}
 
   useEffect(() => {
-    const handleClick = () => {
-      window.scrollTo(0, 0);
-    };
+    const handleClick = () => {window.scrollTo(0, 0);};
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       setShowElement(windowWidth < 720);
@@ -31,12 +29,10 @@ const HrPrugio = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
       link.addEventListener('click', handleClick);
     });
-
     return () => {
       navLinks.forEach((link) => {
         link.removeEventListener('click', handleClick);

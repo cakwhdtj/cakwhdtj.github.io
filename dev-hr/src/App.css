@@ -586,6 +586,7 @@ section {
   width: 80%;
   border: 1px solid rgb(220, 220, 220);
 }
+iframe .ui_textarea {width: 100%;}
 
 footer {
   position: relative;
