@@ -57,15 +57,6 @@ const HrPrugio = () => {
                 <span className='hide_clipPath'>푸르지오로고</span>
               </Link>
             </h1>
-            {/* {showElement && 
-              <div id='bars' className={isOn ? 'on' : ''} onClick={addOn}>
-                <span className='hide_clipPath'>메뉴</span>
-                <div>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>} */}
             <nav className={isOn ? 'on' : ''}>
               <ul>
                 <Link className='nav-link' to="/hr-prugio/Env"><li><h2 onClick={isOn ? addOn : null}>입지{showElement && <br />}환경</h2></li></Link>

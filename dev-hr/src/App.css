@@ -183,14 +183,10 @@ section {
 }
 .mainVisual * {transition: all .3s ease;}
 .mTitle {margin: 100px 0;}
-.mainVisual h3 {
-  color:#205052;
-  font-size: 42px;
-}
-.mainVisual p {
-  color: #8f8f8f;
-  font-size: 36px;
-}
+.mTitle h3 {color:#205052; font-size: 42px;}
+.mTitle p {font-size: 36px; color: #8f8f8f;}
+.mainVisual h3 {color:#205052; font-size: 42px;}
+.mainVisual p {color: #8f8f8f; font-size: 36px;}
 .mainVisual h3, .mainVisual p {opacity: 0;}
 :is(.mainVisual) .l2r h3, .l2r p {opacity: 1;}
 .mainVisual > img {

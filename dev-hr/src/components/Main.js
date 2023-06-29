@@ -65,6 +65,10 @@ const Main = () => {
         style={{ transform: `rotate(${rotation}deg)`}}
         />
       <section id="mSection1">
+        <div className='mTitle'>
+            <h3>제 2의 명품인생</h3>
+            <p>호텔식 하이엔드 실버타운</p>
+        </div>
         <div className="react-player-container">
           <div className="react-player-wrapper">
             <ReactPlayer
